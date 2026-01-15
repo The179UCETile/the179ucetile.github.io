@@ -1,3 +1,11 @@
-body { background-color: #000000; }
-h1 { color: #000000; }
-p { color: #000000; }
+@font-face {
+  font-family: "Monospace TextWall";
+  src: url("monospace-textwall-wip.ttf");
+}
+body { 
+  background-color: #000000; 
+}
+* {
+  font-family: "Monospace TextWall", monospace;
+  color: #000000;
+}
