@@ -218,6 +218,7 @@ setInterval(()=>{
   t = m.max(m.min(t, Values.length),0);
   let text = t<=1?(commaFormat((10**num).toFixed(2))):("{"+(t>=Values.length?"10, 10 [1 [1 \\<sub>1 [2] 2 \\ 2</sub> 2] 2] 2":Values[F(t)])+"}");
   document.getElementById("lngi").innerHTML = text;
-  document.getElementById("factor").innerHTML = "Speed: x"+paused?"0":(30/speed).toString();
+  document.getElementById("factor").innerHTML = "Speed: x"+(paused?"0":(30/speed).toString());
+  document.getElementById("pause").innerHTML = paused?"Resume":"Pause";
   lastTime = Date.now();
 },15);
