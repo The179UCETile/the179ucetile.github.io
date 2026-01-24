@@ -4,6 +4,14 @@ const F = m.floor;
 let t = 0;
 let speed = 30;
 let lastTime = Date.now()-16;
+let paused = false;
+function commaFormat(num) {                                            
+  let portions = num.toString().split(".")                                       
+  portions[0] = portions[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
+  if (portions.length == 1)    
+    return portions[0]    
+  return portions[0] + "." + portions[1]
+}
 function slowDown() {
   speed *= 2;
 }
@@ -16,8 +24,11 @@ function reverse() {
 function resetSpeed() {
   speed = 30;
 }
+function pause() {
+  paused = !paused;
+}
 setInterval(()=>{
-  t += (Date.now()-lastTime)/1e3/speed;
+  t += paused?0:((Date.now()-lastTime)/1e3/speed);
   let num = 10**(t%1);
   let numSubdiv = 10**(num%1);
   let numSubdiv2 = 10**(numSubdiv%1);
@@ -205,8 +216,8 @@ setInterval(()=>{
   "10, 10 [1 [1 \\<sub>"+arr.join(", ")+" \\ 2</sub> 2] 2] 2"
   ];
   t = m.max(m.min(t, Values.length),0);
-  let text = t<=1?(numSubdiv.toFixed(2)+" × 10<sup>"+F(num)+"</sup>"):("{"+(t>=Values.length?"10, 10 [1 [1 \\<sub>1 [2] 2 \\ 2</sub> 2] 2] 2":Values[F(t)])+"}");
+  let text = t<=1?(commaFormat((10**num).toFixed(2))):("{"+(t>=Values.length?"10, 10 [1 [1 \\<sub>1 [2] 2 \\ 2</sub> 2] 2] 2":Values[F(t)])+"}");
   document.getElementById("lngi").innerHTML = text;
-  document.getElementById("factor").innerHTML = "Speed: x"+(30/speed).toString();
+  document.getElementById("factor").innerHTML = "Speed: x"+paused?"0":(30/speed).toString();
   lastTime = Date.now();
 },15);
