@@ -5,7 +5,7 @@
 body { 
   background-color: #000000; 
 }
-* {
-  font-family: "Monospace TextWall";
+h1, p {
+  font-family: "Monospace TextWall", monospace;
   color: #000000;
 }
