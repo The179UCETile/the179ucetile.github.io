@@ -17,7 +17,9 @@ button {
   padding: 4px;
   border: none;
   cursor: pointer;
+  transition: background-image 0.4s, box-shadow 0.4s;
 }
 button:hover {
-  background-image: linear-gradient(to bottom, #a0a0a0, #606060)
+  background-image: linear-gradient(to bottom, #a0a0a0, #606060);
+  box-shadow: 0px 0px 3px #ffffff;
 }
