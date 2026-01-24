@@ -205,7 +205,7 @@ setInterval(()=>{
   "10, 10 [1 [1 \\<sub>"+arr.join(", ")+" \\ 2</sub> 2] 2] 2"
   ];
   t = m.max(m.min(t, Values.length),0);
-  let text = t<=1?(numSubdiv.toFixed(2)+" × 10^"+F(num)):("{"+(t>=Values.length?"10, 10 [1 [1 \\<sub>1 [2] 2 \\ 2</sub> 2] 2] 2":Values[F(t)])+"}");
+  let text = t<=1?(numSubdiv.toFixed(2)+" × 10<sup>"+F(num)+"</sup>"):("{"+(t>=Values.length?"10, 10 [1 [1 \\<sub>1 [2] 2 \\ 2</sub> 2] 2] 2":Values[F(t)])+"}");
   document.getElementById("lngi").innerHTML = text;
   document.getElementById("factor").innerHTML = "Speed: x"+(30/speed).toString();
   lastTime = Date.now();
