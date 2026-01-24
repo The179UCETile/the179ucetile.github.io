@@ -1,10 +1,24 @@
 let timestamp = Date.now();
 const m = Math;
 const F = m.floor;
+let t = 0;
+let speed = 30;
+let lastTime = Date.now()-16;
+function slowDown() {
+  speed *= 2;
+}
+function speedUp() {
+  speed /= 2;
+}
+function reverse() {
+  speed = -speed;
+}
+function resetSpeed() {
+  speed = 30;
+}
 setInterval(()=>{
-  let t = (Date.now()-timestamp)/1e3;
-  let speed = 30;
-  let num = 10**((t/speed)%1);
+  t += (Date.now()-lastTime)/1e3/speed;
+  let num = 10**(t%1);
   let numSubdiv = 10**(num%1);
   let numSubdiv2 = 10**(numSubdiv%1);
   const arr = [];
@@ -190,6 +204,9 @@ setInterval(()=>{
   "10, "+F(996**((num-1)/9)+4)+" [1 [1 \\<sub>1 \\ 2</sub> 2] 2] 2",
   "10, 10 [1 [1 \\<sub>"+arr.join(", ")+" \\ 2</sub> 2] 2] 2"
   ];
-  let text = t<speed?(numSubdiv.toFixed(2)+" × 10^"+F(num)):("{"+(t>=Values.length*speed?"10, 10 [1 [1 \\<sub>1 [2] 2 \\ 2</sub> 2] 2] 2":Values[F(t/speed)])+"}");
-  document.getElementById("lngi").innerHTML = text
+  t = m.max(m.min(t, Values.length),0);
+  let text = t<=1?(numSubdiv.toFixed(2)+" × 10^"+F(num)):("{"+(t>=Values.length?"10, 10 [1 [1 \\<sub>1 [2] 2 \\ 2</sub> 2] 2] 2":Values[F(t/speed)])+"}");
+  document.getElementById("lngi").innerHTML = text;
+  document.getElementById("factor").innerHTML = "Speed: x"+(30/speed).toString();
+  lastTime = Date.now();
 },15);

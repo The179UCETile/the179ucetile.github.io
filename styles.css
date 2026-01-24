@@ -9,3 +9,13 @@ body {
   font-family: "Monospace TextWall", monospace;
   color: #ffffff;
 }
+button {
+  background-color: linear-gradient(to bottom, #ffffff, #a0a0a0);
+  color: #000000;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: linear-gradient(to bottom, #a0a0a0, #606060)
+}
