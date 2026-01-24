@@ -21,7 +21,11 @@ button {
   transition: border 0.6s, background-image 0.6s, box-shadow 0.6s;
 }
 button:hover {
-  background-image: linear-gradient(to bottom, #a0a0a0, #606060);
+  background-image: linear-gradient(to bottom, #c0c0c0, #808080);
   box-shadow: 0px 0px 4px #ffffff;
-  border: 3px solid #404040;
+  border: 2px solid #404040;
+}
+button:active {
+  background-image: linear-gradient(to bottom, #808080, #606060);
+  border: 2px solid #202020;
 }
