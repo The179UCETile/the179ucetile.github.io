@@ -59,7 +59,7 @@ setInterval(()=>{
   "10, 10 ["+F(numSubdiv)+" [2] "+F(num+2)+"] 2",
   "10, 10 [1 [2] "+arr.join(", ")+"] 2",
   "10, 10 ["+arr.join(" [2] ")+"] 2",
-  "10, "+F(numSubdiv+9)+" ["+F(num)+" [3] 2] 2",
+  "10, "+F(numSubdiv*10)+" ["+F(num)+" [3] 2] 2",
   "10, 10 ["+arr.join(", ")+" [3] 2] 2",
   "10, 10 ["+arr.join(" [2] ")+" [3] 2] 2",
   "10, 10 ["+arr.join(" [3] ")+"] 2",
@@ -85,9 +85,9 @@ setInterval(()=>{
   "10, 10 ["+arr.join(" [3] ")+" \\ 2] 2",
   "10, 10 ["+d(num+3)+" \\ 2] 2",
   "10, 10 [1 ["+arr.join(", ")+"] 2 \\ 2] 2",
-  "10, 10 [1 ["+d(num+1)+"] 2] \\ 2",
+  "10, 10 [1 ["+d(num+1)+"] 2] \\ 2] 2",
   "10, "+F(num+2)+" [1 [1 \\ 2] 2 \\ 2] 2",
-  "10, "+F(numSubdiv+1)+" ["+F(num+1)+" [1 \\ 2] 2 \\ 2] 2",
+  "10, "+F(numSubdiv*10)+" ["+F(num+1)+" [1 \\ 2] 2 \\ 2] 2",
   "10, 10 ["+arr.join(", ")+" [1 \\ 2] 2 \\ 2] 2",
   "10, 10 ["+arr.join(" [2] ")+" [1 \\ 2] 2 \\ 2] 2",
   "10, 10 [1 ["+arr.join(", ")+"] 2 [1 \\ 2] 2 \\ 2] 2",
@@ -99,7 +99,7 @@ setInterval(()=>{
   "10, 10 [1 [1 \\ 2] "+arr.join(" [1 \\ 2] ")+" \\ 2] 2",
   "10, "+F(numSubdiv+9)+" [1 ["+F(num+1)+" \\ 2] 2 \\ 2] 2",
   "10, 10 [1 ["+arr.join(", ")+" \\ 2] 2 \\ 2] 2",
-  "10, 10 [1 ["+d(num+1)+"] 2 \\ 2] 2 \\ 2] 2",
+  "10, 10 [1 [1 ["+d(num+1)+"] 2 \\ 2] 2 \\ 2] 2",
   "10, "+F(num+2)+" [1 \\ 3] 2",
   "10, "+d(num+1)+" [1 \\ 3] 2",
   "10, "+F(num+1)+" [1 \\ 2] 2 [1 \\ 3] 2",
@@ -112,7 +112,7 @@ setInterval(()=>{
   "10, 10 [1 \\ 3] 1 [1 ["+arr.join(", ")+"] 2 \\ 2] 2",
   "10, 10 [1 \\ 3] 1 ["+F(numSubdiv)+" ["+F(num+1)+" \\ 2] 2 \\ 2] 2",
   "10, 10 [1 \\ 3] "+arr.join(" [1 \\ 3] "),
-  "10, "+F(numSubdiv2+9)+" ["+F(num+1)+" \\ 3] "+F(numSubdiv),
+  "10, "+F(numSubdiv2*10)+" ["+F(num+1)+" \\ 3] "+F(numSubdiv),
   "10, 10 ["+d(num+1)+" \\ 3] 2",
   "10, 10 [1 ["+F(num)+" \\ 2] 2 \\ 3] 2",
   "10, 10 [1 ["+d(num+1)+" \\ 2] 2 \\ 3] 2",
@@ -213,11 +213,21 @@ setInterval(()=>{
   "10, 10 [1 [1 \\<sub>1 [1 \\<sub>1 ["+S((num-1)/9*8+2)+"] 2</sub> 2] 2</sub> 2] 2] 2",
   "10, 10 [1 [1 \\<sub>1 [1 \\<sub>1 [1 \\<sub>1 ["+S((num-1)/9*8+2)+"] 2</sub> 2] 2</sub> 2] 2</sub> 2] 2] 2",
   "10, "+F(996**((num-1)/9)+4)+" [1 [1 \\<sub>1 \\ 2</sub> 2] 2] 2",
-  "10, 10 [1 [1 \\<sub>"+arr.join(", ")+" \\ 2</sub> 2] 2] 2"
+  "10, 10 [1 [1 \\<sub>"+arr.join(", ")+" \\ 2</sub> 2] 2] 2",
+  "10, 10 [1 [1 \\<sub>"+d(num+1)+" \\ 2</sub> 2] 2] 2",
+  "10, 10 [1 [1 \\<sub>1 ["+d(num+1)+"] 2 \\ 2</sub> 2] 2] 2",
+  "10, 10 [1 [1 \\<sub>1 ["+arr.join(" \\ ")+"] 2 \\ 2</sub> 2] 2] 2",
+  "10, 10 [1 [1 \\<sub>1 ["+S(num)+"]<sub>1</sub> 2 \\ 2</sub> 2] 2] 2",
+  "10, 10 [1 [1 \\<sub>1 [1 \\<sub>"+arr.join(", ")+"</sub> 2] 2 \\ 2</sub> 2] 2] 2",
+  "10, 10 [1 [1 \\<sub>1 [1 \\<sub>"+d(num+1)+"</sub> 2] 2 \\ 2</sub> 2] 2] 2",
+  "10, 10 [1 [1 \\<sub>1 [1 \\<sub>1 ["+S(num)+"]<sub>1</sub> 2</sub> 2] 2 \\ 2</sub> 2] 2] 2",
+  "10, 10 [1 [1 \\<sub>1 [1 \\<sub>"+F(num*10-8)+" \\ 2</sub> 2] 2 \\ 2</sub> 2] 2] 2",
+  "10, 10 [1 [1 \\<sub>1 [1 \\<sub>"+d(num+1)+" \\ 2</sub> 2] 2 \\ 2</sub> 2] 2] 2",
+  "10, 10 [1 [1 \\<sub>"+F(numSubdiv+1)+" \\ "+F(num+2)+"</sub> 2] 2] 2"
   ];
   t = m.max(m.min(t, Values.length),0);
-  let text = t<=1?(commaFormat((10**num).toFixed(2))):("{"+(t>=Values.length?"10, 10 [1 [1 \\<sub>1 [2] 2 \\ 2</sub> 2] 2] 2":Values[F(t)])+"}");
-  document.getElementById("lngi").innerHTML = text;
+  let text = t<=1?(commaFormat((10**num).toFixed(2))):("{"+(t>=Values.length?"10, 10 [1 [1 \\<sub>1 \\ 1, 2</sub> 2] 2] 2":Values[F(t)])+"}");
+  document.getElementById("lngi").innerHTML = t<=0?"10.00":text;
   document.getElementById("factor").innerHTML = "Speed: x"+(paused?"0":(30/speed).toString());
   document.getElementById("pause").innerHTML = paused?"Resume":"Pause";
   lastTime = Date.now();
