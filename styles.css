@@ -2,7 +2,7 @@
   font-family: "Monospace TextWall";
   src: url(monospace-textwall-wip.ttf);
 }
-body { 
+body, html { 
   background-color: #000000; 
 }
 * {
