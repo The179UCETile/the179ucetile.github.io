@@ -14,7 +14,7 @@ p {
 }
 h1 {
   size: 25px;
-  text-shadow: 0px 5px 0px #ffffff80;
+  text-shadow: 0px 2px 0px #ffffff80;
 }
 a {
   transition: color 0.6s, text-shadow 0.6s;
