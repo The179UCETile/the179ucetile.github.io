@@ -8,10 +8,16 @@ body {
 * {
   font-family: "Monospace TextWall", monospace;
   color: #ffffff;
-  font-size: 14px;
+}
+p {
+  font-size: 14px
+}
+h1 {
+  font-size: 25px;
+  text-shadow: 0px 2px 0px #ffffff80;
 }
 a {
-  transition: color 1s, text-shadow 1s;
+  transition: color 0.6s, text-shadow 0.6s;
 }
 a:link {
   color: #6060ff;
