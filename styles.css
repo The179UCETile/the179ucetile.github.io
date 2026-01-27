@@ -17,6 +17,19 @@ h1 {
   text-shadow: 0 2px 0 #ffffff80, 0 4px 0 #ffffff40;
   font-weight: normal;
 }
+div.contain {
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  width: 400px;
+  height: 75vh;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #000000c0;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 a {
   transition: color 0.6s, text-shadow 0.6s;
 }
