@@ -25,7 +25,7 @@ div.contain {
   height: 75vh;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  background-color: #000000c0;
+  background-image: linear-gradient(to right, #000000c0, #00000080);
   z-index: 1;
   overflow-x: hidden;
   overflow-y: scroll;
