@@ -37,10 +37,9 @@ div.newsticker {
   width: 40%;
   height: inherit;
   text-align: center;
-  background-color: #000000c0;
+  background-image: linear-gradient(to right, #00000040, #000000c0);
   border-color: #404040c0;
-  border-top-style: solid;
-  border-bottom-style: solid;
+  border-left-style: solid;
   border-width: 6px;
   z-index: 999;
 }
