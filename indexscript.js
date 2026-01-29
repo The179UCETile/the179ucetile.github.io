@@ -6,4 +6,4 @@ function updateTicker() {
     document.getElementById("news").getElementById("content").style.color = "rgba(255,255,255,1)"
   }, 1000);
 }
-setInterval(updateTicker, 20000)
+setInterval(updateTicker, 20000);
