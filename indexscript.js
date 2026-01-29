@@ -1,5 +1,5 @@
 const tickermsg = ["hi", "tw.nw119.me ~ I'm a furry", "dominoguy_ uses AI for coding (effectively vibecoding", "No RenaultFan Delete RenaultFan Yes haster Add haster", "No jQuery was used on this news ticker"];
-let elem = document.getElementById("newscontainer").getElementById("tickermessage");
+let elem = document.getElementById("tickermessage");
 function updateTicker() {
   elem.style.color = "rgba(255,255,255,0)";
   setTimeout(()=>{
