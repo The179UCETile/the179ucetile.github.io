@@ -6,5 +6,5 @@ function updateTicker() {
     document.getElementById("tickermessage").style.color = "rgba(255,255,255,1)";
   },400);
 }
-updateTicker();
+document.onload(()=>{updateTicker()});
 setInterval(updateTicker, 20000);
