@@ -4,7 +4,7 @@ function updateTicker() {
   setTimeout(()=>{
     document.getElementById("tickermessage").innerHTML = tickermsg[Math.floor(Math.random()*tickermsg.length)];
     document.getElementById("tickermessage").style.color = "rgba(255,255,255,1)";
-  },1000);
+  },400);
 }
 updateTicker();
 setInterval(updateTicker, 20000);
