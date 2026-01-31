@@ -30,19 +30,19 @@ function noUndef(value) {
   return !(value===undefined);
 }
 const utils = {
-  processModif: function(type) {
+  processModif: function(type, arr) {
     switch (type) {
       case "mult": {
         let out = 1;
-        for (let i = 0; i < modifiers.length&&modifiers[i][0]; i++) {
-          out *= modifiers[i][1];
+        for (let i = 0; i < arr.length&&arr[i][0]; i++) {
+          out *= arr[i][1];
         }
         return out;
         } break;
     }
   },
-  properNum: function(base, integ = false) {
-    let out = base*this.processModif("mult");
+  properNum: function(base, integ = false, arr) {
+    let out = base*this.processModif("mult", arr);
     if (integ) {
       out = Math.floor(out);
     };
@@ -51,7 +51,7 @@ const utils = {
   updateModif: function() {
     for (let i = 0; i < modifiers.length; i++) {
       modifiers[i][2]--;
-      if (modifiers[i][2] == 0) {
+      if (modifiers[i][2] == -1) {
         delete modifiers[i];
         modifiers = modifiers.filter(noUndef);
       }
@@ -64,8 +64,8 @@ const utils = {
       return portions[0];
     return portions[0] + "." + portions[1];
   },
-  properDiff: function(num) {
-    return Number((num+Math.log10(this.processModif("mult"))/Math.log10(3)).toFixed(2));
+  properDiff: function(num, arr) {
+    return Number((num+Math.log10(this.processModif("mult", arr))/Math.log10(3)).toFixed(2));
   }
 }
 function generatePunishment() { try {
@@ -88,7 +88,8 @@ function generatePunishment() { try {
     [`Scroll ${utils.properNum(25e3)} characters in TextWall.<br>Page zooming is forbidden.`, utils.properDiff(4.8), 4.8],
     [`In any game that you have experience on, complete ${utils.properNum(2)} levels that you consider the closest to &quot;Medium&quot; in Eternal Towers of Hell difficulty.`, utils.properDiff(2.44), 2.44],
     ["Regenerate, and double the next punishment.", 4.15, 4.15, ["mult", 2, 1]],
-    ["Regenerate, and triple the next punishment.", 4.86, 4.86, ["mult", 3, 1]]
+    ["Regenerate, and triple the next punishment.", 4.86, 4.86, ["mult", 3, 1]],
+    [`For the next ${utils.properNum(15)} minutes, type your messages .drawkcab`, utils.properDiff(5.32), 5.32]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
@@ -97,7 +98,8 @@ function generatePunishment() { try {
       punishmentsSorted[Math.floor(Punishments[i][2])] = [Punishments[i]];
     };
   };
-  let punishmentInfo = punishmentsSorted[diffRange][Math.floor(Math.random()*punishmentsSorted[diffRange].length)];
+  let punishmentInfo = punishmentsSorted[diffRange]
+  [Math.floor(Math.random()*punishmentsSorted[diffRange].length)];
   if (punishmentInfo[3]) {
     modifiers.push(punishmentInfo[3]);
   };
