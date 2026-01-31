@@ -73,6 +73,12 @@ const utils = {
   },
   properDiff: function(num) {
     return Number(Math.min(num+Math.log10(this.processModif("mult"))/Math.log10(3), 14.99).toFixed(2));
+  },
+  playAudio: function(id) {
+    let audio = document.getElementById(id);
+    audio.pause();
+    audio.currentTime = 0;
+    audio.play();
   }
 }
 function generatePunishment() { try {
@@ -130,15 +136,11 @@ function generatePunishment() { try {
   };
   let punishmentInfo = punishmentsSorted[diffRange][Math.floor(Math.random()*(punishmentsSorted[diffRange]??["a"]).length)];
   if (punishmentInfo[1] >= 8) {
-    let audio = document.getElementById("emojideath");
-    audio.pause();
-    audio.currentTime = 0;
-    audio.play();
+    utils.playAudio("emojideath");
   } else if (punishmentInfo[1] >= 4) {
-    let audio = document.getElementById("vineBoom");
-    audio.pause();
-    audio.currentTime = 0;
-    audio.play();
+    utils.playAudio("vineBoomBassboost")
+  } else if (punishmentInfo[1] >= 4) {
+    utils.playAudio("vineBoom");
   } else {};
   if (punishmentInfo[3]) {
     modif.push(punishmentInfo[3]);
