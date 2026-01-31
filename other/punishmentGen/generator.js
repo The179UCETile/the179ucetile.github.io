@@ -98,8 +98,7 @@ function generatePunishment() { try {
       punishmentsSorted[Math.floor(Punishments[i][2])] = [Punishments[i]];
     };
   };
-  let punishmentInfo = punishmentsSorted[diffRange]
-  [Math.floor(Math.random()*punishmentsSorted[diffRange].length)];
+  let punishmentInfo = punishmentsSorted[diffRange][Math.floor(Math.random()*(punishmentsSorted[diffRange]??["a"]).length)];
   if (punishmentInfo[3]) {
     modifiers.push(punishmentInfo[3]);
   };
