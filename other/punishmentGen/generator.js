@@ -122,6 +122,12 @@ function generatePunishment() { try {
     };
   };
   let punishmentInfo = punishmentsSorted[diffRange][Math.floor(Math.random()*(punishmentsSorted[diffRange]??["a"]).length)];
+  if (punishmentInfo[1] >= 4) {
+    document.getElementById("vineBoom").play();
+  }
+  if (punishmentInfo[1] >= 8) {
+    document.getElementById("emojideath").play();
+  }
   if (punishmentInfo[3]) {
     modif.push(punishmentInfo[3]);
   };
