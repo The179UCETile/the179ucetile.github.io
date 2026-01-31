@@ -1,5 +1,5 @@
 const diff = {
-  weights: [0, 0.25, 0.45, 0.65, 0.80, 0.90],
+  weights: [0, 0.2, 0.4, 0.55, 0.70, 0.80, 0.90],
   colors: [
     "#00ce00", "#76f447", "#ffff00", "#fe7c00",
     "#ff3232", "#a00000", "#19222d", "#c900c8",
@@ -39,6 +39,13 @@ const utils = {
         };
         return out;
         } break;
+      case "min": {
+        let min = -Infinity;
+        for (let i = 0; i < modif.length; i++) {
+          min = Math.max(min, modif[i][1])
+        };
+        return min;
+        } break;
     }
   },
   properNum: function(base, integ = false) {
@@ -76,9 +83,11 @@ function generatePunishment() { try {
   for (let i = 0; i < diff.weights.length&&rand >= diff.weights[i]; i++) {
     diffRange++;
   }
+  diffRange = Math.max(diffRange, utils.processModif("min"));
   const Punishments = [
     // punishmentName, diff, defaultDiff, modif (optional)
     ["Nothing happens.", 0, 0],
+    [`Wait for ${utils.properNum(10)} seconds.`, utils.properDiff(0.4), 0.4],
     [`Scroll ${utils.properNum(1e3)} characters in TextWall.<br>Page zooming is forbidden.`, utils.properDiff(1.2), 1.2],
     [`Survive the fictional googology punishment.`, 1.6, 1.6],
     [`Scroll ${utils.properNum(5e3)} characters in TextWall.<br>Page zooming is forbidden.`, utils.properDiff(3), 3],
@@ -90,7 +99,10 @@ function generatePunishment() { try {
     ["Regenerate, and double the next punishment.", 4.15, 4.15, ["mult", 2, 2]],
     ["Regenerate, and triple the next punishment.", 4.86, 4.86, ["mult", 3, 2]],
     [`For the next ${utils.properNum(15)} minutes, type your messages .drawkcab`, utils.properDiff(5.32), 5.32],
-    [`For the next ${utils.properNum(10)} minutes, speak with only emojis.`, utils.properDiff(5.48), 5.48]
+    [`For the next ${utils.properNum(10)} minutes, speak with only emojis.`, utils.properDiff(5.48), 5.48],
+    [`In any game that you have experience on, complete ${utils.properNum(3)} levels that you consider the closest to &quot;Hard&quot; in Eternal Towers of Hell difficulty.`, utils.properDiff(3.63), 3.63],
+    [`Regenerate, and all punishments will be doubled for the next 5 punishments.`, 5.37, 5.37, ["mult", 2, 6]],
+    [`Regenerate, and you cannot roll punishments that are easier than Easy for the next 5 punishments.`, 4.16, 4.16, ["min", 2, 6]]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
