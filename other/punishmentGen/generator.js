@@ -72,7 +72,7 @@ const utils = {
     return portions[0] + "." + portions[1];
   },
   properDiff: function(num) {
-    return Number((num+Math.log10(this.processModif("mult"))/Math.log10(3)).toFixed(2));
+    return Number(Math.min(num+Math.log10(this.processModif("mult"))/Math.log10(3), 14.99).toFixed(2));
   }
 }
 function generatePunishment() { try {
