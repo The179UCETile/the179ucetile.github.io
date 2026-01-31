@@ -1,5 +1,5 @@
 const diff = {
-  weights: [0, 0.2, 0.4, 0.55, 0.70, 0.80, 0.90],
+  weights: [0, 0.1, 0.4, 0.6, 0.75, 0.85, 0.95],
   colors: [
     "#00ce00", "#76f447", "#ffff00", "#fe7c00",
     "#ff3232", "#a00000", "#19222d", "#c900c8",
@@ -9,8 +9,8 @@ const diff = {
   names: [
     "Effortless", "Easy", "Medium", "Hard",
     "Difficult", "Challenging", "Intense", "Remorseless",
-    "<b>INSANE</b>", "<b>EXTREME</b>", "<b>TERRIFYING</b>", "<b><i>CATASTROPHIC</i></b>",
-    "<b><i>HORRIFIC</i></b>", "<b><i><u>UNREAL</u></i></b>", "<b><i><u>nil</u></i></b>"
+    "INSANE", "EXTREME", "TERRIFYING", "CATASTROPHIC",
+    "HORRIFIC", "UNREAL", "nil"
   ],
   ranges: {
     0:"Baseline",
@@ -103,7 +103,10 @@ function generatePunishment() { try {
     [`In any game that you have experience on, complete ${utils.properNum(3)} levels that you consider the closest to &quot;Hard&quot; in Eternal Towers of Hell difficulty.`, utils.properDiff(3.63), 3.63],
     [`Regenerate, and all punishments will be doubled for the next 5 punishments.`, 5.37, 5.37, ["mult", 2, 6]],
     [`Regenerate, and you cannot roll punishments that are easier than Easy for the next 5 punishments.`, 4.16, 4.16, ["min", 2, 6]],
-    [`Regenerate, and you cannot roll punishments that are easier than Hard for the next 5 punishments.`, 6.32, 6.32, ["min", 4, 6]]
+    [`Regenerate, and you cannot roll punishments that are easier than Hard for the next 5 punishments.`, 6.32, 6.32, ["min", 4, 6]],
+    [`For the next ${utils.properNum(15)} minutes, speak in Morse code.`, utils.properDiff(6.8), 6.8],
+    [`Jump ${utils.properNum(10)} times IRL.`, utils.properDiff(1.25), 1.25],
+    [`Wait ${utils.properNum(3)} minutes.`, utils.properDiff(2.48), 2.48]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
