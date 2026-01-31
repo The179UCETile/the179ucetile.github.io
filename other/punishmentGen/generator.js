@@ -124,10 +124,12 @@ function generatePunishment() { try {
   let punishmentInfo = punishmentsSorted[diffRange][Math.floor(Math.random()*(punishmentsSorted[diffRange]??["a"]).length)];
   if (punishmentInfo[1] >= 8) {
     let audio = document.getElementById("emojideath");
+    audio.pause();
     audio.currentTime = 0;
     audio.play();
   } else if (punishmentInfo[1] >= 4) {
     let audio = document.getElementById("vineBoom");
+    audio.pause();
     audio.currentTime = 0;
     audio.play();
   } else {};
