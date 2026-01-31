@@ -108,7 +108,7 @@ function generatePunishment() { try {
     [`Jump ${utils.properNum(10)} times IRL.`, utils.properDiff(1.25), 1.25],
     [`Wait ${utils.properNum(3)} minutes.`, utils.properDiff(2.48), 2.48],
     [`Regenerate, and multiply the next punishment by 10.`, 7.2, 7.2, ["mult", 10, 2]],
-    [`Regenerate, and all punishments will be doubled for the next 10 punishments.`, 7.1, 7.1 ["mult", 2, 11]],
+    [`Regenerate, and all punishments will be doubled for the next 10 punishments.`, 7.1, 7.1, ["mult", 2, 11]],
     [`Complete ${utils.properNum(2)} Intense towers in Eternal Towers of Hell in ${utils.properNum(20)} minutes.`, utils.properDiff(7.35), 7.35],
     [`Count to ${utils.properNum(50)} IRL.<br>Skipping numbers is not allowed.`, utils.properDiff(1.93), 1.93],
     [`Count to ${utils.properNum(1e3)} IRL.<br>Skipping numbers is not allowed.`, utils.properDiff(4.26), 4.26],
