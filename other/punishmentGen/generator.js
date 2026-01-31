@@ -1,5 +1,5 @@
 const diff = {
-  weights: [0, 0.1, 0.4, 0.6, 0.75, 0.85, 0.95],
+  weights: [0, 0.1, 0.35, 0.55, 0.70, 0.80, 0.90, 0.95],
   colors: [
     "#00ce00", "#76f447", "#ffff00", "#fe7c00",
     "#ff3232", "#a00000", "#19222d", "#c900c8",
@@ -71,8 +71,8 @@ const utils = {
       return portions[0];
     return portions[0] + "." + portions[1];
   },
-  properDiff: function(num, modif) {
-    return Number((num+Math.log10(this.processModif("mult", modif))/Math.log10(3)).toFixed(2));
+  properDiff: function(num) {
+    return Number((num+Math.log10(this.processModif("mult"))/Math.log10(3)).toFixed(2));
   }
 }
 function generatePunishment() { try {
@@ -86,27 +86,33 @@ function generatePunishment() { try {
   diffRange = Math.max(diffRange, utils.processModif("min"));
   const Punishments = [
     // punishmentName, diff, defaultDiff, modif (optional)
-    ["Nothing happens.", 0, 0],
+    [`Nothing happens.`, 0, 0],
     [`Wait for ${utils.properNum(10)} seconds.`, utils.properDiff(0.4), 0.4],
     [`Scroll ${utils.properNum(1e3)} characters in TextWall.<br>Page zooming is forbidden.`, utils.properDiff(1.2), 1.2],
     [`Survive the fictional googology punishment.`, 1.6, 1.6],
     [`Scroll ${utils.properNum(5e3)} characters in TextWall.<br>Page zooming is forbidden.`, utils.properDiff(3), 3],
     [`Walk ${utils.properNum(100)} meters IRL.`, utils.properDiff(1.4), 1.4],
-    ["Actually touch grass.<br>The hard part is finding grass.", 2.6, 2.6],
+    [`Actually touch grass.<br>The hard part is finding grass.`, 2.6, 2.6],
     [`Drink ${utils.properNum(25)}ml of water.`, utils.properDiff(1.5), 1.5],
     [`Scroll ${utils.properNum(25e3)} characters in TextWall.<br>Page zooming is forbidden.`, utils.properDiff(4.8), 4.8],
     [`In any game that you have experience on, complete ${utils.properNum(2)} levels that you consider the closest to &quot;Medium&quot; in Eternal Towers of Hell difficulty.`, utils.properDiff(2.44), 2.44],
-    ["Regenerate, and double the next punishment.", 4.15, 4.15, ["mult", 2, 2]],
-    ["Regenerate, and triple the next punishment.", 4.86, 4.86, ["mult", 3, 2]],
+    [`Regenerate, and double the next punishment.`, 4.15, 4.15, ["mult", 2, 2]],
+    [`Regenerate, and triple the next punishment.`, 4.86, 4.86, ["mult", 3, 2]],
     [`For the next ${utils.properNum(15)} minutes, type your messages .drawkcab`, utils.properDiff(5.32), 5.32],
     [`For the next ${utils.properNum(10)} minutes, speak with only emojis.`, utils.properDiff(5.48), 5.48],
     [`In any game that you have experience on, complete ${utils.properNum(3)} levels that you consider the closest to &quot;Hard&quot; in Eternal Towers of Hell difficulty.`, utils.properDiff(3.63), 3.63],
     [`Regenerate, and all punishments will be doubled for the next 5 punishments.`, 5.37, 5.37, ["mult", 2, 6]],
-    [`Regenerate, and you cannot roll punishments that are easier than Easy for the next 5 punishments.`, 4.16, 4.16, ["min", 2, 6]],
-    [`Regenerate, and you cannot roll punishments that are easier than Hard for the next 5 punishments.`, 6.32, 6.32, ["min", 4, 6]],
+    [`Regenerate, and you cannot generate punishments that are easier than Easy for the next 5 punishments.`, 4.16, 4.16, ["min", 2, 6]],
+    [`Regenerate, and you cannot generate punishments that are easier than Hard for the next 5 punishments.`, 6.32, 6.32, ["min", 4, 6]],
     [`For the next ${utils.properNum(15)} minutes, speak in Morse code.`, utils.properDiff(6.8), 6.8],
     [`Jump ${utils.properNum(10)} times IRL.`, utils.properDiff(1.25), 1.25],
-    [`Wait ${utils.properNum(3)} minutes.`, utils.properDiff(2.48), 2.48]
+    [`Wait ${utils.properNum(3)} minutes.`, utils.properDiff(2.48), 2.48],
+    [`Regenerate, and multiply the next punishment by 10.`, 7.2, 7.2, ["mult", 10, 2]],
+    [`Regenerate, and all punishments will be doubled for the next 10 punishments.`, 7.1, 7.1 ["mult", 2, 11]],
+    [`Complete ${utils.properNum(2)} Intense towers in Eternal Towers of Hell in ${utils.properNum(20)} minutes.`, utils.properDiff(7.35), 7.35],
+    [`Count to ${utils.properNum(50)} IRL.<br>Skipping numbers is not allowed.`, utils.properDiff(1.93), 1.93],
+    [`Count to ${utils.properNum(1e3)} IRL.<br>Skipping numbers is not allowed.`, utils.properDiff(4.26), 4.26],
+    [`Count to ${utils.properNum(1e5)} IRL.<br>Skipping numbers is not allowed.`, utils.properDiff(6.28), 6.28]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
