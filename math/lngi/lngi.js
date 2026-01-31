@@ -6,10 +6,10 @@ let speed = 30;
 let lastTime = Date.now()-16;
 let paused = false;
 function commaFormat(num) {                                            
-  let portions = num.toString().split(".")                                       
+  let portions = num.toString().split(".")
   portions[0] = portions[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
-  if (portions.length == 1)    
-    return portions[0]    
+  if (portions.length == 1)
+    return portions[0]
   return portions[0] + "." + portions[1]
 }
 function slowDown() {

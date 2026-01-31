@@ -7,15 +7,17 @@ body, html {
 }
 * {
   font-family: "Monospace TextWall", monospace;
+  font-weight: normal;
   color: #ffffff;
-}
-p {
-  size: 14px
+  size: 12px;
 }
 h1 {
   size: 25px;
   text-shadow: 0 2px 0 #ffffff80, 0 4px 0 #ffffff40;
-  font-weight: normal;
+}
+h2 {
+  size: 20px;
+  text-shadow: 0 2px 0 #ffffff80;
 }
 div.contain {
   padding: 10px;
