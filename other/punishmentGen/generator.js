@@ -104,6 +104,6 @@ function generatePunishment() { try {
   document.getElementById("punishment").innerHTML = `${punishmentInfo[0]}<br>Difficulty: ${punishmentInfo[1].toString()} (${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]})`;
   document.getElementById("punishment").style.color = diff.colors[Math.floor(punishmentInfo[1])];
   } catch (e) {
-    document.getElementById("punishment").innerHTML = `${e.name}occured`;
+    document.getElementById("punishment").innerHTML = `${e.name} occured`;
   }
 };
