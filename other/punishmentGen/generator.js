@@ -70,8 +70,6 @@ const utils = {
 }
 function generatePunishment() {
   utils.updateModif();
-  let punishment = document.getElementById("punishment");
-  let punishmentDiff = document.getElementById("punishmentDiff");
   const rand = Math.random();
   let diffRange = -1;
   const punishmentsSorted = [];
@@ -103,8 +101,6 @@ function generatePunishment() {
   for (let i = 0; punishmentInfo[1]%1 >= Object.keys(diff.ranges)[i]; i++) {
     rangeName = Object.values(diff.ranges)[i];
   }
-  punishment.innerHTML = punishmentInfo[0];
-  punishmentDiff.innerHTML = `Difficulty: ${punishmentInfo[1].toString()} (${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]})`;
-  punishment.style.color = diff.colors[Math.floor(punishmentInfo[1])];
-  punishmentDiff.style.color = diff.colors[Math.floor(punishmentInfo[1])];
-}
+  document.getElementById("punishment").innerHTML = `${punishmentInfo[0]}<br>Difficulty: ${punishmentInfo[1].toString()} (${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]})`;
+  document.getElementById("punishment").style.color = diff.colors[Math.floor(punishmentInfo[1])];
+};
