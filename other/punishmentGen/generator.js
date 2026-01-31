@@ -34,14 +34,14 @@ const utils = {
     switch (type) {
       case "mult": {
         let out = 1;
-        for (let i = 0; i < modif.length&&modif[i][0]; i++) {
+        for (let i = 0; i < modif.length&&modif[i][0] == "mult"; i++) {
           out *= modif[i][1];
         };
         return out;
         } break;
       case "min": {
         let min = -Infinity;
-        for (let i = 0; i < modif.length; i++) {
+        for (let i = 0; i < modif.length&&modif[i][0] == "min"; i++) {
           min = Math.max(min, modif[i][1])
         };
         return min;
@@ -49,7 +49,7 @@ const utils = {
     }
   },
   properNum: function(base, integ = false) {
-    let out = base*this.processModif("mult", modif);
+    let out = base*this.processModif("mult");
     if (integ) {
       out = Math.floor(out);
     };
