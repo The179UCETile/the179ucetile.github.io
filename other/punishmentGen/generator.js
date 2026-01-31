@@ -106,13 +106,20 @@ function generatePunishment() { try {
     [`Regenerate, and you cannot generate punishments that are easier than Hard for the next 5 punishments.`, 6.32, 6.32, ["min", 4, 6]],
     [`For the next ${utils.properNum(15)} minutes, speak in Morse code.`, utils.properDiff(6.8), 6.8],
     [`Jump ${utils.properNum(10)} times IRL.`, utils.properDiff(1.25), 1.25],
-    [`Wait ${utils.properNum(3)} minutes.`, utils.properDiff(2.48), 2.48],
+    [`Wait for ${utils.properNum(3)} minutes.`, utils.properDiff(2.48), 2.48],
     [`Regenerate, and multiply the next punishment by 10.`, 7.2, 7.2, ["mult", 10, 2]],
     [`Regenerate, and all punishments will be doubled for the next 10 punishments.`, 7.1, 7.1, ["mult", 2, 11]],
     [`Complete ${utils.properNum(2)} Intense towers in Eternal Towers of Hell in ${utils.properNum(20)} minutes.`, utils.properDiff(7.35), 7.35],
     [`Count to ${utils.properNum(50)} IRL.<br>Skipping numbers is not allowed.`, utils.properDiff(1.93), 1.93],
     [`Count to ${utils.properNum(1e3)} IRL.<br>Skipping numbers is not allowed.`, utils.properDiff(4.26), 4.26],
-    [`Count to ${utils.properNum(1e5)} IRL.<br>Skipping numbers is not allowed.`, utils.properDiff(6.28), 6.28]
+    [`Count to ${utils.properNum(1e5)} IRL.<br>Skipping numbers is not allowed.`, utils.properDiff(6.28), 6.28],
+    [`Send someone ${utils.properNum(10)} seconds of keyboard spam.`, utils.properDiff(2.2), 2.2],
+    [`Count to ${utils.properNum(1e6)} IRL.<br>Skipping numbers is not allowed.`, utils.properDiff(7.99), 7.99],
+    [`For the next ${utils.properNum(20)} minutes, speak in the form of &quot;No ___ Delete ___ Yes ___ Add ___&quot;`, utils.properDiff(3.28), 3.28],
+    [`Speak in another language that you DON'T know how to speak for ${utils.properNum(10)} minutes.`, utils.properDiff(5.94), 5.94],
+    [`Speak in Base64 encoding for ${utils.properNum(5)} minutes.`, utils.properDiff(6.1), 6.1],
+    [`Speak in +1 or -1 Caesar cypher for ${utils.properNum(8)} minutes.`, utils.properDiff(4.66), 4.66],
+    [`Regenerate, and multiply the next punishment by 0.75.`, 0.2, 0.2]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
