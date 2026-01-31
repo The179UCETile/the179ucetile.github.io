@@ -87,8 +87,8 @@ function generatePunishment() { try {
     [`Drink ${utils.properNum(25)}ml of water.`, utils.properDiff(1.5), 1.5],
     [`Scroll ${utils.properNum(25e3)} characters in TextWall.<br>Page zooming is forbidden.`, utils.properDiff(4.8), 4.8],
     [`In any game that you have experience on, complete ${utils.properNum(2)} levels that you consider the closest to &quot;Medium&quot; in Eternal Towers of Hell difficulty.`, utils.properDiff(2.44), 2.44],
-    ["Regenerate, and double the next punishment.", 4.15, ["mult", 2, 1]],
-    ["Regenerate, and triple the next punishment.", 4.86, ["mult", 3, 1]]
+    ["Regenerate, and double the next punishment.", 4.15, 4.15, ["mult", 2, 1]],
+    ["Regenerate, and triple the next punishment.", 4.86, 4.86, ["mult", 3, 1]]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
