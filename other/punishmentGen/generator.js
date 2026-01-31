@@ -101,7 +101,7 @@ function generatePunishment() { try {
   };
   let punishmentInfo = punishmentsSorted[diffRange][Math.floor(Math.random()*(punishmentsSorted[diffRange]??["a"]).length)];
   if (punishmentInfo[3]) {
-    modifiers.push(punishmentInfo[3]);
+    modif.push(punishmentInfo[3]);
   };
   let rangeName = "";
   for (let i = 0; punishmentInfo[1]%1 >= Object.keys(diff.ranges)[i]; i++) {
