@@ -137,8 +137,6 @@ function generatePunishment() { try {
   let punishmentInfo = punishmentsSorted[diffRange][Math.floor(Math.random()*(punishmentsSorted[diffRange]??["a"]).length)];
   if (punishmentInfo[1] >= 8) {
     utils.playAudio("emojideath");
-  } else if (punishmentInfo[1] >= 6) {
-    utils.playAudio("vineBoomBassboost");
   } else if (punishmentInfo[1] >= 4) {
     utils.playAudio("vineBoom");
   } else {};
