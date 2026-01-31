@@ -30,18 +30,18 @@ function noUndef(value) {
   return !(value===undefined);
 }
 const utils = {
-  processModif: function(type) {
+  processModif: function(type, arr) {
     switch (type) {
       case "mult": {
         let out = 1;
-        for (let i = 0; i < modif.length&&modif[i][0]; i++) {
-          out *= modif[i][1];
+        for (let i = 0; i < arr.length&&arr[i][0]; i++) {
+          out *= arr[i][1];
         }
         return out;
         } break;
     }
   },
-  properNum: function(base, integ = false) {
+  properNum: function(base, arr, integ = false) {
     let out = base*this.processModif("mult", arr);
     if (integ) {
       out = Math.floor(out);
@@ -51,7 +51,7 @@ const utils = {
   updateModif: function() {
     for (let i = 0; i < modif.length; i++) {
       modif[i][2]--;
-      if (modif[i][2] == -1) {
+      if (modif[i][2] == 0) {
         delete modif[i];
         modif = modif.filter(noUndef);
       }
@@ -87,8 +87,8 @@ function generatePunishment() { try {
     [`Drink ${utils.properNum(25,modif)}ml of water.`, utils.properDiff(1.5,modif), 1.5],
     [`Scroll ${utils.properNum(25e3,modif)} characters in TextWall.<br>Page zooming is forbidden.`, utils.properDiff(4.8,modif), 4.8],
     [`In any game that you have experience on, complete ${utils.properNum(2,modif)} levels that you consider the closest to &quot;Medium&quot; in Eternal Towers of Hell difficulty.`, utils.properDiff(2.44,modif), 2.44],
-    ["Regenerate, and double the next punishment.", 4.15, 4.15, ["mult", 2, 1]],
-    ["Regenerate, and triple the next punishment.", 4.86, 4.86, ["mult", 3, 1]],
+    ["Regenerate, and double the next punishment.", 4.15, 4.15, ["mult", 2, 2]],
+    ["Regenerate, and triple the next punishment.", 4.86, 4.86, ["mult", 3, 2]],
     [`For the next ${utils.properNum(15,modif)} minutes, type your messages .drawkcab`, utils.properDiff(5.32,modif), 5.32]
   ];
   for (let i = 0; i < Punishments.length; i++) {
