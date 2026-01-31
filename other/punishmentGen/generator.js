@@ -102,7 +102,8 @@ function generatePunishment() { try {
     [`For the next ${utils.properNum(10)} minutes, speak with only emojis.`, utils.properDiff(5.48), 5.48],
     [`In any game that you have experience on, complete ${utils.properNum(3)} levels that you consider the closest to &quot;Hard&quot; in Eternal Towers of Hell difficulty.`, utils.properDiff(3.63), 3.63],
     [`Regenerate, and all punishments will be doubled for the next 5 punishments.`, 5.37, 5.37, ["mult", 2, 6]],
-    [`Regenerate, and you cannot roll punishments that are easier than Easy for the next 5 punishments.`, 4.16, 4.16, ["min", 2, 6]]
+    [`Regenerate, and you cannot roll punishments that are easier than Easy for the next 5 punishments.`, 4.16, 4.16, ["min", 2, 6]],
+    [`Regenerate, and you cannot roll punishments that are easier than Hard for the next 5 punishments.`, 6.32, 6.32, ["min", 4, 6]]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
