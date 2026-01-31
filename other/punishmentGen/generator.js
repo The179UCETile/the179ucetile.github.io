@@ -91,7 +91,11 @@ function generatePunishment() { try {
     ["Regenerate, and triple the next punishment.", 4.86, ["mult", 3, 1]]
   ];
   for (let i = 0; i < Punishments.length; i++) {
-    punishmentsSorted[Math.floor(Punishments[i][2])].push(Punishments[i]);
+    if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
+      punishmentsSorted[Math.floor(Punishments[i][2])].push(Punishments[i]);
+    } else {
+      punishmentsSorted[Math.floor(Punishments[i][2])] = [Punishments[i]];
+    };
   };
   let punishmentInfo = punishmentsSorted[diffRange][Math.floor(Math.random()*punishmentsSorted[diffRange].length)];
   if (punishmentInfo[3]) {
