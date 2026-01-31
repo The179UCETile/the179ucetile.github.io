@@ -58,11 +58,11 @@ const utils = {
     }
   },
   commaFormat: function(num) {
-    let portions = num.toString().split(".")
-    portions[0] = portions[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
+    let portions = num.toString().split(".");
+    portions[0] = portions[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
     if (portions.length == 1)
-      return portions[0]
-    return portions[0] + "." + portions[1]
+      return portions[0];
+    return portions[0] + "." + portions[1];
   },
   properDiff: function(num) {
     return Number((num+Math.log10(this.processModif("mult"))/Math.log10(3)).toFixed(2));
@@ -104,6 +104,6 @@ function generatePunishment() { try {
   document.getElementById("punishment").innerHTML = `${punishmentInfo[0]}<br>Difficulty: ${punishmentInfo[1].toString()} (${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]})`;
   document.getElementById("punishment").style.color = diff.colors[Math.floor(punishmentInfo[1])];
   } catch (e) {
-    document.getElementById("punishment").innerHTML = `${e.name} occured`;
+    document.getElementById("punishment").innerHTML = `${e.name} occured (${e.message}, ${e.stack})`;
   }
 };
