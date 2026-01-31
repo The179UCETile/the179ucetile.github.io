@@ -30,18 +30,18 @@ function noUndef(value) {
   return !(value===undefined);
 }
 const utils = {
-  processModif: function(type, arr) {
+  processModif: function(type) {
     switch (type) {
       case "mult": {
         let out = 1;
-        for (let i = 0; i < arr.length&&arr[i][0]; i++) {
-          out *= arr[i][1];
+        for (let i = 0; i < modif.length&&modif[i][0]; i++) {
+          out *= modif[i][1];
         }
         return out;
         } break;
     }
   },
-  properNum: function(base, integ = false, arr) {
+  properNum: function(base, integ = false) {
     let out = base*this.processModif("mult", arr);
     if (integ) {
       out = Math.floor(out);
