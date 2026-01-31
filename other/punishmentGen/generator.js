@@ -68,7 +68,7 @@ const utils = {
     return Number((num+Math.log10(this.processModif("mult"))/Math.log10(3)).toFixed(2));
   }
 }
-function generatePunishment() {
+function generatePunishment() { try {
   utils.updateModif();
   const rand = Math.random();
   let diffRange = -1;
@@ -87,8 +87,8 @@ function generatePunishment() {
     [`Drink ${utils.properNum(25)}ml of water.`, utils.properDiff(1.5), 1.5],
     [`Scroll ${utils.properNum(25e3)} characters in TextWall.<br>Page zooming is forbidden.`, utils.properDiff(4.8), 4.8],
     [`In any game that you have experience on, complete ${utils.properNum(2)} levels that you consider the closest to &quot;Medium&quot; in Eternal Towers of Hell difficulty.`, utils.properDiff(2.44), 2.44],
-    ["Regenerate, and next punishment will be doubled.", 4.15, ["mult", 2, 1]],
-    ["Regenerate, and next punishment will be tripled.", 4.86, ["mult", 3, 1]]
+    ["Regenerate, and double the next punishment.", 4.15, ["mult", 2, 1]],
+    ["Regenerate, and triple the next punishment.", 4.86, ["mult", 3, 1]]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     punishmentsSorted[Math.floor(Punishments[i][2])].push(Punishments[i]);
@@ -103,4 +103,7 @@ function generatePunishment() {
   }
   document.getElementById("punishment").innerHTML = `${punishmentInfo[0]}<br>Difficulty: ${punishmentInfo[1].toString()} (${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]})`;
   document.getElementById("punishment").style.color = diff.colors[Math.floor(punishmentInfo[1])];
+  } catch (e) {
+    document.getElementById("punishment").innerHTML = `${e.name}occured`;
+  }
 };
