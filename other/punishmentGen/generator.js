@@ -90,7 +90,7 @@ const utils = {
       str += "<span class=\"modif\">";
       switch (modif[i][0]) {
         case "mult":
-          str += "x"+modif[i][1]=="diff"?"[difficulty]":this.commaFormat(modif[i][1]);
+          str += `x${modif[i][1]=="diff"?"[difficulty]":this.commaFormat(modif[i][1])}`;
           break;
         case "min":
           str += `min ${modif[i][1]}`;
