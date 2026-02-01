@@ -12,6 +12,14 @@
         text-align: center;
         font-size: 10px;
       }
+      div.ext {
+        width: 100%;
+        min-height: 300px;
+        font-size: 10px;
+        border-radius: 2px;
+        border: 2px solid #c0c0c0;
+        background-color: #404040;
+      }
     </style>
     <link rel="stylesheet" href="/styles.css">
     <title>The179UCETile's punishment generator</title>
@@ -28,12 +36,14 @@
       <source src="/audio/emojideath_sfx.wav" type="audio/wav">
     </audio>
     <p><a href="/other/">Go back</a></p>
-    <h1>The179UCETile's punishment generator<sup>v1.1.1</sup></h1>
+    <h1>The179UCETile's punishment generator<sup>v1.1.2</sup></h1>
     <p><i>inspired by <a href="https://lime-textgrid.neocities.org/punishmentwheel">lime.person's punishment wheel</a><br>last updated: February 1st, 2026</i></p>
     <button onclick="generatePunishment();">Generate</button>
     <h2>Punishment generated:</h2>
     <div id="container"></div>
     <p id="punishment" style="color:#00ce00;">not generated<br>Difficulty: 0 (Baseline Effortless)</p>
+    <h2>Extra punishments:</h2>
+    <div class="ext"><p id="exPunishments"></p></div>
     <h2>Difficulties</h2>
     <p><span style="color:#00ce00">0: Effortless (10%)</span><br>
     <span style="color:#76f447">1: Easy (25%)</span><br>

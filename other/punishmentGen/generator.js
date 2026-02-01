@@ -50,6 +50,15 @@ const utils = {
         };
         return min;
       } break;
+      case "comb": {
+        let comb = 0;
+        for (let i = 0; i < modif.length; i++) {
+          if (comb==0&&modif[i][0]=="comb") {
+            comb = modif[i][2];
+          }
+        };
+        return comb;
+      } break;
     }
   },
   properNum: function(base, diff, integ = false) {
@@ -90,13 +99,16 @@ const utils = {
       str += "<span class=\"modif\">";
       switch (modif[i][0]) {
         case "mult":
-          str += `x${modif[i][1]=="diff"?"[difficulty]":this.commaFormat(modif[i][1])}`;
+          str += `x${modif[i][1]=="diff"?"[difficulty]":this.commaFormat(modif[i][1])} (${modif[i][2]})`;
           break;
         case "min":
-          str += `min ${modif[i][1]}`;
+          str += `min ${modif[i][1]} (${modif[i][2]})`;
+          break;
+        case "comb":
+          str += `+${modif[i][2]}`;
           break;
       };
-      str += ` (${modif[i][2]})</span>`;
+      str += `</span>`;
     };
     return str;
   }
@@ -148,7 +160,8 @@ function generatePunishment() { try {
     [`Regenerate, and multiply the next punishment by 0.75.`, 0.2, 0.2, ["mult", 0.75, 2]],
     [`Regenerate, and multiply the next punishment by it's difficulty.`, 4.3, 4.3, ["mult", "diff", 2]],
     [`Regenerate, and all punishments will be multiplied by it's difficulty for 3 punishments.`, 5.28, 5.28 ["mult", "diff", 4]],
-    [`Wait for ${utils.properNum(1, 5.37)} hour.`, utils.properDiff(5.37), 5.37]
+    [`Wait for ${utils.properNum(1, 5.37)} hour.`, utils.properDiff(5.37), 5.37],
+    [`Combine ${utils.properNum(2, 3.57, true)} punishments.`, utils.properDiff(3.57), 3.57, ["comb",,utils.properNum(2, 3.57, true)+1]]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
@@ -164,13 +177,34 @@ function generatePunishment() { try {
     utils.playAudio("vineBoom");
   } else {};
   if (punishmentInfo[3]) {
-    modif.push(punishmentInfo[3]);
+    if (punishmentInfo[3][0] == "comb") {
+      let hasComb = false;
+      let combLocation = 0;
+      for (let i = 0; i < modif.length; i++) {
+        if (!hasComb&&modif[i][0] == "comb") {
+          hasComb = true;
+          combLocation = i;
+        }
+      }
+      if (hasComb) {
+        modif[combLocation][2]+=punishmentInfo[3][2];
+      } else {
+        modif.push(punishmentInfo[3]);
+      }
+    } else {
+      modif.push(punishmentInfo[3]);
+    }
   };
   let rangeName = "";
   for (let i = 0; punishmentInfo[1]%1 >= Object.keys(diff.ranges)[i]; i++) {
     rangeName = Object.values(diff.ranges)[i];
   }
-  document.getElementById("punishment").innerHTML = `${punishmentInfo[0]}<br>Difficulty: ${punishmentInfo[1].toString()} (${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]})`;
+  if (utils.processModif("comb")==0) {
+    document.getElementById("exPunishments").innerHTML = "None";
+  } else {
+    document.getElementById("exPunishments").innerHTML += `${punishmentInfo[0]} [${punishmentInfo[1]} | ${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]}]`;
+  }
+  document.getElementById("punishment").innerHTML = `${punishmentInfo[0]}<br>Difficulty: ${punishmentInfo[1]} (${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]})`;
   document.getElementById("punishment").style.color = diff.colors[Math.floor(punishmentInfo[1])];
   document.getElementById("punishment").style.textShadow = Math.floor(punishmentInfo[1])==6?"0 0 2px #ffffff,0 0 1px #ffffff":"none";
   document.getElementById("container").innerHTML = utils.formatModif();
