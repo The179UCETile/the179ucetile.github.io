@@ -171,7 +171,7 @@ function generatePunishment() { try {
   document.getElementById("punishment").innerHTML = `${punishmentInfo[0]}<br>Difficulty: ${punishmentInfo[1].toString()} (${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]})`;
   document.getElementById("punishment").style.color = diff.colors[Math.floor(punishmentInfo[1])];
   document.getElementById("punishment").style.textShadow = Math.floor(punishmentInfo[1])==6?"0 0 2px #ffffff,0 0 1px #ffffff":"none";
-  document.getElementById("container") = utils.formatModif();
+  document.getElementById("container").innerHTML = utils.formatModif();
   } catch (e) {
     document.getElementById("punishment").innerHTML = `${e.name} occured (${e.stack})`;
   }
