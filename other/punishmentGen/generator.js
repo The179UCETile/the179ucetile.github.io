@@ -89,15 +89,15 @@ const utils = {
     for (let i = 0; i < modif.length; i++) {
       str += "<span class='modif'>";
       switch (modif[i][0]) {
-        case "mult": {
+        case "mult":
           str += `x${modif[i][1]=="diff"?"[difficulty]":this.commaFormat(modif[i][1])}`;
-        } break;
-        case "min": {
+          break;
+        case "min":
           str += `min ${modif[i][1]}`;
-        } break;
-      }
+          break;
+      };
       str += ` (${modif[i][2]})</span>`;
-    }
+    };
     return str;
   }
 }
@@ -173,6 +173,6 @@ function generatePunishment() { try {
   document.getElementById("punishment").style.textShadow = Math.floor(punishmentInfo[1])==6?"0 0 2px #ffffff,0 0 1px #ffffff":"none";
   document.getElementById("container") = utils.formatModif();
   } catch (e) {
-    document.getElementById("punishment").innerHTML = `${e.name} occured (${e.message}, ${e.stack})`;
+    document.getElementById("punishment").innerHTML = `${e.name} occured (${e.stack})`;
   }
 };
