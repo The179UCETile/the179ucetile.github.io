@@ -35,14 +35,18 @@ const utils = {
       case "mult": {
         let out = 1;
         for (let i = 0; i < modif.length&&modif[i][0] == "mult"; i++) {
-          out *= modif[i][1];
+          if (modif[i][0] == "mult") {
+            out *= modif[i][1];
+          };
         };
         return out;
         } break;
       case "min": {
         let min = -Infinity;
-        for (let i = 0; i < modif.length&&modif[i][0] == "min"; i++) {
-          min = Math.max(min, modif[i][1])
+        for (let i = 0; i < modif.length; i++) {
+          if (modif[i][0] == "min") {
+            min = Math.max(min, modif[i][1])
+          }
         };
         return min;
         } break;
