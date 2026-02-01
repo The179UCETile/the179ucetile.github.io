@@ -64,9 +64,9 @@ const utils = {
       modif[i][2]--;
       if (modif[i][2] == 0) {
         delete modif[i];
-        modif = modif.filter(noUndef);
       }
     }
+    modif = modif.filter(noUndef);
   },
   commaFormat: function(num) {
     let portions = num.toString().split(".");
