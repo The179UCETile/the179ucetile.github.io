@@ -34,7 +34,7 @@ const utils = {
     switch (type) {
       case "mult": {
         let out = 1;
-        for (let i = 0; i < modif.length&&modif[i][0] == "mult"; i++) {
+        for (let i = 0; i < modif.length; i++) {
           if (modif[i][0] == "mult") {
             out *= modif[i][1];
           };
