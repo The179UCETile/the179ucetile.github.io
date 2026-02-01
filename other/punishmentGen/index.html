@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      span.modif {
+        display: inline-block;
+        border: 2px solid #ffffff;
+        padding: 3px;
+        height: 12px;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
+    </style>
     <link rel="stylesheet" href="/styles.css">
     <title>The179UCETile's punishment generator</title>
     <link rel="icon" type="image/x-icon" href="/images/favicons/placeholder.png">
@@ -16,10 +26,11 @@
       <source src="/audio/emojideath_sfx.wav" type="audio/wav">
     </audio>
     <p><a href="/other/">Go back</a></p>
-    <h1>The179UCETile's punishment generator<sup>v1.1.0</sup></h1>
-    <p><i>inspired by <a href="https://lime-textgrid.neocities.org/punishmentwheel">lime.person's punishment wheel</a><br>last updated: January 31st, 2026</i></p>
+    <h1>The179UCETile's punishment generator<sup>v1.1.1</sup></h1>
+    <p><i>inspired by <a href="https://lime-textgrid.neocities.org/punishmentwheel">lime.person's punishment wheel</a><br>last updated: February 1st, 2026</i></p>
     <button onclick="generatePunishment();">Generate</button>
     <h2>Punishment generated:</h2>
+    <div id="container"></div>
     <p id="punishment" style="color:#00ce00;text-shadow:0 0 2px #ffffff;">not generated<br>Difficulty: 0 (Baseline Effortless)</p>
     <h2>Difficulties</h2>
     <p><span style="color:#00ce00">0: Effortless (10%)</span><br>
