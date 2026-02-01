@@ -161,7 +161,7 @@ function generatePunishment() { try {
     [`Regenerate, and multiply the next punishment by it's difficulty.`, 4.3, 4.3, ["mult", "diff", 2]],
     [`Regenerate, and all punishments will be multiplied by it's difficulty for 3 punishments.`, 5.28, 5.28 ["mult", "diff", 4]],
     [`Wait for ${utils.properNum(1, 5.37)} hour.`, utils.properDiff(5.37), 5.37],
-    [`Combine ${utils.properNum(2, 3.57, true)} punishments.`, utils.properDiff(3.57), 3.57, ["comb",,utils.properNum(2, 3.57, true)+1]]
+    [`Combine ${utils.properNum(2, 3.57, true)} punishments.`, utils.properDiff(3.57), 3.57, ["comb",,Number(utils.properNum(2, 3.57, true))+1]]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
@@ -200,7 +200,7 @@ function generatePunishment() { try {
     rangeName = Object.values(diff.ranges)[i];
   }
   if (utils.processModif("comb")==0) {
-    document.getElementById("exPunishments").innerHTML = "None";
+    document.getElementById("exPunishments").innerHTML = "";
   } else {
     document.getElementById("exPunishments").innerHTML += `${punishmentInfo[0]} [${punishmentInfo[1]} | ${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]}]<br>`;
   }
