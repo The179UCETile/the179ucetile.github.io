@@ -142,12 +142,13 @@ function generatePunishment() { try {
     [`Send someone ${utils.properNum(10, 2.2)} seconds of keyboard spam.`, utils.properDiff(2.2), 2.2],
     [`Count to ${utils.properNum(1e6, 7.99, true)} IRL.<br>Skipping numbers is not allowed.`, utils.properDiff(7.99), 7.99],
     [`For the next ${utils.properNum(20, 3.28)} minutes, speak in the form of &quot;No ___ Delete ___ Yes ___ Add ___&quot;`, utils.properDiff(3.28), 3.28],
-    [`Speak in another language that you DON&apos;T how to speak for ${utils.properNum(10, 5.94)} minutes.`, utils.properDiff(5.94), 5.94],
+    [`Speak in another language that you DON&apos;T know how to speak for ${utils.properNum(10, 5.94)} minutes.`, utils.properDiff(5.94), 5.94],
     [`Speak in Base64 encoding for ${utils.properNum(5, 6.1)} minutes.`, utils.properDiff(6.1), 6.1],
     [`Speak in +1 or -1 Caesar cypher for ${utils.properNum(8, 4.66)} minutes.`, utils.properDiff(4.66), 4.66],
     [`Regenerate, and multiply the next punishment by 0.75.`, 0.2, 0.2, ["mult", 0.75, 2]],
     [`Regenerate, and multiply the next punishment by it's difficulty.`, 4.3, 4.3, ["mult", "diff", 2]],
-    [`Regenerate, and all punishments will be multiplied by it's difficulty for 3 punishments.`, 5.28, 5.28 ["mult", "diff", 4]]
+    [`Regenerate, and all punishments will be multiplied by it's difficulty for 3 punishments.`, 5.28, 5.28 ["mult", "diff", 4]],
+    [`Wait for ${utils.properNum(1, 5.37)} hour.`, utils.properDiff(5.37), 5.37]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
