@@ -202,7 +202,7 @@ function generatePunishment() { try {
   if (utils.processModif("comb")==0) {
     document.getElementById("exPunishments").innerHTML = "None";
   } else {
-    document.getElementById("exPunishments").innerHTML += `${punishmentInfo[0]} [${punishmentInfo[1]} | ${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]}]`;
+    document.getElementById("exPunishments").innerHTML += `${punishmentInfo[0]} [${punishmentInfo[1]} | ${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]}]<br>`;
   }
   document.getElementById("punishment").innerHTML = `${punishmentInfo[0]}<br>Difficulty: ${punishmentInfo[1]} (${rangeName} ${diff.names[Math.floor(punishmentInfo[1])]})`;
   document.getElementById("punishment").style.color = diff.colors[Math.floor(punishmentInfo[1])];
