@@ -146,7 +146,8 @@ function generatePunishment() { try {
     [`Speak in Base64 encoding for ${utils.properNum(5, 6.1)} minutes.`, utils.properDiff(6.1), 6.1],
     [`Speak in +1 or -1 Caesar cypher for ${utils.properNum(8, 4.66)} minutes.`, utils.properDiff(4.66), 4.66],
     [`Regenerate, and multiply the next punishment by 0.75.`, 0.2, 0.2, ["mult", 0.75, 2]],
-    [`Regenerate, and multiply the next punishment by it's difficulty.`, 4.3, 4.3, ["mult", "diff", 2]]
+    [`Regenerate, and multiply the next punishment by it's difficulty.`, 4.3, 4.3, ["mult", "diff", 2]],
+    [`Regenerate, and all punishments will be multiplied by it's difficulty for 3 punishments.`, 5.28, 5.28 ["mult", "diff", 4]]
   ];
   for (let i = 0; i < Punishments.length; i++) {
     if (punishmentsSorted[Math.floor(Punishments[i][2])]) {
