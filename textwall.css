@@ -75,7 +75,7 @@ h3 {
 }
 
 #info {
-    background-color: rgba(1, 1, 1, 0.9);
+    background-color: rgba(1, 1, 1, 0.85);
     border: 2px solid rgba(64, 64, 64, .8);
     border-style: none solid solid none;
     backdrop-filter: blur(4px);
@@ -128,7 +128,7 @@ h3 {
 #usermenu {
     border: 2px solid rgba(32, 32, 32, 0.7);
     border-style: solid solid solid none;
-    background-color: rgba(10, 10, 10, .9);
+    background-color: rgba(10, 10, 10, .85);
     backdrop-filter: blur(4px);
     color: #fff;
     position: absolute;
@@ -483,6 +483,7 @@ td {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(4px);
     border: 1px solid rgba(213, 213, 213, 0.548);
+    border-style: none none solid solid;
     gap: 8px;
     /* spacing between inner elements */
 }
