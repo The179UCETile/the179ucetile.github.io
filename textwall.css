@@ -74,8 +74,8 @@ h3 {
 }
 
 #info {
-    background-color: rgba(12, 1, 1, 0.8);
-    border: 1px solid rgba(39, 10, 10, .8);
+    background-color: rgba(1, 1, 1, 0.8);
+    border: 1px solid rgba(10, 10, 10, .8);
     color: #fff;
     padding: 5px 0;
     font-size: 18px;
@@ -123,8 +123,8 @@ h3 {
 }
 
 #usermenu {
-    border: 1px solid rgba(49, 0, 0, 0.7);
-    background-color: rgba(26, 10, 10, .8);
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    background-color: rgba(10, 10, 10, .8);
     color: #fff;
     position: absolute;
     padding: 5px 10px;
@@ -168,7 +168,7 @@ h3 {
 
 .member:hover {
     text-decoration: line-through;
-    color: red
+    color: #ffffff
 }
 
 #register,
@@ -179,15 +179,15 @@ h3 {
 
 .buttonlink {
     text-decoration: underline;
-    color: #8B0000;
+    color: #8B8B8B;
     cursor: pointer;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 .buttonlink:hover,
 .buttonlink:active {
-    color: #FF0000;
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
     transition: color 0.3s, text-shadow 0.3s;
 }
 
@@ -226,11 +226,11 @@ input {
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: rgba(173, 0, 0, 0.35);
+    background-color: rgba(173, 173, 173, 0.35);
     border-radius: 8px;
     padding: 4px;
-    border: 1px solid rgba(139, 0, 0, 0.5);
-    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+    border: 1px solid rgba(139, 139, 139, 0.5);
+    box-shadow: 0 4px 12px rgba(139, 139, 139, 0.3);
 }
 
 #colourlist::-webkit-scrollbar,
@@ -332,8 +332,8 @@ td {
     z-index: 2;
     text-align: center;
     transition: all .5s;
-    border: 1px solid rgba(98, 1, 1, 0.8);
-    background-color: rgba(92, 0, 0, 0.949);
+    border: 1px solid rgba(98, 98, 98, 0.8);
+    background-color: rgba(0, 0, 0, 0.949);
     color: #fff;
     margin: 15px;
     padding: 5px 15px 15px;
@@ -450,7 +450,7 @@ td {
 #chat {
     position: absolute;
     top: 0;
-    color: #E80000;
+    color: #404040;
     right: 0;
     display: flex;
     height: 300px;
@@ -465,8 +465,8 @@ td {
 
 .chatcontainer {
     width: 300px;
-    background: rgba(34, 1, 1, 0.95);
-    border-radius: 10px 0 0 10px;
+    background: rgba(34, 34, 34, 0.95);
+    border-radius: 0 0 0 10px;
     padding: 12px;
     display: flex;
     flex-direction: column;
@@ -475,7 +475,7 @@ td {
     /* modern look */
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(6px);
-    border: 1px solid rgba(212, 27, 27, 0.548);
+    border: 1px solid rgba(213, 213, 213, 0.548);
     gap: 8px;
     /* spacing between inner elements */
 }
@@ -488,7 +488,7 @@ td {
 }
 
 #chatbox {
-    border: 1px solid rgba(114, 10, 10, 0.548);
+    border: 1px solid rgba(114, 114, 114, 0.548);
     background-color: #fff;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -524,7 +524,7 @@ td {
     border-radius: 5px;
     border: none;
     width: 100%;
-    background-color: rgba(211, 93, 93, 0.8);
+    background-color: rgba(128, 128, 128, 0.8);
     user-select: none
 }
 
@@ -1029,7 +1029,7 @@ ul::-webkit-scrollbar-thumb {
     bottom: 50px;
     left: 10px;
     background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(80, 0, 0, 0.8);
+    border: 1px solid rgba(80, 80, 80, 0.8);
     color: #0f0;
     padding: 5px 10px;
     font-family: monospace;
@@ -1043,7 +1043,7 @@ ul::-webkit-scrollbar-thumb {
     bottom: 80px;
     left: 10px;
     background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(80, 1, 1, 0.8);
+    border: 1px solid rgba(80, 80, 80, 0.8);
     color: #0f0;
     padding: 5px 10px;
     font-family: monospace;
@@ -1063,7 +1063,7 @@ input[type="submit"] {
     color: #aaa;
     background: #222;
     /* dark grey background */
-    border: 3px solid #411 ;
+    border: 3px solid #444 ;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1107,9 +1107,9 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    border: 2px solid #888;
+    border: 2px solid #444;
     border-radius: 4px;
-    background: #ccc;
+    background: #222;
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
@@ -1117,8 +1117,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:hover {
-    background: #bbb;
-    border-color: #666;
+    background: #111;
+    border-color: #333;
 }
 
 input[type="checkbox"]:focus {
@@ -1127,8 +1127,8 @@ input[type="checkbox"]:focus {
 }
 
 input[type="checkbox"]:checked {
-    background: #f00;
-    border-color: #a00;
+    background: #fff;
+    border-color: #888;
 }
 
 input[type="checkbox"]:checked::after {
@@ -1138,7 +1138,7 @@ input[type="checkbox"]:checked::after {
     top: 0px;
     width: 4px;
     height: 8px;
-    border: solid #fff;
+    border: solid #000;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
@@ -1150,19 +1150,19 @@ input[type="checkbox"]:focus-visible {
     /* optional subtle custom focus */
 }
 input[type="checkbox"]:disabled {
-    background: #ccc;
-    border-color: #888;
+    background: #444;
+    border-color: #666;
     cursor: not-allowed;
     opacity: 0.7;
 }
 
 input[type="checkbox"]:checked:disabled {
-    background: #d88;
-    border-color: #a88;
+    background: #bbb;
+    border-color: #888;
 }
 
 input[type="checkbox"]:disabled:hover {
-    background: #ccc;
+    background: #666;
     border-color: #888;
 }
 
@@ -1170,7 +1170,7 @@ input[type="range"] {
     appearance: none;
     width: 150px;
     height: 6px;
-    background: #ccc;
+    background: #111;
     /* track color (unfilled) */
     border-radius: 3px;
     outline: none;
@@ -1181,12 +1181,12 @@ input[type="range"] {
 
 
 input[type="range"]:hover {
-    background: #bbb;
+    background: #444;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
     height: 6px;
-    background: #ccc;
+    background: #888;
     border-radius: 3px;
 }
 
@@ -1195,10 +1195,10 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    background: #888;
+    background: #fff;
     /* grey thumb */
     border-radius: 50%;
-    border: 2px solid #666;
+    border: 2px solid #888;
     transition: all 0.2s ease;
     cursor: pointer;
     margin-top: -5px;
@@ -1206,28 +1206,28 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-    background: #666;
+    background: #ccc;
     transform: scale(1.1);
 }
 
 input[type="range"]::-moz-range-track {
     height: 6px;
-    background: #ccc;
+    background: #888;
     border-radius: 3px;
 }
 
 input[type="range"]::-moz-range-thumb {
     width: 16px;
     height: 16px;
-    background: #888;
+    background: #fff;
     border-radius: 50%;
-    border: 2px solid #666;
+    border: 2px solid #888;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 input[type="range"]::-moz-range-thumb:hover {
-    background: #666;
+    background: #ccc;
     transform: scale(1.1);
 }
 
@@ -1273,8 +1273,8 @@ textarea {
     color: #fff;
 
 
-    background: rgba(120, 20, 20, 0.8);
-    border: 1px solid rgba(200, 80, 80, 0.4);
+    background: rgba(120, 120, 120, 0.8);
+    border: 1px solid rgba(200, 200, 200, 0.4);
     border-radius: 2px;
 
     outline: none;
@@ -1286,8 +1286,8 @@ input[type="search"]:hover,
 input[type="number"]:hover,
 input[type="password"]:hover,
 textarea:hover {
-    background: rgba(150, 30, 30, 0.85);
-    border-color: rgba(220, 100, 100, 0.6);
+    background: rgba(150, 150, 150, 0.85);
+    border-color: rgba(220, 220, 220, 0.6);
 }
 
 
@@ -1296,9 +1296,9 @@ input[type="search"]:focus,
 input[type="number"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-    background: rgba(170, 40, 40, 0.9);
-    border-color: rgba(255, 120, 120, 0.8);
-    box-shadow: 0 0 6px rgba(255, 100, 100, 0.4);
+    background: rgba(120, 120, 120, 0.9);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
 
@@ -1314,9 +1314,9 @@ select {
     /* compact size */
     font-size: 14px;
     color: #fff;
-    background: rgba(120, 20, 20, 0.8);
+    background: rgba(120, 120, 120, 0.8);
     /* dark red with alpha */
-    border: 1px solid rgba(200, 80, 80, 0.4);
+    border: 1px solid rgba(200, 200, 200, 0.4);
     border-radius: 6px;
     cursor: pointer;
     outline: none;
@@ -1329,15 +1329,15 @@ select {
 
 
 select:hover {
-    background: rgba(150, 30, 30, 0.85);
-    border-color: rgba(220, 100, 100, 0.6);
+    background: rgba(150, 150, 150, 0.85);
+    border-color: rgba(220, 220, 220, 0.6);
 }
 
 
 select:focus {
-    background: rgba(170, 40, 40, 0.9);
-    border-color: rgba(255, 120, 120, 0.8);
-    box-shadow: 0 0 4px rgba(255, 100, 100, 0.3);
+    background: rgba(170, 170, 170, 0.9);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
 }
 
 
@@ -1400,8 +1400,8 @@ select::-ms-expand {
 hr {
     border: none;
     height: 4px;
-    background-color: #8B0000;
-    box-shadow: 0 2px 6px rgba(139, 0, 0, 0.5);
+    background-color: #8B8B8B;
+    box-shadow: 0 2px 6px rgba(139, 139, 139, 0.5);
     margin: 20px 0;
     border-radius: 2px;
 }
@@ -1430,8 +1430,8 @@ hr {
 
 /* i like stylizing */
 fieldset {
-    border: 2px solid #8B0000;
-    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.5);
+    border: 2px solid #8B8B8B;
+    box-shadow: 0 4px 10px rgba(139, 139, 139, 0.5);
     border-radius: 6px;
     padding: 1em;
     margin: 1em 0;
@@ -1439,46 +1439,46 @@ fieldset {
 
 a:link,
 a:visited {
-    color: #8B0000;
+    color: #8B8B8B;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 a:hover,
 a:active {
-    color: #FF0000;
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
 
 /* For inline SVG */
 svg:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0 4px 10px rgba(139, 0, 0, 0.6));
+    filter: drop-shadow(0 4px 10px rgba(139, 139, 139, 0.6));
     transition: transform 0.3s, filter 0.3s;
 }
 
 svg:active {
     transform: scale(0.98);
-    filter: drop-shadow(0 2px 8px rgba(139, 0, 0, 0.8));
+    filter: drop-shadow(0 2px 8px rgba(139, 139, 139, 0.8));
 }
 
 /* For SVG used as <img src="icon.svg"> */
 img[src$=".svg"]:hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 4px 10px rgba(139, 0, 0, 0.6));
+    filter: drop-shadow(0 4px 10px rgba(139, 139, 139, 0.6));
     transition: transform 0.3s, filter 0.3s;
     cursor: pointer;
 }
 
 img[src$=".svg"]:active {
     transform: scale(0.98);
-    filter: drop-shadow(0 2px 8px rgba(139, 0, 0, 0.8));
+    filter: drop-shadow(0 2px 8px rgba(139, 139, 139, 0.8));
 }
 
 input[type="color"] {
     width: 50px;
     height: 30px;
-    border: 2px solid #6A0000;
-    background-color: #8B0000;
+    border: 2px solid #6A6A6A;
+    background-color: #8B8B8B;
     border-radius: 5px;
     padding: 0;
     cursor: pointer;
@@ -1487,10 +1487,10 @@ input[type="color"] {
 
 input[type="color"]:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 8px rgba(139, 0, 0, 0.7);
+    box-shadow: 0 0 8px rgba(139, 139, 139, 0.7);
 }
 
 input[type="color"]:active {
     transform: scale(0.95);
-    box-shadow: 0 0 4px rgba(139, 0, 0, 0.9);
+    box-shadow: 0 0 4px rgba(139, 139, 139, 0.9);
 }
