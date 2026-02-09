@@ -6,7 +6,7 @@ body {
 }
 
 * {
-    font-family: Consolas, monospace, courier new, Courier, special;
+    font-family: 'ibm plex mono', Consolas, monospace, courier new, Courier, special;
     -webkit-tap-highlight-color: transparent
 }
 
@@ -74,8 +74,9 @@ h3 {
 }
 
 #info {
-    background-color: rgba(1, 1, 1, 0.8);
+    background-image: linear-gradient(to top, rgba(1, 1, 1, 0.8), rgba(0, 0, 0, 0.4));
     border: 1px solid rgba(10, 10, 10, .8);
+    backdrop-filter: blur(6px);
     color: #fff;
     padding: 5px 0;
     font-size: 18px;
@@ -124,7 +125,8 @@ h3 {
 
 #usermenu {
     border: 1px solid rgba(0, 0, 0, 0.7);
-    background-color: rgba(10, 10, 10, .8);
+    background-image: linear-gradient(to left, rgba(10, 10, 10, .8), rgba(0, 0, 0, .4));
+    backdrop-filter: blur(6px);
     color: #fff;
     position: absolute;
     padding: 5px 10px;
@@ -333,7 +335,7 @@ td {
     text-align: center;
     transition: all .5s;
     border: 1px solid rgba(98, 98, 98, 0.8);
-    background-color: rgba(0, 0, 0, 0.949);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6));
     color: #fff;
     margin: 15px;
     padding: 5px 15px 15px;
@@ -538,7 +540,9 @@ td {
 }
 
 #chatbutton {
-    background-color: rgba(30, 30, 30, .8);
+    background-color: rgba(34, 34, 34, .95);
+    border: 1px solid rgba(213, 213, 213, 0.548);
+    backdrop-filter: blur(6px);
     border-radius: 0 0 0 5px;
     padding: 10px;
     margin-bottom: 24px;
@@ -1443,13 +1447,13 @@ fieldset {
 
 a:link,
 a:visited {
-    color: #8B8B8B;
+    color: #FFFFFF;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 a:hover,
 a:active {
-    color: #FFFFFF;
+    color: #8F8F8F;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
 
