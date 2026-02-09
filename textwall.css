@@ -1,0 +1,1496 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    touch-action: none;
+    position: static
+}
+
+* {
+    font-family: Consolas, monospace, courier new, Courier, special;
+    -webkit-tap-highlight-color: transparent
+}
+
+canvas {
+    touch-action: none;
+    cursor: text;
+    position: absolute;
+    z-index: -1
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.bold {
+    font-weight: 700
+}
+
+.hidden {
+    display: none !important
+}
+
+#clipboard,
+#textarea {
+    width: 0;
+    height: 0;
+    transform: translate(-200px, -200px);
+    position: absolute
+}
+
+.connectingtext {
+    display: block;
+    text-align: center;
+    user-select: none
+}
+
+#nametag {
+    width: 100px;
+    margin-right: 5px
+}
+
+.infotext {
+    display: flex;
+    justify-content: center;
+    user-select: none
+}
+
+#nearby {
+    margin-right: 15px;
+    cursor: pointer
+}
+
+#connecting {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(30, 30, 30, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    color: #fff;
+    transition: opacity .5s
+}
+
+#info {
+    background-color: rgba(12, 1, 1, 0.8);
+    border: 1px solid rgba(39, 10, 10, .8);
+    color: #fff;
+    padding: 5px 0;
+    font-size: 18px;
+    pointer-events: auto;
+    transition: all .5s;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    transition: all .5s
+}
+
+#decorations {
+    position: absolute;
+    z-index: 4;
+    display: none;
+    flex-direction: row;
+    background-color: rgba(30, 30, 30, .8);
+    border-radius: 5px;
+    width: 145px;
+    justify-content: space-evenly
+}
+
+.decoration {
+    background-color: #b9b9b9;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: all 100ms
+}
+
+.decoration.enabled {
+    background-color: #fff
+}
+
+.decoration>img {
+    filter: opacity(.5);
+    width: 30px
+}
+
+.decoration.enabled>img {
+    filter: opacity(1)
+}
+
+#usermenu {
+    border: 1px solid rgba(49, 0, 0, 0.7);
+    background-color: rgba(26, 10, 10, .8);
+    color: #fff;
+    position: absolute;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 0 5px 5px 0;
+    transform: translateX(-105%);
+    pointer-events: auto;
+    transition: all .5s;
+    display: flex;
+    width: 300px;
+    height: 540px;
+    max-height: 70vh;
+    justify-content: space-between;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+#admin,
+#wallsettings {
+    display: none
+}
+
+#addmembers {
+    margin: 0 10px
+}
+
+#memberlist {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px
+}
+
+.member {
+    padding: 5px;
+    margin: 3px;
+    background-color: rgba(255, 255, 255, .35);
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer
+}
+
+.member:hover {
+    text-decoration: line-through;
+    color: red
+}
+
+#register,
+#loggedin,
+#accountsettings {
+    display: none
+}
+
+.buttonlink {
+    text-decoration: underline;
+    color: #8B0000;
+    cursor: pointer;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.buttonlink:hover,
+.buttonlink:active {
+    color: #FF0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+#optionsmenu {
+    width: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    overflow-wrap: break-word;
+    scrollbar-width: none;
+    max-height: 526px
+}
+
+input {
+    vertical-align: middle;
+    margin-top: 5px
+}
+
+.sidething {
+    display: flex;
+    flex-direction: column
+}
+
+#closemenu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+#closemenu:active,
+#closeteleport:active {
+    transform: scale(.9)
+}
+
+#colourlist {
+    transition: background-color 0.3s, box-shadow 0.3s;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: rgba(173, 0, 0, 0.35);
+    border-radius: 8px;
+    padding: 4px;
+    border: 1px solid rgba(139, 0, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+}
+
+#colourlist::-webkit-scrollbar,
+#optionsmenu::-webkit-scrollbar {
+    display: none
+}
+
+.colour {
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    border-radius: 25%;
+    box-sizing: border-box;
+    transition: all 50ms
+}
+
+.colour.selected {
+    border: 3px solid #fff
+}
+
+#zoom {
+    width: 150px
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid #fff
+}
+
+#coords {
+    cursor: pointer
+}
+
+.infobtn {
+    width: 20px;
+    padding: 0 10px;
+    vertical-align: middle;
+    transition: all .1s;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.infobtn>img,
+.button {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none
+}
+
+.infobtn:active {
+    transform: scale(.9);
+    background-color: rgba(30, 30, 30, .3)
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 0
+}
+
+#toast {
+    position: absolute;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    transition: opacity 0.5s;
+    /* fade effect */
+    padding: 5px;
+    max-width: 80vw;
+    overflow-wrap: break-word;
+    top: 20px;
+    /* fixed position */
+    user-select: none;
+    z-index: 3;
+    opacity: 0;
+    /* initially invisible */
+}
+
+#toast.toasting {
+    opacity: 1;
+    /* fade in */
+    pointer-events: auto;
+}
+
+#teleport {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    text-align: center;
+    transition: all .5s;
+    border: 1px solid rgba(98, 1, 1, 0.8);
+    background-color: rgba(92, 0, 0, 0.949);
+    color: #fff;
+    margin: 15px;
+    padding: 5px 15px 15px;
+    border-radius: 5px;
+    width: 330px;
+    max-width: 85vw;
+    top: -400px;
+    user-select: none;
+    max-height: 400px;
+    overflow-y: hidden;
+    opacity: 0;
+}
+
+#teleport.open {
+    top: 40px;
+    max-height: 100vh;
+    opacity: 1;
+}
+
+
+#teleport>form>input,
+.coordinput>div>input {
+    margin-bottom: 5px
+}
+
+#tpx,
+#tpy {
+    width: 70px
+}
+
+.coordinput {
+    text-align: left;
+    display: flex;
+    justify-content: center
+}
+
+.tptitle {
+    font-size: 26px;
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700
+}
+
+#closeteleport {
+    position: absolute;
+    transition: all .1s;
+    top: 5px;
+    right: 5px
+}
+
+#walllist {
+    text-align: left
+}
+
+#walllist>span>a {
+    color: #fff
+}
+
+#walllist>span {
+    font-size: 20px;
+    font-weight: 700
+}
+
+.walllist {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    height: 75px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 5px
+}
+
+.walllist a {
+    width: 100%;
+    display: block;
+    padding: 3px 0;
+    overflow-wrap: break-word;
+    word-break: break-all
+}
+
+.walllist li {
+    display: flex
+}
+
+.walllist li:hover {
+    background-color: rgba(255, 255, 255, .1)
+}
+
+.walllist img {
+    margin-right: 3px;
+    vertical-align: middle
+}
+
+#thememenu,
+#fontmenu {
+    margin-top: 10px;
+    margin-right: 20px
+}
+
+#fontmenu>input {
+    vertical-align: unset
+}
+
+#customfont {
+    width: 110px
+}
+
+#customfontsize {
+    width: 40px
+}
+
+#chat {
+    position: absolute;
+    top: 0;
+    color: #E80000;
+    right: 0;
+    display: flex;
+    height: 300px;
+    transition: all .5s;
+    pointer-events: none;
+    transform: translateX(327px)
+}
+
+#chat.open {
+    transform: translateX(0px)
+}
+
+.chatcontainer {
+    width: 300px;
+    background: rgba(34, 1, 1, 0.95);
+    border-radius: 10px 0 0 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+
+    /* modern look */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(212, 27, 27, 0.548);
+    gap: 8px;
+    /* spacing between inner elements */
+}
+
+
+
+.msgcontainer {
+    display: flex;
+    justify-content: stretch
+}
+
+#chatbox {
+    border: 1px solid rgba(114, 10, 10, 0.548);
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    word-wrap: break-word;
+    overflow: auto;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#chatbox.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+#chatbox>p {
+    margin: 5px
+}
+
+#chatmsg {
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    background-color: rgba(211, 93, 93, 0.8);
+    user-select: none
+}
+
+#sendmsg {
+    margin: 5px;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    width: 20px;
+    padding: 5px;
+    margin: 5px 0 0 5px
+}
+
+#chatbutton {
+    background-color: rgba(30, 30, 30, .8);
+    border-radius: 0 0 0 5px;
+    padding: 10px;
+    margin-bottom: 24px;
+    pointer-events: auto;
+    position: relative;
+    cursor: pointer
+}
+
+#unread {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d44b4b;
+    position: absolute;
+    left: -2px;
+    bottom: -2px;
+    display: none
+}
+
+#unread.show {
+    display: block
+}
+
+.button {
+    cursor: pointer;
+    transition: all .1s;
+    user-select: none
+}
+
+.button:active {
+    transform: scale(.9)
+}
+
+@font-face {
+    font-family: ubuntu mono;
+    src: url(fonts/UbuntuMono-Regular.ttf)
+}
+
+@font-face {
+    font-family: ubuntu mono;
+    src: url(fonts/UbuntuMono-Bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: ubuntu mono;
+    src: url(fonts/UbuntuMono-Italic.ttf);
+    font-style: italic
+}
+
+@font-face {
+    font-family: ubuntu mono;
+    src: url(fonts/UbuntuMono-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: oblique
+}
+
+@font-face {
+    font-family: inconsolata;
+    src: url(fonts/Inconsolata-Regular.ttf)
+}
+
+@font-face {
+    font-family: inconsolata;
+    src: url(fonts/Inconsolata-Bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: ibm plex mono;
+    src: url(fonts/IBMPlexMono-Regular.ttf)
+}
+
+@font-face {
+    font-family: ibm plex mono;
+    src: url(fonts/IBMPlexMono-Bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: ibm plex mono;
+    src: url(fonts/IBMPlexMono-Italic.ttf);
+    font-style: italic
+}
+
+@font-face {
+    font-family: ibm plex mono;
+    src: url(fonts/IBMPlexMono-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: oblique
+}
+
+@font-face {
+    font-family: roboto mono;
+    src: url(fonts/RobotoMono-Regular.ttf)
+}
+
+@font-face {
+    font-family: roboto mono;
+    src: url(fonts/RobotoMono-Bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: roboto mono;
+    src: url(fonts/RobotoMono-Italic.ttf);
+    font-style: italic
+}
+
+@font-face {
+    font-family: roboto mono;
+    src: url(fonts/RobotoMono-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: oblique
+}
+
+@font-face {
+    font-family: courier prime;
+    src: url(fonts/CourierPrime-Regular.ttf)
+}
+
+@font-face {
+    font-family: courier prime;
+    src: url(fonts/CourierPrime-Bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: courier prime;
+    src: url(fonts/CourierPrime-Italic.ttf);
+    font-style: italic
+}
+
+@font-face {
+    font-family: courier prime;
+    src: url(fonts/CourierPrime-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: oblique
+}
+
+@font-face {
+    font-family: cousine;
+    src: url(fonts/Cousine-Regular.ttf)
+}
+
+@font-face {
+    font-family: cousine;
+    src: url(fonts/Cousine-Bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: cousine;
+    src: url(fonts/Cousine-Italic.ttf);
+    font-style: italic
+}
+
+@font-face {
+    font-family: cousine;
+    src: url(fonts/Cousine-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: oblique
+}
+
+@font-face {
+    font-family: pointfree;
+    src: url(fonts/pointfree.ttf)
+}
+
+@font-face {
+    font-family: pointfree;
+    src: url(fonts/pointfree-bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: monofur;
+    src: url(fonts/monof55.ttf)
+}
+
+@font-face {
+    font-family: monofur;
+    src: url(fonts/monof56.ttf);
+    font-style: italic
+}
+
+@font-face {
+    font-family: fantasque sans mono;
+    src: url(fonts/FantasqueSansMono-Regular.ttf)
+}
+
+@font-face {
+    font-family: fantasque sans mono;
+    src: url(fonts/FantasqueSansMono-Bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: fantasque sans mono;
+    src: url(fonts/FantasqueSansMono-Italic.ttf);
+    font-style: italic
+}
+
+@font-face {
+    font-family: fantasque sans mono;
+    src: url(fonts/FantasqueSansMono-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: oblique
+}
+
+@font-face {
+    font-family: libertinus mono;
+    src: url(fonts/LibertinusMono-Regular.ttf)
+}
+
+@font-face {
+    font-family: libertinus mono;
+    src: url(fonts/LibertinusMono-Bold.ttf);
+    font-weight: 700
+}
+
+@font-face {
+    font-family: fixedsys;
+    src: url(fonts/fixedsys.ttf)
+}
+
+@font-face {
+    font-family: special;
+    src: url(fonts/special.ttf?v=10)
+}
+
+@font-face {
+    font-family: cutive mono;
+    src: url(fonts/CutiveMono-Regular.ttf)
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Hack';
+  src: url('fonts/Hack-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hack';
+  src: url('fonts/Hack-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hack';
+  src: url('fonts/Hack-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Hack';
+  src: url('fonts/Hack-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Fira Code';
+  src: url('fonts/FiraCode-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fira Code';
+  src: url('fonts/FiraCode-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('fonts/SpaceMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('fonts/SpaceMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('fonts/SpaceMono-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Anonymous Pro';
+  src: url('fonts/AnonymousPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Anonymous Pro';
+  src: url('fonts/AnonymousPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Anonymous Pro';
+  src: url('fonts/AnonymousPro-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Anonymous Pro';
+  src: url('fonts/AnonymousPro-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('fonts/SourceCodePro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('fonts/SourceCodePro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('fonts/SourceCodePro-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('fonts/SourceCodePro-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Iosevka';
+  src: url('fonts/Iosevka-Regular.ttc') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Iosevka';
+  src: url('fonts/Iosevka-Bold.ttc') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cascadia Mono';
+  src: url('fonts/CascadiaMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cascadia Mono';
+  src: url('fonts/CascadiaMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cascadia Mono';
+  src: url('fonts/CascadiaMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cascadia Mono';
+  src: url('fonts/CascadiaMono-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Menlo';
+  src: url('fonts/Menlo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PxPlus IBM VGA8';
+  src: url('fonts/PxPlus_IBM_VGA8.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lucida Console';
+  src: url('fonts/lucon.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Monaco';
+  src: url('fonts/Monaco.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Andale Mono';
+  src: url('fonts/andalemono.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Consolas';
+  src: url('fonts/CONSOLA.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.buttons {
+    display: flex;
+    justify-content: stretch;
+    width: 100vw;
+    height: 40px;
+    user-select: none
+}
+
+@media only screen and (min-width:750px) {
+    #info {
+        top: 0;
+        bottom: unset;
+        border-radius: 0 0 5px 0;
+        padding: 5px
+    }
+
+    .infobtn>img {
+        width: 20px
+    }
+
+    .buttons {
+        width: 100%;
+        height: unset
+    }
+
+    #usermenu {
+        margin-top: 60px
+    }
+}
+
+ul::-webkit-scrollbar {
+    width: 8px
+}
+
+ul::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .1);
+    border-radius: 5px
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 5px
+}
+
+#ping {
+    position: fixed;
+    bottom: 50px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(80, 0, 0, 0.8);
+    color: #0f0;
+    padding: 5px 10px;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+#fpsc {
+    position: fixed;
+    bottom: 80px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(80, 1, 1, 0.8);
+    color: #0f0;
+    padding: 5px 10px;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+
+button,
+input[type="button"],
+input[type="submit"] {
+    padding: 3px 20px;
+    /* compact size */
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaa;
+    background: #222;
+    /* dark grey background */
+    border: 3px solid #411 ;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+button:hover,
+input[type="button"],
+input[type="submit"]:hover {
+    background: #666;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+button:disabled,
+input[type="submit"]:disabled,
+input[type="button"]:disabled {
+    background: #333;
+    color: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+input[type="button"]:disabled {
+    background: #333;
+    color: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #888;
+    border-radius: 4px;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    outline: none;
+}
+
+input[type="checkbox"]:hover {
+    background: #bbb;
+    border-color: #666;
+}
+
+input[type="checkbox"]:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+input[type="checkbox"]:checked {
+    background: #f00;
+    border-color: #a00;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+input[type="checkbox"]:focus-visible {
+    outline: none;
+    /* ensures no default ring */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+    /* optional subtle custom focus */
+}
+input[type="checkbox"]:disabled {
+    background: #ccc;
+    border-color: #888;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+input[type="checkbox"]:checked:disabled {
+    background: #d88;
+    border-color: #a88;
+}
+
+input[type="checkbox"]:disabled:hover {
+    background: #ccc;
+    border-color: #888;
+}
+
+input[type="range"] {
+    appearance: none;
+    width: 150px;
+    height: 6px;
+    background: #ccc;
+    /* track color (unfilled) */
+    border-radius: 3px;
+    outline: none;
+    /* remove focus outline */
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+
+input[type="range"]:hover {
+    background: #bbb;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #ccc;
+    border-radius: 3px;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #888;
+    /* grey thumb */
+    border-radius: 50%;
+    border: 2px solid #666;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin-top: -5px;
+    /* center thumb on track */
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #666;
+    transform: scale(1.1);
+}
+
+input[type="range"]::-moz-range-track {
+    height: 6px;
+    background: #ccc;
+    border-radius: 3px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #888;
+    border-radius: 50%;
+    border: 2px solid #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: #666;
+    transform: scale(1.1);
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background: #888;
+    border-radius: 50%;
+    border: 2px solid #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+input[type="range"]::-ms-thumb:hover {
+    background: #666;
+    transform: scale(1.1);
+}
+
+input[type="text"],
+input[type="search"],
+input[type="number"],
+input[type="password"],
+textarea {
+    padding: 4px 2px;
+    color: #fff;
+
+
+    background: rgba(120, 20, 20, 0.8);
+    border: 1px solid rgba(200, 80, 80, 0.4);
+    border-radius: 2px;
+
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+input[type="text"]:hover,
+input[type="search"]:hover,
+input[type="number"]:hover,
+input[type="password"]:hover,
+textarea:hover {
+    background: rgba(150, 30, 30, 0.85);
+    border-color: rgba(220, 100, 100, 0.6);
+}
+
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    background: rgba(170, 40, 40, 0.9);
+    border-color: rgba(255, 120, 120, 0.8);
+    box-shadow: 0 0 6px rgba(255, 100, 100, 0.4);
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: #fff;
+    font-style: italic;
+}
+
+
+select {
+    padding: 4px 8px;
+    /* compact size */
+    font-size: 14px;
+    color: #fff;
+    background: rgba(120, 20, 20, 0.8);
+    /* dark red with alpha */
+    border: 1px solid rgba(200, 80, 80, 0.4);
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.25s ease;
+    appearance: none;
+    /* removes default arrow on some browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+select:hover {
+    background: rgba(150, 30, 30, 0.85);
+    border-color: rgba(220, 100, 100, 0.6);
+}
+
+
+select:focus {
+    background: rgba(170, 40, 40, 0.9);
+    border-color: rgba(255, 120, 120, 0.8);
+    box-shadow: 0 0 4px rgba(255, 100, 100, 0.3);
+}
+
+
+select::-ms-expand {
+    display: none;
+    /* hide default arrow in IE */
+}
+
+@keyframes rainbow {
+    0% {
+        color: hsl(0, 100%, 50%)
+    }
+
+    10% {
+        color: hsl(36, 100%, 50%)
+    }
+
+    20% {
+        color: hsl(72, 100%, 50%)
+    }
+
+    30% {
+        color: hsl(108, 100%, 50%)
+    }
+
+    40% {
+        color: hsl(144, 100%, 50%)
+    }
+
+    50% {
+        color: hsl(180, 100%, 50%)
+    }
+
+    60% {
+        color: hsl(216, 100%, 50%)
+    }
+
+    70% {
+        color: hsl(252, 100%, 50%)
+    }
+
+    80% {
+        color: hsl(288, 100%, 50%)
+    }
+
+    90% {
+        color: hsl(324, 100%, 50%)
+    }
+
+    100% {
+        color: hsl(360, 100%, 50%)
+    }
+
+}
+
+.animatedTags .adminTag {
+    animation: rainbow 3.6s linear infinite;
+}
+
+hr {
+    border: none;
+    height: 4px;
+    background-color: #8B0000;
+    box-shadow: 0 2px 6px rgba(139, 0, 0, 0.5);
+    margin: 20px 0;
+    border-radius: 2px;
+}
+
+.alert {
+    background-color: rgb(112, 0, 0);
+    color: white;
+    font-weight: italic;
+    border-radius: 5px;
+    animation: blinkRed 2s infinite;
+}
+
+@keyframes blinkRed {
+    0% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: darkred;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+/* i like stylizing */
+fieldset {
+    border: 2px solid #8B0000;
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.5);
+    border-radius: 6px;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+a:link,
+a:visited {
+    color: #8B0000;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover,
+a:active {
+    color: #FF0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+}
+
+/* For inline SVG */
+svg:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 10px rgba(139, 0, 0, 0.6));
+    transition: transform 0.3s, filter 0.3s;
+}
+
+svg:active {
+    transform: scale(0.98);
+    filter: drop-shadow(0 2px 8px rgba(139, 0, 0, 0.8));
+}
+
+/* For SVG used as <img src="icon.svg"> */
+img[src$=".svg"]:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 4px 10px rgba(139, 0, 0, 0.6));
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
+}
+
+img[src$=".svg"]:active {
+    transform: scale(0.98);
+    filter: drop-shadow(0 2px 8px rgba(139, 0, 0, 0.8));
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 30px;
+    border: 2px solid #6A0000;
+    background-color: #8B0000;
+    border-radius: 5px;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+input[type="color"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(139, 0, 0, 0.7);
+}
+
+input[type="color"]:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 4px rgba(139, 0, 0, 0.9);
+}
