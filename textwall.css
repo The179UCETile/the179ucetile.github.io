@@ -75,7 +75,7 @@ h3 {
 }
 
 #info {
-    background-color: rgba(1, 1, 1, 0.9);
+    background-color: rgba(1, 1, 1, 0.95);
     border: 2px solid rgba(64, 64, 64, .8);
     backdrop-filter: blur(4px);
     color: #fff;
@@ -126,7 +126,7 @@ h3 {
 
 #usermenu {
     border: 2px solid rgba(32, 32, 32, 0.7);
-    background-color: rgba(10, 10, 10, .9);
+    background-color: rgba(10, 10, 10, .95);
     backdrop-filter: blur(4px);
     color: #fff;
     position: absolute;
