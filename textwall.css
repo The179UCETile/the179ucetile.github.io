@@ -76,7 +76,7 @@ h3 {
 
 #info {
     background-color: rgba(1, 1, 1, 0.8);
-    border: 1px solid rgba(10, 10, 10, .8);
+    border: 2px solid rgba(64, 64, 64, .8);
     backdrop-filter: blur(4px);
     color: #fff;
     padding: 5px 0;
@@ -125,7 +125,7 @@ h3 {
 }
 
 #usermenu {
-    border: 1px solid rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(32, 32, 32, 0.7);
     background-color: rgba(10, 10, 10, .8);
     backdrop-filter: blur(4px);
     color: #fff;
@@ -229,7 +229,7 @@ input {
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: rgba(173, 173, 173, 0.35);
+    background-color: rgba(150, 150, 150, 0.35);
     border-radius: 8px;
     padding: 4px;
     border: 1px solid rgba(139, 139, 139, 0.5);
@@ -336,7 +336,7 @@ td {
     z-index: 2;
     text-align: center;
     transition: all .5s;
-    border: 1px solid rgba(98, 98, 98, 0.8);
+    border: 2px solid rgba(98, 98, 98, 0.8);
     background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(4px);
     color: #fff;
