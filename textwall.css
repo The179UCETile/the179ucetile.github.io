@@ -129,7 +129,7 @@ h3 {
 }
 
 .decoration.enabled>img {
-    filter: opacity(1)
+    filter: invert(0);
 }
 
 #usermenu {
