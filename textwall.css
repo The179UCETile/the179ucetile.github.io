@@ -790,6 +790,10 @@ td {
     src: url(/fonts/monospace-textwall-wip.ttf)
 }
 @font-face {
+    font-family: 'braille octant';
+    src: url(/fonts/worst-font-ever.ttf)
+}
+@font-face {
   font-family: 'JetBrains Mono';
   src: url('https://tw.2s4.me/static/fonts/JetBrainsMono-Regular.ttf') format('truetype');
   font-weight: 400;
