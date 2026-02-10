@@ -75,7 +75,10 @@ h3 {
 }
 
 #info {
-    background-color: rgba(1, 1, 1, 0.8);
+    background-image: linear-gradient(135deg, 
+    rgba(1, 1, 1, 0.8) 25%,
+    rgba(64, 64, 64, 0.8) 50%,
+    rgba(1, 1, 1, 0.8) 75%);
     border: 2px solid rgba(64, 64, 64, .8);
     border-style: none solid solid none;
     backdrop-filter: blur(4px);
@@ -128,16 +131,16 @@ h3 {
 #usermenu {
     border: 2px solid rgba(32, 32, 32, 0.7);
     border-style: solid solid solid none;
-    background-image: linear-gradient(125deg, 
+    background-image: linear-gradient(135deg, 
     rgba(10, 10, 10, .8) 15%, 
     rgba(64, 64, 64, .8) 25%,
     rgba(10, 10, 10, .8) 35%,
+    rgba(10, 10, 10, .8) 45%,
+    rgba(64, 64, 64, .8) 50%,
     rgba(10, 10, 10, .8) 55%,
-    rgba(64, 64, 64, .8) 60%,
-    rgba(10, 10, 10, .8) 65%,
-    rgba(10, 10, 10, .8) 70%,
-    rgba(64, 64, 64, .8) 75%,
-    rgba(10, 10, 10, .8) 80%);
+    rgba(10, 10, 10, .8) 60%,
+    rgba(64, 64, 64, .8) 65%,
+    rgba(10, 10, 10, .8) 70%);
     backdrop-filter: blur(4px);
     color: #fff;
     position: absolute;
@@ -481,7 +484,10 @@ td {
 
 .chatcontainer {
     width: 300px;
-    background: rgba(34, 34, 34, 0.8);
+    background-image: linear-gradient(135deg, 
+    rgba(34, 34, 34, 0.8),
+    rgba(64, 64, 64, 0.8),
+    rgba(34, 34, 34, 0.8));
     border-radius: 0 0 0 10px;
     padding: 12px;
     display: flex;
@@ -541,13 +547,25 @@ td {
     border-radius: 5px;
     border: none;
     width: 100%;
-    background-color: rgba(128, 128, 128, 0.8);
+    background-image: conic-gradient(
+    rgba(96, 96, 96, 0.8) 0deg,
+    rgba(128, 128, 128, 0.8) 45deg,
+    rgba(96, 96, 96, 0.8) 90deg,
+    rgba(96, 96, 96, 0.8) 180deg,
+    rgba(128, 128, 128, 0.8) 215deg,
+    rgba(96, 96, 96, 0.8) 270deg);
     user-select: none
 }
 
 #sendmsg {
     margin: 5px;
-    background-color: rgba(0, 0, 0, .3);
+    background-image: conic-gradient(
+    rgba(0, 0, 0, .3) 0deg,
+    rgba(64, 64, 64, .3) 45deg,
+    rgba(0, 0, 0, .3) 90deg,
+    rgba(0, 0, 0, .3) 180deg,
+    rgba(64, 64, 64, .3) 215deg,
+    rgba(0, 0, 0, .3) 270deg);
     border-radius: 5px;
     width: 20px;
     padding: 5px;
@@ -555,7 +573,7 @@ td {
 }
 
 #chatbutton {
-    background-color: rgba(34, 34, 34, .95);
+    background-image: linear-gradient(to right, rgba(34, 34, 34, .95), rgba(64, 64, 64, .95));
     border: 1px solid rgba(213, 213, 213, 0.548);
     border-style: none none solid solid;
     backdrop-filter: blur(4px);
