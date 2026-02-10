@@ -401,7 +401,7 @@ td {
 }
 
 #walllist>span {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700
 }
 
@@ -409,7 +409,7 @@ td {
     list-style: none;
     padding: 0;
     text-align: left;
-    height: 140px;
+    height: 75px;
     overflow-y: auto;
     overflow-x: hidden;
     margin-bottom: 5px
