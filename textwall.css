@@ -130,14 +130,14 @@ h3 {
     border-style: solid solid solid none;
     background-image: linear-gradient(125deg, 
     rgba(10, 10, 10, .8) 15%, 
-    rgba(64, 64, 64, .8) 20%,
-    rgba(10, 10, 10, .8) 25%,
+    rgba(64, 64, 64, .8) 25%,
     rgba(10, 10, 10, .8) 35%,
-    rgba(64, 64, 64, .8) 37.5%,
-    rgba(10, 10, 10, .8) 40%,
-    rgba(10, 10, 10, .8) 45%,
-    rgba(64, 64, 64, .8) 47.5%,
-    rgba(10, 10, 10, .8) 50%);
+    rgba(10, 10, 10, .8) 55%,
+    rgba(64, 64, 64, .8) 60%,
+    rgba(10, 10, 10, .8) 65%,
+    rgba(10, 10, 10, .8) 70%,
+    rgba(64, 64, 64, .8) 75%,
+    rgba(10, 10, 10, .8) 80%);
     backdrop-filter: blur(4px);
     color: #fff;
     position: absolute;
