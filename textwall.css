@@ -128,7 +128,16 @@ h3 {
 #usermenu {
     border: 2px solid rgba(32, 32, 32, 0.7);
     border-style: solid solid solid none;
-    background-color: rgba(10, 10, 10, .8);
+    background-image: linear-gradient(135deg, 
+    rgba(10, 10, 10, .8) 15%, 
+    rgba(96, 96, 96, .8) 25%,
+    rgba(10, 10, 10, .8) 35%,
+    rgba(10, 10, 10, .8) 45%,
+    rgba(96, 96, 96, .8) 50%,
+    rgba(10, 10, 10, .8) 55%,
+    rgba(10, 10, 10, .8) 60%,
+    rgba(96, 96, 96, .8) 65%,
+    rgba(10, 10, 10, .8) 70%);
     backdrop-filter: blur(4px);
     color: #fff;
     position: absolute;
@@ -231,11 +240,11 @@ input {
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: rgba(150, 150, 150, 0.35);
+    background-color: rgba(140, 140, 140, 0.35);
     border-radius: 8px;
     padding: 4px;
-    border: 1px solid rgba(139, 139, 139, 0.5);
-    box-shadow: 0 4px 12px rgba(139, 139, 139, 0.3);
+    border: 1px solid rgba(130, 130, 130, 0.5);
+    box-shadow: 0 4px 12px rgba(80, 80, 80, 0.3);
 }
 
 #colourlist::-webkit-scrollbar,
