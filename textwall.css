@@ -124,7 +124,7 @@ h3 {
 }
 
 .decoration>img {
-    filter: opacity(.5);
+    filter: opacity(.5), invert(1);
     width: 30px
 }
 
