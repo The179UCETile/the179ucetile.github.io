@@ -826,6 +826,10 @@ td {
     src: url(/fonts/worst-font-ever.ttf)
 }
 @font-face {
+    font-family: 'deltas font';
+    src: url(/fonts/deltas-font-a1-4.ttf)
+}
+@font-face {
   font-family: 'JetBrains Mono';
   src: url('https://tw.2s4.me/static/fonts/JetBrainsMono-Regular.ttf') format('truetype');
   font-weight: 400;
