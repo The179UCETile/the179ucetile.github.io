@@ -104,7 +104,7 @@ w.on("msg", (d)=>{
       }; break;
       // /whereIsId command
       // shows an id's position
-      case "/whereIsId": {
+      case "/whereisid": {
         if (inputs == "") {
           w.chat.send("[CMD] Syntax: /whereIsId <userId>")
         } else {
