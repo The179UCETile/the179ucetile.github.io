@@ -31,10 +31,11 @@ w.on("msg", (d)=>{
         } else {
           if (inputsArr[1]) {
             w.chat.send(`[CMD] Warping to: /${inputsArr[0]}/${inputsArr[1]}`)
+            w.goto(inputsArr[0], inputsArr[1])
           } else {
-            w.chat.send(`[CMD] Warping to: /${inputsArr[0]}`)
+            w.chat.send(`[CMD] Warping to: /${inputs}`)
+            w.goto(inputs)
           };
-          w.goto(...inputsArr.slice(0, 2))
         }
       }; break;
       // /tp command
