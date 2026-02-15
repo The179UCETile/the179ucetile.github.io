@@ -27,15 +27,10 @@ w.on("msg", (d)=>{
       // teleports the client to a wall
       case "/warp": {
         if (inputs == "") {
-          w.chat.send("[CMD] Syntax: /warp <wall> <subwall, optional>")
+          w.chat.send("[CMD] Syntax: /warp <wall>")
         } else {
-          if (inputsArr[1]) {
-            w.chat.send(`[CMD] Warping to: /${inputsArr[0]}/${inputsArr[1]}`)
-            w.goto(inputsArr[0], inputsArr[1])
-          } else {
-            w.chat.send(`[CMD] Warping to: /${inputs}`)
-            w.goto(inputs)
-          };
+          w.chat.send(`[CMD] Warping to: /${inputs}`)
+          w.goto(inputs)
         }
       }; break;
       // /tp command
