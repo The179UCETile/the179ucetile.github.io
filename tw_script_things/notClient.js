@@ -81,6 +81,46 @@ w.on("msg", (d)=>{
         h[stylesheetPos].href = "https://the179ucetile.github.io/textwall.css";
         w.chat.send("[CMD] Changed page CSS.")
       }; break;
+      // /whereIs command
+      // shows someone's position
+      case "/whereis": {
+        if (inputs == "") {
+          w.chat.send("[CMD] Syntax: /whereIs <username> (case sensitive)")
+        } else {
+          let userInWall = false;
+          let userId = 0;
+          for (let i in cursors) {
+            if (cursors[i].n == inputs) {
+              userInWall = true;
+              userId = i
+            }
+          };
+          if (userInWall) {
+            w.chat.send(`[CMD] ${inputs} is at ${cursors[userId].l[0]}, ${-cursors[userId].l[1]}`)
+          } else {
+            w.chat.send(`[CMD] ${inputs} is not in this wall!`)
+          }
+        }
+      }; break;
+      // /whereIsId command
+      // shows an id's position
+      case "/whereIsId": {
+        if (inputs == "") {
+          w.chat.send("[CMD] Syntax: /whereIsId <userId>")
+        } else {
+          let userInWall = false;
+          for (let i in cursors) {
+            if (i == inputs) {
+              userInWall = true
+            }
+          };
+          if (userInWall) {
+            w.chat.send(`[CMD] ID ${inputs} is at ${cursors[inputs].l[0]}, ${-cursors[inputs].l[1]}`)
+          } else {
+            w.chat.send(`[CMD] ID ${inputs} is not in this wall!`)
+          }
+        }
+      }; break;
     }
   }
 })
