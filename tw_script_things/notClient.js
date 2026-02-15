@@ -25,8 +25,8 @@ w.on("msg", (d)=>{
     }
   };
   if (isSentByClient) {
-    const inputsArr = getImpArr(string);
-    const inputs = getImp(string);
+    const inputsArr = getImpArr(d.msg);
+    const inputs = getImp(d.msg);
     switch (getCmd(d.msg).toLowerCase()) {
       // /warp command
       // teleports the client to a wall
