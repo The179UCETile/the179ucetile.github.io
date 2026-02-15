@@ -5,12 +5,7 @@ function getCmd(string) {
 }
 // function to get the command's inputs
 function getImpArr(string) {
-  const arr = string.split(" ");
-  let inputs = "";
-  for (let i = 1; i < arr.length; i++) {
-    inputs += arr[i]
-  };
-  return arr
+  return string.split(" ").slice(1)
 }
 function getImp(string) {
   return getImpArr(string).join(" ")
