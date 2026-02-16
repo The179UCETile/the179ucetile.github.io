@@ -15,7 +15,6 @@ function render(id) {
   switch (id) {
     case 0: {
       ctx.beginPath();
-      ctx.moveTo(mapX(-1), mapY(0));
       for (let i = 0; i <= 50; i++) {
         if (i == 0) {
           ctx.moveTo(mapX(-1), mapY(Math.sin(t * Math.PI * 2) / 2))
