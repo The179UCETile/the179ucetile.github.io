@@ -25,9 +25,9 @@ div.contain {
   left: 0;
   width: 400px;
   height: 75vh;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
   background-image: linear-gradient(to right, #000000c0, #00000080);
+  backdrop-filter: blur(4px);
   z-index: 1;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -41,6 +41,7 @@ div.newsticker {
   height: inherit;
   text-align: center;
   background-image: linear-gradient(to right, #00000020, #000000c0);
+  backdrop-filter: blur(4px);
   border-color: #404040c0;
   border-left-style: solid;
   border-width: 6px;
