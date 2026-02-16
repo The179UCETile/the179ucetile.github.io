@@ -17,6 +17,9 @@ function render(id) {
       ctx.beginPath();
       ctx.moveTo(mapX(-1), mapY(0));
       for (let i = 0; i <= 50; i++) {
+        if (i == 0) {
+          ctx.moveTo(mapX(-1), mapY(Math.sin(t * Math.PI * 2) / 2))
+        };
         ctx.lineTo(mapX(i / 25 - 1), mapY(Math.sin((i / 25 + t) * Math.PI * 2) / 2))
       };
       ctx.lineWidth = 5;
