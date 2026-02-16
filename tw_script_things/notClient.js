@@ -10,26 +10,31 @@ function getImpArr(string) {
 function getImp(string) {
   return getImpArr(string).join(" ")
 }
-w.on("msg", (d)=>{
+// w.chat.send() but it only shows on the client.
+function send(string) {
+  var p = document.createElement('p');
+  p.innerHTML = `<span style="color:#3690EA">[CLIENT]</span> ~ ${string}`;
+  document.getElementById("chatbox").appendChild(p);
+}
+w.on("chatBefore", (d)=>{
   // check if w.cursors doesn't contain the client's name
   const cursors = Object.fromEntries(w.cursors);
-  let isSentByClient = true;
-  for (let i in cursors) {
-    if (cursors[i].n == d.nick) {
-      isSentByClient = false
-    }
-  };
-  if (isSentByClient) {
+  if (d.msg.startsWith("/")) {
     const inputsArr = getImpArr(d.msg);
     const inputs = getImp(d.msg);
     switch (getCmd(d.msg).toLowerCase()) {
+      // /help command
+      // duh.
+      case "/help": {
+        send("Commands: <br>/help - Shows this text.<br>/warp - Teleports you to a wall.<br>/tp - Teleports you to a specified position.<br>/users - Shows all users.<br>/changeTheme - Changes the theme.<br>/useCustomCSS - Changes the page CSS.<br>/whereIs - Shows someone's position.<br>/whereIsId - Shows an ID's position.")
+      }; break;
       // /warp command
       // teleports the client to a wall
       case "/warp": {
         if (inputs == "") {
-          w.chat.send("[CMD] Syntax: /warp <wall>")
+          send("Syntax: /warp <wall>")
         } else {
-          w.chat.send(`[CMD] Warping to: /${inputs}`)
+          send(`Warping to: /${inputs}`)
           w.goto(inputs)
         }
       }; break;
@@ -37,9 +42,9 @@ w.on("msg", (d)=>{
       // teleports the client to a specified position
       case "/tp": {
         if (inputs == "" || inputsArr.length < 2) {
-          w.chat.send("[CMD] Syntax: /tp <x> <y>")
+          send("Syntax: /tp <x> <y>")
         } else {
-          w.chat.send(`[CMD] Teleporting to ${inputsArr[0]}, ${inputsArr[1]}`);
+          send(`Teleporting to ${inputsArr[0]}, ${inputsArr[1]}`);
           w.tp(Number(inputsArr[0]), -Number(inputsArr[1]))
         }
       }; break;
@@ -54,18 +59,18 @@ w.on("msg", (d)=>{
             arr.push(cursors[i].n)
           }
         };
-        w.chat.send(`[CMD] Users: ${arr.join(", ")}`)
+        send(`Users: ${arr.join(", ")}`)
       }; break;
       // /changeTheme command
       // changes custom theme
       case "/changetheme": {
         if (inputs == "" || inputsArr.length < 2) {
-          w.chat.send("[CMD] Syntax: /changeTheme <primaryColor> <secondaryColor>")
+          send("Syntax: /changeTheme <primaryColor> <secondaryColor>")
         } else {
           w.changeTheme(2);
           w.setPrimaryColor(inputsArr[0]);
           w.setSecondaryColor(inputsArr[1]);
-          w.chat.send("[CMD] Changed theme.")
+          send("Changed theme.")
         }
       }; break;
       // /useCustomCSS command
@@ -79,13 +84,13 @@ w.on("msg", (d)=>{
           }
         };
         h[stylesheetPos].href = "https://the179ucetile.github.io/textwall.css";
-        w.chat.send("[CMD] Changed page CSS.")
+        send("Changed page CSS.")
       }; break;
       // /whereIs command
       // shows someone's position
       case "/whereis": {
         if (inputs == "") {
-          w.chat.send("[CMD] Syntax: /whereIs <username> (case sensitive)")
+          send("Syntax: /whereIs <username> (case sensitive)")
         } else {
           let userInWall = false;
           let userId = 0;
@@ -96,9 +101,9 @@ w.on("msg", (d)=>{
             }
           };
           if (userInWall) {
-            w.chat.send(`[CMD] ${inputs} is at ${cursors[userId].l[0]}, ${-cursors[userId].l[1]}`)
+            send(`${inputs} is at ${cursors[userId].l[0]}, ${-cursors[userId].l[1]}`)
           } else {
-            w.chat.send(`[CMD] ${inputs} is not in this wall!`)
+            send(`${inputs} is not in this wall!`)
           }
         }
       }; break;
@@ -106,7 +111,7 @@ w.on("msg", (d)=>{
       // shows an id's position
       case "/whereisid": {
         if (inputs == "") {
-          w.chat.send("[CMD] Syntax: /whereIsId <userId>")
+          send("Syntax: /whereIsId <userId>")
         } else {
           let userInWall = false;
           for (let i in cursors) {
@@ -115,12 +120,13 @@ w.on("msg", (d)=>{
             }
           };
           if (userInWall) {
-            w.chat.send(`[CMD] ID ${inputs} is at ${cursors[inputs].l[0]}, ${-cursors[inputs].l[1]}`)
+            send(`ID ${inputs} is at ${cursors[inputs].l[0]}, ${-cursors[inputs].l[1]}`)
           } else {
-            w.chat.send(`[CMD] ID ${inputs} is not in this wall!`)
+            send(`ID ${inputs} is not in this wall!`)
           }
         }
       }; break;
-    }
+    };
+    d.msg = "";
   }
 })
