@@ -10,9 +10,11 @@ function getImpArr(string) {
 function getImp(string) {
   return getImpArr(string).join(" ")
 }
-// w.chat.send() but it only shows on the client.
+// w.chat.send() but it only shows on the client
 function send(string) {
   var p = document.createElement('p');
+  p.style.opacity = "1";
+  p.style.transition = "opacity 0.5s";
   p.innerHTML = `<span style="color:#3690EA">[CLIENT]</span> ~ ${string}`;
   document.getElementById("chatbox").appendChild(p);
 }
