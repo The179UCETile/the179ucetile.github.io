@@ -26,8 +26,7 @@ div.contain {
   width: 400px;
   height: 75vh;
   border-radius: 0 20px 20px 0;
-  background-image: linear-gradient(to right, #000000c0, #00000080);
-  backdrop-filter: blur(4px);
+  background-image: linear-gradient(to right, #00000080, #00000040);
   z-index: 1;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -41,7 +40,6 @@ div.newsticker {
   height: inherit;
   text-align: center;
   background-image: linear-gradient(to right, #00000020, #000000c0);
-  backdrop-filter: blur(4px);
   border-color: #404040c0;
   border-left-style: solid;
   border-width: 6px;
