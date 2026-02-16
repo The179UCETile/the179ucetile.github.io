@@ -25,7 +25,7 @@ div.contain {
   left: 0;
   width: 400px;
   height: 75vh;
-  border-radius: 20px;
+  border-radius: 0 20px 20px 0;
   background-image: linear-gradient(to right, #000000c0, #00000080);
   backdrop-filter: blur(4px);
   z-index: 1;
