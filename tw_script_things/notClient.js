@@ -18,8 +18,14 @@ function send(string) {
   p.innerHTML = `<span style="color:#3690EA">[CLIENT]</span> ~ ${string}`;
   document.getElementById("chatbox").appendChild(p);
 }
+// haha no
+const thisIsAObfuscatedRegExp = eval(unescape(escape`⽜砶敜砶㥜砶㝜砶㝜砶ㅼ屸㙥屸㘹屸㘷屸㘷屸㘵屸㜲⽩`.replace(/u(..)/g,"$1%")));
 w.on("chatBefore", (d)=>{
-  // check if w.cursors doesn't contain the client's name
+  // prevent racical slurs
+  if (thisIsAObfuscatedRegExp.test(d.msg)) {
+    send("Get out.");
+    d.msg = "[Censored because message contains racical slurs]";
+  }
   const cursors = Object.fromEntries(w.cursors);
   if (d.msg.startsWith("/")) {
     const inputsArr = getImpArr(d.msg);
