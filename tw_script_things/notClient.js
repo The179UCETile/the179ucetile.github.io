@@ -19,10 +19,10 @@ function send(string) {
   document.getElementById("chatbox").appendChild(p);
 }
 // haha no
-const thisIsAObfuscatedRegExp = eval(unescape(escape`⽜砶敜砶㥜砶㝜砶㝜砶ㅼ屸㙥屸㘹屸㘷屸㘷屸㘵屸㜲⽩`.replace(/u(..)/g,"$1%")));
+const thisIsAnObfuscatedRegExp = eval(unescape(escape`⽜砶敜砶㥜砶㝜砶㝜砶ㅼ屸㙥屸㘹屸㘷屸㘷屸㘵屸㜲⽩`.replace(/u(..)/g,"$1%")));
 w.on("chatBefore", (d)=>{
   // prevent racical slurs
-  if (thisIsAObfuscatedRegExp.test(d.msg)) {
+  if (thisIsAnObfuscatedRegExp.test(d.msg)) {
     send("Get out.");
     d.msg = "[Censored because message contains racical slurs]";
   }
