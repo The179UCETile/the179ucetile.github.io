@@ -35,7 +35,7 @@ const mainCurrency = document.getElementById("mainCurrency");
 const begButton = document.getElementById("beg");
 const e = EternalNotations;
 let itemsBegged = new Decimal("0");
-beg.addEventListener("click", function () {
+begButton.addEventListener("click", function () {
   itemsBegged = itemsBegged.add("1")
 })
 function update() {
