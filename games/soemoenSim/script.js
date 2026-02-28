@@ -48,7 +48,7 @@ function decodeB64(str) {
   return output
 }
 function importSave(str) {
-  const obj = JSON.parse(decldeB64(str));
+  const obj = JSON.parse(decodeB64(str));
   for (let i in obj) {
     if (typeof obj[i] == "string") {
       s[i] = new Decimal(obj[i])
