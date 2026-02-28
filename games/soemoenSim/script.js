@@ -38,7 +38,7 @@ beg.addEventListener("click", function () {
   itemsBegged += 1
 })
 function update() {
-  mainCurrency = `You've begged for ${itemsBegged} items.`
+  mainCurrency.innerHTML = `You've begged for ${itemsBegged} items.`
   windowTitle.innerHTML = `py_alt simulator | begged for ${itemsBegged} items`
 }
 setInterval(update)
