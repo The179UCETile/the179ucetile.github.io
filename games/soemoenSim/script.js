@@ -33,12 +33,13 @@ function decodeB64(str) {
 const windowTitle = document.head.getElementsByTagName("title")[0];
 const mainCurrency = document.getElementById("mainCurrency");
 const begButton = document.getElementById("beg");
-let itemsBegged = 0;
+const e = EternalNotations;
+let itemsBegged = new Decimal("0");
 beg.addEventListener("click", function () {
-  itemsBegged += 1
+  itemsBegged = itemsBegged.add("1")
 })
 function update() {
-  mainCurrency.innerHTML = `You've begged for ${itemsBegged} items.`
-  windowTitle.innerHTML = `py_alt simulator | ${itemsBegged} items begged`
+  mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(itemsBegged)} items.`
+  windowTitle.innerHTML = `py_alt simulator | ${e.Presets.MixedScientific.format(itemsBegged)} items begged`
 }
 setInterval(update, 50)
