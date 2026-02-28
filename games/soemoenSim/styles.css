@@ -9,3 +9,11 @@ header {
   border-style: none none solid none;
   background-image: linear-gradient(to bottom, #000000, #202020)
 }
+div.options {
+  position: sticky;
+  top: 0;
+  right: 0;
+  width: 200px;
+  min-height: 30px;
+  background-image: linear-gradient(to right, #fff0, #fff4)
+}

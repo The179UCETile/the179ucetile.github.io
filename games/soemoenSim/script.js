@@ -1,3 +1,23 @@
+const windowTitle = document.head.getElementsByTagName("title")[0];
+const mainCurrency = document.getElementById("mainCurrency");
+const buttons = {
+  beg: "beg",
+  import: "importData",
+  export: "exportData"
+};
+for (let i in buttons) {
+  buttons[i] = document.getElementById(buttons[i])
+}
+const e = EternalNotations;
+const s = {
+  itemsBegged: new Decimal("0")
+};
+if (localStorage.getItem("saveSoemoenSim")) {
+  const obj = JSON.parse(decodeB64(localStorage.getItem("saveSoemoenSim")));
+  for (let i in obj) {
+    s[i] = obj[i]
+  }
+};
 function encodeB64(str) {
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
   const arr = [];
@@ -30,16 +50,35 @@ function decodeB64(str) {
   };
   return output
 }
-const windowTitle = document.head.getElementsByTagName("title")[0];
-const mainCurrency = document.getElementById("mainCurrency");
-const begButton = document.getElementById("beg");
-const e = EternalNotations;
-let itemsBegged = new Decimal("0");
-begButton.addEventListener("click", function () {
-  itemsBegged = itemsBegged.add("1")
+buttons.beg.addEventListener("click", function () {
+  s.itemsBegged = s.itemsBegged.add("1")
 })
-function update() {
-  mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(itemsBegged)} items.`
-  windowTitle.innerHTML = `py_alt simulator | ${e.Presets.MixedScientific.format(itemsBegged)} items begged`
+buttons.import.addEventListener("click", function () {
+  const input = decodeB64(document.getElementById("saveText").innerText);
+  try {
+    const obj = JSON.parse(decodeB64(input));
+    for (let i in obj) {
+      s[i] = obj[i]
+    }
+    localStorage.setItem("saveSoemoenSim", input)
+  } catch (e) {
+    alert("An error occurred while importing this save")
+  }
+})
+buttons.export.addEventListener("click", () => writeClipboardText(encodeB64(JSON.stringify(s))));
+async function writeClipboardText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    console.error(e.message);
+  }
 }
-setInterval(update, 50)
+function save() {
+  localStorage.setItem("saveSoemoenSim", encodeB64(JSON.stringify(s)))
+}
+function update() {
+  mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`
+  windowTitle.innerHTML = `py_alt simulator | ${e.Presets.MixedScientific.format(s.itemsBegged)} items begged`
+}
+setInterval(update, 50);
+setInterval(save, 2500)
