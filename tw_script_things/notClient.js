@@ -40,7 +40,7 @@ w.on("chatBefore", (d)=>{
       // teleports the client to a wall
       case "/warp": {
         if (inputs == "") {
-          send("Syntax: /warp <wall>")
+          send("Syntax: /warp [wall]")
         } else {
           send(`Warping to: /${inputs}`)
           w.goto(inputs)
@@ -50,7 +50,7 @@ w.on("chatBefore", (d)=>{
       // teleports the client to a specified position
       case "/tp": {
         if (inputs == "" || inputsArr.length < 2) {
-          send("Syntax: /tp <x> <y>")
+          send("Syntax: /tp [x] [y]")
         } else {
           send(`Teleporting to ${inputsArr[0]}, ${inputsArr[1]}`);
           w.tp(Number(inputsArr[0]), -Number(inputsArr[1]))
@@ -73,7 +73,7 @@ w.on("chatBefore", (d)=>{
       // changes custom theme
       case "/changetheme": {
         if (inputs == "" || inputsArr.length < 2) {
-          send("Syntax: /changeTheme <primaryColor> <secondaryColor>")
+          send("Syntax: /changeTheme [primaryColor] [secondaryColor]")
         } else {
           w.changeTheme(2);
           w.setPrimaryColor(inputsArr[0]);
@@ -98,7 +98,7 @@ w.on("chatBefore", (d)=>{
       // shows someone's position
       case "/whereis": {
         if (inputs == "") {
-          send("Syntax: /whereIs <username> (case sensitive)")
+          send("Syntax: /whereIs [username] (case sensitive!)")
         } else {
           let userInWall = false;
           let userId = 0;
@@ -119,7 +119,7 @@ w.on("chatBefore", (d)=>{
       // shows an id's position
       case "/whereisid": {
         if (inputs == "") {
-          send("Syntax: /whereIsId <userId>")
+          send("Syntax: /whereIsId [userId]")
         } else {
           let userInWall = false;
           for (let i in cursors) {
