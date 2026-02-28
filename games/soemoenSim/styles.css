@@ -10,7 +10,7 @@ header {
   background-image: linear-gradient(to bottom, #000000, #202020)
 }
 div.options {
-  position: sticky;
+  position: fixed;
   top: 0;
   right: 0;
   width: 200px;
