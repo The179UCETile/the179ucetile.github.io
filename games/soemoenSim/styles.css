@@ -1,5 +1,5 @@
 header {
-  position: fixed;
+  position: sticky;
   padding: 5px;
   width: 100vw;
   min-height: 30px;
