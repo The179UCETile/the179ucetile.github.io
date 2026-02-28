@@ -45,10 +45,10 @@ function decodeB64(str) {
   for (let i = 0; i < binary.length / 8; i++) {
     output += String.fromCharCode(Number.parseInt(binary.slice(i * 8, i * 8 + 8), 2))
   };
-  return output.replace(/\x20$/, "")
+  return output
 }
 function importSave(str) {
-  const obj = JSON.parse(decodeB64(str));
+  const obj = JSON.parse(decodeB64(str).replace(/\s$/, ""));
   for (let i in obj) {
     if (typeof s[i] == "string") {
       s[i] = new Decimal(obj[i])
