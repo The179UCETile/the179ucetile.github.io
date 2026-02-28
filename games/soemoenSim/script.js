@@ -13,7 +13,11 @@ const s = {
   itemsBegged: new Decimal("0")
 };
 if (localStorage.getItem("saveSoemoenSim")) {
-  importSave(localStorage.getItem("saveSoemoenSim"))
+  try {
+    importSave(localStorage.getItem("saveSoemoenSim"))
+  } catch (e) {
+    mainCurrency.innerHTML = e.stack
+  }
 };
 function encodeB64(str) {
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
@@ -64,7 +68,7 @@ buttons.import.addEventListener("click", function () {
     importSave(input);
     localStorage.setItem("saveSoemoenSim", input)
   } catch (e) {
-    alert("An error occurred while importing this save")
+    alert(`An error occurred while importing this save (debug: ${e.stack})`)
   }
 })
 buttons.export.addEventListener("click", () => writeClipboardText(encodeB64(JSON.stringify(s))));
