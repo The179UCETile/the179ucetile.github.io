@@ -13,10 +13,7 @@ const s = {
   itemsBegged: new Decimal("0")
 };
 if (localStorage.getItem("saveSoemoenSim")) {
-  const obj = JSON.parse(decodeB64(localStorage.getItem("saveSoemoenSim")));
-  for (let i in obj) {
-    s[i] = obj[i]
-  }
+  importSave(localStorage.getItem("saveSoemoenSim"))
 };
 function encodeB64(str) {
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
@@ -50,16 +47,21 @@ function decodeB64(str) {
   };
   return output
 }
+function importSave(str) {
+  const obj = JSON.parse(decldeB64(str));
+  for (let i in obj) {
+    if (typeof obj[i] == "string") {
+      s[i] = new Decimal(obj[i])
+    }
+  }
+}
 buttons.beg.addEventListener("click", function () {
   s.itemsBegged = s.itemsBegged.add("1")
 })
 buttons.import.addEventListener("click", function () {
   const input = decodeB64(document.getElementById("saveText").innerText);
   try {
-    const obj = JSON.parse(decodeB64(input));
-    for (let i in obj) {
-      s[i] = obj[i]
-    }
+    importSave(input);
     localStorage.setItem("saveSoemoenSim", input)
   } catch (e) {
     alert("An error occurred while importing this save")

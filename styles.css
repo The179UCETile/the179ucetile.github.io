@@ -87,5 +87,5 @@ button:active {
 }
 input {
   background-image: linear-gradient(to bottom, #000000, #404040);
-  outline: 1px solid #606060
+  border: 1px solid #606060
 }
