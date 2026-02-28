@@ -1,0 +1,9 @@
+header {
+  position: fixed;
+  padding: 5px;
+  width: 100vw;
+  min-height: 30px;
+  border: 2px solid #404040;
+  border-style: none none solid none;
+  background-image: linear-gradient(to bottom, #000000, #202020)
+}
