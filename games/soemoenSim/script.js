@@ -41,4 +41,4 @@ function update() {
   mainCurrency.innerHTML = `You've begged for ${itemsBegged} items.`
   windowTitle.innerHTML = `py_alt simulator | begged for ${itemsBegged} items`
 }
-setInterval(update)
+setInterval(update, 20)
