@@ -36,7 +36,7 @@ buttons.import.addEventListener("click", function () {
     importSave(input);
     localStorage.setItem("saveSoemoenSim", input)
   } catch (e) {
-    alert("An error occurred while importing this save")
+    alert(`An error occurred while importing this save (debug: ${e.stack})`)
   }
 })
 buttons.export.addEventListener("click", () => writeClipboardText(btoa(JSON.stringify(s))));
