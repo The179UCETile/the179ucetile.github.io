@@ -52,7 +52,7 @@ function decodeB64(str) {
   return output
 }
 function importSave(str) {
-  const obj = JSON.parse(decodeB64(str).replace(/[\s\x00\x01\x03\x07\x0f]$/, ""));
+  const obj = JSON.parse(decodeB64(str).replace(/\s|\x00|\x01|\x03|\x07|\x0f/g, ""));
   for (let i in obj) {
     if (typeof s[i] == "string") {
       s[i] = new Decimal(obj[i])
