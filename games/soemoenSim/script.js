@@ -31,7 +31,7 @@ buttons.beg.addEventListener("click", function () {
   s.itemsBegged = s.itemsBegged.add("1")
 })
 buttons.import.addEventListener("click", function () {
-  const input = atob(document.getElementById("saveText").innerText);
+  const input = document.getElementById("saveText").innerText;
   try {
     importSave(input);
     localStorage.setItem("saveSoemoenSim", input)
