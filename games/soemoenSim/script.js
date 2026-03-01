@@ -39,7 +39,7 @@ buttons.import.addEventListener("click", function () {
     alert("An error occurred while importing this save")
   }
 })
-buttons.export.addEventListener("click", () => writeClipboardText(atob(JSON.stringify(s))));
+buttons.export.addEventListener("click", () => writeClipboardText(btoa(JSON.stringify(s))));
 async function writeClipboardText(text) {
   try {
     await navigator.clipboard.writeText(text);
