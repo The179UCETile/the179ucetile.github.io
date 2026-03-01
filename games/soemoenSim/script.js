@@ -20,7 +20,7 @@ if (localStorage.getItem("saveSoemoenSim")) {
   }
 };
 function importSave(str) {
-  const obj = JSON.parse(atob(str));
+  const obj = JSON.parse(str);
   for (let i in obj) {
     if (typeof s[i] == "string") {
       s[i] = new Decimal(obj[i])
@@ -31,7 +31,7 @@ buttons.beg.addEventListener("click", function () {
   s.itemsBegged = s.itemsBegged.add("1")
 })
 buttons.import.addEventListener("click", function () {
-  const input = document.getElementById("saveText").innerText;
+  const input = atob(document.getElementById("saveText").innerText);
   try {
     importSave(input);
     localStorage.setItem("saveSoemoenSim", input)
