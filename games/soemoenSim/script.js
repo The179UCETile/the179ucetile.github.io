@@ -19,40 +19,8 @@ if (localStorage.getItem("saveSoemoenSim")) {
     mainCurrency.innerHTML = e.stack
   }
 };
-function encodeB64(str) {
-  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
-  const arr = [];
-  let binary = "";
-  let output = "";
-  for (let i = 0; i < str.length; i++) {
-    binary += (str.charCodeAt(i) + 256).toString(2).slice(1)
-  };
-  if (binary.length % 6 != 0) {
-    binary += "0".repeat(6 - binary.length % 6)
-  }
-  for (let i = 0; i < binary.length / 6; i++) {
-    arr[i] = binary.slice(i * 6, i * 6 + 6)
-  };
-  for (let i in arr) {
-    output += alphabet[Number.parseInt(arr[i], 2)]
-  }
-  return output + (output.length % 4 == 0 ? "" : "=".repeat(4 - output.length % 4))
-}
-function decodeB64(str) {
-  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split("");
-  let binary = "";
-  let output = "";
-  str = str.replace(/=$/g, "");
-  for (let i = 0; i < str.length; i++) {
-    binary += (alphabet.indexOf(str[i]) + 64).toString(2).slice(1)
-  };
-  for (let i = 0; i < binary.length / 8; i++) {
-    output += String.fromCharCode(Number.parseInt(binary.slice(i * 8, i * 8 + 8), 2))
-  };
-  return output
-}
 function importSave(str) {
-  const obj = JSON.parse(decodeB64(str).replace(/\s|\x00|\x01|\x03|\x07|\x0f/g, "").replace(/\s|\x00|\x01|\x03|\x07|\x0f/g, ""));
+  const obj = JSON.parse(atob(str));
   for (let i in obj) {
     if (typeof s[i] == "string") {
       s[i] = new Decimal(obj[i])
@@ -63,15 +31,15 @@ buttons.beg.addEventListener("click", function () {
   s.itemsBegged = s.itemsBegged.add("1")
 })
 buttons.import.addEventListener("click", function () {
-  const input = decodeB64(document.getElementById("saveText").innerText);
+  const input = atob(document.getElementById("saveText").innerText);
   try {
     importSave(input);
     localStorage.setItem("saveSoemoenSim", input)
   } catch (e) {
-    alert(`An error occurred while importing this save (debug: ${e.stack})`)
+    alert("An error occurred while importing this save")
   }
 })
-buttons.export.addEventListener("click", () => writeClipboardText(encodeB64(JSON.stringify(s))));
+buttons.export.addEventListener("click", () => writeClipboardText(atob(JSON.stringify(s))));
 async function writeClipboardText(text) {
   try {
     await navigator.clipboard.writeText(text);
@@ -80,7 +48,7 @@ async function writeClipboardText(text) {
   }
 }
 function save() {
-  localStorage.setItem("saveSoemoenSim", encodeB64(JSON.stringify(s)))
+  localStorage.setItem("saveSoemoenSim", btoa(JSON.stringify(s)))
 }
 function update() {
   mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`
