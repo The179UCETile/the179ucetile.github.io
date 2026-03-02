@@ -14,7 +14,7 @@ const s = {
 };
 if (localStorage.getItem("saveSoemoenSim")) {
   try {
-    importSave(localStorage.getItem("saveSoemoenSim"))
+    importSave(atob(localStorage.getItem("saveSoemoenSim")))
   } catch (e) {
     mainCurrency.innerHTML = e.stack
   }
@@ -31,9 +31,9 @@ buttons.beg.addEventListener("click", function () {
   s.itemsBegged = s.itemsBegged.add("1")
 })
 buttons.import.addEventListener("click", function () {
-  const input = atob(document.getElementById("saveText").innerText);
+  const input = document.getElementById("saveText").innerText;
   try {
-    importSave(input);
+    importSave(atob(input));
     localStorage.setItem("saveSoemoenSim", input)
   } catch (e) {
     alert(`An error occurred while importing this save (debug: ${e.stack})`)
