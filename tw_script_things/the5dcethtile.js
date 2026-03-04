@@ -16,7 +16,7 @@ function getInp(str) {
 }
 function appendHex(str, col = 0) {
   if (typeof col == "string") return `<start ${col}>${str}<end>`
-  else return `<start ${colHex(colId.indexOf(col))}>${str}<end>`
+  else return `<start ${colHex[colId.indexOf(col)]}>${str}<end>`
 }
 function sendWithHex(str, col = 0) {
   w.chat.send(appendHex(str, col))
