@@ -29,7 +29,7 @@ function throwError(num = 0) {
     case 1:
       sendWithHex("ERROR 1: Not enough inputs", "#f00")
     case 1000:
-      sendWithHex("ERROR 1000: Command doesn't exist")
+      sendWithHex("ERROR 1000: Command doesn't exist", "#f00")
   }
 }
 w.on("msg", (d)=>{if(__x){
