@@ -64,7 +64,8 @@ case "t>choice": {
   w.chat.send(`i choose ${arr[Math.floor(Math.random()*arr.length)]}`)
 } break;
 default: {
-  if (/^t>|^t</.test(getCmd(d.msg).toLowerCase())) {
+  const cmd = getCmd(d.msg).toLowerCase();
+  if (/^t>|^t</.test(cmd)&&(!/^t>enable/.test(cmd))) {
     throwError(1000)
   }
 }
