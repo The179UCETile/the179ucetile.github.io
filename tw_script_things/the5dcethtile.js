@@ -15,9 +15,34 @@ function appendHex(str, col = 0) {
   if (typeof col == "string") return `<start ${col}>${str}<end>`
   else return `<start ${colHex(colId.indexOf(col))}>${str}<end>`
 }
+function sendWithHex(str, col = 0) {
+  w.chat.send(appendHex(str, col))
+}
+function throwError(num = 0) {
+  switch (num) {
+    case 0:
+      sendWithHex("ERROR 0: Cannot echo commands", "#f00")
+      break;
+    case 1:
+      sendWithHex("ERROR 1: Not enough inputs", "#f00")
+  }
+}
 w.on("msg", (d)=>{if(__x){
 const inp = getInp(d.msg);
-switch (getCmd(d.msg)) {
-
-}
-}});
+switch (getCmd(d.msg).toLowerCase()) {
+case "t>echo": {
+  if (/^t>|t</.test(inp)) {
+    throwError(0)
+  } else {
+    w.chat.send(inp)
+  }
+} break;
+case "t>howis": {
+  const inputs = inp.split("|");
+  if (inputs.length < 2) {
+    throwError(1)
+  } else {
+    w.chat.send(`${inputs[0]} is ${(Math.random() * 100).toFixed(5)}% ${inputs[1]}`)
+  }
+} break;
+}}});
