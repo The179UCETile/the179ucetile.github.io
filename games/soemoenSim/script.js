@@ -14,7 +14,7 @@ const s = {
 };
 if (localStorage.getItem("saveSoemoenSim")) {
   try {
-    importSave(atob(localStorage.getItem("saveSoemoenSim")))
+    importSave(localStorage.getItem("saveSoemoenSim"))
   } catch (e) {
     mainCurrency.innerHTML = e.stack
   }
@@ -30,29 +30,12 @@ function importSave(str) {
 buttons.beg.addEventListener("click", function () {
   s.itemsBegged = s.itemsBegged.add("1")
 })
-buttons.import.addEventListener("click", function () {
-  const input = document.getElementById("saveText").innerText;
-  try {
-    importSave(atob(input));
-    localStorage.setItem("saveSoemoenSim", input)
-  } catch (e) {
-    alert(`An error occurred while importing this save (debug: ${e.stack})`)
-  }
-})
-buttons.export.addEventListener("click", () => writeClipboardText(btoa(JSON.stringify(s))));
-async function writeClipboardText(text) {
-  try {
-    await navigator.clipboard.writeText(text);
-  } catch (e) {
-    console.error(e.message);
-  }
-}
 function save() {
-  localStorage.setItem("saveSoemoenSim", btoa(JSON.stringify(s)))
+  localStorage.setItem("saveSoemoenSim", JSON.stringify(s))
 }
 function update() {
   mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`
   windowTitle.innerHTML = `py_alt simulator | ${e.Presets.MixedScientific.format(s.itemsBegged)} items begged`
 }
-setInterval(update, 50);
-setInterval(save, 2500)
+setInterval(update, 15);
+setInterval(save, 1000)
