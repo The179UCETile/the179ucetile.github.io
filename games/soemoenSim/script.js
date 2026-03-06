@@ -35,7 +35,10 @@ function save() {
 }
 function update() {
   mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`
+}
+function updateTitle() {
   windowTitle.innerHTML = `py_alt simulator | ${e.Presets.MixedScientific.format(s.itemsBegged)} items begged`
 }
-setInterval(update, 15);
+setInterval(update, 15)
+setInterval(updateTitle, 100);
 setInterval(save, 1000)
