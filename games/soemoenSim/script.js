@@ -22,7 +22,7 @@ if (localStorage.getItem("saveSoemoenSim")) {
 function importSave(str) {
   const obj = JSON.parse(str);
   for (let i in obj) {
-    if (typeof s[i] == "string") {
+    if (typeof obj[i] == "string") {
       s[i] = new Decimal(obj[i])
     }
   }
