@@ -17,7 +17,7 @@ const upgInfo = {
 };
 function process(obj) {
   for (let i in obj) {
-    if (typeof obj[i] == "object") obj(obj[i])
+    if (typeof obj[i] == "object") process(obj[i])
     obj[i] = document.getElementById(obj[i])
   }
 }
