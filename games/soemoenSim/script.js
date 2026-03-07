@@ -2,9 +2,7 @@ const windowTitle = document.head.getElementsByTagName("title")[0];
 const mainCurrency = document.getElementById("mainCurrency");
 const buttons = {
   beg: "beg",
-  begUpg: {
-    upg1: "mainUpg1",
-  }
+  begUpg1: "mainUpg1"
 };
 const upgInfo = {
   begUpg: {
@@ -15,13 +13,9 @@ const upgInfo = {
     }
   }
 };
-function process(obj) {
-  for (let i in obj) {
-    if (typeof obj[i] == "object") process(obj[i])
-    obj[i] = document.getElementById(obj[i])
-  }
+for (let i in obj) {
+  buttons[i] = document.getElementById(buttons[i])
 }
-process(buttons);
 const d = Decimal;
 const e = EternalNotations;
 const s = {
@@ -29,11 +23,7 @@ const s = {
   begUpg1Bought: new Decimal("0")
 };
 if (localStorage.getItem("saveSoemoenSim")) {
-  try {
-    importSave(localStorage.getItem("saveSoemoenSim"))
-  } catch (error) {
-    mainCurrency.innerHTML = error.stack
-  }
+  importSave(localStorage.getItem("saveSoemoenSim"))
 };
 function importSave(str) {
   const obj = JSON.parse(str);
@@ -85,20 +75,22 @@ function changeElem(id, str) {
 buttons.beg.addEventListener("onclick", function () {
   s.itemsBegged = s.itemsBegged.add("1")
 })
-buttons.begUpg.upg1.addEventListener("onclick", function () {
+buttons.begUpg1.addEventListener("onclick", function () {
   buyMax(s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged)
 })
 function save() {
   localStorage.setItem("saveSoemoenSim", JSON.stringify(s))
 }
-function update() {
-  upgUpd(buttons.begUpg.upg1, s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged)
+function update() { try {
+  upgUpd(buttons.begUpg1, s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged)
   changeElem("mainUpg1Stats", `
     Currently: +${e.HTMLPresets.MixedScientific.format(s.begUpg1Bought)}<br>
     Cost: ${e.HTMLPresets.MixedScientific.format(getCost(s.begUpg1Bought, upgInfo.begUpg.upg1))}
   `)
   mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`
-}
+} catch (error) {
+  mainCurrency.innerHTML = error.stack
+}}
 function updateTitle() {
   windowTitle.innerHTML = `py_alt simulator | ${e.Presets.MixedScientific.format(s.itemsBegged)} items begged`
 }
