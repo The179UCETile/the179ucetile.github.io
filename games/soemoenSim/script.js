@@ -13,7 +13,7 @@ const upgInfo = {
     }
   }
 };
-for (let i in obj) {
+for (let i in buttons) {
   buttons[i] = document.getElementById(buttons[i])
 }
 const d = Decimal;
