@@ -16,9 +16,9 @@ const upgInfo = {
   }
 };
 function e(obj) {
-  for (let i in e) {
-    if (typeof e[i] == "object") e(obj[i])
-    e[i] = document.getElementById(e[i])
+  for (let i in obj) {
+    if (typeof obj[i] == "object") obj(obj[i])
+    obj[i] = document.getElementById(obj[i])
   }
 }
 e(buttons);
