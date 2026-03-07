@@ -21,7 +21,7 @@ function e(obj) {
     e[i] = document.getElementById(e[i])
   }
 }
-e(buttons)
+e(buttons);
 const d = Decimal;
 const e = EternalNotations;
 const s = {
