@@ -15,9 +15,13 @@ const upgInfo = {
     }
   }
 };
-for (let i in buttons) {
-  buttons[i] = document.getElementById(buttons[i])
+function e(obj) {
+  for (let i in e) {
+    if (typeof e[i] == "object") e(obj[i])
+    e[i] = document.getElementById(e[i])
+  }
 }
+e(buttons)
 const d = Decimal;
 const e = EternalNotations;
 const s = {
