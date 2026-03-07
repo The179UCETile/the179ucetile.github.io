@@ -15,13 +15,13 @@ const upgInfo = {
     }
   }
 };
-function e(obj) {
+function process(obj) {
   for (let i in obj) {
     if (typeof obj[i] == "object") obj(obj[i])
     obj[i] = document.getElementById(obj[i])
   }
 }
-e(buttons);
+process(buttons);
 const d = Decimal;
 const e = EternalNotations;
 const s = {
@@ -31,8 +31,8 @@ const s = {
 if (localStorage.getItem("saveSoemoenSim")) {
   try {
     importSave(localStorage.getItem("saveSoemoenSim"))
-  } catch (e) {
-    mainCurrency.innerHTML = e.stack
+  } catch (error) {
+    mainCurrency.innerHTML = error.stack
   }
 };
 function importSave(str) {
