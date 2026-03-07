@@ -85,6 +85,10 @@ button:active {
   background-image: linear-gradient(to bottom, #808080, #606060);
   border: 2px solid #202020;
 }
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 input {
   background-image: linear-gradient(to bottom, #000000, #404040);
   border: 1px solid #606060

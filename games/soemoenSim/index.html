@@ -11,7 +11,18 @@
       <h1 style="font-size:20px">py_alt simulator</h1>
       <p id="mainCurrency">Loading...</p>
     </header>
-    <button id="beg">Beg for a random item</button>
+    <div>
+      <button id="beg">Beg for a random item</button><br>
+      <div>
+        <button disabled class="upg" id="mainUpg1">
+          Increase beg power.<br>
+          <span id="mainUpg1Stats">
+            Currently: +0<br>
+            Cost: 10 items begged
+          </span>
+        </button>
+      </div>
+    </div>
     <script src="/game_scripts/break_eternity.min.js"></script>
     <script src="/game_scripts/eternal_notations.min.js"></script>
     <script src="script.js"></script>

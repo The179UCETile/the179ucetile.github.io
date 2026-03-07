@@ -9,3 +9,7 @@ header {
   border-style: none none solid none;
   background-image: linear-gradient(to bottom, #000000, #202020)
 }
+button.upg {
+  border-radius: 5px;
+  box-shadow: 0 0 5px #fff4
+}
