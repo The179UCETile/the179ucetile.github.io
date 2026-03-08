@@ -25,11 +25,12 @@ for (let i in buttons) {
 }
 const d = Decimal;
 const e = EternalNotations;
-const s = {
+const fs = {
   itemsBegged: new Decimal("0"),
   begUpg1Bought: new Decimal("0"),
   begUpg2Bought: new Decimal("0")
 };
+let s = fs;
 const upgEffect = {
   begUpg: {
     upg1: new Decimal("0"),
@@ -94,7 +95,7 @@ function changeElem(id, str) {
 }
 buttons.hardReset.addEventListener("click", function () {
   if (confirm("Are you sure you want to reset everything?")) {
-    localStorage.removeItem("saveSoemoenSim");
+    localStorage.setItem("saveSoemoenSim", JSON.stringify(fs));
     location.reload()
   }
 });
