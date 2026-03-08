@@ -1,4 +1,5 @@
 const windowTitle = document.head.getElementsByTagName("title")[0];
+const uselessCurrency = document.getElementById("uselessCurrency");
 const mainCurrency = document.getElementById("mainCurrency");
 const buttons = {
   beg: "beg",
@@ -90,7 +91,8 @@ function update() { try {
     Currently: +${e.HTMLPresets.MixedScientific.format(s.begUpg1Bought)}<br>
     Cost: ${e.HTMLPresets.MixedScientific.format(getCost(s.begUpg1Bought, upgInfo.begUpg.upg1))} items
   `)
-  mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`
+  mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`;
+  uselessCurrency.innerHTML = `and ${e.HTMLPresets.MixedScientific.format(new Decimal("3").pow(s.itemsBegged).sub("1"))} people are annoyed by your begging`
 } catch (error) {
   mainCurrency.innerHTML = error.stack
 }}
