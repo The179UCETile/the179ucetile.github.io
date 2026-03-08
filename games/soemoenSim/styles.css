@@ -16,3 +16,9 @@ button.upg {
 span.btn {
   color: #000
 }
+span#mainCurrency {
+  background: linear-gradient(to bottom, #fff, #ccc);
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+}
