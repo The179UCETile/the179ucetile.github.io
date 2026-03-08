@@ -36,12 +36,12 @@ function importSave(str) {
 function buyMax(upg, info, currency) {
   if (info.type == "geometric") {
     const upgsGained = d.affordGeometricSeries(currency, info.startCost, info.increment, upg);
-    currency = currency.sub(d.sumGeometricSeries(upgsGained, info.startCost, info.increment, upg));
-    upg = upg.add(upgsGained)
+    currency = d.sub(currency, d.sumGeometricSeries(upgsGained, info.startCost, info.increment, upg));
+    upg = d.add(upg, upgsGained)
   } else if (info.type == "arithmetic") {
     const upgsGained = d.affordArithmeticSeries(currency, info.startCost, info.increment, upg);
-    currency = currency.sub(d.sumArithmeticSeries(upgsGained, info.startCost, info.increment, upg));
-    upg = upg.add(upgsGained)
+    currency = d.sub(currency, d.sumArithmeticSeries(upgsGained, info.startCost, info.increment, upg));
+    upg = d.add(upg, upgsGained)
   } else {
     throw new RangeError("Invalid cost type on buyMax")
   }
