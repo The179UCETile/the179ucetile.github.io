@@ -64,7 +64,7 @@ function aboveReq(upg, info, currency) {
 }
 function upgUpd(upg, upgsBought, info, currency) {
   if (info.type == "geometric" || info.type == "arithmetic") {
-    upg.disabled = aboveReq(upgsBought, info, currency)
+    upg.disabled = !aboveReq(upgsBought, info, currency)
   } else {
     throw new RangeError("Invalid cost type on upgUpd")
   }
@@ -85,7 +85,7 @@ function update() { try {
   upgUpd(buttons.begUpg1, s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged)
   changeElem("mainUpg1Stats", `
     Currently: +${e.HTMLPresets.MixedScientific.format(s.begUpg1Bought)}<br>
-    Cost: ${e.HTMLPresets.MixedScientific.format(getCost(s.begUpg1Bought, upgInfo.begUpg.upg1))}
+    Cost: ${e.HTMLPresets.MixedScientific.format(getCost(s.begUpg1Bought, upgInfo.begUpg.upg1))} items
   `)
   mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`
 } catch (error) {
