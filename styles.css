@@ -68,7 +68,7 @@ a:active {
 }
 button {
   background-color: #ffffff;
-  background-image: linear-gradient(to bottom, #fff0, #a0a0a0);
+  background-image: linear-gradient(to bottom, #fff0, #0004);
   color: #000000;
   text-shadow: 1px 1px 3px #00000080;
   padding: 2px;

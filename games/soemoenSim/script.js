@@ -63,7 +63,7 @@ function buyMax(upg, info, currency) {
   };
   eval(`
     ${currency} = new Decimal(${decimCur.toString()});
-    ${upg} = new Decimal(${decimUpg.toString()})
+    ${upg} = new Decimal(${decimUpg.toString()});
   `)
 }
 function getCost(upg, info) {
@@ -102,10 +102,10 @@ buttons.beg.addEventListener("click", function () {
   s.itemsBegged = s.itemsBegged.add(new Decimal("1").add(upgEffect.begUpg.upg1).mul(upgEffect.begUpg.upg2))
 });
 buttons.begUpg1.addEventListener("click", function () {
-  buyMax(s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged);
+  buyMax("s.begUpg1Bought", upgInfo.begUpg.upg1, "s.itemsBegged");
 });
 buttons.begUpg2.addEventListener("click", function () {
-  buyMax(s.begUpg2Bought, upgInfo.begUpg.upg2, s.itemsBegged)
+  buyMax("s.begUpg2Bought", upgInfo.begUpg.upg2, "s.itemsBegged")
 })
 function updateEffects() {
   upgEffect.begUpg.upg1 = s.begUpg1Bought;
