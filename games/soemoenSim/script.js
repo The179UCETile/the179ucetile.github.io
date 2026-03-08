@@ -76,7 +76,7 @@ buttons.beg.addEventListener("click", function () {
   s.itemsBegged = s.itemsBegged.add("1").add(s.begUpg1Bought)
 })
 buttons.begUpg1.addEventListener("click", function () {
-  buyMax(s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged)
+  buyMax(s.itemsBegged, upgInfo.begUpg.upg1, s.begUpg1Bought)
 })
 function save() {
   localStorage.setItem("saveSoemoenSim", JSON.stringify(s))
