@@ -8,7 +8,7 @@ const upgInfo = {
   begUpg: {
     upg1: {
       startCost: new Decimal("10"),
-      increment: new Decimal("1.15"),
+      increment: new Decimal("1.25"),
       type: "geometric"
     }
   }
@@ -72,10 +72,10 @@ function upgUpd(upg, upgsBought, info, currency) {
 function changeElem(id, str) {
   document.getElementById(id).innerHTML = str
 }
-buttons.beg.addEventListener("onclick", function () {
-  s.itemsBegged = s.itemsBegged.add("1")
+buttons.beg.addEventListener("click", function () {
+  s.itemsBegged = s.itemsBegged.add("1").add(s.begUpg1Bought)
 })
-buttons.begUpg1.addEventListener("onclick", function () {
+buttons.begUpg1.addEventListener("click", function () {
   buyMax(s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged)
 })
 function save() {
