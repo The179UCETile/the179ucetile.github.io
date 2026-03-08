@@ -40,11 +40,12 @@ function buyMax(upg, info, currency) {
     upg = d.add(upg, upgsGained)
   } else if (info.type == "arithmetic") {
     const upgsGained = d.affordArithmeticSeries(currency, info.startCost, info.increment, upg);
-    currency = d.sub(currency, d.sumArithmeticSeries(upgsGained, info.startCost, info.increment, upg));
-    upg = d.add(upg, upgsGained)
+    currency = currency.sub(d.sumArithmeticSeries(upgsGained, info.startCost, info.increment, upg));
+    upg = upg.add(upgsGained)
   } else {
     throw new RangeError("Invalid cost type on buyMax")
-  }
+  };
+  return [currency, upg]
 }
 function getCost(upg, info) {
   if (info.type == "geometric") {
@@ -76,7 +77,9 @@ buttons.beg.addEventListener("click", function () {
   s.itemsBegged = s.itemsBegged.add("1").add(s.begUpg1Bought)
 })
 buttons.begUpg1.addEventListener("click", function () {
-  buyMax(s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged)
+  const arr = buyMax(s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged);
+  s.itemsBegged = arr[0];
+  s.begUpg1Bought = arr[1]
 })
 function save() {
   localStorage.setItem("saveSoemoenSim", JSON.stringify(s))
