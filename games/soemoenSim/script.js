@@ -49,8 +49,16 @@ function importSave(str) {
   }
 }
 function buyMax(upg, info, currency) {
-  let decimCur = window[currency];
-  let decimUpg = window[upg];
+  const arr1 = currency.split(".");
+  const arr2 = upg.split(".");
+  let decimCur = window;
+  let decimUpg = window;
+  for (let i in arr1) {
+    decimCur = decimCur[arr1[i]];
+  };
+  for (let i in arr2) {
+    decimUpg = decimUpg[arr2[i]];
+  }
   if (info.type == "geometric") {
     const upgsGained = d.affordGeometricSeries(decimCur, info.startCost, info.increment, decimUpg);
     decimCur = decimCur.sub(d.sumGeometricSeries(upgsGained, info.startCost, info.increment, decimUpg));
