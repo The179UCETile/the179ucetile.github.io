@@ -17,7 +17,7 @@ const buttons = {
 const upgInfo = {
   begUpg: {
     upg1: new UpgradeInfo("10", "1.25", "geometric"),
-    upg2: new UpgradeInfo("80", "4", "geometric")
+    upg2: new UpgradeInfo("80", "2", "geometric")
   }
 };
 for (let i in buttons) {
