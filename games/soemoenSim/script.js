@@ -95,6 +95,7 @@ function changeElem(id, str) {
 }
 buttons.hardReset.addEventListener("click", function () {
   if (confirm("Are you sure you want to reset everything?")) {
+    s = fs;
     localStorage.setItem("saveSoemoenSim", JSON.stringify(fs));
     location.reload()
   }
