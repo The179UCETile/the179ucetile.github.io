@@ -37,6 +37,7 @@ const upgEffect = {
     upg2: new Decimal("0")
   }
 };
+let itemsBeggedPerClick = new Decimal("1");
 if (localStorage.getItem("saveSoemoenSim")) {
   importSave(localStorage.getItem("saveSoemoenSim"))
 };
@@ -93,6 +94,13 @@ function upgUpd(upg, upgsBought, info, currency) {
 function changeElem(id, str) {
   document.getElementById(id).innerHTML = str
 }
+function usePlural(str, decim) {
+  if (decim.eq("1")) return str
+  else {
+    if (/s$/.test(str)) return `${str}es`
+    else return `${str}s`
+  }
+}
 buttons.hardReset.addEventListener("click", function () {
   if (confirm("Are you sure you want to reset everything?")) {
     s = fs;
@@ -101,7 +109,7 @@ buttons.hardReset.addEventListener("click", function () {
   }
 });
 buttons.beg.addEventListener("click", function () {
-  s.itemsBegged = s.itemsBegged.add(new Decimal("1").add(upgEffect.begUpg.upg1).mul(upgEffect.begUpg.upg2))
+  s.itemsBegged = s.itemsBegged.add(itemsBeggedPerClick)
 });
 buttons.begUpg1.addEventListener("click", function () {
   buyMax("s.begUpg1Bought", upgInfo.begUpg.upg1, "s.itemsBegged");
@@ -122,6 +130,7 @@ function save() {
 }
 function update() { try {
   updateEffects();
+  itemsBeggedPerClick = new Decimal("1").add(upgEffect.begUpg.upg1).mul(upgEffect.begUpg.upg2);
   upgUpd(buttons.begUpg1, s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged);
   upgUpd(buttons.begUpg2, s.begUpg2Bought, upgInfo.begUpg.upg2, s.itemsBegged);
   changeElem("mainUpg1Stats", `
@@ -132,6 +141,7 @@ function update() { try {
     Currently: x${e.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg2)}<br>
     Cost: ${e.HTMLPresets.MixedScientific.format(getCost(s.begUpg2Bought, upgInfo.begUpg.upg2))} items
   `);
+  changeElem("itemsBeggedPC", `+${e.HTMLPresets.MixedScientific.format(itemsBeggedPerClick)} ${usePlural("item", itemsBeggedPerClick)} begged per click`);
   mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`;
   uselessCurrency.innerHTML = `and ${e.HTMLPresets.MixedScientific.format(new Decimal("3").pow(s.itemsBegged).sub("1"))} people are annoyed by your begging`
 } catch (error) {
