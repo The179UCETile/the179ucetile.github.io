@@ -20,7 +20,7 @@ const upgInfo = {
   begUpg: {
     upg1: new UpgradeInfo("10", "1.25", "geometric"),
     upg2: new UpgradeInfo("80", "2", "geometric"),
-    upg3: new UpgradeInfo("400", "1.5", "geometric", "25")
+    upg3: new UpgradeInfo("400", "1.5", "geometric", "20")
   }
 };
 for (let i in buttons) {
@@ -136,7 +136,7 @@ function updateEffects() {
   } else {
     upgEffect.begUpg.upg2 = new Decimal("1.4").pow(s.begUpg2Bought)
   };
-  upgEffect.begUpg.upg3 = s.begUpg3Bought.div("500")
+  upgEffect.begUpg.upg3 = s.begUpg3Bought.div("200")
 }
 function save() {
   localStorage.setItem("saveSoemoenSim", JSON.stringify(s))
