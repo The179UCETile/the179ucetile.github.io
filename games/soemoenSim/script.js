@@ -146,7 +146,7 @@ function updateEffects() {
   } else {
     upgEffect.begUpg.upg2 = new Decimal("1.4").pow(s.begUpg2Bought)
   };
-  upgEffect.begUpg.upg3 = s.begUpg3Bought.div("100");
+  upgEffect.begUpg.upg3 = s.begUpg3Bought.div("20");
   upgEffect.begUpg.upg4 = s.begUpg4Bought.gte("1") ? s.itemsBegged.add("1").log10().pow("0.7").add("1") : new Decimal("1")
 }
 function save() {
