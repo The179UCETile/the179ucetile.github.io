@@ -64,11 +64,11 @@ function buyMax(upg, info, currency) {
   let decimUpg = eval(upg);
   if (decimUpg.gte(info.maxUpg)) return;
   if (info.type == "geometric") {
-    const upgsGained = d.min(d.affordGeometricSeries(decimCur, info.startCost, info.increment, decimUpg), info.maxUpg.sub(decimUpg));
+    const upgsGained = d.affordGeometricSeries(decimCur, info.startCost, info.increment, decimUpg).min(info.maxUpg.sub(decimUpg));
     decimCur = decimCur.sub(d.sumGeometricSeries(upgsGained, info.startCost, info.increment, decimUpg));
     decimUpg = decimUpg.add(upgsGained)
   } else if (info.type == "arithmetic") {
-    const upgsGained = d.min(d.affordArithmeticSeries(decimCur, info.startCost, info.increment, decimUpg), info.maxUpg.sub(decimUpg));
+    const upgsGained = d.affordArithmeticSeries(decimCur, info.startCost, info.increment, decimUpg).min(info.maxUpg.sub(decimUpg));
     decimCur = decimCur.sub(d.sumArithmeticSeries(upgsGained, info.startCost, info.increment, decimUpg));
     decimUpg = decimUpg.add(upgsGained)
   } else {
