@@ -160,7 +160,7 @@ function update() { try {
     Currently: x${EN.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg2)}<br>
     Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg2Bought, upgInfo.begUpg.upg2))} items
   `);
-  changeElem("mainUpg2Stats", `
+  changeElem("mainUpg3Stats", `
     Currently: +${EN.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg3)}%/sec<br>
     Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg3Bought, upgInfo.begUpg.upg3))} items
   `);
