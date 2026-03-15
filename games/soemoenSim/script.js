@@ -142,7 +142,7 @@ function save() {
   localStorage.setItem("saveSoemoenSim", JSON.stringify(s))
 }
 let lastUpd = Date.now();
-let delta = 0.05;
+let delta = 0.016;
 function update() { try {
   delta = (Date.now() - lastUpd) / 1e3;
   updateEffects();
@@ -159,6 +159,10 @@ function update() { try {
   changeElem("mainUpg2Stats", `
     Currently: x${EN.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg2)}<br>
     Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg2Bought, upgInfo.begUpg.upg2))} items
+  `);
+  changeElem("mainUpg2Stats", `
+    Currently: +${EN.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg3)}%/sec<br>
+    Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg3Bought, upgInfo.begUpg.upg3))} items
   `);
   changeElem("begStats", `+${EN.HTMLPresets.MixedScientific.format(itemsBeggedPerClick)}/click | +${EN.HTMLPresets.MixedScientific.format(itemsBeggedPerSecond)}/sec`);
   mainCurrency.innerHTML = `You've begged for ${EN.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`;
