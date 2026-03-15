@@ -164,7 +164,6 @@ function update() { try {
   mainCurrency.innerHTML = `You've begged for ${EN.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`;
   uselessCurrency.innerHTML = `and ${EN.HTMLPresets.MixedScientific.format(new Decimal("3").pow(s.itemsBegged).sub("1"))} people are annoyed by your begging`;
   lastUpd = Date.now();
-  document.getElementsByClassName("loadingScreen")[0].style.display = "none"
 } catch (error) {
   mainCurrency.innerHTML = error.stack
 }}
