@@ -11,7 +11,9 @@ header {
 }
 button.upg {
   border-radius: 5px;
-  box-shadow: 0 0 5px #fff4
+  box-shadow: 0 0 5px #fff4;
+  width: 150px;
+  size: 10px
 }
 span.btn {
   color: #000;
