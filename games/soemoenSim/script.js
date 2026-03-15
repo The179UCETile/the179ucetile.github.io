@@ -14,13 +14,15 @@ const buttons = {
   begUpg1: "mainUpg1",
   begUpg2: "mainUpg2",
   begUpg3: "mainUpg3",
+  begUpg4: "mainUpg4",
   hardReset: "hardReset"
 };
 const upgInfo = {
   begUpg: {
     upg1: new UpgradeInfo("10", "1.25", "geometric"),
     upg2: new UpgradeInfo("80", "2", "geometric"),
-    upg3: new UpgradeInfo("400", "1.5", "geometric", "20")
+    upg3: new UpgradeInfo("400", "1.5", "geometric", "20"),
+    upg4: new UpgradeInfo("5e3", "1", "geometric", "1")
   }
 };
 for (let i in buttons) {
@@ -32,14 +34,16 @@ const fs = {
   itemsBegged: new Decimal("0"),
   begUpg1Bought: new Decimal("0"),
   begUpg2Bought: new Decimal("0"),
-  begUpg3Bought: new Decimal("0")
+  begUpg3Bought: new Decimal("0"),
+  begUpg4Bought: new Decimal("0")
 };
 let s = fs;
 const upgEffect = {
   begUpg: {
     upg1: new Decimal("0"),
-    upg2: new Decimal("0"),
-    upg3: new Decimal("0")
+    upg2: new Decimal("1"),
+    upg3: new Decimal("0"),
+    upg4: new Decimal("1")
   }
 };
 let itemsBeggedPerClick = new Decimal("1");
@@ -127,10 +131,13 @@ buttons.begUpg1.addEventListener("click", function () {
 });
 buttons.begUpg2.addEventListener("click", function () {
   buyMax("s.begUpg2Bought", upgInfo.begUpg.upg2, "s.itemsBegged")
-})
+});
 buttons.begUpg3.addEventListener("click", function () {
   buyMax("s.begUpg3Bought", upgInfo.begUpg.upg3, "s.itemsBegged")
-})
+});
+buttons.begUpg4.addEventListener("click", function () {
+  buyMax("s.begUpg4Bought", upgInfo.begUpg.upg4, "s.itemsBegged")
+});
 function updateEffects() {
   upgEffect.begUpg.upg1 = s.begUpg1Bought;
   if (s.begUpg2Bought.gte("50")) {
@@ -138,7 +145,8 @@ function updateEffects() {
   } else {
     upgEffect.begUpg.upg2 = new Decimal("1.4").pow(s.begUpg2Bought)
   };
-  upgEffect.begUpg.upg3 = s.begUpg3Bought.div("100")
+  upgEffect.begUpg.upg3 = s.begUpg3Bought.div("100");
+  upgEffect.begUpg.upg4 = s.itemsBegged.log10().pow("0.7").add("1")
 }
 function save() {
   localStorage.setItem("saveSoemoenSim", JSON.stringify(s))
@@ -148,12 +156,13 @@ let delta = 0.016;
 function update() { try {
   delta = (Date.now() - lastUpd) / 1e3;
   updateEffects();
-  itemsBeggedPerClick = new Decimal("1").add(upgEffect.begUpg.upg1).mul(upgEffect.begUpg.upg2);
+  itemsBeggedPerClick = new Decimal("1").add(upgEffect.begUpg.upg1).mul(upgEffect.begUpg.upg2).mul(upgEffect.begUpg.upg4);
   itemsBeggedPerSecond = itemsBeggedPerClick.mul(upgEffect.begUpg.upg3);
   s.itemsBegged = s.itemsBegged.add(itemsBeggedPerSecond.mul(delta));
   upgUpd(buttons.begUpg1, s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged);
   upgUpd(buttons.begUpg2, s.begUpg2Bought, upgInfo.begUpg.upg2, s.itemsBegged);
   upgUpd(buttons.begUpg3, s.begUpg3Bought, upgInfo.begUpg.upg3, s.itemsBegged);
+  upgUpd(buttons.begUpg4, s.begUpg4Bought, upgInfo.begUpg.upg4, s.itemsBegged);
   changeElem("mainUpg1Stats", `
     Currently: +${EN.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg1)}<br>
     Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg1Bought, upgInfo.begUpg.upg1))} items
@@ -165,6 +174,10 @@ function update() { try {
   changeElem("mainUpg3Stats", `
     Currently: +${EN.HTMLPresets.Default.format(upgEffect.begUpg.upg3.mul(100))}%/sec<br>
     Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg3Bought, upgInfo.begUpg.upg3))} items
+  `);
+  changeElem("mainUpg4Stats", `
+    Currently: x${EN.HTMLPresets.Default.format(upgEffect.begUpg.upg4)}<br>
+    Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg4Bought, upgInfo.begUpg.upg4))} items
   `);
   changeElem("begStats", `+${EN.HTMLPresets.MixedScientific.format(itemsBeggedPerClick)}/click | +${EN.HTMLPresets.MixedScientific.format(itemsBeggedPerSecond)}/sec`);
   mainCurrency.innerHTML = `You've begged for ${EN.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`;

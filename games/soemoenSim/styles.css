@@ -24,3 +24,7 @@ span#mainCurrency {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
 }
+div#shortHR {
+  height: 5px;
+  background-image: linear-gradient(to right, #fff0, #ffff, #fff0)
+}
