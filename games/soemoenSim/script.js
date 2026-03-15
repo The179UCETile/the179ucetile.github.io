@@ -110,11 +110,13 @@ function usePlural(str, decim) {
   }
 }
 buttons.hardReset.addEventListener("click", function () {
-  if (confirm("Are you sure you want to reset everything?")) {
+  if (confirm("Are you sure you want to reset everything?")) { try {
     s = fs;
     localStorage.setItem("saveSoemoenSim", JSON.stringify(fs));
     location.reload()
-  }
+  } catch (e) {
+    alert(e.stack)
+  }}
 });
 buttons.beg.addEventListener("click", function () {
   s.itemsBegged = s.itemsBegged.add(itemsBeggedPerClick)
