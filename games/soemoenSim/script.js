@@ -1,8 +1,9 @@
 class UpgradeInfo {
-  constructor(startCost, increment, type) {
+  constructor(startCost, increment, type, maxUpg = "Infinity") {
     this.startCost = new Decimal(startCost);
     this.increment = new Decimal(increment);
-    this.type = type
+    this.type = type;
+    this.maxUpg = new Decimal(maxUpg)
   }
 };
 const windowTitle = document.head.getElementsByTagName("title")[0];
@@ -12,32 +13,37 @@ const buttons = {
   beg: "beg",
   begUpg1: "mainUpg1",
   begUpg2: "mainUpg2",
+  begUpg3: "mainUpg3",
   hardReset: "hardReset"
 };
 const upgInfo = {
   begUpg: {
     upg1: new UpgradeInfo("10", "1.25", "geometric"),
-    upg2: new UpgradeInfo("80", "2", "geometric")
+    upg2: new UpgradeInfo("80", "2", "geometric"),
+    upg3: new UpgradeInfo("400", "1.5", "geometric", "50")
   }
 };
 for (let i in buttons) {
   buttons[i] = document.getElementById(buttons[i])
 }
 const d = Decimal;
-const e = EternalNotations;
+const EN = EternalNotations;
 const fs = {
   itemsBegged: new Decimal("0"),
   begUpg1Bought: new Decimal("0"),
-  begUpg2Bought: new Decimal("0")
+  begUpg2Bought: new Decimal("0"),
+  begUpg3Bought: new Decimal("0")
 };
 let s = fs;
 const upgEffect = {
   begUpg: {
     upg1: new Decimal("0"),
-    upg2: new Decimal("0")
+    upg2: new Decimal("0"),
+    upg3: new Decimal("0")
   }
 };
 let itemsBeggedPerClick = new Decimal("1");
+let itemsBeggedPerSecond = new Decimal("0");
 if (localStorage.getItem("saveSoemoenSim")) {
   importSave(localStorage.getItem("saveSoemoenSim"))
 };
@@ -53,11 +59,11 @@ function buyMax(upg, info, currency) {
   let decimCur = eval(currency);
   let decimUpg = eval(upg);
   if (info.type == "geometric") {
-    const upgsGained = d.affordGeometricSeries(decimCur, info.startCost, info.increment, decimUpg);
+    const upgsGained = d.min(d.affordGeometricSeries(decimCur, info.startCost, info.increment, decimUpg), info.maxUpg.sub(decimUpg));
     decimCur = decimCur.sub(d.sumGeometricSeries(upgsGained, info.startCost, info.increment, decimUpg));
     decimUpg = decimUpg.add(upgsGained)
   } else if (info.type == "arithmetic") {
-    const upgsGained = d.affordArithmeticSeries(decimCur, info.startCost, info.increment, decimUpg);
+    const upgsGained = d.min(d.affordArithmeticSeries(decimCur, info.startCost, info.increment, decimUpg), info.maxUpg.sub(decimUpg));
     decimCur = decimCur.sub(d.sumArithmeticSeries(upgsGained, info.startCost, info.increment, decimUpg));
     decimUpg = decimUpg.add(upgsGained)
   } else {
@@ -69,7 +75,9 @@ function buyMax(upg, info, currency) {
   `)
 }
 function getCost(upg, info) {
-  if (info.type == "geometric") {
+  if (upg.gte(info.maxUpg)) {
+    return new Decimal("Infinity")
+  } else if (info.type == "geometric") {
     return info.startCost.mul(info.increment.pow(upg))
   } else if (info.type == "arithmetic") {
     return info.startCost.add(info.increment.mul(upg))
@@ -111,11 +119,15 @@ buttons.hardReset.addEventListener("click", function () {
 buttons.beg.addEventListener("click", function () {
   s.itemsBegged = s.itemsBegged.add(itemsBeggedPerClick)
 });
+// TODO: generalize this
 buttons.begUpg1.addEventListener("click", function () {
   buyMax("s.begUpg1Bought", upgInfo.begUpg.upg1, "s.itemsBegged");
 });
 buttons.begUpg2.addEventListener("click", function () {
   buyMax("s.begUpg2Bought", upgInfo.begUpg.upg2, "s.itemsBegged")
+})
+buttons.begUpg3.addEventListener("click", function () {
+  buyMax("s.begUpg3Bought", upgInfo.begUpg.upg3, "s.itemsBegged")
 })
 function updateEffects() {
   upgEffect.begUpg.upg1 = s.begUpg1Bought;
@@ -123,33 +135,41 @@ function updateEffects() {
     upgEffect.begUpg.upg2 = new Decimal("1.4").pow(s.begUpg2Bought.sub("50").pow("0.85").add("50"))
   } else {
     upgEffect.begUpg.upg2 = new Decimal("1.4").pow(s.begUpg2Bought)
-  }
+  };
+  upgEffect.begUpg.upg3 = s.begUpg3Bought.div("1e3")
 }
 function save() {
   localStorage.setItem("saveSoemoenSim", JSON.stringify(s))
 }
+let lastUpd = Date.now();
+let delta = 0.05;
 function update() { try {
+  delta = (Date.now() - lastUpd) / 1e3;
   updateEffects();
   itemsBeggedPerClick = new Decimal("1").add(upgEffect.begUpg.upg1).mul(upgEffect.begUpg.upg2);
+  itemsBeggedPerSecond = itemsBeggedPerClick.mul(upgEffect.begUpg.upg3);
+  s.itemsBegged = s.itemsBegged.add(itemsBeggedPerSecond.mul(delta));
   upgUpd(buttons.begUpg1, s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged);
   upgUpd(buttons.begUpg2, s.begUpg2Bought, upgInfo.begUpg.upg2, s.itemsBegged);
   changeElem("mainUpg1Stats", `
-    Currently: +${e.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg1)}<br>
-    Cost: ${e.HTMLPresets.MixedScientific.format(getCost(s.begUpg1Bought, upgInfo.begUpg.upg1))} items
+    Currently: +${EN.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg1)}<br>
+    Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg1Bought, upgInfo.begUpg.upg1))} items
   `);
   changeElem("mainUpg2Stats", `
-    Currently: x${e.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg2)}<br>
-    Cost: ${e.HTMLPresets.MixedScientific.format(getCost(s.begUpg2Bought, upgInfo.begUpg.upg2))} items
+    Currently: x${EN.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg2)}<br>
+    Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg2Bought, upgInfo.begUpg.upg2))} items
   `);
-  changeElem("itemsBeggedPC", `+${e.HTMLPresets.MixedScientific.format(itemsBeggedPerClick)} ${usePlural("item", itemsBeggedPerClick)} begged per click`);
-  mainCurrency.innerHTML = `You've begged for ${e.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`;
-  uselessCurrency.innerHTML = `and ${e.HTMLPresets.MixedScientific.format(new Decimal("3").pow(s.itemsBegged).sub("1"))} people are annoyed by your begging`
+  changeElem("begStats", `+${EN.HTMLPresets.MixedScientific.format(itemsBeggedPerClick)}/click | +${EN.HTMLPresets.MixedScientific.format(itemsBeggedPerSecond)}/sec`);
+  mainCurrency.innerHTML = `You've begged for ${EN.HTMLPresets.MixedScientific.format(s.itemsBegged)} items.`;
+  uselessCurrency.innerHTML = `and ${EN.HTMLPresets.MixedScientific.format(new Decimal("3").pow(s.itemsBegged).sub("1"))} people are annoyed by your begging`;
+  lastUpd = Date.now();
 } catch (error) {
   mainCurrency.innerHTML = error.stack
 }}
 function updateTitle() {
-  windowTitle.innerHTML = `py_alt simulator | ${e.Presets.MixedScientific.format(s.itemsBegged)} items begged`
+  windowTitle.innerHTML = `py_alt simulator | ${EN.Presets.MixedScientific.format(s.itemsBegged)} items begged`
 }
 setInterval(update, 16)
 setInterval(updateTitle, 100);
-setInterval(save, 1000)
+setInterval(save, 1000);
+document.getElementsByClassName("loadingScreen")[0].style.display = "none"

@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicons/placeholder.png">
   </head>
   <body>
+    <div class="loadingScreen">Loading...</div>
     <header>
       <p>
         <span id="mainCurrency" style="font-size:20px">Loading...</span><br>
@@ -14,7 +15,7 @@
       </p>
     </header>
     <div>
-      <p id="itemsBeggedPC">+1 item begged per click</p>
+      <p id="begStats">+1/click | +0/sec</p>
       <button id="beg">Beg for a random item</button><br>
       <div>
         <button disabled class="upg" id="mainUpg1">
@@ -30,6 +31,9 @@
             Currently: x1<br>
             Cost: 80 items
           </span>
+        </button>
+        <button disabled class="upg" id="mainUpg3">
+
         </button>
       </div>
       <button id="hardReset" style="background-color: #f00;">HARD RESET</button>
