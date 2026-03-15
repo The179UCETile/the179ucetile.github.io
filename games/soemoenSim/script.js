@@ -62,6 +62,7 @@ function importSave(str) {
 function buyMax(upg, info, currency) {
   let decimCur = eval(currency);
   let decimUpg = eval(upg);
+  if (decimUpg.gte(info.maxUpg)) return;
   if (info.type == "geometric") {
     const upgsGained = d.min(d.affordGeometricSeries(decimCur, info.startCost, info.increment, decimUpg), info.maxUpg.sub(decimUpg));
     decimCur = decimCur.sub(d.sumGeometricSeries(upgsGained, info.startCost, info.increment, decimUpg));
@@ -146,7 +147,7 @@ function updateEffects() {
     upgEffect.begUpg.upg2 = new Decimal("1.4").pow(s.begUpg2Bought)
   };
   upgEffect.begUpg.upg3 = s.begUpg3Bought.div("100");
-  upgEffect.begUpg.upg4 = s.itemsBegged.log10().pow("0.7").add("1")
+  upgEffect.begUpg.upg4 = s.begUpg4Bought.gte("1") ? s.itemsBegged.log10().pow("0.7").add("1") : new Decimal("1")
 }
 function save() {
   localStorage.setItem("saveSoemoenSim", JSON.stringify(s))
