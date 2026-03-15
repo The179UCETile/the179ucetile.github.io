@@ -161,7 +161,7 @@ function update() { try {
     Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg2Bought, upgInfo.begUpg.upg2))} items
   `);
   changeElem("mainUpg3Stats", `
-    Currently: +${EN.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg3)}%/sec<br>
+    Currently: +${EN.HTMLPresets.Default.format(upgEffect.begUpg.upg3.mul(100))}%/sec<br>
     Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg3Bought, upgInfo.begUpg.upg3))} items
   `);
   changeElem("begStats", `+${EN.HTMLPresets.MixedScientific.format(itemsBeggedPerClick)}/click | +${EN.HTMLPresets.MixedScientific.format(itemsBeggedPerSecond)}/sec`);
