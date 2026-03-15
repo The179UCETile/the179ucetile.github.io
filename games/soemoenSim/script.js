@@ -151,6 +151,7 @@ function update() { try {
   s.itemsBegged = s.itemsBegged.add(itemsBeggedPerSecond.mul(delta));
   upgUpd(buttons.begUpg1, s.begUpg1Bought, upgInfo.begUpg.upg1, s.itemsBegged);
   upgUpd(buttons.begUpg2, s.begUpg2Bought, upgInfo.begUpg.upg2, s.itemsBegged);
+  upgUpd(buttons.begUpg3, s.begUpg3Bought, upgInfo.begUpg.upg3, s.itemsBegged);
   changeElem("mainUpg1Stats", `
     Currently: +${EN.HTMLPresets.MixedScientific.format(upgEffect.begUpg.upg1)}<br>
     Cost: ${EN.HTMLPresets.MixedScientific.format(getCost(s.begUpg1Bought, upgInfo.begUpg.upg1))} items
