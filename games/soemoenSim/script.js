@@ -136,7 +136,7 @@ function updateEffects() {
   } else {
     upgEffect.begUpg.upg2 = new Decimal("1.4").pow(s.begUpg2Bought)
   };
-  upgEffect.begUpg.upg3 = s.begUpg3Bought.div("50")
+  upgEffect.begUpg.upg3 = s.begUpg3Bought.div("500")
 }
 function save() {
   localStorage.setItem("saveSoemoenSim", JSON.stringify(s))
