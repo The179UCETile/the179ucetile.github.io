@@ -7,7 +7,7 @@ function playAudio() {
   audio.currentTime = 0;
   audio.play()
 }
-const t = Date.now();
+let t = Date.now();
 function update() {
   const timeLeft = (864e5 - (Date.now() - t)) / 1e3;
   setInterval(()=>{
