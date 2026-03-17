@@ -9,8 +9,8 @@ function playAudio() {
 }
 let t = Date.now();
 function update() {
-  const timeLeft = (864e5 - (Date.now() - t)) / 1e3;
   setInterval(()=>{
+    const timeLeft = (864e5 - (Date.now() - t)) / 1e3;
     if (timeLeft < 0) {
       document.getElementById("fakeGame").style.display = "none";
       document.getElementById("win").style.display = "";
