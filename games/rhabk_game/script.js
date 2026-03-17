@@ -15,7 +15,7 @@ function update() {
       document.getElementById("fakeGame").style.display = "none";
       document.getElementById("win").style.display = "";
     } else {
-      document.getElementById("chapter").innerHTML = `YOUR CURRNTLY ON CHALPER ${Math.floor(timeLeft / 28800) + 1}`;
+      document.getElementById("chapter").innerHTML = `YOUR CURRNTLY ON CHALPER ${Math.floor((86400 - timeLeft) / 28800) + 1}`;
       document.getElementById("timeLeft").innerHTML = `${timeLeft} secknds lft!!!!`
     }
   }, 16)
