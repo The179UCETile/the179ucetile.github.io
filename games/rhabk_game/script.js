@@ -30,7 +30,7 @@ function update() {
       document.getElementById("fakeGame").style.display = "none";
       document.getElementById("win").style.display = "";
     } else {
-      if (Math.random() < 10 ** (-5 + Math.floor((86400 - timeLeft) / 28800) + 1)) {
+      if (Math.random() < 10 ** (-4 + Math.floor((86400 - timeLeft) / 28800) + 1)) {
         playSFX(Math.floor(Math.random() * 7 + 1))
       }
       document.getElementById("chapter").innerHTML = `YOUR CURRNTLY ON CHALPER ${Math.floor((86400 - timeLeft) / 28800) + 1}`;
