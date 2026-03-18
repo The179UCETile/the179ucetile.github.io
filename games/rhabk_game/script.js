@@ -12,7 +12,7 @@ function playAudio() {
   audio.play()
 }
 function playSFX(num) {
-  let A = document.getElementById(`sfx${i}`);
+  let A = document.getElementById(`sfx${num}`);
   A.pause();
   A.currentTime = 0;
   A.play()
