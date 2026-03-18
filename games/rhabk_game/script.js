@@ -14,7 +14,7 @@ function playAudio() {
 }
 function playSFX(num) {
   let A = document.getElementById(`sfx${num}`);
-  if (!audiosConnected.includes(i)) {
+  if (!audiosConnected.includes(num)) {
     const ctx = new AudioContext();
     const gain = ctx.createGain();
     gain.gain.value = 10;
