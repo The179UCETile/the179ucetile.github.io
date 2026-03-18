@@ -5,6 +5,11 @@ audio.preload = true;
 for (let i = 1; i < 8; i++) {
   let A = document.getElementById(`sfx${i}`);
   A.preload = true;
+  const ctx = new AudioContext();
+  const gain = ctx.createGain();
+  gain.gain.value = 5;
+  const T = ctx.createMediaElementSource(A);
+  T.connect(gain).connect(ctx.destination);
 }
 function playAudio() {
   audio.pause();
@@ -13,11 +18,6 @@ function playAudio() {
 }
 function playSFX(num) {
   let A = document.getElementById(`sfx${num}`);
-  const ctx = new AudioContext();
-  const gain = ctx.createGain();
-  gain.gain.value = 5;
-  const T = ctx.createMediaElementSource(A);
-  T.connect(gain).connect(ctx.destination);
   A.pause();
   A.currentTime = 0;
   A.play()
@@ -30,7 +30,7 @@ function update() {
       document.getElementById("fakeGame").style.display = "none";
       document.getElementById("win").style.display = "";
     } else {
-      if (Math.random() < 10 ** (-6 + Math.floor((86400 - timeLeft) / 28800) + 1)) {
+      if (Math.random() < 10 ** (-5 + Math.floor((86400 - timeLeft) / 28800) + 1)) {
         playSFX(Math.floor(Math.random() * 7 + 1))
       }
       document.getElementById("chapter").innerHTML = `YOUR CURRNTLY ON CHALPER ${Math.floor((86400 - timeLeft) / 28800) + 1}`;
