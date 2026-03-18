@@ -13,6 +13,11 @@ function playAudio() {
 }
 function playSFX(num) {
   let A = document.getElementById(`sfx${num}`);
+  const ctx = new AudioContext();
+  const gain = ctx.createGain();
+  gain.gain.value = 5;
+  const T = ctx.createMediaElementSource(A);
+  T.connect(gain).connect(ctx.destination);
   A.pause();
   A.currentTime = 0;
   A.play()
