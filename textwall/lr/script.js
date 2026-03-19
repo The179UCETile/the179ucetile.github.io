@@ -35,11 +35,11 @@ function Lr(e) {
   }
 };
 setInterval(()=>{
-  const coords = Lr(document.getElementById("tpword").innerHTML);
+  const coords = Lr(document.getElementById("tpword").value);
   coords.y = -coords.y;
   coords.abs = {x: Math.abs(coords.x), y: Math.abs(coords.y)};
   let type = "common";
-  if (coords.abs.x % 10000 == 0 || coords.abs.y % 10000 == 0 || coords.abs.x == 100000 || coords.abs.y == 100000) {
+  if (coords.abs.x % 10000 == 0 || coords.abs.y % 10000 == 0 || coords.abs.x == 100000 || coords.abs.y == 100000 && !(coords.x == 0 && coords.y == 0)) {
     type = "rare"
   } else if (coords.abs.x == 69420 || coords.abs.y == 69420) {
     type = "nice"
