@@ -1,0 +1,51 @@
+SOANYWAY does rhabk and py_alt understand??
+GIVEME audio WHICHIS IHAVE WHAT UQisUandQ: gameTheme BRO NOWDO document INSIDE getElementById NOW NOW!!!!!!!!!!
+CHANGE audio INSIDE loop TO CORRECT NOW!!!!!!!!!!
+CHANGE audio INSIDE preload TO CORRECT NOW!!!!!!!!!!
+GIVEME audiosConnected WHICHIS PASTE INPASTEBIN NOW!!!!!!!!!!
+GIVEME i WHICHIS I ANDDO /
+  GIVEME A WHICHIS IHAVE WHAT WHAT UQisUandQ: sfx BRO GIVE ~!i!~ BRO NOWDO document INSIDE getElementById NOW NOW!!!!!!!!!!
+  CHANGE A INSIDE preload TO CORRECT NOW!!!!!!!!!!
+\ UNTIL <i IMTHEBEST VII> NOW!!!!!!!!!!
+IWILLDO playAudio IFYOUGIVEME LIKETHIS /
+  IHAVE NOWDO audio INSIDE pause NOW!!!!!!!!!!
+  CHANGE audio INSIDE currentTime TO I NO I NOW!!!!!!!!!!
+  IHAVE NOWDO audio INSIDE play NOW!!!!!!!!!!
+\ NOWRESPOND!!!!!!!!!!
+IWILLDO playSFX IFYOUGIVEME num LIKETHIS /
+  GIVEME A WHICHIS IHAVE WHAT WHAT UQisUandQ: sfx BRO GIVE ~!num!~ BRO NOWDO document INSIDE getElementById NOW NOW!!!!!!!!!!
+  DOITNOW <SYBAU IHAVE num NOWDO audiosConnected INSIDE includes NOW> /
+    GIVEME ctx WHICHIS CREATE IHAVE NOWDO AudioContext NOW NOW!!!!!!!!!!
+    GIVEME gain WHICHIS IHAVE NOWDO ctx INSIDE createGain NOW NOW!!!!!!!!!!
+    CHANGE gain INSIDE gain INSIDE value TO X NOW!!!!!!!!!!
+    GIVEME T WHICHIS IHAVE A NOWDO ctx INSIDE createMediaElementSource NOW NOW!!!!!!!!!!
+    IHAVE ctx INSIDE destination NOWDO IHAVE gain NOWDO T INSIDE connect NOW INSIDE connect NOW!!!!!!!!!!
+    IHAVE num NOWDO audiosConnected INSIDE push NOW!!!!!!!!!!
+  \!!!!!!!!!!
+  IHAVE NOWDO A INSIDE pause NOW!!!!!!!!!!
+  CHANGE A INSIDE currentTime TO I NO I NOW!!!!!!!!!!
+  IHAVE NOWDO A INSIDE play NOW!!!!!!!!!!
+\ NOWRESPOND!!!!!!!!!!
+GIVEME t WHICHIS IHAVE NOWDO Date INSIDE now NOW!!!!!!!!!!
+IWILLDO update IFYOUGIVEME LIKETHIS /
+  IHAVE IWILLDO IFYOUGIVEME LIKETHIS /
+    GIVEME timeLeft WHICHIS WHAT 86400000 NO WHAT IHAVE NOWDO Date INSIDE now NOW NO t BRO BRO STOPIT M!!!!!!!!!!
+    DOITNOW <timeLeft WHYWOULDYOU I NO I> /
+      CHANGE IHAVE WHAT UQisUandQ: fakeGame BRO NOWDO document INSIDE getElementById NOW INSIDE style INSIDE display TO WHAT UQisUandQ: none BRO NOW!!!!!!!!!!
+      CHANGE IHAVE WHAT UQisUandQ: win BRO NOWDO document INSIDE getElementById NOW INSIDE style INSIDE display TO WHAT UQisUandQ: BRO NOW!!!!!!!!!!
+    \ ISAIDDOITYOUBITCH /
+      DOITNOW <IHAVE NOWDO Math INSIDE random NOW WHYWOULDYOU X HUH WHAT ?IV GIVE WHAT 86400 NO timeLeft BRO STOPIT 28800 BRO WHY V> /
+        IHAVE IHAVE IHAVE NOWDO Math INSIDE random NOW WHY VII GIVE I NOWDO Math INSIDE floor NOW NOWDO playSFX NOW!!!!!!!!!!
+      \!!!!!!!!!!
+      CHANGE IHAVE WHAT UQisUandQ: chapter BRO NOWDO document INSIDE getElementById NOW INSIDE innerHTML TO WHAT UQisUandQ: YOUR CURRNTLY ON CHALPER!GIVUNIC000020` BRO GIVE ~!WHAT IHAVE WHAT 86400 NO timeLeft BRO STOPIT 28800 NOWDO Math INSIDE floor NOW GIVE I BRO!~ NOW!!!!!!!!!!
+      CHANGE IHAVE WHAT UQisUandQ: timeLeft BRO NOWDO document INSIDE getElementById NOW INSIDE innerHTML TO ~!timeLeft!~ GIVE WHAT UQisUandQ: secknds lft!!`!!`!!`!!` BRO NOW!!!!!!!!!!
+    \!!!!!!!!!!
+  \ NOWRESPOND AND XVI NOWDO setInterval NOW!!!!!!!!!!
+\ NOWRESPOND!!!!!!!!!!
+IHAVE WHAT UQisUandQ: click BRO AND IWILLDO IFYOUGIVEME LIKETHIS /
+  CHANGE t TO IHAVE NOWDO Date INSIDE now NOW!!!!!!!!!!
+  CHANGE IHAVE WHAT UQisUandQ: titleScreen BRO NOWDO document INSIDE getElementById NOW INSIDE style INSIDE display TO WHAT UQisUandQ: none BRO NOW!!!!!!!!!!
+  CHANGE IHAVE WHAT UQisUandQ: fakeGame BRO NOWDO document INSIDE getElementById NOW INSIDE style INSIDE display TO WHAT UQisUandQ: BRO NOW!!!!!!!!!!
+  IHAVE NOWDO playAudio NOW!!!!!!!!!!
+  IHAVE NOWDO update NOW!!!!!!!!!!
+\ NOWRESPOND NOWDO IHAVE WHAT UQisUandQ: rhabk is trash BRO NOWDO document INSIDE getElementById NOW INSIDE addEventListener NOW!!!!!!!!!!
