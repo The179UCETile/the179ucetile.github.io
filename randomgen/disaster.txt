@@ -34,11 +34,11 @@ O C T O B E R
 N O V E M B E R
 D E C E M B E R
 
-$>disaster
-IT IS THE [adj2] TIME...
-[4-15] PENTAGRAMS...
-THE [adj2,x2-3] [adj1] TEXTWALL EVENT...
-WILL START AT <b><i><u>[months] O N E .
-. . .
-[S O O N|T H E E N D I S N E A R|[1-30] D A Y S L E F T] .
+$disaster
+IT IS THE [adj2] TIME...<br>
+[4-15] PENTAGRAMS...<br>
+THE [adj2,x2-3] [adj1] TEXTWALL EVENT...<br>
+WILL START AT <b><i><u>[months] O N E .<br>
+. . .<br>
+[S O O N|T H E E N D I S N E A R|[1-30] D A Y S L E F T] .<br>
 ~[adj2]_DISASTER</u></i></b>
