@@ -1,0 +1,44 @@
+$name : Disaster Generator
+$author : The179UCETile
+$description : Generates fake disasters as seen on tw.2s4.me/~FINAL_DISASTER and tw.2s4.me/~ULTIMATE_DISASTER.
+$amount : 1
+$button : Give me a random fake disaster!
+
+$adj1
+FINAL
+ULTIMATE
+LAST
+GRAND
+REAL
+ACTUAL
+
+$adj2
+FINAL
+ULTIMATE
+LAST
+GRAND FINAL
+REAL FINAL
+ACTUAL FINAL
+
+$months
+J A N U A R Y
+F E B R U A R Y
+M A R C H
+A P R I L
+M A Y
+J U N E
+J U L Y
+A U G U S T
+S E P T E M B E R
+O C T O B E R
+N O V E M B E R
+D E C E M B E R
+
+$>disaster
+IT IS THE [adj2] TIME...
+[4-15] PENTAGRAMS...
+THE [adj2,x2-3] [adj1] TEXTWALL EVENT...
+WILL START AT <b><i><u>[months] O N E .
+. . .
+[S O O N|T H E E N D I S N E A R|[1-30] D A Y S L E F T] .
+~[adj2]_DISASTER</u></i></b>
