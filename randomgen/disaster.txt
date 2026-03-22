@@ -127,7 +127,7 @@ $twclones
 
 $disasters
 • EVERYONE IS AUTOMATICALLY LOGGED IN ON THE TEXTWALL ACCOUNT IN ALL TEXTWALL CLONES.<br>
-• "[hugenumber,#num] nearby, [num] online"<br>
+• "[hugenumber,#num] nearby, [#num] online"<br>
 • [GRIEFS|[synonyms][s]] IN TW.2S4.ME[twclones,x5-7] AND EVERY TEXTWALL CLONE!!!!!<br>
 • ALL SCRAPFANS, HALL OF SHAMERS AND BELOW JOINS.<br>
 • [hugenumber] BOTS ONLINE.<br>
