@@ -4,23 +4,19 @@ $description : Generates fake disasters as seen on tw.2s4.me/~FINAL_DISASTER and
 $amount : 1
 $button : Give me a random fake disaster!
 
-$adj1
-FINAL,[ ] {nospace: FINAL}
-ULTIMATE,[ ] {nospace: ULTIMATE}
-LAST,[ ] {nospace: LAST}
-GRAND,[ ] {nospace: GRAND}
-REAL,[ ] {nospace: REAL}
-ACTUAL,[ ] {nospace: ACTUAL}
-SUPREME,[ ] {nospace: SUPREME}
-
-$adj2
-FINAL
-ULTIMATE
-LAST
-GRAND FINAL
-REAL FINAL
-ACTUAL FINAL
-SUPREME FINAL
+$adjs
+FINAL,[ ] {nospace:FINAL} {last:FINAL}
+ULTIMATE,[ ] {nospace:ULTIMATE} {last:ULTIMATE}
+LAST,[ ] {nospace:LAST} {last:LAST}
+GRAND,[ ] {nospace:GRAND} {last:GRAND FINAL}
+REAL,[ ] {nospace:REAL} {last:REAL FINAL}
+ACTUAL,[ ] {nospace:ACTUAL} {last:ACTUAL FINAL}
+SUPREME,[ ] {nospace:SUPREME} {last:SUPREME FINAL}
+PENULTIMATE,[ ] {nospace:PENULTIMATE} {last:PENULTIMATE}
+UNIVERSAL,[ ] {nospace:UNIVERSAL} {last:UNIVERSAL FINAL}
+ETERNAL,[ ] {nospace:ETERNAL} {last:ETERNAL FINAL}
+INFINITE,[ ] {nospace:INFINITE} {last:INFINITE FINAL}
+PROPER,[ ] {nospace:PROPER} {last:PROPER FINAL}
 
 $months
 J A N U A R Y
@@ -36,5 +32,19 @@ O C T O B E R
 N O V E M B E R
 D E C E M B E R
 
+$warnings
+, TW END
+, FG
+, DESTRUCTION
+, ABOMINATION
+, DANGER
+, INCIDENT
+, HACKING
+, INFINITY
+, AUTISM
+, GARETT
+, DISASTER
+, IRL DEATH
+
 $disaster
-IT IS THE [adj2] TIME...<br>[4-15] PENTAGRAMS...<br>THE [adj1,x2-5][adj2] TEXTWALL EVENT...<br>WILL START AT <b><i><u>[months] O N E .<br>. . .<br>[S O O N|T H E E N D I S N E A R|[1 D A Y|[2-30] D A Y S] L E F T] .<br>~[adj1,as nospace]_DISASTER</u></i></b>
+IT IS THE [adjs,as final] TIME...<br>[4-15] PENTAGRAMS...<br>THE [adjs,x2-5][adjs,as final] TEXTWALL EVENT...<br>WILL START AT <b><i><u>[months] O N E .<br>. . .<br>[S O O N|T H Y E N D I S N E A R|[1 D A Y|[2-30] D A Y S] L E F T] .<br>~[adjs,as nospace]_DISASTER</u></i></b><br><b>W A R N I N G ! ! ! :</b><br>OBLITERATION[warnings, x5-12]!!!!!!!!!!
