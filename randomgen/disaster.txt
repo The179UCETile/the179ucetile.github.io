@@ -5,12 +5,13 @@ $amount : 1
 $button : Give me a random fake disaster!
 
 $adj1
-FINAL[ ]
-ULTIMATE[ ]
-LAST[ ]
-GRAND[ ]
-REAL[ ]
-ACTUAL[ ]
+FINAL,[ ] {nospace: FINAL}
+ULTIMATE,[ ] {nospace: ULTIMATE}
+LAST,[ ] {nospace: LAST}
+GRAND,[ ] {nospace: GRAND}
+REAL,[ ] {nospace: REAL}
+ACTUAL,[ ] {nospace: ACTUAL}
+SUPREME,[ ] {nospace: SUPREME}
 
 $adj2
 FINAL
@@ -19,6 +20,7 @@ LAST
 GRAND FINAL
 REAL FINAL
 ACTUAL FINAL
+SUPREME FINAL
 
 $months
 J A N U A R Y
@@ -35,10 +37,4 @@ N O V E M B E R
 D E C E M B E R
 
 $disaster
-IT IS THE [adj2] TIME...<br>
-[4-15] PENTAGRAMS...<br>
-THE [adj1,x2-3] [adj2] TEXTWALL EVENT...<br>
-WILL START AT <b><i><u>[months] O N E .<br>
-. . .<br>
-[S O O N|T H E E N D I S N E A R|[1-30] D A Y S L E F T] .<br>
-~[adj1]_DISASTER</u></i></b>
+IT IS THE [adj2] TIME...<br>[4-15] PENTAGRAMS...<br>THE [adj1,x2-5] [adj2] TEXTWALL EVENT...<br>WILL START AT <b><i><u>[months] O N E .<br>. . .<br>[S O O N|T H E E N D I S N E A R|[1 D A Y|[2-30] D A Y S] L E F T] .<br>~[adj1,as nospace]_DISASTER</u></i></b>
