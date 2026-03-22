@@ -5,12 +5,12 @@ $amount : 1
 $button : Give me a random fake disaster!
 
 $adj1
-FINAL
-ULTIMATE
-LAST
-GRAND
-REAL
-ACTUAL
+FINAL[ ]
+ULTIMATE[ ]
+LAST[ ]
+GRAND[ ]
+REAL[ ]
+ACTUAL[ ]
 
 $adj2
 FINAL
