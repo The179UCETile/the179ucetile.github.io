@@ -116,6 +116,14 @@ YOCTO
 RONTO
 QUECTO
 
+$prefixes2
+SUPER[ ]
+ULTRA[ ]
+HYPER[ ]
+MEGA[ ]
+META[ ]
+SUPREME[ ]
+
 $twclones
 , TEXTWALL.CC
 , EHTWWALL
@@ -125,6 +133,13 @@ $twclones
 , TEXTNEXUS
 , UNITEXTWALL
 
+$badstuff
+/FAX
+/RENAULT
+/TENAULT
+/SCRAPFAN1 WORSHIP ABSOLUTE INFINTY
+/VERSICLE
+
 $disasters
 • EVERYONE IS AUTOMATICALLY LOGGED IN ON THE TEXTWALL ACCOUNT IN ALL TEXTWALL CLONES.<br>
 • "[hugenumber,#num] nearby, [#num] online"<br>
@@ -133,11 +148,15 @@ $disasters
 • [hugenumber] BOTS ONLINE.<br>
 • DESPERATE FOR EVERY SINGLE COINBOT IN THE ENTIRE [prefixes]VERSE.<br>
 • [0.666|0.0666|0.00666|0.000066666|0.000000006666666] [smallprefixes][SECOND|PLANK TIME] SPAM: [hugenumber] OF EVERYTHING!!!!!!!!!!<br>
-• YOU... ARE... THE ARMY OF TEXTWALL [synonyms] AND [synonyms,as er] OF SCRAPFAN!<br>
+• YOU... ARE... THE ARMY OF TEXTWALL [synonyms] AND [synonyms,as er] OF SCRAPFAN!!!<br>
+• ADDING [OFFENSIVE |BAD |]THINGS TO ALL USERS IN ALL TEXTWALLERS IN ALL [prefixes]VERSES!!!<br>
+• RENAULT ARMY JOINS AND DESTROYS E V E R Y T H I N G ! ! !<br>• SO DOES THE TEL ARMY!<br>• AND THE FAX ARMY!<br>• AND FINALLY, THE SOEMOEN ARMY!<br>
+• TEL[badstuff,x3-5] SPAMMING!!!!!<br>
+• ALL EVIL TEXTWALLERS AND FORMER EVIL TEXTWALLERS GET [prefixes2,x3-6]MEMBER!<br>
 
 $transformations
 TRANSFORMATION THE LAST CHARACTER... (HALL OF SHAME LEVEL [hugenumber]... THE [synonyms,as er] OF ALL TEXTWALL CLONES... NO NEW TEXTWALL.)<br>
 TRANSFORMATION DARKHEART OF TEXTWALL (TEXTWALL DIES!)<br>
 
 $disaster
-IT IS THE [adjs,as last] TIME...<br>[4-15] PENTAGRAMS...<br>THE [adjs,x2-5,#adjstart][adjs,as last,#adjend] TEXTWALL EVENT...<br>WILL START AT <b><i><u>[months] O N E .<br>. . .<br>[S O O N|T H Y E N D I S N E A R|[1 D A Y|[2-30] D A Y S] L E F T] .<br>~[adjs,as nospace]_DISASTER</u></i></b><br><br><b>W A R N I N G ! ! ! :</b><br>OBLITERATION[warnings,x5-13]!!!!!!!!!!<br><br><b><i><u>CONTAINS IN THE [#adjstart][#adjend] FINAL TEXTWALL EVENT...</u></i></b><br>[disasters,x6-8]• TRANSFORMATION!!!!!!!!!!<br><b>[transformations,x1-2]</b>
+IT IS THE [adjs,as last] TIME...<br>[4-15] PENTAGRAMS...<br>THE [adjs,x2-5,#adjstart][adjs,as last,#adjend] TEXTWALL EVENT...<br>WILL START AT <b><i><u>[months] O N E .<br>. . .<br>[S O O N|T H Y E N D I S N E A R|[1 D A Y|[2-30] D A Y S] L E F T] .<br>~[adjs,as nospace]_DISASTER</u></i></b><br><br><b>W A R N I N G ! ! ! :</b><br>OBLITERATION[warnings,x5-13]!!!!!!!!!!<br><br><b><i><u>CONTAINS IN THE [#adjstart][#adjend] FINAL TEXTWALL EVENT...</u></i></b><br>[disasters,x7-11]• TRANSFORMATION!!!!!!!!!!<br><b>[transformations,x1-2]</b>
