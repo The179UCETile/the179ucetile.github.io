@@ -48,22 +48,22 @@ $warnings
 , IRL DEATH
 
 $synonyms
-DESTRUCTION {er:DESTROYER}
-OBLITERATION {er:OBLITERATOR}
-DECIMATION {er:DECIMATOR}
-ANNIHILATION {er:ANNIHILATOR}
-DEMOLITION {er:DEMOLITOR}
-DEVASTATION {er:DEVASTATOR}
-WRECKAGE {er:WRECKAGER}
-CATASTROPHE {er:CATASTROPHE CAUSER}
-HAVOC {er:HAVOC CAUSER}
-COLLAPSE {er:COLLAPSER}
-DESOLATION {er:DESOLATOR}
-RAVAGING {er:RAVAGER}
-DEFACEMENT {er:DEFACER}
-BREAKDOWN {er:BREAKDOWNER}
-EXTERMINATION {er:EXTERMINATOR}
-DISSOLUTION {er:DISSOLUTOR}
+DESTRUCTION {er:DESTROYER} {normal:DESTROY}
+OBLITERATION {er:OBLITERATOR} {normal:OBLITERATE}
+DECIMATION {er:DECIMATOR} {normal:DECIMATE}
+ANNIHILATION {er:ANNIHILATOR} {normal:ANNIHILATE}
+DEMOLITION {er:DEMOLITOR} {normal:DEMOLITE}
+DEVASTATION {er:DEVASTATOR} {normal:DEVASTATE}
+WRECKAGE {er:WRECKAGER} {normal:WRECK}
+CATASTROPHE {er:CATASTROPHE CAUSER} {normal:CAUSES CATASTOPHE}
+HAVOC {er:HAVOC CAUSER} {normal:HAVOC}
+COLLAPSE {er:COLLAPSER} {normal:COLLAPSE}
+DESOLATION {er:DESOLATOR} {normal:DESOLATE}
+RAVAGING {er:RAVAGER} {normal:RAVAGE}
+DEFACEMENT {er:DEFACER} {normal:DEFACE}
+BREAKDOWN {er:BREAKDOWNER} {normal:BREAKDOWN}
+EXTERMINATION {er:EXTERMINATOR} {normal:EXTERMINATE}
+DISSOLUTION {er:DISSOLUTOR} {normal:DISSOLUTE}
 
 $hugenumber
 66
@@ -141,23 +141,47 @@ $badstuff
 /SCRAPFAN1 WORSHIP ABSOLUTE INFINTY
 /VERSICLE
 
+$collaborators
+- RenaultHasAlwaysBeenKing<br>
+- RenaultFan<br>
+- soemoen<br>
+- Chessy<br>
+- U-Bern<br>
+
+$numbers
+THREE {pentagrams:⛧ ⛧ ⛧}
+FOUR {pentagrams:⛧ ⛧ ⛧ ⛧}
+FIVE {pentagrams:⛧ ⛧ ⛧ ⛧ ⛧}
+SIX {pentagrams:⛧ ⛧ ⛧ ⛧ ⛧ ⛧}
+SEVEN {pentagrams:⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧}
+EIGHT {pentagrams:⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧}
+NINE {pentagrams:⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧}
+TEN {pentagrams:⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧}
+ELEVEN {pentagrams:⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧}
+TWELVE {pentagrams:⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧}
+THIRTEEN {pentagrams:⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧}
+FOURTEEN {pentagrams:⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧}
+FIFTEEN {pentagrams:⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧ ⛧}
+
 $disasters
-• EVERYONE IS AUTOMATICALLY LOGGED IN ON THE TEXTWALL ACCOUNT IN ALL TEXTWALL CLONES.<br>
-• "[hugenumber,#num] nearby, [#num] online"<br>
-• [GRIEFS|[synonyms][s]] IN TW.2S4.ME[twclones,x5-7] AND EVERY TEXTWALL CLONE!!!!!<br>
-• ALL SCRAPFANS, HALL OF SHAMERS AND BELOW JOINS.<br>
-• [hugenumber] BOTS ONLINE.<br>
-• DESPERATE FOR EVERY SINGLE COINBOT IN THE ENTIRE [prefixes]VERSE.<br>
-• [0.666|0.0666|0.00666|0.000066666|0.000000006666666] [smallprefixes][SECOND|PLANK TIME] SPAM: [hugenumber] OF EVERYTHING!!!!!!!!!!<br>
-• YOU... ARE... THE ARMY OF TEXTWALL [synonyms] AND [synonyms,as er] OF SCRAPFAN!!!<br>
-• ADDING [OFFENSIVE |BAD |]THINGS TO ALL USERS IN ALL TEXTWALLERS IN ALL [prefixes]VERSES!!!<br>
-• RENAULT ARMY JOINS AND DESTROYS E V E R Y T H I N G ! ! !<br>• SO DOES THE TEL ARMY!<br>• AND THE FAX ARMY!<br>• AND FINALLY, THE SOEMOEN ARMY!<br>
-• TEL[badstuff,x3-5] SPAMMING!!!!!<br>
-• ALL EVIL TEXTWALLERS AND FORMER EVIL TEXTWALLERS GET [prefixes2,x3-6]MEMBER!<br>
+• EVERYONE IS AUTOMATICALLY LOGGED IN ON THE TEXTWALL ACCOUNT IN ALL TEXTWALL CLONES. [<b>PASSWORD: [SOON]</b>|]<br>
+• "[hugenumber,#num] nearby, [#num] online" [#numb,as pentagrams]<br>
+• [GRIEFS|[synonyms][s]] IN TW.2S4.ME[twclones,x5-7] AND EVERY TEXTWALL CLONE!!!!! [#numb,as pentagrams]<br>
+• ALL SCRAPFANS, HALL OF SHAMERS AND BELOW JOINS. [#numb,as pentagrams]<br>
+• [hugenumber] BOTS ONLINE. [#numb,as pentagrams]<br>
+• DESPERATE FOR EVERY SINGLE COINBOT IN THE ENTIRE [prefixes]VERSE. [#numb,as pentagrams]<br>
+• [0.666|0.0666|0.00666|0.000066666|0.000000006666666] [smallprefixes][SECOND|PLANK TIME] SPAM: [hugenumber] OF EVERYTHING!!!!!!!!!! [#numb,as pentagrams]<br>
+• YOU... ARE... THE ARMY OF TEXTWALL [synonyms] AND [synonyms,as er] OF SCRAPFAN!!! [#numb,as pentagrams]<br>
+• ADDING [OFFENSIVE |BAD |]THINGS TO ALL USERS IN ALL TEXTWALLS IN ALL [prefixes]VERSES!!! [#numb,as pentagrams]<br>
+• RENAULT ARMY JOINS AND DESTROYS E V E R Y T H I N G ! ! ! [#numb,as pentagrams]<br>• SO DOES THE TEL ARMY! [#numb,as pentagrams]<br>• AND THE FAX ARMY!<br>• AND FINALLY, THE SOEMOEN ARMY! [#numb,as pentagrams]<br>
+• TEL[badstuff,x3-5] SPAMMING!!!!! [#numb,as pentagrams]<br>
+• ALL EVIL TEXTWALLERS AND FORMER EVIL TEXTWALLERS GET [prefixes2,x3-6]MEMBER! [#numb,as pentagrams]<br>
+• <b>SPAMS: EVERY BAD THING AND OFFENSIVE THING EVER!!!!!!!!!! [#numb,as pentagrams]</b><br>
 
 $transformations
-TRANSFORMATION THE LAST CHARACTER... (HALL OF SHAME LEVEL [hugenumber]... THE [synonyms,as er] OF ALL TEXTWALL CLONES... NO NEW TEXTWALL.)<br>
-TRANSFORMATION DARKHEART OF TEXTWALL (TEXTWALL DIES!)<br>
+TRANSFORMATION THE LAST CHARACTER... (HALL OF SHAME LEVEL [hugenumber]... [synonyms,as normal][s] ALL TEXTWALL CLONES... NO NEW TEXTWALL.) [#numb,as pentagrams]<br>
+TRANSFORMATION DARKHEART OF TEXTWALL (TEXTWALL DIES!) [#numb,as pentagrams]<br>
+TRANSFORMATION MASS EXTINCTION EVENT ([KILLS|[synonyms][s]] ALL TWERS IN REAL LIFE) [#numb,as pentagrams]<br>
 
 $disaster
-IT IS THE [adjs,as last] TIME...<br>[4-15] PENTAGRAMS...<br>THE [adjs,x2-5,#adjstart,written][adjs,as last,#adjend] TEXTWALL EVENT...<br>WILL START AT <b><i><u>[months] O N E .<br>. . .<br>[S O O N|T H Y E N D I S N E A R|[1 D A Y|[2-30] D A Y S] L E F T] .<br>~[adjs,as nospace]_DISASTER</u></i></b><br><br><b>W A R N I N G ! ! ! :</b><br>OBLITERATION[warnings,x5-13]!!!!!!!!!!<br><br><b><i><u>CONTAINS IN THE [#adjstart][#adjend] FINAL TEXTWALL EVENT...</u></i></b><br>[disasters,x7-11]• TRANSFORMATION!!!!!!!!!!<br><b>[transformations,x1-2]</b>
+[numbers,#numb,hidden][#numb,as pentagrams] IT IS THE [adjs,as last] TIME... [#numb,as pentagrams]<br>[#numb,as pentagrams] [#numb] PENTAGRAMS... [#numb,as pentagrams]<br>[#numb,as pentagrams] THE [adjs,x2-5,#adjstart,written][adjs,as last,#adjend] TEXTWALL EVENT... [#numb,as pentagrams]<br>[#numb,as pentagrams] WILL [BE STARTING AT|START ON] <b><i><u>[months] O N E . [#numb,as pentagrams]<br>[#numb,as pentagrams] . . . [#numb,as pentagrams]<br>[#numb,as pentagrams] [S O O N|T H Y E N D I S N E A R|[1 D A Y|[2-30] D A Y S] L E F T] . [#numb,as pentagrams]<br>[#numb,as pentagrams] ~[adjs,as nospace]_DISASTER [#numb,as pentagrams]</u></i></b>[<br><br>|]<br><br><b>W A R N I N G ! ! ! :</b><br>[#numb,as pentagrams] OBLITERATION[warnings,x5-13]!!!!!!!!!! [#numb,as pentagrams]<br><br><b><i><u>[#numb,as pentagrams] CONTAINS IN THE [#adjstart][#adjend] FINAL TEXTWALL EVENT... [#numb,as pentagrams]</u></i></b><br>[disasters,x8-12]• TRANSFORMATION!!!!!!!!!!<br><b>[transformations,x2-3]</b>
