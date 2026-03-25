@@ -1,7 +1,7 @@
 const argamChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-ctx.font = "30px argam"
+ctx.font = "30px argam";
 ctx.translate(canvas.width / 2, canvas.height / 2);
 function mapX(expectX) {
   return expectX / 2 * canvas.width
