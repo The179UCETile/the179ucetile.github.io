@@ -10,6 +10,7 @@ header {
   position: relative;
   width: 100vw;
   height: 80px;
+  margin: 0 0 0 0;
 }
 html {
   background-color: #66f;
@@ -19,4 +20,7 @@ hr {
 }
 h1 {
   font-weight: normal;
+}
+p {
+  font-family: sans-serif;
 }
