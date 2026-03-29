@@ -1,3 +1,6 @@
+* {
+  margin: 0;
+}
 .headertext {
   font-family: Wittgenstein, serif;
   font-variant: small-caps;
@@ -7,10 +10,8 @@
 }
 header {
   background-color: #88f;
-  position: relative;
   width: 100vw;
   height: 80px;
-  margin: 0;
 }
 html {
   background-color: #66f;
