@@ -28,7 +28,7 @@ footer {
 }
 html {
   background-color: #66f;
-  filter: contrast(100000) blur(1px);
+  filter: contrast(1000);
 }
 hr {
   border: 2px solid #88f;
