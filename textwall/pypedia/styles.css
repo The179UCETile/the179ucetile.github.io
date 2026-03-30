@@ -28,7 +28,7 @@ footer {
 }
 html {
   background-color: #66f;
-  filter: contrast(1000);
+  filter: contrast(10);
 }
 hr {
   border: 2px solid #88f;
@@ -56,4 +56,12 @@ a {
 }
 a:visited {
   color: #ff0;
+}
+div.dyk {
+  margin: 5px;
+  background-color: #0f0;
+}
+div.dyk h2 {
+  background-color: #080;
+  border: 2px solid #fff;
 }
