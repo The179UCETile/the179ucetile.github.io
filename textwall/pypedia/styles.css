@@ -57,12 +57,29 @@ a {
 a:visited {
   color: #ff0;
 }
+div.welcome {
+  margin: 5px;
+  background-color: #08f;
+  padding: 5px;
+  border: 1px dashed #00f;
+}
 div.dyk {
   margin: 5px;
   background-color: #080;
+  border: 1px solid #0f0;
+  padding: 5px;
 }
 div.dyk h2 {
-  background-color: #080;
-  border: 2px solid #fff;
+  background-color: #060;
+  border: 1px solid #fff;
+}
+div.itn {
   margin: 5px;
+  background-color: #048;
+  border: 1px solid #08f;
+  padding: 5px;
+}
+div.itn h2 {
+  background-color: #036;
+  border: 1px solid #fff;
 }
