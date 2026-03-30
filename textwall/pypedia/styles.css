@@ -36,6 +36,9 @@ hr {
 h1 {
   font-family: "braille octant", monospace;
   font-weight: normal;
+  font-size: 50px;
+  color: #000;
+  background-color: #f0f;
 }
 h2, h3, h4, h5, h6 {
   font-family: "Courier New", monospace;
