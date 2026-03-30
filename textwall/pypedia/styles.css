@@ -1,6 +1,14 @@
 * {
   margin: 0;
 }
+@font-face {
+  font-family: braille octant;
+  src: url(/fonts/worst-font-ever.ttf)
+}
+@font-face {
+  font-family: monospace textwall;
+  src: url(/fonts/monospace-textwall-wip.ttf)
+}
 .headertext {
   font-family: Wittgenstein, serif;
   font-variant: small-caps;
@@ -20,18 +28,29 @@ footer {
 }
 html {
   background-color: #66f;
-  filter: contrast(2);
+  filter: contrast(1000);
 }
 hr {
   border: 2px solid #88f;
 }
 h1 {
+  font-family: "braille octant", monospace;
   font-weight: normal;
 }
 h2, h3, h4, h5, h6 {
-  font-family: sans-serif;
+  font-family: "Courier New", monospace;
+  font-variant: small-caps;
 }
-p, ol, ul, li {
-  font-family: sans-serif;
+p {
+  font-family: cursive;
   font-size: 14px;
+}
+ol, ul, li {
+  font-family: "monospace textwall", monospace;
+}
+a {
+  color: #0f0;
+}
+a:visited {
+  color: #ff0;
 }
