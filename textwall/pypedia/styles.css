@@ -6,7 +6,7 @@
   src: url(/fonts/worst-font-ever.ttf)
 }
 @font-face {
-  font-family: monospace textwall;
+  font-family: "monospace textwall";
   src: url(/fonts/monospace-textwall-wip.ttf)
 }
 .headertext {
