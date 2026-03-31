@@ -84,18 +84,18 @@ div.itn h2 {
   background-color: #08f;
   border: 1px solid #fff;
 }
-div.other {
+div.otr {
   margin: 5px;
   background-color: #444;
   border: 1px solid #fff;
   padding: 5px;
   color: #fff;
 }
-div.other h2 {
+div.otr h2 {
   background-color: #048;
   border: 1px solid #fff;
 }
-div.other b {
+div.otr b {
   font-family: Wittgenstein, serif;
   font-variant: small-caps;
   color: #08f;
