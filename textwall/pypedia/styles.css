@@ -9,6 +9,10 @@
   font-family: "monospace textwall";
   src: url(/fonts/monospace-textwall-wip.ttf)
 }
+@font-face {
+  font-family: "richard grechko terminal 2";
+  src: url(https://richardgrechko.github.io/textwall-stuff/fonts/richard-grechko-terminal-2.ttf)
+}
 .headertext {
   font-family: Wittgenstein, serif;
   font-variant: small-caps;
@@ -45,7 +49,7 @@ h2, h3, h4, h5, h6 {
   font-variant: small-caps;
 }
 p {
-  font-family: cursive;
+  font-family: Inspiration, cursive;
   font-size: 14px;
 }
 ol, ul, li {
