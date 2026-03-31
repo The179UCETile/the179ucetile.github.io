@@ -84,3 +84,19 @@ div.itn h2 {
   background-color: #08f;
   border: 1px solid #fff;
 }
+div.other {
+  margin: 5px;
+  background-color: #444;
+  border: 1px solid #fff;
+  padding: 5px;
+  color: #fff;
+}
+div.other h2 {
+  background-color: #048;
+  border: 1px solid #fff;
+}
+div.other b {
+  font-family: Wittgenstein, serif;
+  font-variant: small-caps;
+  color: #08f;
+}
