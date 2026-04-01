@@ -15,6 +15,7 @@
     "YTFI" 738,
     "YTLC" 514,
     "YTUC" 712;
+  color: #fff;
 }
 html {
   background-color: #000;
@@ -22,4 +23,10 @@ html {
 div.container {
   max-width: 400px;
   max-height: 300px;
+  top: calc(50dvh - 150px);
+  left: calc(50dvw - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444;
 }
