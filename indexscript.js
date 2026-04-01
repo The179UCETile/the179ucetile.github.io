@@ -20,5 +20,5 @@ function updateTicker() {
     document.getElementById("tickermessage").style.color = "rgba(255,255,255,1)";
   },10);
 }
-setInterval(updateTicker, 100);
+setInterval(updateTicker, 1000);
 document.getElementById("tickermessage").innerHTML = tickermsg[Math.floor(Math.random()*tickermsg.length)];
