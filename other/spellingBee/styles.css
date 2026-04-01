@@ -31,7 +31,7 @@ div.container {
   align-items: center;
   background-color: #444;
 }
-div#word {
+div#word p {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 40px;
 }
