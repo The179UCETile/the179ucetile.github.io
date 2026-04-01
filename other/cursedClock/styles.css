@@ -1,8 +1,0 @@
-@font-face {
-  font-family: "argam";
-  src: url(/fonts/argam-pixel.ttf)
-}
-canvas {
-  width: 50vw;
-  height: 50vh
-}
