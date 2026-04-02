@@ -38,3 +38,10 @@ p#word {
   font-weight: 700;
   font-size: 40px;
 }
+input#wordInput {
+  position: absolute;
+  bottom: 120px;
+  background-color: #000;
+  border-radius: 0px;
+  border: 1px solid #fff;
+}
