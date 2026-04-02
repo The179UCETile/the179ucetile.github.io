@@ -52,3 +52,7 @@ button#retry, input#wordInput {
   position: absolute;
   bottom: 120px;
 }
+button#check {
+  position: absolute;
+  bottom: 100px;
+}
