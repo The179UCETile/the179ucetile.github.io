@@ -1,7 +1,7 @@
 try {
   fetch("words.txt")
   .then(x => x.text())
-  .then(y => doTheThing(y))
+  .then(doTheThing)
 } catch (e) {
   alert(e.stack)
 }
