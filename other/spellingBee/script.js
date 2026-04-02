@@ -41,9 +41,7 @@ function doTheThing(data) {
       check();
     }
   });
-  g("retry").addEventListener("click", () => {
-    startGame();
-  });
+  g("retry").addEventListener("click", startGame);
   g("check").addEventListener("click", check)
   setInterval(update, 16)
 }
