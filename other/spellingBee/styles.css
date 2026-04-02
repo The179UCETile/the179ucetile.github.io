@@ -37,7 +37,7 @@ div#word p {
 }
 div#word {
   position: absolute;
-  top: 80px;
+  top: 60px;
   text-align: center;
 }
 input#wordInput {
