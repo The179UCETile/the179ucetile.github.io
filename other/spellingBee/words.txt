@@ -16,7 +16,8 @@ chimney
 circle
 consecutive
 corgi
-color colour
+color
+common
 create
 curl
 darkness
@@ -32,6 +33,7 @@ fall
 ferocious
 first
 force
+fusion
 gallant
 gibberish
 glisten

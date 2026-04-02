@@ -40,10 +40,15 @@ div#word {
   top: 60px;
   text-align: center;
 }
-input#wordInput {
+input#wordInput, button {
+  background-color: #000;
+  border-radius: 0;
+  border: 1px solid #fff;
+}
+button {
+  padding: 2px;
+}
+button#retry, input#wordInput {
   position: absolute;
   bottom: 120px;
-  background-color: #000;
-  border-radius: 0px;
-  border: 1px solid #fff;
 }
