@@ -9,7 +9,7 @@ function doTheThing(data) {
   const words = data.split("\n");
   let timestamp = Date.now();
   let score = 0;
-  let $ = document.getElementById;
+  function $(x) {return document.getElementById(x)};
   let word = words[Math.floor(Math.random() * words.length)];
   function check() {
     if ($("wordInput").value == word) {
