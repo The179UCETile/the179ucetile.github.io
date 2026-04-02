@@ -1,6 +1,10 @@
-fetch("words.txt")
-.then(x => x.text())
-.then(y => doTheThing(y))
+try {
+  fetch("words.txt")
+  .then(x => x.text())
+  .then(y => doTheThing(y))
+} catch (e) {
+  alert(e.stack)
+}
 function doTheThing(data) {
   const words = data.split("\n");
   let timestamp = Date.now();
