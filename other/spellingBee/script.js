@@ -12,16 +12,33 @@ function doTheThing(data) {
       word = words[Math.floor(Math.random() * words.length)];
       $("wordInput").value = "";
       timestamp = Date.now();
+    } else {
+      endGame();
     }
+  }
+  function endGame() {
+    $("gameover").style.display = "";
+    $("main").style.display = "none";
   }
   function update() {
     $("word").innerHTML = `<p>${word}</p>`;
     $("word").style.filter = `blur(${Math.sqrt(score) * .3}px)`;
   }
+  function startGame() {
+    word = words[Math.floor(Math.random() * words.length)];
+    score = 0;
+    $("main").style.display = "";
+    $("gameOver").style.display = "none";
+    $("wordInput").value = "";
+    timestamp = Date.now();
+  }
   $("wordInput").addEventListener("keydown", (e) => {
     if (e.code == "Enter") {
-      check()
+      check();
     }
+  });
+  $("retry").addEventListener("click", () => {
+    startGame();
   })
   setInterval(update, 16)
 }
