@@ -9,39 +9,39 @@ function doTheThing(data) {
   const words = data.split("\n");
   let timestamp = Date.now();
   let score = 0;
-  function $(x) {return document.getElementById(x)};
+  function g(x) {return document.getElementById(x)};
   let word = words[Math.floor(Math.random() * words.length)];
   function check() {
-    if ($("wordInput").value == word) {
+    if (g("wordInput").value == word) {
       word = words[Math.floor(Math.random() * words.length)];
-      $("wordInput").value = "";
+      g("wordInput").value = "";
       timestamp = Date.now();
     } else {
       endGame();
     }
   }
   function endGame() {
-    $("gameover").style.display = "";
-    $("main").style.display = "none";
+    g("gameover").style.display = "";
+    g("main").style.display = "none";
   }
   function update() {
-    $("word").innerHTML = `<p>${word}</p>`;
-    $("word").style.filter = `blur(${Math.sqrt(score) * .3}px)`;
+    g("word").innerHTML = `<p>${word}</p>`;
+    g("word").style.filter = `blur(${Math.sqrt(score) * .3}px)`;
   }
   function startGame() {
     word = words[Math.floor(Math.random() * words.length)];
     score = 0;
-    $("main").style.display = "";
-    $("gameOver").style.display = "none";
-    $("wordInput").value = "";
+    g("main").style.display = "";
+    g("gameOver").style.display = "none";
+    g("wordInput").value = "";
     timestamp = Date.now();
   }
-  $("wordInput").addEventListener("keydown", (e) => {
+  g("wordInput").addEventListener("keydown", (e) => {
     if (e.code == "Enter") {
       check();
     }
   });
-  $("retry").addEventListener("click", () => {
+  g("retry").addEventListener("click", () => {
     startGame();
   })
   setInterval(update, 16)
