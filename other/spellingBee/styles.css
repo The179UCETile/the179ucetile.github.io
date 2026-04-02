@@ -32,11 +32,13 @@ div.container {
   background-color: #444;
 }
 div#word p {
+  font-weight: 700;
+  font-size: 40px;
+}
+div#word {
   position: absolute;
   top: 80px;
   text-align: center;
-  font-weight: 700;
-  font-size: 40px;
 }
 input#wordInput {
   position: absolute;
