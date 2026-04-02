@@ -31,7 +31,7 @@ div.container {
   align-items: center;
   background-color: #444;
 }
-p#word {
+div#word p {
   position: absolute;
   top: 80px;
   text-align: center;
