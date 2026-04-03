@@ -43,7 +43,7 @@ function doTheThing(data) {
   function update() {
     let timeRemain = getTime(score, 0.2, 2, 1.2, .05) * 1e3 * word.length;
     document.getElementById("word").innerHTML = `<p>${word}</p>`;
-    document.getElementById("word").style.filter = `blur(${Math.sqrt(score) * .5}px)`;
+    document.getElementById("word").style.filter = `blur(${Math.sqrt(score) * 1.25}px)`;
     document.getElementById("timeRemaining").innerHTML = `<p>${((timeRemain - (Date.now() - timestamp)) / 1e3).toFixed(2)}s</p>`;
     document.getElementById("timeRemaining").style.width = `${100 - (Date.now() - timestamp) / timeRemain * 100}%`;
     if (timeRemain - (Date.now() - timestamp) < 0) endGame()
