@@ -16,6 +16,7 @@ function doTheThing(data) {
       document.getElementById("wordInput").value = "";
       timestamp = Date.now();
       score++;
+      document.getElementById("wordInput").focus();
     } else {
       endGame();
     }
