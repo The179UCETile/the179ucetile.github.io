@@ -64,11 +64,10 @@ button#check {
 }
 div#timeRemaining {
   position: absolute;
-  bottom: 140px;
+  top: 120px;
   text-align: center;
   width: 100%;
   height: 20px;
-  filter: invert(100%);
   backdrop-filter: invert(100%);
 }
 div#timeRemaining p {
