@@ -31,6 +31,9 @@ div.container {
   align-items: center;
   background-color: #444;
 }
+div.container div {
+  margin: auto;
+}
 div#word p {
   font-weight: 700;
   font-size: 40px;
@@ -38,8 +41,6 @@ div#word p {
 div#word {
   position: absolute;
   top: 60px;
-  margin: auto;
-  text-align: center;
 }
 input#wordInput, button {
   background-color: #000;
@@ -51,7 +52,6 @@ button {
 }
 button#retry, button#check, input#wordInput {
   position: absolute;
-  margin: auto;
   bottom: 120px;
 }
 button#check {
