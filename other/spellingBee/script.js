@@ -15,6 +15,7 @@ function doTheThing(data) {
       word = words[Math.floor(Math.random() * words.length)];
       document.getElementById("wordInput").value = "";
       timestamp = Date.now();
+      score++;
     } else {
       endGame();
     }
