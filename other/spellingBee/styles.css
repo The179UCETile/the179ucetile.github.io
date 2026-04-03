@@ -77,3 +77,9 @@ div#timeRemaining p {
   font-variation-settings: "wdth" 150, "slnt" -10;
   color: #000;
 }
+div.gameoverText {
+  position: absolute;
+  top: 70px;
+  text-align: center;
+  width: 100%;
+}
