@@ -41,9 +41,9 @@ function doTheThing(data) {
     document.getElementById("gameoverInfo").innerHTML = `Your score was: ${score.toLocaleString("en-US")}<br>Average WPM: ${Math.floor(totalChars / ((Date.now() - gameStartTimestamp) / 1e3) / 5 * 60)}<br>You survived for ${formatTime((Date.now() - gameStartTime) / 1e3)}.`;
   }
   function update() {
-    let timeRemain = getTime(score, 0.2, 2, 1.2, .05) * 1e3 * word.length;
+    let timeRemain = getTime(score, 0.2, 2, 1.175, .03) * 1e3 * word.length;
     document.getElementById("word").innerHTML = `<p>${word}</p>`;
-    document.getElementById("word").style.filter = `blur(${Math.sqrt(score)}px)`;
+    document.getElementById("word").style.filter = `blur(${Math.sqrt(score) * .5}px)`;
     document.getElementById("timeRemaining").innerHTML = `<p>${((timeRemain - (Date.now() - timestamp)) / 1e3).toFixed(2)}s</p>`;
     document.getElementById("timeRemaining").style.width = `${100 - (Date.now() - timestamp) / timeRemain * 100}%`;
     if (timeRemain - (Date.now() - timestamp) < 0) endGame()
