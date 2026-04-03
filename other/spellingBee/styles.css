@@ -75,4 +75,5 @@ div#timeRemaining {
 div#timeRemaining p {
   font-weight: 200;
   font-variation-settings: "wdth" 150, "slnt" -10;
+  color: #000;
 }
