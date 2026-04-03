@@ -31,7 +31,7 @@ function doTheThing(data) {
     word = words[Math.floor(Math.random() * words.length)];
     score = 0;
     document.getElementById("main").style.display = "";
-    document.getElementById("gameOver").style.display = "none";
+    document.getElementById("gameover").style.display = "none";
     document.getElementById("wordInput").value = "";
     timestamp = Date.now();
   }
