@@ -33,11 +33,12 @@ function doTheThing(data) {
     document.getElementById("main").style.display = "none";
   }
   function update() {
-    let timeRemain = getTime(score, 1, 10, 1.2, .05);
+    let timeRemain = getTime(score, 1, 10, 1.2, .05) * 1e3;
     document.getElementById("word").innerHTML = `<p>${word}</p>`;
     document.getElementById("word").style.filter = `blur(${Math.sqrt(score) * .5}px)`;
-    document.getElementById("timeRemaining").innerHTML = `${((timeRemain * 1e3 - (Date.now() - timestamp)) / 1e3).toFixed(2)}s`;
-    if (timeRemain * 1e3 - (Date.now() - timestamp) < 0) endGame()
+    document.getElementById("timeRemaining").innerHTML = `${((timeRemain - (Date.now() - timestamp)) / 1e3).toFixed(2)}s`;
+    document.getElementById("timeRemaining").style.width = `${(Date.now() - timestamp) / timeRemain * 100}%`;
+    if (timeRemain - (Date.now() - timestamp) < 0) endGame()
   }
   function startGame() {
     word = words[Math.floor(Math.random() * words.length)];

@@ -62,3 +62,10 @@ button#retry, button#check, input#wordInput {
 button#check {
   bottom: 95px;
 }
+div#timeRemaining {
+  position: absolute;
+  top: 70px;
+  text-align: center;
+  width: 100%;
+  backdrop-filter: invert(100%);
+}
