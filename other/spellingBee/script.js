@@ -33,7 +33,7 @@ function doTheThing(data) {
     document.getElementById("main").style.display = "none";
   }
   function update() {
-    let timeRemain = getTime(score, 1, 10, 1.2, .05) * 1e3;
+    let timeRemain = getTime(score, 0.2, 2, 1.2, .05) * 1e3 * word.length;
     document.getElementById("word").innerHTML = `<p>${word}</p>`;
     document.getElementById("word").style.filter = `blur(${Math.sqrt(score) * .5}px)`;
     document.getElementById("timeRemaining").innerHTML = `${((timeRemain - (Date.now() - timestamp)) / 1e3).toFixed(2)}s`;
