@@ -32,7 +32,7 @@ div.container {
   background-color: #444;
 }
 div.container div {
-  margin: auto;
+  width: 100%;
 }
 div#word p {
   font-weight: 700;
@@ -42,7 +42,6 @@ div#word {
   position: absolute;
   top: 60px;
   text-align: center;
-  width: 100%;
 }
 input#wordInput, button {
   background-color: #000;
