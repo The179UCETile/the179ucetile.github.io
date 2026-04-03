@@ -38,6 +38,7 @@ div#word p {
 div#word {
   position: absolute;
   top: 60px;
+  margin: auto;
   text-align: center;
 }
 input#wordInput, button {
@@ -48,11 +49,11 @@ input#wordInput, button {
 button {
   padding: 2px;
 }
-button#retry, input#wordInput {
+button#retry, button#check, input#wordInput {
   position: absolute;
+  margin: auto;
   bottom: 120px;
 }
 button#check {
-  position: absolute;
   bottom: 95px;
 }
