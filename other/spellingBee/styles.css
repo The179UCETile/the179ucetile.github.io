@@ -41,6 +41,8 @@ div#word p {
 div#word {
   position: absolute;
   top: 60px;
+  text-align: center;
+  width: 100%;
 }
 input#wordInput, button {
   background-color: #000;
