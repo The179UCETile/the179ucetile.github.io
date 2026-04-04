@@ -86,3 +86,6 @@ div.gameoverText {
 b {
   font-weight: 700;
 }
+i {
+  font-variation-settings: "slnt" -10;
+}
