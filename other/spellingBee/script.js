@@ -50,6 +50,7 @@ function doTheThing(data) {
   }
   function startGame() {
     word = words[Math.floor(Math.random() * words.length)];
+    totalChars = 0;
     score = 0;
     document.getElementById("main").style.display = "";
     document.getElementById("gameover").style.display = "none";
