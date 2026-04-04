@@ -82,6 +82,7 @@ div.gameoverText {
   top: 70px;
   text-align: center;
   width: 100%;
+  display: block;
 }
 b {
   font-weight: 700;
