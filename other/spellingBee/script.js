@@ -13,6 +13,7 @@ function doTheThing(data) {
   const words = data.split("\n");
   let timestamp = Date.now();
   let gameStartTimestamp = Date.now();
+  let gameEnded = false;
   let score = 0;
   let word = words[Math.floor(Math.random() * words.length)];
   let totalChars = 0;
@@ -36,6 +37,7 @@ function doTheThing(data) {
     }
   }
   function endGame() {
+    gameEnded = true;
     document.getElementById("gameover").style.display = "";
     document.getElementById("main").style.display = "none";
     document.getElementById("gameoverInfo").innerHTML = `Your score was: ${score.toLocaleString("en-US")}<br>Average WPM: ${Math.floor(totalChars / ((Date.now() - gameStartTimestamp) / 1e3) / 5 * 60)}<br>You survived for ${formatTime((Date.now() - gameStartTimestamp) / 1e3)}.`;
@@ -46,9 +48,10 @@ function doTheThing(data) {
     document.getElementById("word").style.filter = `blur(${Math.sqrt(score) * .5}px)`;
     document.getElementById("timeRemaining").innerHTML = `<p>${((timeRemain - (Date.now() - timestamp)) / 1e3).toFixed(2)}s</p>`;
     document.getElementById("timeRemaining").style.width = `${100 - (Date.now() - timestamp) / timeRemain * 100}%`;
-    if (timeRemain - (Date.now() - timestamp) < 0) endGame()
+    if (timeRemain - (Date.now() - timestamp) < 0 && !gameEnded) endGame()
   }
   function startGame() {
+    gameEnded = false;
     word = words[Math.floor(Math.random() * words.length)];
     totalChars = 0;
     score = 0;
