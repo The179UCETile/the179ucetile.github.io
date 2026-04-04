@@ -38,8 +38,7 @@ function doTheThing(data) {
   function endGame() {
     document.getElementById("gameover").style.display = "";
     document.getElementById("main").style.display = "none";
-    document.getElementById("gameoverInfo").innerHTML = `Your score was: ${score.toLocaleString("en-US")}<br>Average WPM: ${Math.floor(totalChars / ((Date.now() - gameStartTimestamp) / 1e3) / 5 * 60)}<br>You survived for ${formatTime((Date.now() - gameStartTime) / 1e3)}.`;
-    console.log(`debug:\nYour score was: ${score.toLocaleString("en-US")}\nAverage WPM: ${Math.floor(totalChars / ((Date.now() - gameStartTimestamp) / 1e3) / 5 * 60)}\nYou survived for ${formatTime((Date.now() - gameStartTime) / 1e3)}.`)
+    document.getElementById("gameoverInfo").innerHTML = `Your score was: ${score.toLocaleString("en-US")}<br>Average WPM: ${Math.floor(totalChars / ((Date.now() - gameStartTimestamp) / 1e3) / 5 * 60)}<br>You survived for ${formatTime((Date.now() - gameStartTimestamp) / 1e3)}.`;
   }
   function update() {
     let timeRemain = getTime(score, 0.2, 2, 1.175, .03) * 1e3 * word.length;
