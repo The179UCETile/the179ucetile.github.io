@@ -39,6 +39,7 @@ div.container div {
 }
 div#word p {
   font-weight: 700;
+  font-variation-settings: "wdth" 87.5;
   font-size: 40px;
 }
 div#word {
@@ -86,6 +87,7 @@ div.gameoverText {
 }
 b {
   font-weight: 700;
+  font-variation-settings: "wdth" 87.5;
 }
 i {
   font-variation-settings: "slnt" -10;
