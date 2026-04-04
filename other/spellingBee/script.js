@@ -60,6 +60,7 @@ function doTheThing(data) {
     document.getElementById("wordInput").value = "";
     timestamp = Date.now();
     gameStartTimestamp = Date.now();
+    document.getElementById("wordInput").focus();
   }
   document.getElementById("wordInput").addEventListener("keydown", (e) => {
     if (e.code == "Enter") {
@@ -68,5 +69,6 @@ function doTheThing(data) {
   });
   document.getElementById("retry").addEventListener("click", startGame);
   document.getElementById("check").addEventListener("click", check);
-  setInterval(update, 16)
+  setInterval(update, 16);
+  document.getElementById("wordInput").focus()
 }

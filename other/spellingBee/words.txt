@@ -31,6 +31,7 @@ deserve
 destroy
 dissent
 dog
+enter
 erupt
 every
 everything
@@ -38,6 +39,8 @@ fall
 ferocious
 first
 force
+free
+frequent
 fusion
 gallant
 gibberish
@@ -98,6 +101,7 @@ purple
 quadrant
 quarrel
 radiation
+rare
 rebirth
 reborn
 red
@@ -111,6 +115,7 @@ singer
 song
 soon
 sound
+space
 sphere
 steal
 stunning
@@ -132,6 +137,7 @@ turquoise
 two
 uncommon
 underline
+universe
 vast
 very
 vouch
