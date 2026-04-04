@@ -17,8 +17,8 @@ function doTheThing(data) {
   let word = words[Math.floor(Math.random() * words.length)];
   let totalChars = 0;
   function formatTime(s) {
-    if (s < 3600) return `${Math.floor(s / 60 + 100).slice(1)}:${Math.floor(s % 60 + 100).slice(1)}`;
-    return `${Math.floor(s / 3600 + 100).slice(1)}:${Math.floor((s / 60) % 60 + 100).slice(1)}:${Math.floor(s % 60 + 100).slice(1)}`
+    if (s < 3600) return `${String(Math.floor(s / 60 + 100)).slice(1)}:${String(Math.floor(s % 60 + 100)).slice(1)}`;
+    return `${String(Math.floor(s / 3600 + 100)).slice(1)}:${String(Math.floor((s / 60) % 60 + 100)).slice(1)}:${String(Math.floor(s % 60 + 100)).slice(1)}`
   }
   function getTime(score, min, start, pow, speed) {
     return Math.max(min, start / (score * speed + 1) ** pow)
