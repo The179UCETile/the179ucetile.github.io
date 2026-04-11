@@ -819,7 +819,7 @@ td {
 }
 @font-face {
     font-family: 'monospace textwall';
-    src: url(/fonts/monospace-textwall-wip.ttf)
+    src: url(/fonts/monospace-textwall-wip.ttf) format('truetype')
 }
 @font-face {
     font-family: 'braille octant';
