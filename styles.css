@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Monospace TextWall";
-  src: url(/fonts/monospace-textwall-wip.ttf);
+  src: url(/fonts/monospace-textwall-wip.ttf) format('truetype');
 }
 body, html { 
   background-color: #000000; 
