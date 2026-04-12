@@ -10,6 +10,10 @@
   src: url(/fonts/monospace-textwall-wip.otf.woff2)
 }
 @font-face {
+  font-family: "monospace textwall em";
+  src: url(/fonts/monospace-textwall-wip.ttf)
+}
+@font-face {
   font-family: "richard grechko terminal 2";
   src: url(https://richardgrechko.github.io/textwall-stuff/fonts/richard-grechko-terminal-2.ttf)
 }
@@ -52,7 +56,7 @@ p {
   font-size: 20px;
 }
 ol, ul, li {
-  font-family: "monospace textwall", monospace;
+  font-family: "monospace textwall", "monospace textwall em", monospace;
 }
 a {
   color: #0f0;
