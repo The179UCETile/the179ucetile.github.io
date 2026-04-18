@@ -33,7 +33,7 @@ function doTheThing(d) {
     }
   }
   setInterval(()=>{
-    const val = document.getElementById("users").value;
+    const val = data[document.getElementById("users").value];
     document.getElementById("output").style = styles[round(val)].style;
     document.getElementById("output").innerHTML = `${styles[round(val)].name} (Confusol: ${val})`
   }, 16)
