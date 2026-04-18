@@ -27,7 +27,7 @@ function doTheThing(d) {
     data[i.split(" ")[0]] = Number(i.split(" ")[1])
   };
   function round(x) {
-    const arr = styles.keys();
+    const arr = styles.keys;
     for (let i in arr) {
       if (arr[i] > x) return arr[i - 1] ?? 0
     }
