@@ -28,6 +28,7 @@ function doTheThing(d) {
   };
   function round(x) {
     const arr = Object.keys(styles);
+    if (x > 2000) return 2000
     for (let i in arr) {
       if (arr[i] > x) return arr[i - 1] ?? 0
     }
