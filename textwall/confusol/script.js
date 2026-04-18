@@ -20,7 +20,8 @@ function doTheThing(d) {
     500: new Info("Extremely confusing", "color: #08f; text-shadow: 0 0 1px #08f"),
     1000: new Info("Catastrophically confusing", "color: #0ff; text-shadow: 0 0 1px #0ff"),
     1500: new Info("Uber confusing", "color: #fff; text-shadow: 0 0 1px #fff"),
-    2000: new Info("Most likely dead by now", "color: #888; text-shadow: 0 0 1px #888")
+    2000: new Info("Most likely dead by now", "color: #888; text-shadow: 0 0 1px #888"),
+    10000: new Info("TOO CONFUSING", "color: #000; text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff")
   };
   d = d.split("\n");
   for (let i of d) {
@@ -28,7 +29,7 @@ function doTheThing(d) {
   };
   function round(x) {
     const arr = Object.keys(styles);
-    if (x > 2000) return 2000
+    if (x > 10000) return 10000
     for (let i in arr) {
       if (arr[i] > x) return arr[i - 1] ?? 0
     }
