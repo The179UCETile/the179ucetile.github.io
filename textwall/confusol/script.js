@@ -21,7 +21,7 @@ function doTheThing(d) {
     1000: new Info("Catastrophically confusing", "color: #0ff; text-shadow: 0 0 1px #0ff"),
     1500: new Info("Uber confusing", "color: #fff; text-shadow: 0 0 1px #fff"),
     2000: new Info("Most likely dead by now", "color: #888; text-shadow: 0 0 1px #888"),
-    10000: new Info("TOO CONFUSING", "color: #000; text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff")
+    10000: new Info("TOO CONFUSING", "color: #000; text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 0 0 2px #fff")
   };
   d = d.split("\n");
   for (let i of d) {
