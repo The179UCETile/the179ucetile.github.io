@@ -6,6 +6,6 @@ Europe2048_ 0.12
 dominoguy_ 10.68
 katz.richard 0.08
 The179UCETile 0.06
-RenaultHasAlwaysBeenKing 32.8
+RenaultHasAlwaysBeenKing 911.2
 RenaultFan 140.3
 THE_LAST_DISASTER 519.2
