@@ -27,12 +27,12 @@ function doTheThing(d) {
   for (let i of d) {
     data[i.split(" ")[0]] = Number(i.split(" ")[1])
   };
-  for (let i = 1; i < Object.keys(data).length; i++) {
-    let j = Object.keys(data)[i];
+  for (let i of Object.keys(data)) {
+    if (i == "Luca12FCSB") continue;
     let op = document.createElement("option");
-    op.value = j;
-    op.innerHTML = j;
-    document.getElementById("users").appendChild(j)
+    op.value = i;
+    op.innerHTML = i;
+    document.getElementById("users").appendChild(op);
   }
   function round(x) {
     const arr = Object.keys(styles);
