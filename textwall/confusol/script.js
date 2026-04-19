@@ -45,7 +45,7 @@ function doTheThing(d) {
   setInterval(()=>{
     const arr = [];
     for (let i = 0; i < 6; i++) {
-      arr.push(`${Math.random() * 8 - 4}px ${Math.random() * 8 - 4}px ${Math.random() * 2 - 1}px #${Math.floor(2 ** 32 + Math.random() * 2 ** 32).toString(16).slice(1)}`)
+      arr.push(`${Math.random() * 8 - 4}px ${Math.random() * 8 - 4}px ${Math.random() * 0.5 - 0.25}px #${Math.floor(2 ** 32 + Math.random() * 2 ** 32).toString(16).slice(1)}`)
     };
     styles[1000000].style = `color: #${Math.floor(16777216 + Math.random() * 16777216).toString(16).slice(1)}; text-shadow: ${arr.join(", ")};`;
     const val = data[document.getElementById("users").value];
