@@ -27,6 +27,13 @@ function doTheThing(d) {
   for (let i of d) {
     data[i.split(" ")[0]] = Number(i.split(" ")[1])
   };
+  for (let i = 1; i < Object.keys(data).length; i++) {
+    let j = Object.keys(data)[i];
+    let op = document.createElement("option");
+    op.value = j;
+    op.innerHTML = j;
+    document.getElementById("users").appendChild(j)
+  }
   function round(x) {
     const arr = Object.keys(styles);
     if (x > 10000) return 10000
