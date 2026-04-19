@@ -43,13 +43,13 @@ function doTheThing(d) {
     }
   }
   setInterval(()=>{
-    const val = data[document.getElementById("users").value];
-    document.getElementById("output").style = styles[round(val)].style;
-    document.getElementById("output").innerHTML = `${styles[round(val)].name} (Confusol: ${val})`;
     const arr = [];
     for (let i = 0; i < 4; i++) {
       arr.push(`${Math.random() * 4 - 2}px ${Math.random() * 4 - 2}px 0 #${Math.floor(16777216 + Math.random() * 16777216).toString(16).slice(1)}`)
     };
     styles[1000000].style = `color: #${Math.floor(16777216 + Math.random() * 16777216).toString(16).slice(1)}; text-shadow: ${arr.join(", ")};`;
+    const val = data[document.getElementById("users").value];
+    document.getElementById("output").style = styles[round(val)].style;
+    document.getElementById("output").innerHTML = `${styles[round(val)].name} (Confusol: ${val})`;
   }, 16)
 }
