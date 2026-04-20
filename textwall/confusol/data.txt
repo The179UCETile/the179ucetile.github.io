@@ -17,3 +17,4 @@ haster 0.01
 penthexium56 0.03
 lime.person 0.02
 ScrapFan_1 1.797693134e308
+Diamond26 0.48
