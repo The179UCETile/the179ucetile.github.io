@@ -2,8 +2,14 @@
 // you're still not getting the bot run >:)
 // please credit me when you clone this bot
 eval(unescape(escape`敶慬⡡瑯戨≤㉬畚䜹㍌氹晥䐱浙坸穚呴橢㈵穤䍂晘㉕㥗㍒祤坕獉湑⭚圵桙浸汉楸桤䜹楋䍊坒㉨獔噒橎噚噔歚坒㉸穗汅㥐卉灌䍊畡坎牉楸桤䜹楋䍊坒㉨獔汖卒䙰奕洹坒㉸穗汅㥐卉灌䍊瑣㉣楌䍊穤䝆祤䡎塡塒潉楸摏㍣畢㈴潉洱穚祉獋䘹晤祫㥐湴浤圵橤䝬癢楂晘㍑潥䍬㝣浖つ塊畉䘹晚噴㑌呅㑎ㄱ㥏㉬测䘹晤ㅴ晘㍑潍呫祋嘱托ㄹか䑅㕍祬摋䘹晤䍧硏䑧灋卙浉嘹晥䍙测䘹晤ㅴ晘㍑潍呫睋嘰㥐嘹晤䍧硏䑫灦䡸晘㍤托ㄹか䑅㕍䍬摐吱晘㍑潍呫硋卫灘ㄹ㑐嘹晤䍧硏䑣灦卫㴢⤩`.replace(/u(..)/g,"$1%")))
+let EN = document.createElement("script");
+EN.src = "https://the179ucetile.github.io/game_scripts/eternal_notations.min.js";
+document.body.appendChild(EN);
+let BE = document.createElement("script");
+BE.src = "https://the179ucetile.github.io/game_scripts/break_eternity.min.js";
+document.body.appendChild(BE);
 // -- CONSTANTS --
-const version = "v3.0.0 - bot version [160]",
+const version = "v3.0.0 - bot version [161]",
   rankOffset = -1,
   hasCmd = /^t>|^t</,
   ranks = ["Bad User", "Anonymous", "User", "Member", "Admin", "Owner"],
@@ -11,7 +17,8 @@ const version = "v3.0.0 - bot version [160]",
   colHex = ["#000000", "#515252", "#898D90", "#D4D7D9", "#6D001A", "#BE0039", "#FF4500", "#FFA800", "#FFD635", "#FFF8B8", "#00A368", "#00CC78", "#7EED56", "#00756F", "#009EAA", "#00CCC0", "#2450A4", "#3690EA", "#51E9F4", "#493AC1", "#6A5CFF", "#94B3FF", "#811E9F", "#B44AC0", "#E4ABFF", "#DE107F", "#FF3881", "#FF99AA", "#6D482F", "#9C6926", "#FFB470"],
   mEightBallMessages = [["it is certain", 0], ["it is decidedly so", 0], ["without a doubt", 0], ["yes definitely", 0], ["you may rely on it", 0], ["as i see it, yes", 0], ["most likely", 0], ["outlook good", 0], ["yes", 0], ["signs point to yes", 0], ["reply hazy, try again", 1], ["ask again later", 1], ["better not tell you now", 1], ["cannot predict now", 1], ["concentrate and ask again", 1], ["don't count on it", 2], ["my reply is no", 2], ["my sources say no", 2], ["outlook not so good", 2], ["very doubtful", 2]],
   badUsers = ["py_alt"],
-  members = ["Bzuki", "MangoJansaRebirthed", "penthexium56", "Delta", "fp"];
+  members = ["Bzuki", "MangoJansaRebirthed", "penthexium56", "Delta", /* fp account is not owned by fp */],
+  notations = [["Scientific", "1e10"], ["Engineering", "1e10"], ["Standard"], ["Logarithm"], ["SuperLogarithm"], ["SI"], ["RomanNumerals"], ["ADRoman"], ["Fours"]];
 // -- FUNCTIONS --
 function getCmd(str) {
   return str.split(" ")[0]
@@ -28,24 +35,29 @@ function appendHex(str, col = 0) {
 function sendWithHex(str, col = 0) {
   w.chat.send(appendHex(str, col))
 }
-function throwError(num = 0, input1 = 0) {
+function throwError(num = 0, ...inputs) {
   switch (num) {
     case 0:
-      sendWithHex("ERROR 0: Cannot echo commands", "#f00")
+      sendWithHex("ERROR 0: cannot echo commands", "#f00")
       break;
     case 1:
-      sendWithHex("ERROR 1: Not enough inputs", "#f00")
+      sendWithHex("ERROR 1: not enough inputs", "#f00")
       break;
     case 2:
-      sendWithHex("ERROR 2: Cannot save commands into storage", "#f00")
+      sendWithHex("ERROR 2: cannot save commands into storage", "#f00")
       break;
+    case 3:
+      sendWithHex(`ERROR 3: an error occured when calculating ${inputs[0]}^${inputs[1]}`, "#f00")
+      break;
+    case 4:
+      sendWithHex(`ERROR 4: input is not in range (${inputs[0]}~${inputs[1]})`, "#f00")
     case 1000:
-      sendWithHex("ERROR 1000: Command doesn't exist", "#f00")
+      sendWithHex("ERROR 1000: command doesn't exist", "#f00")
       break;
     case 1001:
-      sendWithHex(`ERROR 1001: Your rank is lower than the command rank requirement (${ranks[input1 - rankOffset]}+)`, "#f00")
+      sendWithHex(`ERROR 1001: your rank is lower than the command rank requirement (${ranks[inputs[0] - rankOffset]}+)`, "#f00")
     case 5000:
-      sendWithHex("ERROR 5000: Command not implemented", "#f00")
+      sendWithHex("ERROR 5000: command not implemented", "#f00")
   }
 }
 function getRank(d) {
@@ -122,7 +134,21 @@ case "t>dyk":
 case "t>uptime":
 case "t>rank":
 case "t>rollstats":
-case "t>pow":
+case "t>pow": {/*
+  func: {
+    let inputs = inp.split(" ");
+    if (inputs.length < 3) {
+      throwError(1);
+      break func;
+    };
+    let num = new Decimal(inputs[0]).pow(inputs[1]);
+    if (Decimal.isNaN(num)) {
+      throwError(3);
+      break func;
+    }
+    if 
+  }*/
+} break;
 case "t>roll":
 case "t>yearprogress": {
   throwError(5000)

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Font displayer</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicons/placeholder.png">
+  </head>
+  <body>
+    <p><a href="/other">Go back</a></p>
+    <h1>Font displayer</h1>
+    <label for="font">Choose a font:</label>
+    <select id="font" oninput="document.getElementById('txt').style.fontFamily = document.getElementById('font').value + ', sans-serif'">
+      <option value="monospace textwall em" selected>Monospace Textwall</option>
+      <option value="deltas font">Delta's font</option>
+      <option value="pixel ayako">Pixel Ayako</option>
+      <option value="braille octant">Braille Octant [WARNING: UNREADABLE]</option>
+    </select>
+    <textarea id="txt" style="font-family: 'monospace textwall em'">
+      Hello, World!
+    </textarea>
+  </body>
+</html>
