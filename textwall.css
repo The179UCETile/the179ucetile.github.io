@@ -817,13 +817,9 @@ td {
     font-family: cutive mono;
     src: url(https://tw.2s4.me/static/fonts/CutiveMono-Regular.ttf)
 }
-/*@font-face {
-    font-family: 'monospace textwall';
-    src: url(/fonts/monospace-textwall-wip.otf.woff2);
-}*/
 @font-face {
     font-family: 'monospace textwall';
-    src: url(/fonts/monospace-textwall-wip.ttf);
+    src: url(/fonts/monospace-textwall.ttf);
 }
 @font-face {
     font-family: 'braille octant';
