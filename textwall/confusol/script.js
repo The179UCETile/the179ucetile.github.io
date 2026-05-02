@@ -50,6 +50,6 @@ function doTheThing(d) {
     styles[1000000].style = `color: #${Math.floor(16777216 + Math.random() * 16777216).toString(16).slice(1)}; text-shadow: ${arr.join(", ")};`;
     const val = data[document.getElementById("users").value];
     document.getElementById("output").style = styles[round(val)].style;
-    document.getElementById("output").innerHTML = `${styles[round(val)].name} (Confusol: ${val})`;
+    document.getElementById("output").innerHTML = `${styles[round(val)].name} (Confusion essence: ${val})`;
   }, 16)
 }
