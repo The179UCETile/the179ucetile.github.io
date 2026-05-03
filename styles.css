@@ -103,7 +103,10 @@ hr {
   border: 1px solid #fff
 }
 footer.ft {
-  font-size: 0.75em !important;
+  font-size: 0.75em;
   color: #888;
   text-align: center;
+}
+footer.ft a {
+  font-size: 0.75em;
 }
