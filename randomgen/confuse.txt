@@ -1,0 +1,229 @@
+$name : Confusing rarity generator
+$author : The179UCETile
+$description : Generates rarities so confusing that you should reconsider before adding them to your rarity list.
+$amount : 5
+$button : Confuse me!
+
+$prefix
+gran
+ex
+met
+supi
+suter
+versa
+omn
+hypi
+etern
+parad
+plexi
+dy
+try
+ad
+en
+scend
+di
+tri
+dic
+asc
+sup
+grea
+xi
+colos
+ginorma
+fiz
+omeg
+termin
+lute
+mil
+bil
+tril
+quadr
+micr
+nan
+pic
+femt
+kal
+multi
+terra
+jova
+gargantua
+hysu
+zenna
+aetern
+entrop
+absur
+phos
+sud
+norik
+epusorik
+ultimik
+finth
+gendr
+th
+memori
+metro
+mej
+gi
+ter
+pet
+exa
+zet
+yot
+ron
+que
+incarn
+ate
+monstructa
+maxim
+demi
+quasi
+ulti
+ji
+ti
+ter
+petri
+att
+zept
+yoct
+ront
+quec
+pro
+anti
+tetrat
+endian
+us
+pulmen
+fino
+exe
+kiaro
+ikai
+opul
+era
+gen
+kian
+brony
+renk
+asyak
+mendr
+broth
+ork
+zy
+extra
+trances
+ab
+prem
+fundam
+trundam
+undam
+izer
+zy
+alp
+bet
+gam
+del
+psi
+sort
+conja
+uni
+dua
+imag
+nihil
+neg
+absil
+zyro
+expanta
+eterna
+minim
+ubera
+eka
+disa
+trisa
+plusi
+then
+cryo
+ployt
+on
+byzr
+ol
+realit
+tayer
+ziren
+iren
+tri
+tetra
+
+$suffix
+ia
+ium
+us
+al
+gen
+ite
+lic
+cate
+um
+on
+io
+iko
+o
+Num overflow
+try
+rum
+ion
+oes
+ic
+uum
+a
+e
+i
+u
+ol
+am
+is
+finity
+
+$incomp
+[prefix,x5-15][suffix]
+
+$incomp2
+[prefix,x10-25][suffix]
+
+$incomp3
+[prefix,x25-40][suffix]
+
+$incomp4
+[prefix,x50-120][suffix]
+
+$>high confusion rarity
+[incomp2,x1-4,title]
+THE START OF [INCOMP2,x1-3] {20%}
+THE END OF [INCOMP2,x1-3] {20%}
+Post-[incomp2,x1-3,title] {20%}
+Limit of [incomp2,x1-3,title] {20%}
+
+$>extreme confusion rarity
+[incomp3,x2-5,title]
+THE START OF [INCOMP3,x2-4] {20%}
+THE END OF [INCOMP3,x2-4] {20%}
+Post-[incomp3,x2-5,title] {20%}
+Limit of [incompl3,x2-5,title] {20%}
+
+$>whar???
+[incomp4,x3-7,title]
+THE START OF [INCOMP4,x3-6] {20%}
+THE END OF [INCOMP4,x3-6] {20%}
+Post-[incomp4,x3-6,title] {20%}
+Limit of [incomp4,x3-6,title] {20%}
+
+$completely random confusion level of rarity
+[medium confusion rarity]
+[high confusion rarity]
+[extreme confusion rarity]
+[whar???]
+
+$medium confusion rarity
+[incomp,x1-3,title] {20%}
+THE START OF [INCOMP,x1-2] {20%}
+THE END OF [INCOMP,x1-2] {20%}
+Post-[incomp,x1-2,title] {20%}
+Limit of [incomp,x1-2,title] {20%}
