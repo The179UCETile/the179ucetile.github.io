@@ -205,7 +205,7 @@ $xc
 THE START OF [INCOMP3,x2-4] {20%}
 THE END OF [INCOMP3,x2-4] {20%}
 Post-[incomp3,x2-5,title] {20%}
-Limit of [incompl3,x2-5,title] {20%}
+Limit of [incomp3,x2-5,title] {20%}
 
 $uc
 [incomp4,x3-7,title]
