@@ -166,7 +166,6 @@ on
 io
 iko
 o
-Num overflow
 try
 rum
 ion
@@ -229,16 +228,16 @@ Post-[incomp,x1-2,title] {20%}
 Limit of [incomp,x1-2,title] {20%}
 
 $>high confusion rarity
-[hc]
+[hc][||||Num overflow]
 
 $>extreme confusion rarity
-[xc]
+[xc][||||Num overflow]
 
 $>whar??????
-[uc]
+[uc][||||Num overflow]
 
 $>completely random confusion level of rarity
-[rc]
+[rc][||||Num overflow]
 
 $medium confusion rarity
-[mc]
+[mc][||||Num overflow]
