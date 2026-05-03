@@ -218,7 +218,7 @@ $rc
 [medium confusion rarity]
 [high confusion rarity]
 [extreme confusion rarity]
-[whar???]
+[whar??????]
 
 $mc
 [incomp,x1-3,title]
@@ -237,7 +237,7 @@ $>whar??????
 [uc][||||Num overflow]
 
 $>completely random confusion level of rarity
-[rc][||||Num overflow]
+[rc]
 
 $medium confusion rarity
 [mc][||||Num overflow]
