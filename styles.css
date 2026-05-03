@@ -13,14 +13,14 @@ body, html {
   font-family: "Monospace TextWall", "monospace textwall em", monospace;
   font-weight: normal;
   color: #ffffff;
-  size: 12px;
+  font-size: 12px;
 }
 h1 {
-  size: 25px;
+  font-size: 25px;
   text-shadow: 0 2px 0 #ffffff80, 0 4px 0 #ffffff40;
 }
 h2 {
-  size: 20px;
+  font-size: 20px;
   text-shadow: 0 2px 0 #ffffff40;
 }
 div.contain {
@@ -98,4 +98,7 @@ button:disabled {
 input {
   background-image: linear-gradient(to bottom, #000000, #404040);
   border: 1px solid #606060
+}
+hr {
+  border: 1px solid #fff
 }
