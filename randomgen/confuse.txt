@@ -229,16 +229,16 @@ Post-[incomp,x1-2,title] {20%}
 Limit of [incomp,x1-2,title] {20%}
 
 $>high confusion rarity
-hc
+[hc]
 
-$>extreme confusion raritxc
-xc
+$>extreme confusion rarity
+[xc]
 
 $>whar??????
-uc
+[uc]
 
 $>completely random confusion level of rarity
-rc
+[rc]
 
 $medium confusion rarity
-mc
+[mc]
