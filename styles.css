@@ -16,11 +16,11 @@ body, html {
   font-size: 16px;
 }
 h1 {
-  font-size: 25px;
+  font-size: 2em;
   text-shadow: 0 2px 0 #ffffff80, 0 4px 0 #ffffff40;
 }
 h2 {
-  font-size: 20px;
+  font-size: 1.5em;
   text-shadow: 0 2px 0 #ffffff40;
 }
 div.contain {
@@ -101,4 +101,9 @@ input {
 }
 hr {
   border: 1px solid #fff
+}
+footer.ft {
+  font-size: 0.75em !important;
+  color: #888;
+  text-align: center;
 }
