@@ -183,47 +183,62 @@ is
 finity
 
 $incomp
-[prefix,x5-15][suffix]
+[prefix,x2-5][suffix][ ]
 
 $incomp2
-[prefix,x10-25][suffix]
+[prefix,x4-12][suffix][ ]
 
 $incomp3
-[prefix,x25-40][suffix]
+[prefix,x9-22][suffix][ ]
 
 $incomp4
-[prefix,x50-120][suffix]
+[prefix,x14-35][suffix][ ]
 
-$>high confusion rarity
+$hc
 [incomp2,x1-4,title]
 THE START OF [INCOMP2,x1-3] {20%}
 THE END OF [INCOMP2,x1-3] {20%}
 Post-[incomp2,x1-3,title] {20%}
 Limit of [incomp2,x1-3,title] {20%}
 
-$>extreme confusion rarity
+$xc
 [incomp3,x2-5,title]
 THE START OF [INCOMP3,x2-4] {20%}
 THE END OF [INCOMP3,x2-4] {20%}
 Post-[incomp3,x2-5,title] {20%}
 Limit of [incompl3,x2-5,title] {20%}
 
-$>whar???
+$uc
 [incomp4,x3-7,title]
 THE START OF [INCOMP4,x3-6] {20%}
 THE END OF [INCOMP4,x3-6] {20%}
 Post-[incomp4,x3-6,title] {20%}
 Limit of [incomp4,x3-6,title] {20%}
 
-$completely random confusion level of rarity
+$rc
 [medium confusion rarity]
 [high confusion rarity]
 [extreme confusion rarity]
 [whar???]
 
-$medium confusion rarity
-[incomp,x1-3,title] {20%}
+$mc
+[incomp,x1-3,title]
 THE START OF [INCOMP,x1-2] {20%}
 THE END OF [INCOMP,x1-2] {20%}
 Post-[incomp,x1-2,title] {20%}
 Limit of [incomp,x1-2,title] {20%}
+
+$>high confusion rarity
+hc
+
+$>extreme confusion raritxc
+xc
+
+$>whar??????
+uc
+
+$>completely random confusion level of rarity
+rc
+
+$medium confusion rarity
+mc
