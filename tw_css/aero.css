@@ -10,7 +10,7 @@ body {
     --btn-default: linear-gradient(to bottom, rgba(64, 64, 64, 0.8) 0%, rgba(96, 96, 96, 0.8) 50%, rgba(32, 32, 32, 0.8) 50%);
     --btn-hover: linear-gradient(to bottom, rgba(96, 96, 96, 0.8) 0%, rgba(128, 128, 128, 0.8) 50%, rgba(64, 64, 64, 0.8) 50%);
     --btn-active: linear-gradient(to bottom, rgba(128, 128, 128, 0.8) 0%, rgba(160, 160, 160, 0.8) 50%, rgba(96, 96, 96, 0.8) 50%);
-    --btn-on: linear-gradient(to bottom, rgba(160, 160, 160, 0.8) 0%, rgba(192, 192, 192, 0.8) 50%, rgba(96, 96, 96, 0.8) 50%)
+    --btn-on: linear-gradient(to bottom, rgba(192, 192, 192, 0.8) 0%, rgba(224, 224, 224, 0.8) 50%, rgba(128, 128, 128, 0.8) 50%)
 }
 
 * {
@@ -93,7 +93,7 @@ h3 {
 }
 
 #info {
-    background-image: var(--btn-dim);
+    background-image: var(--btn-default);
     border: 1px solid rgba(39, 39, 39, 0.8);
     color: #fff;
     bottom: 10px;
@@ -194,8 +194,8 @@ body.menu-open #bubbles {
     opacity: 0.5
 }
 #sidemenu {
-    border: 1px solid rgba(49, 0, 0, 0.7);
-    background-color: rgba(26, 10, 10, .8);
+    border: 1px solid rgba(49, 49, 49, 0.7);
+    background-image: var(--btn-dim);
     color: #fff;
     position: fixed;
     top: 10px;
@@ -213,6 +213,7 @@ body.menu-open #bubbles {
     opacity: 0;
     pointer-events: none;
     transition: transform .12s ease, opacity .28s ease;
+    backdrop-filter: blur(4px);
 }
 
 #sidemenu.open {
@@ -229,7 +230,7 @@ body.menu-open #bubbles {
   height: 100%;
 }
 .badge {
-    background-color: #d44b4b;
+    background-color: #d4d4d4;
     color: #fff;
     border-radius: 50%;
     padding: 1px 4px;
@@ -253,12 +254,12 @@ body.menu-open #bubbles {
 }
 .tab-btn {
   appearance:none;-webkit-appearance:none;
-  background:transparent;color:#fff;
+  background-image:var(--btn-default);color:#fff;
   border:1px solid rgba(255,255,255,0.03);
   padding:6px 8px;border-radius:4px;
   text-align:center;cursor:pointer;font-size:13px;
 }
-.tab-btn.active { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.12); }
+.tab-btn.active { background-image: var(--btn-active); border-color: rgba(255,255,255,0.12); }
 .tab-btn:hover { filter:brightness(1.06); }
 
 .tab-contents {
@@ -396,14 +397,15 @@ input {
     width: 90%;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: rgba(173, 0, 0, 0.35);
+    background-image: var(--btn-default);
     border-radius: 8px;
     padding: 4px;
-    border: 1px solid rgba(139, 0, 0, 0.5);
-    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+    border: 1px solid rgba(139, 139, 139, 0.5);
+    box-shadow: 0 4px 12px rgba(139, 139, 139, 0.3);
+    backdrop-filter: blur(4px);
 }
 #colourlist {
-    border: 0.56px solid #f00;
+    border: 0.56px solid #fff;
     border-radius: 5%;
     display: inline-grid;
     grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8%;
@@ -415,7 +417,7 @@ input {
     flex: 0 0 auto;  
     width: 20px;     
     height: 20px;
-    background-color: rgba(139, 0, 0, 0.5);
+    background-color: rgba(139, 139, 139, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -428,7 +430,7 @@ input {
 }
 #customcolour {
     margin: 4px;
-    border: 2px solid #f00;
+    border: 2px solid #fff;
     padding: 0;
     width: 50%;
     border-radius: 5%;
@@ -467,8 +469,6 @@ td {
     height: 20px;
 }
 .infobtn {
-    background-image: var(--btn-dim);
-    border: 1px solid #ffffff;
     border-radius: 5px;
     width: 34px;
     padding: 0 0;
@@ -524,7 +524,7 @@ td {
 
 #toast {
     position: absolute;
-    background-color: rgba(30, 30, 30, 0.8);
+    background-image: var(--btn-dim);
     color: #fff;
     border-radius: 5px;
     margin: 5px;
@@ -540,6 +540,7 @@ td {
     opacity: 0;
     /* initially invisible */
     display: none;
+    backdrop-filter: blur(4px);
 }
 
 #toast.toasting {
@@ -555,8 +556,8 @@ td {
     z-index: 2;
     text-align: center;
     transition: all .5s;
-    border: 1px solid rgba(98, 1, 1, 1);
-    background-color: rgba(39, 11, 11, 1);
+    border: 1px solid rgba(98, 98, 98, 1);
+    background-color: var(--btn-default);
     color: #fff;
     margin: 15px;
     padding: 5px;
@@ -598,12 +599,12 @@ td {
     grid-row: 1fr;
     background-color:rgba(30, 30, 30, .3);
     padding: 10px;
-    border: 1px solid rgba(30, 5, 20, .8);
+    border: 1px solid rgba(30, 30, 30, .8);
 }
 .tpcontent {
     padding: 8px;
     background-color: rgba(30, 30, 30, .3);
-     border: 1px solid rgba(30, 5, 20, .8);
+     border: 1px solid rgba(30, 30, 30, .8);
      margin-top: 5px;
 }
 .tpcontent button,
@@ -618,8 +619,8 @@ td {
 }
 
 .tpcontent > hr, #walllist hr {
-    border: 0.5px solid rgba(255, 0, 0, 0.2) !important;
-    background-color: rgba(70,0,0,0.6) !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(70,70,70,0.6) !important;
     padding-top: 0 !important;
     box-shadow: none !important;
     margin: 8px 0 !important;
@@ -661,8 +662,8 @@ td {
 }
 
 .walllist {
-    border: 1px solid rgba(128, 0, 0, 1);
-        background-color: rgba(34, 14, 14, 1);
+    border: 1px solid rgba(128, 128, 128, 1);
+        background-color: rgba(34, 34, 34, 1);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
         margin-top: 5px;
     list-style: none;
@@ -1376,8 +1377,8 @@ input[type="submit"] {
     font-size: 14px;
     font-weight: 500;
     color: #aaa;
-    background: #222;
-    border: 3px solid #411 ;
+    background-image: var(--btn-default);
+    border: 3px solid #444 ;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1388,7 +1389,7 @@ input[type="submit"] {
 button:hover,
 input[type="button"],
 input[type="submit"]:hover {
-    background: #666;
+    background-image: var(--btn-hover);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
@@ -1421,9 +1422,9 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    border: 2px solid #888;
+    border: 2px solid #fff;
     border-radius: 4px;
-    background: #ccc;
+    background-image: var(--btn-dim);
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
@@ -1431,7 +1432,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:hover {
-    background: #bbb;
+    background-image: var(--btn-hover);
     border-color: #666;
 }
 
@@ -1441,8 +1442,8 @@ input[type="checkbox"]:focus {
 }
 
 input[type="checkbox"]:checked {
-    background: #f00;
-    border-color: #a00;
+    background-image: var(--btn-on);
+    border-color: #ccc;
 }
 
 input[type="checkbox"]:checked::after {
@@ -1452,7 +1453,7 @@ input[type="checkbox"]:checked::after {
     top: 0px;
     width: 4px;
     height: 8px;
-    border: solid #fff;
+    border: solid #000;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
@@ -1462,19 +1463,19 @@ input[type="checkbox"]:focus-visible {
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 input[type="checkbox"]:disabled {
-    background: #ccc;
+    background-image: var(--btn-hover);
     border-color: #888;
     cursor: not-allowed;
     opacity: 0.7;
 }
 
 input[type="checkbox"]:checked:disabled {
-    background: #d88;
-    border-color: #a88;
+    background-image: var(--btn-on);
+    border-color: #ccc;
 }
 
 input[type="checkbox"]:disabled:hover {
-    background: #ccc;
+    background-image: var(--btn-active);
     border-color: #888;
 }
 
