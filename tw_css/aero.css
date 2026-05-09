@@ -14,7 +14,7 @@ body {
 }
 
 * {
-    font-family: "ibm plex mono", Consolas, monospace, courier new, Courier, special;
+    font-family: "ibm plex mono", Consolas, monospace, courier new, Courier, special, "last resort";
     -webkit-tap-highlight-color: transparent
 }
 
@@ -1066,6 +1066,10 @@ td {
 @font-face {
     font-family: "braille octant";
     src: url(/fonts/worst-font-ever.ttf)
+}
+@font-face {
+    font-family: "last resort";
+    src: url(/fonts/LastResort-Regular.ttf)
 }
 @font-face {
   font-family: 'JetBrains Mono';

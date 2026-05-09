@@ -17,6 +17,10 @@
   font-family: "richard grechko terminal 2";
   src: url(https://richardgrechko.github.io/textwall-stuff/fonts/richard-grechko-terminal-2.ttf)
 }
+@font-face {
+  font-family: last resort;
+  src: url(/fonts/LastResort-Regular.ttf);
+}
 .headertext {
   font-family: Wittgenstein, serif;
   font-variant: small-caps;
@@ -42,7 +46,7 @@ hr {
   border: 2px solid #88f;
 }
 h1 {
-  font-family: "braille octant", monospace;
+  font-family: "braille octant", monospace, "last resort";
   font-weight: normal;
   font-size: 50px;
   color: #000;
@@ -52,11 +56,11 @@ h2, h3, h4, h5, h6 {
   font-family: cursive;
 }
 p {
-  font-family: Inspiration, cursive;
+  font-family: Inspiration, cursive, "last resort";
   font-size: 20px;
 }
 ol, ul, li {
-  font-family: "monospace textwall", "monospace textwall em", monospace;
+  font-family: "monospace textwall", "monospace textwall em", monospace, "last resort";
 }
 a {
   color: #0f0;

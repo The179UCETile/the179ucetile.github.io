@@ -6,11 +6,15 @@
   font-family: "monospace textwall em";
   src: url(/fonts/monospace-textwall-wip.ttf)
 }
+@font-face {
+  font-family: "last resort";
+  src: url(/fonts/LastResort-Regular.ttf);
+}
 body, html { 
   background-color: #000000; 
 }
 * {
-  font-family: "Monospace TextWall", "monospace textwall em", monospace;
+  font-family: "Monospace TextWall", "monospace textwall em", monospace, last resort;
   font-weight: normal;
   color: #ffffff;
   font-size: 16px;
