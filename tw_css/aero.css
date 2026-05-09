@@ -5,6 +5,14 @@ body {
     position: static
 }
 
+:root {
+    --btn-dim: linear-gradient(to bottom, rgba(40, 40, 40, 0.8) 0%, rgba(50, 50, 50, 0.8) 50%, rgba(20, 20, 20, 0.8) 50%);
+    --btn-default: linear-gradient(to bottom, rgba(64, 64, 64, 0.8) 0%, rgba(96, 96, 96, 0.8) 50%, rgba(32, 32, 32, 0.8) 50%);
+    --btn-hover: linear-gradient(to bottom, rgba(96, 96, 96, 0.8) 0%, rgba(128, 128, 128, 0.8) 50%, rgba(64, 64, 64, 0.8) 50%);
+    --btn-active: linear-gradient(to bottom, rgba(128, 128, 128, 0.8) 0%, rgba(160, 160, 160, 0.8) 50%, rgba(96, 96, 96, 0.8) 50%);
+    --btn-on: linear-gradient(to bottom, rgba(160, 160, 160, 0.8) 0%, rgba(192, 192, 192, 0.8) 50%, rgba(96, 96, 96, 0.8) 50%)
+}
+
 * {
     font-family: "ibm plex mono", Consolas, monospace, courier new, Courier, special;
     -webkit-tap-highlight-color: transparent
@@ -85,8 +93,8 @@ h3 {
 }
 
 #info {
-    background-color: rgba(12, 1, 1, 0.8);
-    border: 1px solid rgba(39, 10, 10, 0.8);
+    background-image: var(--btn-dim);
+    border: 1px solid rgba(39, 39, 39, 0.8);
     color: #fff;
     bottom: 10px;
     left: 50%;
@@ -104,6 +112,7 @@ h3 {
     max-width: 500px; 
     overflow-x: auto;
     overflow-y: hidden;
+    backdrop-filter: blur(4px);
 }
 
 
@@ -141,7 +150,7 @@ body.menu-open #bubbles {
 }
 
 .separator {
-    background-color: rgba(114, 10, 10, 0.548);
+    background-color: rgba(64, 64, 64, 0.548);
     border-radius: 2px;
     flex-shrink: 0;
     width: 2px;
@@ -151,7 +160,7 @@ body.menu-open #bubbles {
 
 .bubble {
     pointer-events: all;
-    background-image: linear-gradient(to bottom, rgba(64, 64, 64, 0.8) 0%, rgba(96, 96, 96, 0.8) 50%, rgba(32, 32, 32, 0.8) 50%);
+    background-image: var(--btn-default);
     border: 2px solid #aaa;
     color: #fff;
     border-radius: 18px;
@@ -159,7 +168,8 @@ body.menu-open #bubbles {
     min-height: 20px;
     padding: 8px;
     font-size: 16px;
-    display: flex
+    display: flex;
+    backdrop-filter: blur(4px);
 }
 
 .bubble.clickable {
@@ -168,16 +178,16 @@ body.menu-open #bubbles {
 }
 @media (hover: hover) {
     .tool:hover,.bubble.clickable:hover {
-        background-image: linear-gradient(to bottom, rgba(96, 96, 96, 0.8) 0%, rgba(128, 128, 128, 0.8) 50%, rgba(64, 64, 64, 0.8) 50%);
+        background-image: var(--btn-hover);
     }
 }
 
 .tool:not(.disabled):active,.bubble.clickable:not(.disabled):active {
-    background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.8) 0%, rgba(160, 160, 160, 0.8) 50%, rgba(96, 96, 96, 0.8) 50%)
+    background-image: var(--btn-active)
 }
 
 .infobtn.enabled {
-    background-color: #990000
+    background-image: var(--btn-on)
 }
 
 .infobtn.disabled {
@@ -457,6 +467,8 @@ td {
     height: 20px;
 }
 .infobtn {
+    background-image: var(--btn-dim);
+    border: 1px solid #ffffff;
     border-radius: 5px;
     width: 34px;
     padding: 0 0;
@@ -1906,8 +1918,8 @@ input[type="color"]:active {
 }
 
 #nsfwwarning {
-    background-color: rgb(41, 13, 13);
-    border: 1px solid rgb(200, 0, 0);
+    background-image: var(--btn-default);
+    border: 1px solid rgb(200, 200, 200);
     color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -1925,9 +1937,10 @@ input[type="color"]:active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 4px 12px rgba(95, 0, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(95, 95, 95, 0.5);
     transition: all 0.3s ease;
     z-index: 9999;
+    backdrop-filter: blur(4px);
 }
 
 #nsfwwarning button {
@@ -1956,8 +1969,8 @@ input[type="color"]:active {
     width: 95%;
     height: 100%;
     object-fit: cover;
-    border: 1px solid rgb(200, 0, 0);
-    background-color: rgb(75, 0, 0);
+    border: 1px solid rgb(200, 200, 200);
+    background-color: rgb(75, 75, 75);
      border-radius: 5px;
    /* squeeze text */
     
