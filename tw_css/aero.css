@@ -10,7 +10,7 @@ body {
     --btn-default: linear-gradient(to bottom, rgba(64, 64, 64, 0.8) 0%, rgba(96, 96, 96, 0.8) 50%, rgba(32, 32, 32, 0.8) 50%);
     --btn-hover: linear-gradient(to bottom, rgba(96, 96, 96, 0.8) 0%, rgba(128, 128, 128, 0.8) 50%, rgba(64, 64, 64, 0.8) 50%);
     --btn-active: linear-gradient(to bottom, rgba(128, 128, 128, 0.8) 0%, rgba(160, 160, 160, 0.8) 50%, rgba(96, 96, 96, 0.8) 50%);
-    --btn-on: linear-gradient(to bottom, rgba(192, 192, 192, 0.8) 0%, rgba(224, 224, 224, 0.8) 50%, rgba(128, 128, 128, 0.8) 50%)
+    --btn-on: linear-gradient(to bottom, rgba(224, 224, 224, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(192, 192, 192, 0.8) 50%)
 }
 
 * {
@@ -89,7 +89,8 @@ h3 {
     justify-content: center;
     z-index: 4;
     color: #fff;
-    transition: opacity .5s
+    transition: opacity .5s;
+    backdrop-filter: blur(4px);
 }
 
 #info {
@@ -329,15 +330,15 @@ body.menu-open #bubbles {
 
 .buttonlink {
     text-decoration: underline;
-    color: #8B0000;
+    color: #8B8B8B;
     cursor: pointer;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 .buttonlink:hover,
 .buttonlink:active {
-    color: #FF0000;
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
     transition: color 0.3s, text-shadow 0.3s;
 }
 
@@ -557,7 +558,7 @@ td {
     text-align: center;
     transition: all .5s;
     border: 1px solid rgba(98, 98, 98, 1);
-    background-color: var(--btn-default);
+    background-image: var(--btn-default);
     color: #fff;
     margin: 15px;
     padding: 5px;
@@ -569,6 +570,7 @@ td {
     overflow-y: hidden;
     opacity: 0;
     transform: scale(0);
+    backdrop-filter: blur(4px);
 }
 
 #teleport.open {
@@ -717,7 +719,7 @@ td {
 #chat {
     position: absolute;
     top: 0;
-    color: #E80000;
+    color: #E8E8E8;
     right: 0;
     display: flex;
     height: 320px;
@@ -732,14 +734,14 @@ td {
 .chatcontainer {
     position: relative; 
     width: 300px;
-    background: rgba(34, 1, 1, 0.95);
+    background-image: var(--btn-dim);
     padding: 12px;
     display: flex;
     flex-direction: column;
     pointer-events: auto;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(6px);
-    border: 1px solid rgba(212, 27, 27, 0.548);
+    border: 1px solid rgba(212, 217, 217, 0.548);
     gap: 8px;
 }
 #stacker {
@@ -814,8 +816,8 @@ td {
 }
 
 #chatbutton {
-    background-color: rgba(68, 0, 0, 0.8);
-    border: 1px solid #9b0000;
+    background-image: var(--btn-default);
+    border: 1px solid #9b9b9b;
     padding: 10px;
     margin-bottom: 10px;
     pointer-events: auto;
@@ -829,7 +831,7 @@ td {
     padding-left: 5px;
     height: 20px;
     border-radius: 50%;
-    background-color: #d44b4b;
+    background-color: #d4d4d4;
     position: absolute;
     color: #ffffff;
     left: -9px;
@@ -1302,7 +1304,7 @@ td {
     padding-right: 3px;
 }
 .channel-btn.active {
-    background: #e20;
+    background: #eee;
     border-color: #aaa;
 }
 .buttons {
@@ -1345,28 +1347,30 @@ ul::-webkit-scrollbar-thumb {
     position: fixed;
     bottom: 50px;
     left: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(80, 0, 0, 0.8);
+    background-image: var(--btn-default);
+    border: 1px solid rgba(80, 80, 80, 0.8);
     color: #0f0;
     padding: 5px 10px;
     font-family: monospace;
     font-size: 14px;
     border-radius: 5px;
     z-index: 9999;
+    backdrop-filter: blur(4px);
 }
 
 #fpsc {
     position: fixed;
     bottom: 80px;
     left: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(80, 1, 1, 0.8);
+    background-image: var(--btn-default);
+    border: 1px solid rgba(80, 80, 80, 0.8);
     color: #0f0;
     padding: 5px 10px;
     font-family: monospace;
     font-size: 14px;
     border-radius: 5px;
     z-index: 9999;
+    backdrop-filter: blur(4px);
 }
 
 
@@ -1586,8 +1590,8 @@ textarea {
     color: #fff;
 
 
-    background: rgba(120, 20, 20, 0.8);
-    border: 1px solid rgba(200, 80, 80, 0.4);
+    background-image: linear-gradient(to bottom, rgba(120, 120, 120, 0.8) rgba(96, 96, 96, 0.8));
+    border: 1px solid rgba(200, 200, 200, 0.4);
     border-radius: 2px;
 
     outline: none;
@@ -1599,8 +1603,8 @@ input[type="search"]:hover,
 input[type="number"]:hover,
 input[type="password"]:hover,
 textarea:hover {
-    background: rgba(150, 30, 30, 0.85);
-    border-color: rgba(220, 100, 100, 0.6);
+    background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.8) rgba(120, 120, 120, 0.8));
+    border-color: rgba(220, 220, 220, 0.6);
 }
 
 
@@ -1609,9 +1613,9 @@ input[type="search"]:focus,
 input[type="number"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-    background: rgba(170, 40, 40, 0.9);
-    border-color: rgba(255, 120, 120, 0.8);
-    box-shadow: 0 0 6px rgba(255, 100, 100, 0.4);
+    background-image: linear-gradient(to bottom, rgba(170, 170, 170, 0.8) rgba(140, 140, 140, 0.8));
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
 
@@ -1627,9 +1631,9 @@ select {
     /* compact size */
     font-size: 14px;
     color: #fff;
-    background: rgba(120, 20, 20, 0.8);
+    background-image: linear-gradient(to bottom, rgba(120, 120, 120, 0.8) rgba(96, 96, 96, 0.8));
     /* dark red with alpha */
-    border: 1px solid rgba(200, 80, 80, 0.4);
+    border: 1px solid rgba(200, 200, 200, 0.4);
     border-radius: 6px;
     cursor: pointer;
     outline: none;
@@ -1642,15 +1646,15 @@ select {
 
 
 select:hover {
-    background: rgba(150, 30, 30, 0.85);
-    border-color: rgba(220, 100, 100, 0.6);
+    background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.8) rgba(120, 120, 120, 0.8));
+    border-color: rgba(220, 220, 220, 0.6);
 }
 
 
 select:focus {
-    background: rgba(170, 40, 40, 0.9);
-    border-color: rgba(255, 120, 120, 0.8);
-    box-shadow: 0 0 4px rgba(255, 100, 100, 0.3);
+    background-image: linear-gradient(to bottom, rgba(170, 170, 170, 0.8) rgba(140, 140, 140, 0.8));
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
 }
 
 
@@ -1713,8 +1717,8 @@ select::-ms-expand {
 hr {
     border: none;
     height: 4px;
-    background-color: #8B0000;
-    box-shadow: 0 2px 6px rgba(139, 0, 0, 0.5);
+    background-color: #8B8B8B;
+    box-shadow: 0 2px 6px rgba(139, 139, 139, 0.5);
     margin: 20px 0;
     border-radius: 2px;
 }
@@ -1743,8 +1747,8 @@ hr {
 
 /* i like stylizing */
 fieldset {
-    border: 2px solid #8B0000;
-    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.5);
+    border: 2px solid #8B8B8B;
+    box-shadow: 0 4px 10px rgba(139, 139, 139, 0.5);
     border-radius: 6px;
     padding: 1em;
     margin: 1em 0;
@@ -1752,20 +1756,20 @@ fieldset {
 
 a:link,
 a:visited {
-    color: #8B0000;
+    color: #8B8B8B;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 a:hover,
 a:active {
-    color: #FF0000;
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
 
 /* For inline SVG */
 svg:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0 4px 10px rgba(139, 0, 0, 0.6));
+    filter: drop-shadow(0 4px 10px rgba(139, 139, 139, 0.6));
     transition: transform 0.3s, filter 0.3s;
 }
 
@@ -1791,8 +1795,8 @@ img[src$=".svg"]:not(.nohover):active {
 input[type="color"] {
     width: 50px;
     height: 30px;
-    border: 2px solid #6A0000;
-    background-color: #8B0000;
+    border: 2px solid #6A6A6A;
+    background-image: var(--btn-default);
     border-radius: 5px;
     padding: 0;
     cursor: pointer;
@@ -1801,12 +1805,12 @@ input[type="color"] {
 
 input[type="color"]:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 8px rgba(139, 0, 0, 0.7);
+    box-shadow: 0 0 8px rgba(139, 139, 139, 0.7);
 }
 
 input[type="color"]:active {
     transform: scale(0.95);
-    box-shadow: 0 0 4px rgba(139, 0, 0, 0.9);
+    box-shadow: 0 0 4px rgba(139, 139, 139, 0.9);
 }
 
 #toggled {
@@ -1900,8 +1904,8 @@ input[type="color"]:active {
 
 .result {
     border-radius: 10px;
-    border: 1px solid rgb(212, 0, 0);
-    background-color: rgb(110, 0, 0);
+    border: 1px solid rgb(212, 212, 212);
+    background-image: var(--btn-default);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     margin: 10px 0;
     padding: 10px;
