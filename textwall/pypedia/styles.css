@@ -53,10 +53,10 @@ h1 {
   background-color: #f0f;
 }
 h2, h3, h4, h5, h6 {
-  font-family: cursive;
+  font-family: cursive, sans-serif, "last resort";
 }
 p {
-  font-family: Inspiration, cursive, "last resort";
+  font-family: Inspiration, cursive, sans-serif, "last resort";
   font-size: 20px;
 }
 ol, ul, li {
@@ -107,7 +107,7 @@ div.otr h2 {
   border: 1px solid #fff;
 }
 div.otr b {
-  font-family: Wittgenstein, serif;
+  font-family: Wittgenstein, serif, "last resort";
   font-variant: small-caps;
   color: #08f;
 }
