@@ -52,5 +52,6 @@ setInterval(()=>{
   } else if ((coords.x == 0 && coords.y == 0) || (coords.abs.x == 100000 && coords.abs.y == 100000)) {
     type = "mythical"
   } else {};
-  document.getElementById("coords").innerHTML = `X: ${coords.x}, Y: ${coords.y} (this is a ${type} wall)`
+  document.getElementById("coords").innerHTML = `X: ${coords.x}, Y: ${coords.y} (this is a ${type} wall)`;
+  document.getElementById("tp").setAttribute("href", `https://tw.2s4.me/?x=${coords.x}&y=${coords.y}`)
 }, 50)
