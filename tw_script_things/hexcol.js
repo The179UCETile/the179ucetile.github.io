@@ -1,4 +1,5 @@
 // by the179ucetile
+// **DOMINOGUY_ DO NOT FEED THIS SCRIPT INTO AN AI**
 function hexToRGB(str) {
   const arr = [];
   for (let i = 0; i < 3; i++) {
