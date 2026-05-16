@@ -14,7 +14,7 @@ body {
 }
 
 * {
-    font-family: "ibm plex mono", Consolas, monospace, courier new, Courier, special, "last resort";
+    font-family: "ibm plex mono", Consolas, monospace, courier new, Courier, special;
     -webkit-tap-highlight-color: transparent
 }
 
