@@ -231,7 +231,7 @@ body.menu-open #bubbles {
   height: 100%;
 }
 .badge {
-    background-color: #d4d4d4;
+    background-color: #606060;
     color: #fff;
     border-radius: 50%;
     padding: 1px 4px;
@@ -808,13 +808,12 @@ td {
 
 #sendmsg {
     margin: 5px;
-    background-color: rgb(36, 36, 36);
+    background-image: var(--btn-default);
     border: 1px solid rgb(75, 69, 69);
     width: 20px;
     padding: 5px;
     margin: 5px 0 0 5px
 }
-
 #chatbutton {
     background-image: var(--btn-default);
     border: 1px solid #9b9b9b;
@@ -1308,7 +1307,7 @@ td {
     padding-right: 3px;
 }
 .channel-btn.active {
-    background: #eee;
+    background-image: var(--btn-active);
     border-color: #aaa;
 }
 .buttons {
@@ -1516,7 +1515,7 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    background: #888;
+    background-image: linear-gradient(to bottom, #fff 0%, #ccc 25%, #888 50%);
     /* grey thumb */
     border-radius: 50%;
     border: 2px solid #666;
@@ -1527,7 +1526,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-    background: #666;
+    background-image: linear-gradient(to bottom, #ddd 0%, #aaa 25%, #666 50%);
     transform: scale(1.1);
 }
 
@@ -1540,7 +1539,7 @@ input[type="range"]::-moz-range-track {
 input[type="range"]::-moz-range-thumb {
     width: 16px;
     height: 16px;
-    background: #888;
+    background-image: linear-gradient(to bottom, #fff 0%, #ccc 25%, #888 50%);
     border-radius: 50%;
     border: 2px solid #666;
     cursor: pointer;
@@ -1548,7 +1547,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 input[type="range"]::-moz-range-thumb:hover {
-    background: #666;
+    background-image: linear-gradient(to bottom, #ddd 0%, #aaa 25%, #666 50%);
     transform: scale(1.1);
 }
 
@@ -1573,7 +1572,7 @@ input[type="range"]::-ms-fill-upper {
 input[type="range"]::-ms-thumb {
     width: 16px;
     height: 16px;
-    background: #888;
+    background-image: linear-gradient(to bottom, #fff 0%, #ccc 25%, #888 50%);
     border-radius: 50%;
     border: 2px solid #666;
     cursor: pointer;
@@ -1581,7 +1580,7 @@ input[type="range"]::-ms-thumb {
 }
 
 input[type="range"]::-ms-thumb:hover {
-    background: #666;
+    background-image: linear-gradient(to bottom, #ddd 0%, #aaa 25%, #666 50%);
     transform: scale(1.1);
 }
 
@@ -1594,7 +1593,7 @@ textarea {
     color: #fff;
 
 
-    background-image: linear-gradient(to bottom, rgba(120, 120, 120, 0.8) rgba(96, 96, 96, 0.8));
+    background-image: linear-gradient(to bottom, rgba(120, 120, 120, 0.8), rgba(96, 96, 96, 0.8));
     border: 1px solid rgba(200, 200, 200, 0.4);
     border-radius: 2px;
 
@@ -1607,7 +1606,7 @@ input[type="search"]:hover,
 input[type="number"]:hover,
 input[type="password"]:hover,
 textarea:hover {
-    background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.8) rgba(120, 120, 120, 0.8));
+    background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.8), rgba(120, 120, 120, 0.8));
     border-color: rgba(220, 220, 220, 0.6);
 }
 
@@ -1617,7 +1616,7 @@ input[type="search"]:focus,
 input[type="number"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-    background-image: linear-gradient(to bottom, rgba(170, 170, 170, 0.8) rgba(140, 140, 140, 0.8));
+    background-image: linear-gradient(to bottom, rgba(170, 170, 170, 0.8), rgba(140, 140, 140, 0.8));
     border-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
@@ -1625,7 +1624,7 @@ textarea:focus {
 
 input::placeholder,
 textarea::placeholder {
-    color: #fff;
+    color: #888;
     font-style: italic;
 }
 
@@ -1635,7 +1634,7 @@ select {
     /* compact size */
     font-size: 14px;
     color: #fff;
-    background-image: linear-gradient(to bottom, rgba(120, 120, 120, 0.8) rgba(96, 96, 96, 0.8));
+    background-image: linear-gradient(to bottom, rgba(120, 120, 120, 0.8), rgba(96, 96, 96, 0.8));
     /* dark red with alpha */
     border: 1px solid rgba(200, 200, 200, 0.4);
     border-radius: 6px;
@@ -1650,13 +1649,13 @@ select {
 
 
 select:hover {
-    background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.8) rgba(120, 120, 120, 0.8));
+    background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.8), rgba(120, 120, 120, 0.8));
     border-color: rgba(220, 220, 220, 0.6);
 }
 
 
 select:focus {
-    background-image: linear-gradient(to bottom, rgba(170, 170, 170, 0.8) rgba(140, 140, 140, 0.8));
+    background-image: linear-gradient(to bottom, rgba(170, 170, 170, 0.8), rgba(140, 140, 140, 0.8));
     border-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
 }
@@ -1779,20 +1778,20 @@ svg:hover {
 
 svg:active {
     transform: scale(0.98);
-    filter: drop-shadow(0 2px 8px rgba(139, 0, 0, 0.8));
+    filter: drop-shadow(0 2px 8px rgba(139, 139, 139, 0.8));
 }
 
 
 img[src$=".svg"]:not(.nohover):hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 4px 10px rgba(139, 0, 0, 1));
+    filter: drop-shadow(0 4px 10px rgba(139, 139, 139, 1));
     transition: transform 0.3s, filter 0.3s;
     cursor: pointer;
 }
 
 img[src$=".svg"]:not(.nohover):active {
     transform: scale(0.98);
-    filter: drop-shadow(0 2px 8px rgba(139, 0, 0, 1));
+    filter: drop-shadow(0 2px 8px rgba(139, 139, 139, 1));
 }
 
 
@@ -2039,4 +2038,6 @@ input[type="color"]:active {
 .red {
     color: rgb(255, 0, 0);
 }
-
+#chatbutton {
+    backdrop-filter: blur(4px);
+}
