@@ -14,9 +14,8 @@ i.style.height = "100%";
 i.style.width = "25%";
 document.getElementById("colourcontainer").appendChild(i);
 i.addEventListener("input", () => {
-  i.value = i.value.toUpperCase();
-  if (!(i.value.length == 6 || /[0-9a-f]/g.test(i.value))) return;
-  w.changeColor(hexToRGB(i.value));
-  cc.setAttribute("data-current-color", `#${i.value}`);
+  if (!(i.value.length == 6 || /[0-9a-f]/g.test(i.value.toLowerCase()))) return;
+  w.changeColor(hexToRGB(i.value.toUpperCase()));
+  cc.setAttribute("data-current-color", `#${i.value.toUpperCase()}`);
 });
 i.value = cc.getAttribute("data-current-color").slice(1)
