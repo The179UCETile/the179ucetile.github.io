@@ -26,5 +26,26 @@
     </ul>
     <div class="code"><span>position</span></div>
     <p>???</p>
+    <div class="code"><span>elem</span></div>
+    <p>Holds references to key DOM elements on the website.</p>
+    <div class="code"><span>accept_nsfw()</span></div>
+    <p>Hides the NSFW message <span class="red">By using this command, you understand that the wall you're about to enter contains NSFW content.</span></p>
+    <div class="code"><span>decline_nsfw()</span></div>
+    <p>Declines the NSFW message and go back to the main wall</p>
+    <div class="code"><span>printMsg(nick, color, msg, isRegistered, isAdmin, channel, displayNick, timestamp, tag, html = false)</span></div>
+    <p>Displays a message only shown to the client.<br>
+    <b>Parameters:</b></p>
+    <ul>
+      <li>nick: The user who sent the message.</li>
+      <li>color: The username color, using internal syntax.</li>
+      <li>msg: The message to send.</li>
+      <li>isRegistered: Determines if the user is registered or not.</li>
+      <li>isAdmin: Doesn't do anything.</li>
+      <li>channel: The channel to send in.</li>
+      <li>displayNick: Overwrites nick.</li>
+      <li>timestamp: The time (given by Date.now()) when the message is sent.</li>
+      <li>tag: The tag. You can use HTML to style the tag.</li>
+      <li>html: Doesn't do anything.</li>
+    </ul>
   </body>
 </html>
