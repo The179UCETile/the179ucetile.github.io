@@ -33,7 +33,7 @@
     <div class="code"><span>decline_nsfw()</span></div>
     <p>Declines the NSFW message and go back to the main wall.</p>
     <div class="code"><span>printMsg(nick, color, msg, isRegistered, isAdmin, channel, displayNick, timestamp, tag, html = false)</span></div>
-    <p>Displays a message only shown to the client.<br>
+    <p>Displays a message in chat only shown to the client.<br>
     <b>Parameters:</b></p>
     <ul>
       <li>nick: The user who sent the message.</li>
@@ -47,5 +47,20 @@
       <li>tag: The tag. You can use HTML to style the tag.</li>
       <li>html: Doesn't do anything.</li>
     </ul>
+    <div class="code"><span>prsCol(color_name)</span></div>
+    <p>A utility to get the index of a color in the color palette.</p>
+    <div class="code"><span>prsTil(color)</span></div>
+    <p>Returns the color name from a color index or array.</p>
+    <div class="code"><span>colFmt(index, options)</span></div>
+    <p>Returns the numeric index of a color in the palette, optionally applying decorations for later rendering.<br>
+    Options:</p>
+    <pre>
+      {
+        bold: Boolean,
+        italic: Boolean,
+        strikethrough: Boolean,
+        underline: Boolean
+      }
+    </pre>
   </body>
 </html>
