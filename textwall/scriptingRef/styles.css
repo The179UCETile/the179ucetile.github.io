@@ -9,3 +9,13 @@
 html {
   background-color: #000;
 }
+a:link {
+  color: #44f
+}
+div.code span {
+  background-color: #333;
+  border: 2px solid #666;
+}
+span.red {
+  color: #f00
+}
