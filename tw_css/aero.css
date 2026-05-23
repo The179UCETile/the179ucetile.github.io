@@ -1059,6 +1059,11 @@ td {
     src: url(/fonts/monospace-textwall-wip.ttf);
 }
 @font-face {
+    font-family: "monospace textwall";
+    src: url(/fonts/monospace-textwall-smp.ttf);
+    font-display: fallback;
+}
+@font-face {
     font-family: "deltas font";
     src: url(/fonts/deltas-font-a1-4.ttf);
 }

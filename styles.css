@@ -7,6 +7,11 @@
   src: url(/fonts/monospace-textwall-wip.ttf)
 }
 @font-face {
+  font-family: "monospace textwall em";
+  src: url(/fonts/monospace-textwall-smp.ttf);
+  font-display: fallback;
+}
+@font-face {
   font-family: "last resort";
   src: url(/fonts/LastResort-Regular.ttf);
 }
