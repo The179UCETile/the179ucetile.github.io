@@ -28,3 +28,7 @@ textarea {
   font-family: braille octant;
   src: url(/fonts/worst-font-ever.ttf);
 }
+@font-face {
+  font-family: thegreengreen09;
+  src: url(/fonts/thegreengreen09.ttf);
+}
