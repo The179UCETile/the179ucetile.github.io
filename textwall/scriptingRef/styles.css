@@ -1,0 +1,10 @@
+@font-face {
+  font-family: fairfax;
+  src: url(https://the179ucetile.github.io/h/fonts/FairfaxHD.ttf)
+}
+* {
+  font-family: fairfax;
+}
+html {
+  background-color: #000;
+}
