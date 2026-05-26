@@ -1056,7 +1056,12 @@ td {
 }
 @font-face {
     font-family: "monospace textwall";
+    src: url(/fonts/monospace-textwall-bmp.ttf);
+}
+@font-face {
+    font-family: "monospace textwall";
     src: url(/fonts/monospace-textwall-wip.ttf);
+    font-display: fallback;
 }
 @font-face {
     font-family: "monospace textwall";
