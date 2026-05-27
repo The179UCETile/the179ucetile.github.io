@@ -8,6 +8,11 @@
 }
 @font-face {
   font-family: "monospace textwall em";
+  src: url(/fonts/monospace-textwall-spuab.ttf);
+  unicode-range: U+100000-10FFFF;
+}
+@font-face {
+  font-family: "monospace textwall em";
   src: url(/fonts/monospace-textwall-wip.ttf);
   font-display: fallback;
 }
