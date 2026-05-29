@@ -16,8 +16,10 @@ html {
     "YTLC" 514,
     "YTUC" 712;
   background-color: #000;
+  color: #fff;
 }
 h2 {
+  font-weight: 400;
   font-variation-settings: "XOPQ" 125, "YOPQ" 50, "wdth" 62.5;
   font-size: 2em;
 }
