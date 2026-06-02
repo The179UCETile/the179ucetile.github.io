@@ -1067,6 +1067,7 @@ td {
     font-family: "monospace textwall";
     src: url(/fonts/monospace-textwall-wip.ttf);
     font-display: fallback;
+    unicode-range: U+0-1CBFF, U+1CEB4-10FFFF; /* exclude SLC2 */
 }
 @font-face {
     font-family: "monospace textwall";
