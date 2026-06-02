@@ -22,6 +22,18 @@
   font-display: fallback;
 }
 @font-face {
+  font-family: "monospace textwall em";
+  src: url(/fonts/monospace-textwall-bold-bmp.ttf);
+  font-weight: 700;
+  unicode-range: U+0-FFFF;
+}
+@font-face {
+  font-family: "monospace textwall em";
+  src: url(/fonts/monospace-textwall-bold-smp.ttf);
+  font-weight: 700;
+  unicode-range: U+10000-1FFFF;
+}
+@font-face {
   font-family: "last resort";
   src: url(/fonts/LastResort-Regular.ttf);
 }

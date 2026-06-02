@@ -1075,6 +1075,18 @@ td {
     font-display: fallback;
 }
 @font-face {
+    font-family: "monospace textwall";
+    src: url(/fonts/monospace-textwall-bold-bmp.ttf);
+    font-weight: 700;
+    unicode-range: U+0-FFFF;
+}
+@font-face {
+    font-family: "monospace textwall";
+    src: url(/fonts/monospace-textwall-bold-smp.ttf);
+    font-weight: 700;
+    unicode-range: U+10000-1FFFF;
+}
+@font-face {
     font-family: "deltas font";
     src: url(/fonts/deltas-font-a1-4.ttf);
 }
