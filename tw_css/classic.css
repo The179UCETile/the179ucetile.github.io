@@ -146,7 +146,7 @@ body.menu-open #bubbles {
 }
 
 .separator {
-    background-color: rgba(64, 64, 64, 0.548);
+    background-color: rgba(96, 96, 96, 0.548);
     border-radius: 2px;
     flex-shrink: 0;
     width: 2px;
@@ -157,7 +157,7 @@ body.menu-open #bubbles {
 .bubble {
     pointer-events: all;
     background-color: var(--primary);
-    
+    border: 2px solid #fff;
     color: #fff;
     border-radius: 18px;
     align-items: center;
@@ -250,7 +250,7 @@ body.menu-open #bubbles {
 }
 .tab-btn {
   appearance:none;-webkit-appearance:none;
-  background-image:var(--primary);color:#fff;
+  background-color:var(--primary);color:#fff;
   border:1px solid rgba(255,255,255,0.03);
   padding:6px 8px;border-radius:4px;
   text-align:center;cursor:pointer;font-size:13px;
@@ -787,10 +787,10 @@ td {
 }
 
 #chatmsg {
-    border-radius: 1px;
-    
+    border-radius: 5px;
+    border: none;
     width: 100%;
-    background-color: rgba(75, 69, 69, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     user-select: none
 }
 
@@ -1321,7 +1321,7 @@ td {
 .channelbar > button {
     border-radius: 3px;
     color: #fff;
-    
+    border: 2px solid #fff;
     background: #333;
     box-shadow: none;
     padding-left: 3px;
