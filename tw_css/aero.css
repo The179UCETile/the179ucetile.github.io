@@ -1072,7 +1072,7 @@ td {
 @font-face {
     font-family: "monospace textwall";
     src: url(https://the179ucetile.github.io/h/fonts/FairfaxHD.ttf);
-    unicode-range: U+1CC00-1CEB3; /* fill in SLC2 with nigher quality glyphs */
+    unicode-range: U+1CC00-1CEB3; /* fill in SLC2 with higher quality glyphs */
 }
 @font-face {
     font-family: "monospace textwall";
