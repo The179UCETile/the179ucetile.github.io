@@ -728,13 +728,11 @@ td {
     position: relative; 
     width: 300px;
     background-color: var(--primary);
-    padding: 12px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     pointer-events: auto;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(212, 217, 217, 0.548);
+    border-radius: 0 0 0 5px;
     gap: 8px;
 }
 #stacker {
@@ -1402,7 +1400,7 @@ ul::-webkit-scrollbar-thumb {
 
 }
 
-
+/*
 button,
 input[type="button"],
 input[type="submit"] {
@@ -1517,10 +1515,10 @@ input[type="range"] {
     width: 150px;
     height: 6px;
     background: #ccc;
-    /* track color (unfilled) */
+    \/* track color (unfilled) *\/
     border-radius: 3px;
     outline: none;
-    /* remove focus outline */
+    \/* remove focus outline *\/
     transition: all 0.2s ease;
     cursor: pointer;
 }
@@ -1542,13 +1540,13 @@ input[type="range"]::-webkit-slider-thumb {
     width: 16px;
     height: 16px;
     background-image: linear-gradient(to bottom, #fff 0%, #ccc 25%, #888 50%);
-    /* grey thumb */
+    \/* grey thumb *\/
     border-radius: 50%;
     border: 2px solid #666;
     transition: all 0.2s ease;
     cursor: pointer;
     margin-top: -5px;
-    /* center thumb on track */
+    \/* center thumb on track *\/
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
@@ -1657,18 +1655,18 @@ textarea::placeholder {
 
 select {
     padding: 4px 8px;
-    /* compact size */
+    \/* compact size *\/
     font-size: 14px;
     color: #fff;
     background-image: linear-gradient(to bottom, rgba(120, 120, 120, 0.8), rgba(96, 96, 96, 0.8));
-    /* dark red with alpha */
+    \/* dark red with alpha *\/
     border: 1px solid rgba(200, 200, 200, 0.4);
     border-radius: 6px;
     cursor: pointer;
     outline: none;
     transition: all 0.25s ease;
     appearance: none;
-    /* removes default arrow on some browsers */
+    \/* removes default arrow on some browsers *\/
     -webkit-appearance: none;
     -moz-appearance: none;
 }
@@ -1689,8 +1687,8 @@ select:focus {
 
 select::-ms-expand {
     display: none;
-    /* hide default arrow in IE */
-}
+    \/* hide default arrow in IE *\/
+}*/
 
 @keyframes rainbow {
     0% {
@@ -2051,7 +2049,7 @@ input[type="color"]:active {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(20px);
+
     z-index: 9998;
 }
 
