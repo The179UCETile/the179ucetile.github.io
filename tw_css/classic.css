@@ -517,9 +517,7 @@ td {
     /* fixed position */
     user-select: none;
     z-index: 3;
-    /* initially invisible */
-    display: none;
-
+    
 }
 
 #toast.toasting {
@@ -764,7 +762,7 @@ td {
 }
 #chatbutton {
     background-color: var(--primary);
-    
+    border-radius: 0 0 0 5px;
     padding: 10px;
     margin-bottom: 10px;
     pointer-events: auto;
