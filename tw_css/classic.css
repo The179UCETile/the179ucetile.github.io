@@ -208,7 +208,7 @@ body.menu-open #bubbles {
     transform: translateX(-100%);
     opacity: 0;
     pointer-events: none;
-    transition: transform .12s ease, opacity .28s ease;
+    transition: all .5s;
 
 }
 
@@ -255,7 +255,7 @@ body.menu-open #bubbles {
   padding:6px 8px;border-radius:4px;
   text-align:center;cursor:pointer;font-size:13px;
 }
-.tab-btn.active { background-color: var(--primary); border-color: rgba(255,255,255,0.12); }
+.tab-btn.active { background-color: rgba(60,60,60,0.3); border-color: rgba(255,255,255,0.5); }
 .tab-btn:hover { filter:brightness(1.06); }
 
 .tab-contents {
@@ -554,20 +554,16 @@ td {
     padding: 5px;
     width: 330px;
     max-width: 85vw;
-    top: 40px;
+    top: -400px;
     user-select: none;
     max-height: 400px;
     overflow-y: hidden;
-    opacity: 0;
-    transform: scale(0);
 
 }
 
 #teleport.open {
     top: 40px;
-    transform: scale(1);
     max-height: 100vh;
-    opacity: 1;
 }
 
 
@@ -589,13 +585,11 @@ td {
 .tpheader {
     display: grid;
     grid-row: 1fr;
-    background-color:rgba(30, 30, 30, .3);
     padding: 10px;
     
 }
 .tpcontent {
     padding: 8px;
-    background-color: rgba(30, 30, 30, .3);
      
      margin-top: 5px;
 }
@@ -605,7 +599,6 @@ td {
     background-color: #333;
     
     color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     transition: all .1s;
     cursor: pointer;
 }
@@ -1321,7 +1314,7 @@ td {
 .channelbar > button {
     border-radius: 3px;
     color: #fff;
-    border: 2px solid #fff;
+    border: 2px solid #aaa;
     background: #333;
     box-shadow: none;
     padding-left: 3px;
@@ -1329,7 +1322,7 @@ td {
 }
 .channel-btn.active {
     background-color: var(--primary);
-    border-color: #aaa;
+    border-color: #fff;
 }
 .buttons {
     display: flex;
