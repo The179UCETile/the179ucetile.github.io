@@ -275,17 +275,6 @@ body.menu-open #bubbles {
 .tab-content { display:none; }
 .tab-content.active { display:block; }
 
-
-.tab-content input[type="text"], .tab-content input[type="password"], .tab-content input[type="number"], .tab-content select, .tab-content textarea {
-  width:100%; box-sizing:border-box; margin:4px 0 8px; padding:6px; background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.04); color:#fff; border-radius:4px;
-}
-.tab-content input[type="checkbox"]{ margin-right:6px; }
-.tab-content button, .tab-content input[type="submit"], .tab-content .buttonlink {
-  background: rgba(255,255,255,0.03); color: #fff; 
-  padding:6px 8px; border-radius:4px; cursor:pointer;
-}
-
 #admin,
 #wallsettings {
     display: none
@@ -592,23 +581,6 @@ td {
      
      margin-top: 5px;
 }
-.tpcontent button,
-.tpcontent input[type="submit"] {
-    margin-top: 5px;
-    background-color: #333;
-    
-    color: #fff;
-    transition: all .1s;
-    cursor: pointer;
-}
-
-.tpcontent > hr, #walllist hr {
-    
-    background-color: rgba(70,70,70,0.6) !important;
-    padding-top: 0 !important;
-    box-shadow: none !important;
-    margin: 8px 0 !important;
-}
 
 .tpbutton {
     background-color: transparent;
@@ -622,7 +594,7 @@ td {
     font-size: 10px;
     text-align: left;
     display: block;
-    font-weight: 700
+    font-weight: 700;
 }
 
 #closeteleport {
@@ -1383,14 +1355,6 @@ ul::-webkit-scrollbar-thumb {
     border-radius: 5px;
     z-index: 9999;
 
-}
-
-button,
-input[type="button"],
-input[type="submit"] {
-    background-color: #eee;
-    color: #000;
-    border: 2px solid #666;
 }
 /*
 button,
