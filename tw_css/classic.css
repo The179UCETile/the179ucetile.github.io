@@ -413,7 +413,7 @@ input {
 }
 #customcolour {
     margin: 4px;
-    
+    border: none;
     padding: 0;
     width: 50%;
     border-radius: 5%;
