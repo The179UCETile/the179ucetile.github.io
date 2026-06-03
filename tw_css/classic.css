@@ -724,7 +724,7 @@ td {
     position: relative; /* container for absolute chatboxes */
     flex: 1;            /* take available space in .chatcontainer */
     min-height: 0;      /* required for flex scroll */
-    
+    word-wrap: break-word; /* haster forgot */
 }
 #_msg{
    font-size: 12px;
