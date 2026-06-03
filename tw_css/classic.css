@@ -6,15 +6,11 @@ body {
 }
 
 :root {
-    --btn-dim: linear-gradient(to bottom, rgba(40, 40, 40, 0.8) 0%, rgba(50, 50, 50, 0.8) 50%, rgba(20, 20, 20, 0.8) 50%);
-    --btn-default: linear-gradient(to bottom, rgba(64, 64, 64, 0.8) 0%, rgba(96, 96, 96, 0.8) 50%, rgba(32, 32, 32, 0.8) 50%);
-    --btn-hover: linear-gradient(to bottom, rgba(96, 96, 96, 0.8) 0%, rgba(128, 128, 128, 0.8) 50%, rgba(64, 64, 64, 0.8) 50%);
-    --btn-active: linear-gradient(to bottom, rgba(128, 128, 128, 0.8) 0%, rgba(160, 160, 160, 0.8) 50%, rgba(96, 96, 96, 0.8) 50%);
-    --btn-on: linear-gradient(to bottom, rgba(224, 224, 224, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(192, 192, 192, 0.8) 50%)
+    --primary: rgba(30, 30, 30, 0.8);
 }
 
 * {
-    font-family: "ibm plex mono", Consolas, monospace, courier new, Courier, special;
+    font-family: "ubuntu mono", Consolas, monospace, courier new, Courier, special;
     -webkit-tap-highlight-color: transparent
 }
 
@@ -90,12 +86,11 @@ h3 {
     z-index: 4;
     color: #fff;
     transition: opacity .5s;
-    backdrop-filter: blur(4px);
+
 }
 
 #info {
-    background-image: var(--btn-default);
-    border: 1px solid rgba(39, 39, 39, 0.8);
+    background-color: var(--primary);
     color: #fff;
     bottom: 10px;
     left: 50%;
@@ -113,7 +108,7 @@ h3 {
     max-width: 500px; 
     overflow-x: auto;
     overflow-y: hidden;
-    backdrop-filter: blur(4px);
+
 }
 
 
@@ -161,7 +156,7 @@ body.menu-open #bubbles {
 
 .bubble {
     pointer-events: all;
-    background-image: var(--btn-default);
+    background-color: var(--primary);
     border: 2px solid #aaa;
     color: #fff;
     border-radius: 18px;
@@ -170,7 +165,7 @@ body.menu-open #bubbles {
     padding: 8px;
     font-size: 16px;
     display: flex;
-    backdrop-filter: blur(4px);
+
 }
 
 .bubble.clickable {
@@ -179,16 +174,16 @@ body.menu-open #bubbles {
 }
 @media (hover: hover) {
     .tool:hover,.bubble.clickable:hover {
-        background-image: var(--btn-hover);
+        background-color: var(--primary);
     }
 }
 
 .tool:not(.disabled):active,.bubble.clickable:not(.disabled):active {
-    background-image: var(--btn-active)
+    background-color: var(--primary)
 }
 
 .infobtn.enabled {
-    background-image: var(--btn-on)
+    background-color: var(--primary)
 }
 
 .infobtn.disabled {
@@ -196,7 +191,7 @@ body.menu-open #bubbles {
 }
 #sidemenu {
     border: 1px solid rgba(49, 49, 49, 0.7);
-    background-image: var(--btn-dim);
+    background-color: var(--primary);
     color: #fff;
     position: fixed;
     top: 10px;
@@ -214,7 +209,7 @@ body.menu-open #bubbles {
     opacity: 0;
     pointer-events: none;
     transition: transform .12s ease, opacity .28s ease;
-    backdrop-filter: blur(4px);
+
 }
 
 #sidemenu.open {
@@ -255,12 +250,12 @@ body.menu-open #bubbles {
 }
 .tab-btn {
   appearance:none;-webkit-appearance:none;
-  background-image:var(--btn-default);color:#fff;
+  background-image:var(--primary);color:#fff;
   border:1px solid rgba(255,255,255,0.03);
   padding:6px 8px;border-radius:4px;
   text-align:center;cursor:pointer;font-size:13px;
 }
-.tab-btn.active { background-image: var(--btn-active); border-color: rgba(255,255,255,0.12); }
+.tab-btn.active { background-color: var(--primary); border-color: rgba(255,255,255,0.12); }
 .tab-btn:hover { filter:brightness(1.06); }
 
 .tab-contents {
@@ -398,12 +393,12 @@ input {
     width: 90%;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-image: var(--btn-default);
+    background-color: var(--primary);
     border-radius: 8px;
     padding: 4px;
     border: 1px solid rgba(139, 139, 139, 0.5);
     box-shadow: 0 4px 12px rgba(139, 139, 139, 0.3);
-    backdrop-filter: blur(4px);
+
 }
 #colourlist {
     border: 0.56px solid #fff;
@@ -525,28 +520,26 @@ td {
 
 #toast {
     position: absolute;
-    background-image: var(--btn-dim);
+    background-color: var(--primary);
     color: #fff;
     border-radius: 5px;
     margin: 5px;
-    transition: opacity 0.5s;
+    transition: all 0.5s;
     /* fade effect */
     padding: 5px;
     max-width: 80vw;
     overflow-wrap: break-word;
-    top: 20px;
+    top: -30px;
     /* fixed position */
     user-select: none;
     z-index: 3;
-    opacity: 0;
     /* initially invisible */
     display: none;
-    backdrop-filter: blur(4px);
+
 }
 
 #toast.toasting {
-    opacity: 1;
-    /* fade in */
+    top: 20px;
     pointer-events: auto;
     display: block;
 }
@@ -558,7 +551,7 @@ td {
     text-align: center;
     transition: all .5s;
     border: 1px solid rgba(98, 98, 98, 1);
-    background-image: var(--btn-default);
+    background-color: var(--primary);
     color: #fff;
     margin: 15px;
     padding: 5px;
@@ -570,7 +563,7 @@ td {
     overflow-y: hidden;
     opacity: 0;
     transform: scale(0);
-    backdrop-filter: blur(4px);
+
 }
 
 #teleport.open {
@@ -734,7 +727,7 @@ td {
 .chatcontainer {
     position: relative; 
     width: 300px;
-    background-image: var(--btn-dim);
+    background-color: var(--primary);
     padding: 12px;
     display: flex;
     flex-direction: column;
@@ -808,14 +801,14 @@ td {
 
 #sendmsg {
     margin: 5px;
-    background-image: var(--btn-default);
-    border: 1px solid rgb(75, 69, 69);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
     width: 20px;
     padding: 5px;
     margin: 5px 0 0 5px
 }
 #chatbutton {
-    background-image: var(--btn-default);
+    background-color: var(--primary);
     border: 1px solid #9b9b9b;
     padding: 10px;
     margin-bottom: 10px;
@@ -830,7 +823,7 @@ td {
     padding-left: 5px;
     height: 20px;
     border-radius: 50%;
-    background-color: #d4d4d4;
+    background-color: #d44d4d;
     position: absolute;
     color: #ffffff;
     left: -9px;
@@ -1072,7 +1065,7 @@ td {
 @font-face {
     font-family: "monospace textwall";
     src: url(https://the179ucetile.github.io/h/fonts/FairfaxHD.ttf);
-    unicode-range: U+1CC00-1CEB3, U+1FB00-1FBE; /* fill in SLC2 with higher quality glyphs */
+    unicode-range: U+1CC00-1CEB3, U+1FB00-1FBEF; /* fill in SLC2 with higher quality glyphs */
 }
 @font-face {
     font-family: "monospace textwall";
@@ -1340,7 +1333,7 @@ td {
     padding-right: 3px;
 }
 .channel-btn.active {
-    background-image: var(--btn-active);
+    background-color: var(--primary);
     border-color: #aaa;
 }
 .buttons {
@@ -1383,7 +1376,7 @@ ul::-webkit-scrollbar-thumb {
     position: fixed;
     bottom: 50px;
     left: 10px;
-    background-image: var(--btn-default);
+    background-color: var(--primary);
     border: 1px solid rgba(80, 80, 80, 0.8);
     color: #0f0;
     padding: 5px 10px;
@@ -1391,14 +1384,14 @@ ul::-webkit-scrollbar-thumb {
     font-size: 14px;
     border-radius: 5px;
     z-index: 9999;
-    backdrop-filter: blur(4px);
+
 }
 
 #fpsc {
     position: fixed;
     bottom: 80px;
     left: 10px;
-    background-image: var(--btn-default);
+    background-color: var(--primary);
     border: 1px solid rgba(80, 80, 80, 0.8);
     color: #0f0;
     padding: 5px 10px;
@@ -1406,7 +1399,7 @@ ul::-webkit-scrollbar-thumb {
     font-size: 14px;
     border-radius: 5px;
     z-index: 9999;
-    backdrop-filter: blur(4px);
+
 }
 
 
@@ -1417,7 +1410,7 @@ input[type="submit"] {
     font-size: 14px;
     font-weight: 500;
     color: #aaa;
-    background-image: var(--btn-default);
+    background-color: var(--primary);
     border: 3px solid #444 ;
     border-radius: 4px;
     cursor: pointer;
@@ -1429,7 +1422,7 @@ input[type="submit"] {
 button:hover,
 input[type="button"],
 input[type="submit"]:hover {
-    background-image: var(--btn-hover);
+    background-color: var(--primary);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
@@ -1464,7 +1457,7 @@ input[type="checkbox"] {
     height: 16px;
     border: 2px solid #fff;
     border-radius: 4px;
-    background-image: var(--btn-dim);
+    background-color: var(--primary);
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
@@ -1472,7 +1465,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:hover {
-    background-image: var(--btn-hover);
+    background-color: var(--primary);
     border-color: #666;
 }
 
@@ -1482,7 +1475,7 @@ input[type="checkbox"]:focus {
 }
 
 input[type="checkbox"]:checked {
-    background-image: var(--btn-on);
+    background-color: var(--primary);
     border-color: #ccc;
 }
 
@@ -1503,19 +1496,19 @@ input[type="checkbox"]:focus-visible {
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 input[type="checkbox"]:disabled {
-    background-image: var(--btn-hover);
+    background-color: var(--primary);
     border-color: #888;
     cursor: not-allowed;
     opacity: 0.7;
 }
 
 input[type="checkbox"]:checked:disabled {
-    background-image: var(--btn-on);
+    background-color: var(--primary);
     border-color: #ccc;
 }
 
 input[type="checkbox"]:disabled:hover {
-    background-image: var(--btn-active);
+    background-color: var(--primary);
     border-color: #888;
 }
 
@@ -1832,7 +1825,7 @@ input[type="color"] {
     width: 50px;
     height: 30px;
     border: 2px solid #6A6A6A;
-    background-image: var(--btn-default);
+    background-color: var(--primary);
     border-radius: 5px;
     padding: 0;
     cursor: pointer;
@@ -1889,12 +1882,12 @@ input[type="color"]:active {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(139, 139, 139, 0.30); /* dark red track at 30% opacity */
+  background: rgba(255, 255, 255, 0.1); /* dark red track at 30% opacity */
   border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.45); /* red thumb at 45% opacity */
+  background: rgba(255, 255, 255, 0.2); /* red thumb at 45% opacity */
   border-radius: 8px;
   border: 3px solid transparent;    /* gives a padded look */
   background-clip: padding-box;
@@ -1909,14 +1902,14 @@ input[type="color"]:active {
 
 /* corner where two scrollbars meet */
 ::-webkit-scrollbar-corner {
-  background: rgba(139, 139, 139, 0.30);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin; /* auto | thin | none */
   /* thumb color, track color (Firefox supports rgba) */
-  scrollbar-color: rgba(255, 255, 255, 0.45) rgba(139, 139, 139, 0.30);
+  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.1);
 }
 
 .tip {
@@ -1941,7 +1934,7 @@ input[type="color"]:active {
 .result {
     border-radius: 10px;
     border: 1px solid rgb(212, 212, 212);
-    background-image: var(--btn-default);
+    background-color: var(--primary);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     margin: 10px 0;
     padding: 10px;
@@ -1959,7 +1952,7 @@ input[type="color"]:active {
 }
 
 #nsfwwarning {
-    background-image: var(--btn-default);
+    background-color: var(--primary);
     border: 1px solid rgb(200, 200, 200);
     color: #fff;
     padding: 10px;
@@ -1981,7 +1974,7 @@ input[type="color"]:active {
     box-shadow: 0 4px 12px rgba(95, 95, 95, 0.5);
     transition: all 0.3s ease;
     z-index: 9999;
-    backdrop-filter: blur(4px);
+
 }
 
 #nsfwwarning button {
@@ -2070,7 +2063,4 @@ input[type="color"]:active {
 
 .red {
     color: rgb(255, 0, 0);
-}
-#chatbutton {
-    backdrop-filter: blur(4px);
 }
