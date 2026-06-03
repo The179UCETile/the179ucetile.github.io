@@ -647,10 +647,6 @@ td {
 }
 
 .walllist {
-    
-        background-color: rgba(34, 34, 34, 1);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        margin-top: 5px;
     list-style: none;
     padding: 0;
     text-align: left;
@@ -1390,6 +1386,11 @@ ul::-webkit-scrollbar-thumb {
 
 }
 
+button {
+    background-color: #eee;
+    color: #000;
+    border: 2px solid #666;
+}
 /*
 button,
 input[type="button"],
@@ -1731,15 +1732,6 @@ select::-ms-expand {
     animation: rainbow 3.6s linear infinite;
 }
 
-hr {
-    
-    height: 4px;
-    background-color: #8B8B8B;
-    box-shadow: 0 2px 6px rgba(139, 139, 139, 0.5);
-    margin: 20px 0;
-    border-radius: 2px;
-}
-
 .alert {
     background-color: rgb(112, 0, 0);
     color: white;
@@ -1764,8 +1756,6 @@ hr {
 
 /* i like stylizing */
 fieldset {
-    
-    box-shadow: 0 4px 10px rgba(139, 139, 139, 0.5);
     border-radius: 6px;
     padding: 1em;
     margin: 1em 0;
@@ -1773,13 +1763,11 @@ fieldset {
 
 a:link,
 a:visited {
-    color: #8B8B8B;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 a:hover,
 a:active {
-    color: #FFFFFF;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
 
