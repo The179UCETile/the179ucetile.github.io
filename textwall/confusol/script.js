@@ -22,7 +22,7 @@ function doTheThing(d) {
     1500: new Info("Uber confusing", "color: #fff; text-shadow: 0 0 1px #fff"),
     2000: new Info("Most likely dead by now", "color: #888; text-shadow: 0 0 1px #888"),
     10000: new Info("TOO CONFUSING", "color: #000; text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 0 0 2px #fff"),
-    1000000: new Info("Confusumi syndrome", "color: #000; text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff")
+    1000000: new Info("Setsumi syndrome", "color: #000; text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff")
   };
   d = d.split("\n");
   for (let i of d) {
@@ -45,7 +45,7 @@ function doTheThing(d) {
   setInterval(()=>{
     const arr = [];
     for (let i = 0; i < 6; i++) {
-      arr.push(`${Math.random() * 8 - 4}px ${Math.random() * 8 - 4}px ${Math.random() * 0.5 - 0.25}px #${Math.floor(2 ** 32 + Math.random() * 2 ** 32).toString(16).slice(1)}`)
+      arr.push(`${Math.random() * 8 - 4}px ${Math.random() * 8 - 4}px ${Math.random() * 0.4}px #${Math.floor(2 ** 32 + Math.random() * 2 ** 32).toString(16).slice(1)}`)
     };
     styles[1000000].style = `color: #${Math.floor(16777216 + Math.random() * 16777216).toString(16).slice(1)}; text-shadow: ${arr.join(", ")};`;
     const val = data[document.getElementById("users").value];
