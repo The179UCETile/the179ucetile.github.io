@@ -4,26 +4,27 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="/styles.css">
     <title>Confusing rarity generator | The179UCETile's site</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicons/textwall.png"> 
+    <link rel="icon" type="image/x-icon" href="/images/favicons/placeholder.png"> 
   </head>
   <body>
     <p><a href="/textwall">Go back</a> · <a href="https://orteil.dashnet.org/randomgen/?gen=https://the179ucetile.github.io/randomgen/confuse.txt">Legacy generator</a></p>
     <h1>Confusing rarity generator</h1>
-    <button id="generate">Generate!</button><br>
+    <button id="generate">Generate!</button><br><br>
     <div class="options">
       <label for="minWordAmt">Minimum word amount:</label>
-      <input type="number" id="minWordAmt" step="1"><br>
+      <input type="number" id="minWordAmt" step="1" value="1"><br>
       <label for="maxWordAmt">Maximum word amount:</label>
-      <input type="number" id="maxWordAmt" step="1"><br>
+      <input type="number" id="maxWordAmt" step="1" value="3"><br>
       <label for="minPrefAmt">Minimum prefix amount:</label>
-      <input type="number" id="minPrefAmt" step="1"><br>
+      <input type="number" id="minPrefAmt" step="1" value="2"><br>
       <label for="maxPrefAmt">Maximum word amount:</label>
-      <input type="number" id="maxPrefAmt" step="1"><br>
+      <input type="number" id="maxPrefAmt" step="1" value="5"><br>
       <label for="rarityAmt">Amount of rarities:</label>
-      <input type="number" id="rarityAmt" step="1">
-    </div>
+      <input type="number" id="rarityAmt" step="1" value="5">
+    </div><br>
     <div id="results">
       Results go here...
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
