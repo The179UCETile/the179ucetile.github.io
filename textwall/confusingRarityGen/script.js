@@ -28,7 +28,7 @@ function _$(id) {
 _$("generate").addEventListener("click", () => {
   let results = [];
   for (let i = 0; i < parseFloat(_$("rarityAmt").value); i++) {
-    results.push(generateRarity(Math.floor(parseFloat(_$("minWordAmt").value) + (parseFloat(_$("maxWordAmt").value) - parseFloat(_$("minWordAmt").value + 1)) * Math.random()), parseFloat(_$("minPrefAmt").value), parseFloat(_$("maxPrefAmt").value)))
+    results.push(generateRarity(Math.floor(parseFloat(_$("minWordAmt").value) + (parseFloat(_$("maxWordAmt").value) - parseFloat(_$("minWordAmt").value) + 1) * Math.random()), parseFloat(_$("minPrefAmt").value), parseFloat(_$("maxPrefAmt").value)))
   };
   _$("results").innerText = results.join("\n")
 })
