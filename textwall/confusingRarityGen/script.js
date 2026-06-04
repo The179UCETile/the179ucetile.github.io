@@ -17,7 +17,7 @@ function generateRarity(words, minPrefs, maxPrefs) {
   const arr = [];
   let starting = Math.random() < 0.25 ? startings[Math.floor(Math.random() * startings.length)] : "";
   for (let i = 0; i < words; i++) {
-    arr.push(generateRarityWord(Math.floor(minPrefs + (maxPrefs - minPrefs) * Math.random())))
+    arr.push(generateRarityWord(Math.round(minPrefs + (maxPrefs - minPrefs) * Math.random())))
   };
   let output = starting + arr.join(" ") + (Math.random() < 0.2 ? "Num overflow" : "");
   return (starting == "THE START OF " || starting == "THE END OF ") ? output.toUpperCase() : output;
@@ -28,7 +28,7 @@ function _$(id) {
 _$("generate").addEventListener("click", () => {
   let results = [];
   for (let i = 0; i < parseFloat(_$("rarityAmt").value); i++) {
-    results.push(generateRarity(Math.floor(parseFloat(_$("minWordAmt").value) + (parseFloat(_$("maxWordAmt").value) - parseFloat(_$("minWordAmt").value)) * Math.random()), parseFloat(_$("minPrefAmt").value), parseFloat(_$("maxPrefAmt").value)))
+    results.push(generateRarity(Math.round(parseFloat(_$("minWordAmt").value) + (parseFloat(_$("maxWordAmt").value)- parseFloat(_$("minWordAmt").value)) * Math.random()), parseFloat(_$("minPrefAmt").value), parseFloat(_$("maxPrefAmt").value)))
   };
   _$("results").innerText = results.join("\n")
 })
