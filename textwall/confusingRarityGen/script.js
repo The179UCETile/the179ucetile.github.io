@@ -22,3 +22,13 @@ function generateRarity(words, minPrefs, maxPrefs) {
   let output = starting + arr.join(" ") + (Math.random() < 0.2 ? "Num overflow" : "");
   return (starting == "THE START OF " || starting == "THE END OF ") ? output.toUpperCase() : output;
 }
+function _$(id) {
+  return document.getElementById(id)
+}
+_$("generate").addEventListener("click", () => {
+  let results = [];
+  for (let i = 0; i < _$("rarityAmt").value; i++) {
+    results.push(generateRarity(Math.floor(_$("minWordAmt").value + (_$("maxWordAmt").value - _$("minWordAmt").value) * Math.random()), _$("minPrefAmt").value, _$("maxPrefAmt").value))
+  };
+  _$("results").innerText = results.join("\n")
+})
