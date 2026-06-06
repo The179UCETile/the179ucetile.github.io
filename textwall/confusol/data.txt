@@ -1,7 +1,6 @@
 Luca12FCSB 0
-Setsumi2s4 185734.83
 tw.nw119.me 1847.36
-BernatJansaRebirthed 948573.2
+BernatJansaRebirthed 648392.1
 Europe2048_ 0.12
 dominoguy_ 100.25
 The179UCETile 0.06
@@ -15,6 +14,6 @@ NotReiny 0.04
 haster 0.01
 penthexium56 0.03
 lime.person 0.02
-ScrapFan_1 1.797693134e308
+ScrapFan_1 8192.3
 Diamond26 0.48
 x00Area 217.49
