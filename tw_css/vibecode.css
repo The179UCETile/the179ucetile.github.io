@@ -6,7 +6,7 @@ body {
 }
 
 * {
-    font-family: "Overused Grotesk", sans-serif, special;
+    font-family: "Overused Grotesk", sans-serif, special, legacycomputing;
     -webkit-tap-highlight-color: transparent
 }
 
@@ -543,8 +543,8 @@ td {
     z-index: 2;
     text-align: center;
     transition: all .5s;
-    border: 1px solid rgba(98, 1, 1, 1);
-    background-color: rgba(39, 11, 11, 1);
+    border: 1px solid rgba(98, 98, 98, 1);
+    background-color: rgba(39, 39, 39, 1);
     color: #fff;
     margin: 15px;
     padding: 5px;
@@ -586,12 +586,12 @@ td {
     grid-row: 1fr;
     background-color:rgba(30, 30, 30, .3);
     padding: 10px;
-    border: 1px solid rgba(30, 5, 20, .8);
+    border: 1px solid rgba(30, 30, 30, .8);
 }
 .tpcontent {
     padding: 8px;
     background-color: rgba(30, 30, 30, .3);
-     border: 1px solid rgba(30, 5, 20, .8);
+     border: 1px solid rgba(30, 30, 30, .8);
      margin-top: 5px;
 }
 .tpcontent button,
@@ -606,8 +606,8 @@ td {
 }
 
 .tpcontent > hr, #walllist hr {
-    border: 0.5px solid rgba(255, 0, 0, 0.2) !important;
-    background-color: rgba(70,0,0,0.6) !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(70,70,70,0.6) !important;
     padding-top: 0 !important;
     box-shadow: none !important;
     margin: 8px 0 !important;
@@ -649,8 +649,8 @@ td {
 }
 
 .walllist {
-    border: 1px solid rgba(128, 0, 0, 1);
-        background-color: rgba(34, 14, 14, 1);
+    border: 1px solid rgba(128, 128, 128, 1);
+        background-color: rgba(34, 34, 34, 1);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
         margin-top: 5px;
     list-style: none;
@@ -704,7 +704,7 @@ td {
 #chat {
     position: absolute;
     top: 0;
-    color: #E80000;
+    color: #E8E8E8;
     right: 0;
     display: flex;
     height: 320px;
@@ -719,14 +719,14 @@ td {
 .chatcontainer {
     position: relative; 
     width: 300px;
-    background: rgba(34, 1, 1, 0.95);
+    background: rgba(34, 34, 34, 0.95);
     padding: 12px;
     display: flex;
     flex-direction: column;
     pointer-events: auto;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(6px);
-    border: 1px solid rgba(212, 27, 27, 0.548);
+    border: 1px solid rgba(212, 212, 212, 0.548);
     gap: 8px;
 }
 #stacker {
@@ -787,22 +787,22 @@ td {
     border-radius: 1px;
     border: 1px #666 solid;
     width: 100%;
-    background-color: rgba(75, 69, 69, 0.8);
+    background-color: rgba(75, 75, 75, 0.8);
     user-select: none
 }
 
 #sendmsg {
     margin: 5px;
     background-color: rgb(36, 36, 36);
-    border: 1px solid rgb(75, 69, 69);
+    border: 1px solid rgb(75, 75, 75);
     width: 20px;
     padding: 5px;
     margin: 5px 0 0 5px
 }
 
 #chatbutton {
-    background-color: rgba(68, 0, 0, 0.8);
-    border: 1px solid #9b0000;
+    background-color: rgba(68, 68, 68, 0.8);
+    border: 1px solid #9b9b9b;
     padding: 10px;
     margin-bottom: 10px;
     pointer-events: auto;
@@ -1318,7 +1318,7 @@ td {
     padding-right: 3px;
 }
 .channel-btn.active {
-    background: #e20;
+    background: #eee;
     border-color: #aaa;
 }
 .buttons {
@@ -1361,13 +1361,13 @@ ul::-webkit-scrollbar-thumb {
     position: fixed;
     bottom: 50px;
     left: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(80, 0, 0, 0.8);
+    background: rgba(0, 80, 0, 0.7);
+    border: 1px solid rgba(0, 192, 0, 0.8);
     color: #0f0;
     padding: 5px 10px;
     font-family: monospace;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 15px;
     z-index: 9999;
 }
 
@@ -1375,13 +1375,13 @@ ul::-webkit-scrollbar-thumb {
     position: fixed;
     bottom: 80px;
     left: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(80, 1, 1, 0.8);
+    background: rgba(80, 80, 0, 0.7);
+    border: 1px solid rgba(192, 192, 0, 0.8);
     color: #0f0;
     padding: 5px 10px;
     font-family: monospace;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 15px;
     z-index: 9999;
 }
 
@@ -1458,8 +1458,8 @@ input[type="checkbox"]:focus {
 }
 
 input[type="checkbox"]:checked {
-    background: #f00;
-    border-color: #a00;
+    background: #fff;
+    border-color: #000;
 }
 
 input[type="checkbox"]:checked::after {
@@ -1486,8 +1486,8 @@ input[type="checkbox"]:disabled {
 }
 
 input[type="checkbox"]:checked:disabled {
-    background: #d88;
-    border-color: #a88;
+    background: #ddd;
+    border-color: #888;
 }
 
 input[type="checkbox"]:disabled:hover {
@@ -1602,8 +1602,8 @@ textarea {
     color: #fff;
 
 
-    background: rgba(120, 20, 20, 0.8);
-    border: 1px solid rgba(200, 80, 80, 0.4);
+    background: rgba(120, 120, 120, 0.8);
+    border: 1px solid rgba(200, 200, 200, 0.4);
     border-radius: 2px;
 
     outline: none;
@@ -1615,8 +1615,8 @@ input[type="search"]:hover,
 input[type="number"]:hover,
 input[type="password"]:hover,
 textarea:hover {
-    background: rgba(150, 30, 30, 0.85);
-    border-color: rgba(220, 100, 100, 0.6);
+    background: rgba(150, 150, 150, 0.85);
+    border-color: rgba(220, 220, 220, 0.6);
 }
 
 
@@ -1625,9 +1625,9 @@ input[type="search"]:focus,
 input[type="number"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-    background: rgba(170, 40, 40, 0.9);
-    border-color: rgba(255, 120, 120, 0.8);
-    box-shadow: 0 0 6px rgba(255, 100, 100, 0.4);
+    background: rgba(170, 170, 170, 0.9);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 6px rgba(100, 100, 100, 0.4);
 }
 
 
@@ -1643,9 +1643,9 @@ select {
     /* compact size */
     font-size: 14px;
     color: #fff;
-    background: rgba(120, 20, 20, 0.8);
+    background: rgba(120, 120, 120, 0.8);
     /* dark red with alpha */
-    border: 1px solid rgba(200, 80, 80, 0.4);
+    border: 1px solid rgba(200, 200, 200, 0.4);
     border-radius: 6px;
     cursor: pointer;
     outline: none;
@@ -1658,15 +1658,15 @@ select {
 
 
 select:hover {
-    background: rgba(150, 30, 30, 0.85);
-    border-color: rgba(220, 100, 100, 0.6);
+    background: rgba(150, 150, 150, 0.85);
+    border-color: rgba(220, 220, 220, 0.6);
 }
 
 
 select:focus {
-    background: rgba(170, 40, 40, 0.9);
-    border-color: rgba(255, 120, 120, 0.8);
-    box-shadow: 0 0 4px rgba(255, 100, 100, 0.3);
+    background: rgba(170, 170, 170, 0.9);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 4px rgba(100, 100, 100, 0.3);
 }
 
 
@@ -1677,66 +1677,31 @@ select::-ms-expand {
 
 @keyframes rainbow {
     0% {
-        color: hsl(0, 100%, 50%)
+        color: rgba(200, 200, 0)
     }
-
-    10% {
-        color: hsl(36, 100%, 50%)
-    }
-
-    20% {
-        color: hsl(72, 100%, 50%)
-    }
-
-    30% {
-        color: hsl(108, 100%, 50%)
-    }
-
-    40% {
-        color: hsl(144, 100%, 50%)
-    }
-
     50% {
-        color: hsl(180, 100%, 50%)
+        color: rgba(130, 120, 0)
     }
-
-    60% {
-        color: hsl(216, 100%, 50%)
-    }
-
-    70% {
-        color: hsl(252, 100%, 50%)
-    }
-
-    80% {
-        color: hsl(288, 100%, 50%)
-    }
-
-    90% {
-        color: hsl(324, 100%, 50%)
-    }
-
     100% {
-        color: hsl(360, 100%, 50%)
+        color: rgba(200, 200, 0)
     }
-
 }
 
 .animatedTags .adminTag {
-    animation: rainbow 3.6s linear infinite;
+    animation: rainbow 2s linear infinite;
 }
 
 hr {
     border: none;
     height: 4px;
-    background-color: #8B0000;
-    box-shadow: 0 2px 6px rgba(139, 0, 0, 0.5);
+    background-color: #8B8B8B;
+    box-shadow: 0 2px 6px rgba(139, 139, 139, 0.5);
     margin: 20px 0;
     border-radius: 2px;
 }
 
 .alert {
-    background-color: rgb(112, 0, 0);
+    background-color: rgb(112, 112, 112);
     color: white;
     font-weight: italic;
     border-radius: 5px;
@@ -1759,56 +1724,62 @@ hr {
 
 /* i like stylizing */
 fieldset {
-    border: 2px solid #8B0000;
-    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.5);
-    border-radius: 6px;
+    border: 2px solid #8B8B8B;
+    box-shadow: 0 4px 10px rgba(139, 139, 139, 0.5);
+    border-radius: 8px;
     padding: 1em;
     margin: 1em 0;
 }
 
 a:link,
 a:visited {
-    color: #8B0000;
-    transition: color 0.3s, text-shadow 0.3s;
+    background: linear-gradient(to bottom, #44f, #64f, #44f);
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.3s, text-shadow 0.3s;
 }
 
 a:hover,
 a:active {
-    color: #FF0000;
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    background: linear-gradient(to bottom, #88f, #c8f, #88f);
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 5px rgba(0, 0, 255, 0.7);
 }
 
 /* For inline SVG */
 svg:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0 4px 10px rgba(139, 0, 0, 0.6));
+    filter: drop-shadow(0 4px 10px rgba(139, 139, 139, 0.6));
     transition: transform 0.3s, filter 0.3s;
 }
 
 svg:active {
     transform: scale(0.98);
-    filter: drop-shadow(0 2px 8px rgba(139, 0, 0, 0.8));
+    filter: drop-shadow(0 2px 8px rgba(139, 139, 139, 0.8));
 }
 
 
 img[src$=".svg"]:not(.nohover):hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 4px 10px rgba(139, 0, 0, 1));
+    filter: drop-shadow(0 4px 10px rgba(139, 139, 139, 1));
     transition: transform 0.3s, filter 0.3s;
     cursor: pointer;
 }
 
 img[src$=".svg"]:not(.nohover):active {
     transform: scale(0.98);
-    filter: drop-shadow(0 2px 8px rgba(139, 0, 0, 1));
+    filter: drop-shadow(0 2px 8px rgba(139, 139, 139, 1));
 }
 
 
 input[type="color"] {
     width: 50px;
     height: 30px;
-    border: 2px solid #6A0000;
-    background-color: #8B0000;
+    border: 2px solid #6A6A6A;
+    background-color: #8B8B8B;
     border-radius: 5px;
     padding: 0;
     cursor: pointer;
@@ -1817,12 +1788,12 @@ input[type="color"] {
 
 input[type="color"]:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 8px rgba(139, 0, 0, 0.7);
+    box-shadow: 0 0 8px rgba(139, 139, 139, 0.7);
 }
 
 input[type="color"]:active {
     transform: scale(0.95);
-    box-shadow: 0 0 4px rgba(139, 0, 0, 0.9);
+    box-shadow: 0 0 4px rgba(139, 139, 139, 0.9);
 }
 
 #toggled {
@@ -1865,12 +1836,12 @@ input[type="color"]:active {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(139, 0, 0, 0.30); /* dark red track at 30% opacity */
+  background: rgba(139, 139, 139, 0.30); /* dark red track at 30% opacity */
   border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 0, 0, 0.45); /* red thumb at 45% opacity */
+  background: rgba(255, 255, 255, 0.45); /* red thumb at 45% opacity */
   border-radius: 8px;
   border: 3px solid transparent;    /* gives a padded look */
   background-clip: padding-box;
@@ -1879,20 +1850,20 @@ input[type="color"]:active {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 0, 0, 0.75); /* more visible on hover */
+  background: rgba(255, 255, 255, 0.75); /* more visible on hover */
   box-shadow: 0 0 0 1px rgba(0,0,0,0.08), inset 0 0 6px rgba(0,0,0,0.12);
 }
 
 /* corner where two scrollbars meet */
 ::-webkit-scrollbar-corner {
-  background: rgba(139, 0, 0, 0.30);
+  background: rgba(139, 139, 139, 0.30);
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin; /* auto | thin | none */
   /* thumb color, track color (Firefox supports rgba) */
-  scrollbar-color: rgba(255, 0, 0, 0.45) rgba(139, 0, 0, 0.30);
+  scrollbar-color: rgba(255, 255, 255, 0.45) rgba(139, 139, 139, 0.30);
 }
 
 .tip {
@@ -1903,8 +1874,8 @@ input[type="color"]:active {
 }
 
 #exploreresults {
-    border: 1px solid rgb(187, 0, 0);
-        background-color: rgb(75, 0, 0);
+    border: 1px solid rgb(187, 187, 187);
+        background-color: rgb(75, 75, 75);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
         margin-top: 5px;
     list-style: none;
@@ -1916,8 +1887,8 @@ input[type="color"]:active {
 
 .result {
     border-radius: 10px;
-    border: 1px solid rgb(212, 0, 0);
-    background-color: rgb(110, 0, 0);
+    border: 1px solid rgb(212, 212, 212);
+    background-color: rgb(110, 110, 110);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     margin: 10px 0;
     padding: 10px;
@@ -1935,8 +1906,8 @@ input[type="color"]:active {
 }
 
 #nsfwwarning {
-    background-color: rgb(41, 13, 13);
-    border: 1px solid rgb(200, 0, 0);
+    background-color: rgb(41, 41, 41);
+    border: 1px solid rgb(200, 200, 200);
     color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -1985,8 +1956,8 @@ input[type="color"]:active {
     width: 95%;
     height: 100%;
     object-fit: cover;
-    border: 1px solid rgb(200, 0, 0);
-    background-color: rgb(75, 0, 0);
+    border: 1px solid rgb(200, 200, 200);
+    background-color: rgb(75, 75, 75);
      border-radius: 5px;
    /* squeeze text */
     

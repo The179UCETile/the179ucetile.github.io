@@ -6,7 +6,7 @@ body {
 }
 
 * {
-    font-family: Consolas, monospace, courier new, Courier, special;
+    font-family: Consolas, monospace, courier new, Courier, special, legacycomputing;
     -webkit-tap-highlight-color: transparent
 }
 
