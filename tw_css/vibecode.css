@@ -8,7 +8,6 @@ body {
 * {
     font-family: "Overused Grotesk", sans-serif, special, legacycomputing;
     -webkit-tap-highlight-color: transparent;
-    transition: font-weight 0.3s;
 }
 
 canvas {
@@ -387,15 +386,15 @@ input {
     width: 90%;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: rgba(173, 0, 0, 0.35);
+    background-color: rgba(173, 173, 173, 0.35);
     border-radius: 8px;
     padding: 4px;
-    border: 1px solid rgba(139, 0, 0, 0.5);
-    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+    border: 1px solid rgba(212, 212, 212, 0.5);
+    box-shadow: 0 4px 12px rgba(139, 139, 139, 0.3);
 }
 #colourlist {
-    border: 0.56px solid #f00;
-    border-radius: 5%;
+    border: 0.56px solid #fff;
+    border-radius: 10px;
     display: inline-grid;
     grid-template-columns: 8% 8% 8% 8% 8% 8% 8% 8%;
     width: 100%;
@@ -406,7 +405,7 @@ input {
     flex: 0 0 auto;  
     width: 20px;     
     height: 20px;
-    background-color: rgba(139, 0, 0, 0.5);
+    background-color: rgba(139, 139, 139, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -419,10 +418,10 @@ input {
 }
 #customcolour {
     margin: 4px;
-    border: 2px solid #f00;
+    border: 2px solid #fff;
     padding: 0;
     width: 50%;
-    border-radius: 5%;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 50ms;
 }
@@ -515,7 +514,7 @@ td {
     position: absolute;
     background-color: rgba(30, 30, 30, 0.8);
     color: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     margin: 5px;
     transition: opacity 0.5s;
     /* fade effect */
@@ -1742,17 +1741,17 @@ a:visited {
     background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
-    transition: background 0.3s, text-shadow 0.3s;
+    transition: background 0.3s, text-shadow 0.3s, font-weight 0.3s;
 }
 
 a:hover,
 a:active {
     background: linear-gradient(45deg, #88f, #c8f, #88f);
-    font-weight: 800;
+    font-weight: 700;
     background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    text-shadow: 0 0 5px rgba(0, 0, 255, 0.1);
 }
 
 /* For inline SVG */
