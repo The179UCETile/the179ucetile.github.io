@@ -733,7 +733,7 @@ td {
     position: relative; /* container for absolute chatboxes */
     flex: 1;            /* take available space in .chatcontainer */
     min-height: 0;      /* required for flex scroll */
-    
+    word-wrap: break-word; /* haster forgot */
 }
 #_msg{
    font-size: 12px;
@@ -840,205 +840,205 @@ td {
 
 @font-face {
     font-family: ubuntu mono;
-    src: url(fonts/UbuntuMono-Regular.ttf)
+    src: url(https://tw.2s4.me/static/fonts/UbuntuMono-Regular.ttf)
 }
 
 @font-face {
     font-family: ubuntu mono;
-    src: url(fonts/UbuntuMono-Bold.ttf);
+    src: url(https://tw.2s4.me/static/fonts/UbuntuMono-Bold.ttf);
     font-weight: 700
 }
 
 @font-face {
     font-family: ubuntu mono;
-    src: url(fonts/UbuntuMono-Italic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/UbuntuMono-Italic.ttf);
     font-style: italic
 }
 
 @font-face {
     font-family: ubuntu mono;
-    src: url(fonts/UbuntuMono-BoldItalic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/UbuntuMono-BoldItalic.ttf);
     font-weight: 700;
     font-style: oblique
 }
 
 @font-face {
     font-family: inconsolata;
-    src: url(fonts/Inconsolata-Regular.ttf)
+    src: url(https://tw.2s4.me/static/fonts/Inconsolata-Regular.ttf)
 }
 
 @font-face {
     font-family: inconsolata;
-    src: url(fonts/Inconsolata-Bold.ttf);
+    src: url(https://tw.2s4.me/static/fonts/Inconsolata-Bold.ttf);
     font-weight: 700
 }
 
 @font-face {
     font-family: ibm plex mono;
-    src: url(fonts/IBMPlexMono-Regular.ttf)
+    src: url(https://tw.2s4.me/static/fonts/IBMPlexMono-Regular.ttf)
 }
 
 @font-face {
     font-family: ibm plex mono;
-    src: url(fonts/IBMPlexMono-Bold.ttf);
+    src: url(https://tw.2s4.me/static/fonts/IBMPlexMono-Bold.ttf);
     font-weight: 700
 }
 
 @font-face {
     font-family: ibm plex mono;
-    src: url(fonts/IBMPlexMono-Italic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/IBMPlexMono-Italic.ttf);
     font-style: italic
 }
 
 @font-face {
     font-family: ibm plex mono;
-    src: url(fonts/IBMPlexMono-BoldItalic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/IBMPlexMono-BoldItalic.ttf);
     font-weight: 700;
     font-style: oblique
 }
 
 @font-face {
     font-family: roboto mono;
-    src: url(fonts/RobotoMono-Regular.ttf)
+    src: url(https://tw.2s4.me/static/fonts/RobotoMono-Regular.ttf)
 }
 
 @font-face {
     font-family: roboto mono;
-    src: url(fonts/RobotoMono-Bold.ttf);
+    src: url(https://tw.2s4.me/static/fonts/RobotoMono-Bold.ttf);
     font-weight: 700
 }
 
 @font-face {
     font-family: roboto mono;
-    src: url(fonts/RobotoMono-Italic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/RobotoMono-Italic.ttf);
     font-style: italic
 }
 
 @font-face {
     font-family: roboto mono;
-    src: url(fonts/RobotoMono-BoldItalic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/RobotoMono-BoldItalic.ttf);
     font-weight: 700;
     font-style: oblique
 }
 
 @font-face {
     font-family: courier prime;
-    src: url(fonts/CourierPrime-Regular.ttf)
+    src: url(https://tw.2s4.me/static/fonts/CourierPrime-Regular.ttf)
 }
 
 @font-face {
     font-family: courier prime;
-    src: url(fonts/CourierPrime-Bold.ttf);
+    src: url(https://tw.2s4.me/static/fonts/CourierPrime-Bold.ttf);
     font-weight: 700
 }
 
 @font-face {
     font-family: courier prime;
-    src: url(fonts/CourierPrime-Italic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/CourierPrime-Italic.ttf);
     font-style: italic
 }
 
 @font-face {
     font-family: courier prime;
-    src: url(fonts/CourierPrime-BoldItalic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/CourierPrime-BoldItalic.ttf);
     font-weight: 700;
     font-style: oblique
 }
 
 @font-face {
     font-family: cousine;
-    src: url(fonts/Cousine-Regular.ttf)
+    src: url(https://tw.2s4.me/static/fonts/Cousine-Regular.ttf)
 }
 
 @font-face {
     font-family: cousine;
-    src: url(fonts/Cousine-Bold.ttf);
+    src: url(https://tw.2s4.me/static/fonts/Cousine-Bold.ttf);
     font-weight: 700
 }
 
 @font-face {
     font-family: cousine;
-    src: url(fonts/Cousine-Italic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/Cousine-Italic.ttf);
     font-style: italic
 }
 
 @font-face {
     font-family: cousine;
-    src: url(fonts/Cousine-BoldItalic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/Cousine-BoldItalic.ttf);
     font-weight: 700;
     font-style: oblique
 }
 
 @font-face {
     font-family: pointfree;
-    src: url(fonts/pointfree.ttf)
+    src: url(https://tw.2s4.me/static/fonts/pointfree.ttf)
 }
 
 @font-face {
     font-family: pointfree;
-    src: url(fonts/pointfree-bold.ttf);
+    src: url(https://tw.2s4.me/static/fonts/pointfree-bold.ttf);
     font-weight: 700
 }
 
 @font-face {
     font-family: monofur;
-    src: url(fonts/monof55.ttf)
+    src: url(https://tw.2s4.me/static/fonts/monof55.ttf)
 }
 
 @font-face {
     font-family: monofur;
-    src: url(fonts/monof56.ttf);
+    src: url(https://tw.2s4.me/static/fonts/monof56.ttf);
     font-style: italic
 }
 
 @font-face {
     font-family: fantasque sans mono;
-    src: url(fonts/FantasqueSansMono-Regular.ttf)
+    src: url(https://tw.2s4.me/static/fonts/FantasqueSansMono-Regular.ttf)
 }
 
 @font-face {
     font-family: fantasque sans mono;
-    src: url(fonts/FantasqueSansMono-Bold.ttf);
+    src: url(https://tw.2s4.me/static/fonts/FantasqueSansMono-Bold.ttf);
     font-weight: 700
 }
 
 @font-face {
     font-family: fantasque sans mono;
-    src: url(fonts/FantasqueSansMono-Italic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/FantasqueSansMono-Italic.ttf);
     font-style: italic
 }
 
 @font-face {
     font-family: fantasque sans mono;
-    src: url(fonts/FantasqueSansMono-BoldItalic.ttf);
+    src: url(https://tw.2s4.me/static/fonts/FantasqueSansMono-BoldItalic.ttf);
     font-weight: 700;
     font-style: oblique
 }
 
 @font-face {
     font-family: libertinus mono;
-    src: url(fonts/LibertinusMono-Regular.ttf)
+    src: url(https://tw.2s4.me/static/fonts/LibertinusMono-Regular.ttf)
 }
 
 @font-face {
     font-family: libertinus mono;
-    src: url(fonts/LibertinusMono-Bold.ttf);
+    src: url(https://tw.2s4.me/static/fonts/LibertinusMono-Bold.ttf);
     font-weight: 700
 }
 
 @font-face {
     font-family: fixedsys;
-    src: url(fonts/fixedsys.ttf)
+    src: url(https://tw.2s4.me/static/fonts/fixedsys.ttf)
 }
 
 @font-face {
     font-family: special;
-    src: url(fonts/special.ttf?v=10)
+    src: url(https://tw.2s4.me/static/fonts/special.ttf?v=10)
 }
 
 @font-face {
     font-family: cutive mono;
-    src: url(fonts/CutiveMono-Regular.ttf)
+    src: url(https://tw.2s4.me/static/fonts/CutiveMono-Regular.ttf)
 }
 @font-face {
   font-family: 'JetBrains Mono';
