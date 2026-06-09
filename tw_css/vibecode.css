@@ -1748,7 +1748,7 @@ a:visited {
 a:hover,
 a:active {
     background: linear-gradient(45deg, #88f, #c8f, #88f);
-    font-weight: 550;
+    font-weight: 800;
     background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
