@@ -7,4 +7,4 @@ for (let i of document.getElementsByTagName("*")) {
   }
 }
 ```
-where <THEME> is the name of any file in this folder.
+where \<THEME\> is the name of any file in this folder.
