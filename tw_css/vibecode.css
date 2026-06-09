@@ -19,7 +19,12 @@ canvas {
 
 h3 {
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #ff0, #f80, #f00);
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5em;
 }
 
 .bold {
@@ -728,8 +733,7 @@ td {
     display: flex;
     flex-direction: column;
     pointer-events: auto;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(6px);
+    border-radius: 0 0 0 10px;
     border: 1px solid rgba(212, 212, 212, 0.548);
     gap: 8px;
 }
@@ -788,7 +792,7 @@ td {
 }
 
 #chatmsg {
-    border-radius: 1px;
+    border-radius: 10px;
     border: 1px #666 solid;
     width: 100%;
     background-color: rgba(75, 75, 75, 0.8);
@@ -798,6 +802,7 @@ td {
 #sendmsg {
     margin: 5px;
     background-color: rgb(36, 36, 36);
+    border-radius: 10px;
     border: 1px solid rgb(75, 75, 75);
     width: 20px;
     padding: 5px;
@@ -809,6 +814,7 @@ td {
     border: 1px solid #9b9b9b;
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 0 0 0 10px;
     pointer-events: auto;
     position: relative;
     cursor: pointer
