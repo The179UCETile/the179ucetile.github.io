@@ -1041,6 +1041,43 @@ td {
     src: url(https://tw.2s4.me/static/fonts/CutiveMono-Regular.ttf)
 }
 @font-face {
+    font-family: "monospace textwall";
+    src: url(/fonts/monospace-textwall-bmp.ttf);
+}
+@font-face {
+    font-family: "monospace textwall";
+    src: url(/fonts/monospace-textwall-spuab.ttf);
+    unicode-range: U+100000-10FFFF;
+}
+@font-face {
+    font-family: "monospace textwall";
+    src: url(/fonts/monospace-textwall-wip.ttf);
+    font-display: fallback;
+    unicode-range: U+0-1CBFF, U+1CEB4-1FAFF, U+1FBF0-10FFFF; /* exclude SLC2 */
+}
+@font-face {
+    font-family: "monospace textwall";
+    src: url(https://the179ucetile.github.io/h/fonts/FairfaxHD.ttf);
+    unicode-range: U+1CC00-1CEB3, U+1FB00-1FBEF; /* fill in SLC2 with higher quality glyphs */
+}
+@font-face {
+    font-family: "monospace textwall";
+    src: url(/fonts/monospace-textwall-smp.ttf);
+    font-display: fallback;
+}
+@font-face {
+    font-family: "monospace textwall";
+    src: url(/fonts/monospace-textwall-bold-bmp.ttf);
+    font-weight: 700;
+    unicode-range: U+0-FFFF;
+}
+@font-face {
+    font-family: "monospace textwall";
+    src: url(/fonts/monospace-textwall-bold-smp.ttf);
+    font-weight: 700;
+    unicode-range: U+10000-1FFFF;
+}
+@font-face {
   font-family: 'JetBrains Mono';
   src: url('fonts/JetBrainsMono-Regular.ttf') format('truetype');
   font-weight: 400;
