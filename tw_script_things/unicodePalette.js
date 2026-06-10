@@ -23,7 +23,7 @@ style.innerHTML = `
   padding: 2px;
   background-color: #666e;
   border: 2px solid #888;
-  top: 202px;
+  top: 177px;
   border-radius: 0 0 25px 25px;
 }
 #charContainer {
