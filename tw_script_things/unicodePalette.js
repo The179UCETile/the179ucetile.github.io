@@ -7,8 +7,8 @@ style.innerHTML = `
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 650px;
-  top: -202px;
+  width: min(600px, 85vw);
+  top: -177px;
   transition: top 0.5s cubic-bezier(0, 0, 0.1, 1);
   color: #fff;
 }
@@ -18,7 +18,7 @@ style.innerHTML = `
 #closeUnicodePal {
   position: absolute;
   text-align: center;
-  width: 40%;
+  width: 35%;
   height: 25px;
   padding: 2px;
   background-color: #666e;
@@ -32,7 +32,7 @@ style.innerHTML = `
   grid-template-columns: repeat(15, 1fr);
   overflow: auto;
   gap: 5px;
-  height: 200px;
+  height: 175px;
   width: 100%;
   background-color: #333e;
   border: 2px solid #555;
@@ -44,7 +44,7 @@ style.innerHTML = `
   border-radius: 4px;
   background-color: #000;
   color: #fff;
-  font-size: 1.25em;
+  font-size: 1.1em;
   padding: 2px;
   text-align: center;
 }
