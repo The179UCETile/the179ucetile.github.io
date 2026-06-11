@@ -58,7 +58,7 @@ function copy(e) {
             } else {
               d += String.fromCharCode(192 + g[1]);
             }
-          } else if (tt.copydecorations.checked) {
+          } else if (elem.copydecorations.checked) {
             d += String.fromCharCode(192 + b);
           }
           Qn(g[0], b) || (0 != b && (v = !0),
