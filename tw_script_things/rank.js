@@ -27,11 +27,14 @@ const ranks = [
   ["A-", 10_000, "color:#3f0"],
   ["A", 14_000, "-webkit-text-stroke:0.3px #080;color:#0f0"],
   ["A+", 18_000, "-webkit-text-stroke:0.3px #083;color:#0f6"],
-  ["S-", 25_000, `-webkit-text-stroke:0.3px #0c8;${gradient("linear-gradient(135deg, #fff, #0fb, #fff)")}`],
-  ["S", 35_000, `-webkit-text-stroke:0.3px #0ff;${gradient("linear-gradient(135deg, #fff, #0ff, #fff)")}`],
-  ["S+", 50_000, `-webkit-text-stroke:0.3px #0f0;${gradient("linear-gradient(135deg, #fff, #0f0, #fff)")}`],
-  ["SS-", 75_000, `-webkit-text-stroke:0.3px #8f0;${gradient("linear-gradient(135deg, #fff, #8f0, #fff)")}`],
-  ["SS", 100_000, `-webkit-text-stroke:0.3px #ff0;${gradient("linear-gradient(135deg, #fff, #ff0, #fff, #ff0, #fff)")}`]
+  ["S-", 25_000, `-webkit-text-stroke:0.2px #086;${gradient("linear-gradient(120deg, #fff, #0fb, #fff, #0fb, #fff)")}`],
+  ["S", 35_000, `-webkit-text-stroke:0.2px #088;${gradient("linear-gradient(120deg, #fff, #0ff, #fff, #0ff, #fff)")}`],
+  ["S+", 50_000, `-webkit-text-stroke:0.2px #080;${gradient("linear-gradient(120deg, #fff, #0f0, #fff, #0f0, #fff)")}`],
+  ["SS-", 75_000, `-webkit-text-stroke:0.2px #480;${gradient("linear-gradient(120deg, #fff, #8f0, #fff, #8f0, #fff)")}`],
+  ["SS", 100_000, `-webkit-text-stroke:0.2px #880;${gradient("linear-gradient(120deg, #fff, #ff0, #fff, #ff0, #fff, #ff0, #fff)")}`],
+  ["SS+", 140_000, `-webkit-text-stroke:0.2px #f0f;${gradient("linear-gradient(120deg, #fff, #f8f, #fff, #f8f, #fff, #f8f, #fff)")}`],
+  ["X-", 180_000, `-webkit-text-stroke:0.2px #00f;${gradient("linear-gradient(120deg, #f00, #00f, #f00, #00f, #f00)")}`],
+  ["X", 250_000, `-webkit-text-stroke:0.2px #f08;${gradient("linear-gradient(30deg, #f08, #0f8, #f08)")}`]
 ];
 function getRankIdx() {
   for (let i in ranks) {
