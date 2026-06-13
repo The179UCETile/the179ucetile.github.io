@@ -1,4 +1,4 @@
-let pts = Number(localStorage["ranks_points"] ?? 0), timestamp = Date.now(), ptsQueue = 0, lastTime = Date.now() - 16;
+let pts = Number(localStorage["ranks_points"] ?? 0), timestamp = Date.now(), ptsQueue = 0, lt = Date.now() - 16;
 w.on("writeBefore", ()=>{
   ptsQueue++
 });
@@ -119,9 +119,9 @@ if (r == ranks.length - 1) {
 };
 localStorage.setItem("ranks_points", pts.toString());
 if (ptsQueue > 2e3) { ptsQueue = 0 };
-let ptsChange = Math.floor(((Date.now() - lastTime) / 1000) * 512);
+let ptsChange = Math.floor(((Date.now() - lt) / 1000) * 512);
 ptsChange = ptsQueue - ptsChange < 0 ? ptsQueue : ptsChange;
 ptsQueue -= ptsChange;
 pts += ptsChange;
-lastTime = Date.now();
+lt = Date.now();
 }, 15)
