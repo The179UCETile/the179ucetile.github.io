@@ -41,7 +41,13 @@ const ranks = [
   ["XX+", 500_000, `-webkit-text-stroke:0.5px #fff;${gradient("linear-gradient(30deg, #fff, #000, #fff, #000)")}`],
   ["W-", 600_000, `-webkit-text-stroke:0.5px #f80;${gradient("linear-gradient(120deg, #f80, #ff0, #8f0, #0f0, #0f8, #0ff, #08f, #00f)")}`],
   ["W", 750_000, `-webkit-text-stroke:0.5px #066;${gradient("linear-gradient(60deg, #066, #0ff, #fff, #0ff, #066)")}`],
-  ["W+", 900_000, `-webkit-text-stroke:0.5px #88f;${gradient("linear-gradient(60deg, #f0f, #0f0, #f0f, #0f0, #f0f)")}`]
+  ["W+", 900_000, `-webkit-text-stroke:0.5px #88f;${gradient("linear-gradient(60deg, #f0f, #0f0, #f0f, #0f0, #f0f)")}`],
+  ["WW-", 1_200_000, `-webkit-text-stroke:0.5px #ff0;${gradient("linear-gradient(120deg, #ff0, #f0f, #ff0)")}`],
+  ["WW", 1_500_000, `-webkit-text-stroke:0.5px #0f0;${gradient("linear-gradient(150deg, #0f0, #f00, #0f0)")}`],
+  ["WW+", 1_800_000, `-webkit-text-stroke:0.5px #0ff;${gradient("linear-gradient(210deg, #0ff, #ff0, #0ff)")}`],
+  ["P-", 2_500_000, `-webkit-text-stroke:0.5px #00f;${gradient("linear-gradient(240deg, #00f, #0f0, #00f)")}`],
+  ["P", 3_000_000, `-webkit-text-stroke:0.5px #0f0;${gradient("linear-gradient(120deg, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00)")}`],
+  ["P+", 3_500_000, `-webkit-text-stroke:0.5px #f0f;${gradient("linear-gradient(-120deg, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00)")}`]
 ];
 function getRankIdx() {
   for (let i in ranks) {
