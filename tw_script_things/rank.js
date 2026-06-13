@@ -1,10 +1,10 @@
-let pts = Number(localStorage["ranks_points"] ?? 0), timestamp = Date.now();
+let pts = Number(localStorage["ranks_points"] ?? 0), timestamp = Date.now(), ptsQueue = 0, lastTime = Date.now() - 16;
 w.on("writeBefore", ()=>{
-  pts++
+  ptsQueue++
 });
 w.on("chatBefore", (d)=>{
   let m = d.msg[0] ?? d.msg[1];
-  pts += m.length < 5 ? m.length : Math.floor(5 * (m.length / 5) ** 0.75)
+  ptsQueue += m.length < 5 ? m.length : Math.floor(5 * (m.length / 5) ** 0.75)
 });
 function gradient(s) {
   return `background:${s};background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent;`
@@ -108,4 +108,10 @@ if (r == ranks.length - 1) {
   document.getElementById("rankContainer_rankProgress").style.right = `${205 - (pts - ranks[r][1]) / (ranks[r + 1][1] - ranks[r][1]) * 200}px`;
 };
 localStorage.setItem("ranks_points", pts.toString());
+if (ptsQueue > 2e3) { ptsQueue = 0 };
+let ptsChange = Math.floor(((Date.now() - lastTime) / 1000) * 512);
+ptsChange = ptsQueue - ptsChange < 0 ? ptsQueue : ptsChange;
+ptsQueue -= ptsChange;
+pts += ptsChange;
+lastTime = Date.now();
 }, 15)
