@@ -57,9 +57,21 @@ const ranks = [
   ["M-", 22_500_000, `animation: anim2 2.5s linear infinite;${gradient("linear-gradient(60deg, #0000, #000c, #0000)")}`],
   ["M", 27_500_000, `animation: anim3 2.5s linear infinite;${gradient("linear-gradient(60deg, #0000, #000c, #0000)")}`],
   ["M+", 35_000_000, `animation: anim4 2.5s linear infinite;${gradient("linear-gradient(60deg, #0000, #000c, #0000)")}`],
-  ["MM-", 50_000_000, `animation: anim5 2.5s infinite;${gradient("linear-gradient(60deg, #fff0, #fffc, #fff0)")}`],
-  ["MM", 75_000_000, `animation: anim6 2s infinite;${gradient("linear-gradient(60deg, #fff0, #fffc, #fff0)")}`],
-  ["MM+", 100_000_000, `animation: anim7 1.6s infinite;${gradient("linear-gradient(60deg, #fff0, #fffc, #fff0)")}`]
+  ["MM-", 50_000_000, `animation: anim5 2.5s linear infinite;${gradient("linear-gradient(60deg, #fff0, #fffc, #fff0)")}`],
+  ["MM", 75_000_000, `animation: anim6 2s linear infinite;${gradient("linear-gradient(60deg, #fff0, #fffc, #fff0)")}`],
+  ["MM+", 100_000_000, `animation: anim7 1.6s linear infinite;${gradient("linear-gradient(60deg, #fff0, #fffc, #fff0)")}`],
+  ["O-", 125_000_000, `animation: anim8 3s linear infinite;${gradient("linear-gradient(30deg, #0ff0, #0ff8, #0ff0)")}`],
+  ["O", 160_000_000, `animation: anim8 2s linear infinite;${gradient("linear-gradient(30deg, #0ff0, #0ff8, #0ff0, #0ff8, #0ff0)")}`],
+  ["O+", 200_000_000, `animation: anim9 2s linear infinite;${gradient("linear-gradient(30deg, #fff0, #fff8, #fff0)")}`],
+  ["OO-", 250_000_000, `animation: anim10 2s linear infinite;${gradient("linear-gradient(30deg, #fff0, #fff8, #fff0)")}`],
+  ["OO", 300_000_000, `animation: anim11 3s linear infinite;${gradient("linear-gradient(60deg, #0f00, #0f08, #0f00)")}`],
+  ["OO+", 400_000_000, `animation: anim11 2s linear infinite;${gradient("linear-gradient(60deg, #0f00, #0f08, #0f00, #0f08, #0f00)")}`],
+  ["R-", 500_000_000, `animation: anim11 1.5s linear infinite;${gradient("linear-gradient(60deg, #0f00, #0f08, #0f00, #0f08, #0f00)")}`],
+  ["R", 650_000_000, `animation: anim12 4s linear infinite;${gradient("linear-gradient(60deg, #0000, #80f8, #f0f8, #80f8, #0000)")}`],
+  ["R+", 800_000_000, `animation: anim12 3s linear infinite;${gradient("linear-gradient(30deg, #0000, #80f8, #f0f8, #80f8, #0000)")}`],
+  ["RR-", 1_000_000_000, `animation: anim12 2s linear infinite;${gradient("linear-gradient(120deg, #0000, #80f8, #f0f8, #80f8, #0000)")}`],
+  ["RR", 1_250_000_000, `animation: anim12 1.5s linear infinite;${gradient("linear-gradient(0deg, #0000, #80f8, #f0f8, #80f8, #0000)")}`],
+  ["RR+", 1_750_000_000, `animation: anim13 5s linear infinite;${gradient("linear-gradient(60deg, #0000, #fff8, #8888, #0ff8, #8888, #fff8, #0000)")}`]
 ];
 function getRankIdx() {
   for (let i in ranks) {
@@ -132,19 +144,63 @@ style.innerHTML = `
   100% { -webkit-text-stroke:2px #0ff; background-color:#000; }
 }
 @keyframes anim5 {
-  0% { -webkit-text-stroke:2px #f0f; background-color:#fff; transform: translateY(-50%) rotate(0.5deg) }
-  50% { -webkit-text-stroke:2px #fff; background-color:#f0f; transform: translateY(-50%) rotate(-0.5deg) }
-  100% { -webkit-text-stroke:2px #f0f; background-color:#fff; transform: translateY(-50%) rotate(0.5deg) }
+  0% { -webkit-text-stroke:2px #f0f; background-color:#fff; }
+  50% { -webkit-text-stroke:2px #fff; background-color:#f0f; }
+  100% { -webkit-text-stroke:2px #f0f; background-color:#fff; }
 }
 @keyframes anim6 {
-  0% { -webkit-text-stroke:2px #0f0; background-color:#fff; transform: translateY(-50%) rotate(1deg) }
-  50% { -webkit-text-stroke:2px #fff; background-color:#0f0; transform: translateY(-50%) rotate(-1deg) }
-  100% { -webkit-text-stroke:2px #0f0; background-color:#fff; transform: translateY(-50%) rotate(1deg) }
+  0% { -webkit-text-stroke:2px #0f0; background-color:#fff; }
+  50% { -webkit-text-stroke:2px #fff; background-color:#0f0; }
+  100% { -webkit-text-stroke:2px #0f0; background-color:#fff; }
 }
 @keyframes anim7 {
-  0% { -webkit-text-stroke:2px #f0f; background-color:#ff0; transform: translateY(-50%) rotate(1.5deg) }
-  50% { -webkit-text-stroke:2px #ff0; background-color:#f0f; transform: translateY(-50%) rotate(-1.5deg) }
-  100% { -webkit-text-stroke:2px #f0f; background-color:#ff0; transform: translateY(-50%) rotate(1.5deg) }
+  0% { -webkit-text-stroke:2px #f0f; background-color:#ff0; }
+  50% { -webkit-text-stroke:2px #ff0; background-color:#f0f; }
+  100% { -webkit-text-stroke:2px #f0f; background-color:#ff0; }
+}
+@keyframes anim8 {
+  0% { -webkit-text-stroke:2px #00f; background-color:#08f; }
+  50% { -webkit-text-stroke:2px #08f; background-color:#00f; }
+  100% { -webkit-text-stroke:2px #00f; background-color:#08f; }
+}
+@keyframes anim9 {
+  0% { -webkit-text-stroke:2px #f00; background-color:#0ff; }
+  33% { -webkit-text-stroke:2px #0f0; background-color:#f0f; }
+  66% { -webkit-text-stroke:2px #00f; background-color:#ff0; }
+  100% { -webkit-text-stroke:2px #f00; background-color:#0ff; }
+}
+@keyframes anim10 {
+  0% { -webkit-text-stroke:2px #0ff; background-color:#f00; }
+  33% { -webkit-text-stroke:2px #f0f; background-color:#0f0; }
+  66% { -webkit-text-stroke:2px #ff0; background-color:#00f; }
+  100% { -webkit-text-stroke:2px #0ff; background-color:#f00; }
+}
+@keyframes anim11 {
+  0% { -webkit-text-stroke:2px #0f0; background-color:#0ff; }
+  50% { -webkit-text-stroke:2px #0ff; background-color:#0f0; }
+  100% { -webkit-text-stroke:2px #0f0; background-color:#0ff; }
+}
+@keyframes anim12 {
+  0% { -webkit-text-stroke:2px #000; background-color:#f0f; }
+  25% { -webkit-text-stroke:2px #80f; background-color:#0f0; }
+  50% { -webkit-text-stroke:2px #f0f; background-color:#000; }
+  75% { -webkit-text-stroke:2px #80f; background-color:#0f0; }
+  100% { -webkit-text-stroke:2px #000; background-color:#f0f; }
+}
+@keyframes anim13 {
+  0% { -webkit-text-stroke:2px #000; background-color:#000; }
+  8.3% { -webkit-text-stroke:2px #43f; background-color:#fff; }
+  16.6% { -webkit-text-stroke:2px #0f8; background-color:#f00; }
+  25% { -webkit-text-stroke:2px #084; background-color:#0f0; }
+  33.3% { -webkit-text-stroke:2px #80f; background-color:#00f; }
+  41.6% { -webkit-text-stroke:2px #ff0; background-color:#0ff; }
+  50% { -webkit-text-stroke:2px #f0f; background-color:#f0f; }
+  58.3% { -webkit-text-stroke:2px #0ff; background-color:#ff0; }
+  66.6% { -webkit-text-stroke:2px #00f; background-color:#80f; }
+  75% { -webkit-text-stroke:2px #0f0; background-color:#084; }
+  83.3% { -webkit-text-stroke:2px #f00; background-color:#0f8; }
+  91.6% { -webkit-text-stroke:2px #fff; background-color:#43f; }
+  100% { -webkit-text-stroke:2px #000; background-color:#000; }
 }
 `;
 document.head.append(style);
