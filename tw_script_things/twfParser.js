@@ -17,7 +17,7 @@ function decodeNonchar(str) {
   .replace(/\ufdd3/g, " ")
 }
 function parseTWF(data) {
-  data = escapeTWF(data);
+  data = escapeTWF(data.replace(/\n+$/g, ""));
   let obj = { fontInfo: {}, glyphs: {}, kerningData: {} }, splittedData = [], line = "", inCharData = false;
   for (let i = 0; i < data.length; i++) {
     let c = data[i]
