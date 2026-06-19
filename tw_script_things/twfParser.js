@@ -38,7 +38,7 @@ function parseTWF(data) {
   for (let i in splittedData) {
     if (i != 0) {
       let l = splittedData[i].split(" ");
-      splittedData[i] = `${l.slice(0, 5).join(" ")} ${l.slice(5).join(" ").replace(/\[\n(.+)\n\]/s, "[$1]").replace(/\x20/g, String.fromCodePoint(0xfdd3))}`;
+      splittedData[i] = `${l.slice(0, 6).join(" ")} ${l.slice(6).join(" ").replace(/\[\n(.+)\n\]/s, "[$1]").replace(/\x20/g, String.fromCodePoint(0xfdd3))}`;
     };
   };
   for (let i in splittedData) {
@@ -55,10 +55,11 @@ function parseTWF(data) {
         obj.glyphs[l[0]] = {}
       }
       obj.glyphs[l[0]][l[1] == "space" ? " " : l[1]] = {
-        glyph: decodeNonchar(l[5]).replace(/^\[|\]$/g, ""),
+        glyph: decodeNonchar(l[6]).replace(/^\[|\]$/g, ""),
         width: l[2],
         height: l[3],
-        descenderDepth: l[4]
+        descenderDepth: l[4],
+        glyphOffset: l[5]
       }
     } else if (l[0] == "kern") {
       obj.kerningData[l[1]] = {
