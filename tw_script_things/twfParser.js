@@ -47,7 +47,8 @@ function parseTWF(data) {
       obj.fontInfo = {
         spacing: l[0],
         lineHeight: l[1],
-        fontWeights: l.slice(2)
+        ascenderHeight: l[2],
+        fontWeights: l.slice(3)
       }
     } else if (l[0] != "kern") {
       if (typeof obj.glyphs[l[0]] == "undefined") {
