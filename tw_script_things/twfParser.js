@@ -54,7 +54,7 @@ function parseTWF(data) {
       if (typeof obj.glyphs[l[0]] == "undefined") {
         obj.glyphs[l[0]] = {}
       }
-      obj.glyphs[l[0]][l[1] == "space" ? " " : l[1]] = {
+      obj.glyphs[l[0]][decodeNonchar(l[1]) == "space" ? " " : decodeNonchar(l[1])] = {
         glyph: decodeNonchar(l[6]).replace(/^\[|\]$/g, ""),
         width: l[2],
         height: l[3],
@@ -62,7 +62,7 @@ function parseTWF(data) {
         glyphOffset: l[5]
       }
     } else if (l[0] == "kern") {
-      obj.kerningData[l[1]] = {
+      obj.kerningData[decodeNonchar(l[1])] = {
         offsets: l.slice(2)
       }
     } else { 
