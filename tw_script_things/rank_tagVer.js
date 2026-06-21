@@ -271,7 +271,7 @@ ptsChange = ptsQueue - ptsChange < 0 ? ptsQueue : ptsChange;
 ptsQueue -= ptsChange;
 pts += ptsChange;
 lt = Date.now();
-tag = `<start #${HSVtoRGB(r < 15 ? ((r / 15 / 3) % 1) : ((1 / 3 + (r - 15) / 9) % 1), r < 15 ? 1 : (Math.sin((r - 15) / Math.PI + Math.PI / 2) + 1) / 2 * 0.75 + 0.25, 1)}>[ ${ranks[r][0]} | ${abbrev(pts)} pts ]<end>`
+tag = `<start #${HSVtoRGB(r < 15 ? ((r / 15 / 3) % 1) : ((1 / 3 + (r - 15) / 9) % 1), r < 15 ? 1 : (Math.sin((r - 15) * Math.PI / 4 + Math.PI / 2) + 1) / 2 * 0.75 + 0.25, 1)}>[ ${ranks[r][0]} | ${abbrev(pts)} pts ]<end>`
 }, 15);
 w.on("chatBefore", (d)=>{
 d.msg[0] = `${tag} ${d.msg[0]}`
