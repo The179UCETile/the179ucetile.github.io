@@ -33,7 +33,17 @@ function abbrev(num) {
   if (num < 1e6) {
     return num.toLocaleString("en-US")
   } else {
-    let prefixes = ["", "k", "M", "B", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No", "Dc"];
+    let prefixes = ["", "k", "M", "B", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No",
+                   ...["", "U", "D", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No"].map(a => `${a}Dc`),
+                   ...["", "U", "D", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No"].map(a => `${a}Vg`),
+                   ...["", "U", "D", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No"].map(a => `${a}Tg`),
+                   ...["", "U", "D", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No"].map(a => `${a}qg`),
+                   ...["", "U", "D", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No"].map(a => `${a}Qg`),
+                   ...["", "U", "D", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No"].map(a => `${a}sg`),
+                   ...["", "U", "D", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No"].map(a => `${a}Sg`),
+                   ...["", "U", "D", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No"].map(a => `${a}Og`),
+                   ...["", "U", "D", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No"].map(a => `${a}Ng`),
+                   ...["", "U", "D", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "No"].map(a => `${a}Ce`)];
     return `${(num / 1e3 ** Math.floor(Math.log10(num) / 3)).toPrecision(4)} ${prefixes[Math.floor(Math.log10(num) / 3)]}`
   }
 }
