@@ -12,7 +12,7 @@ function generateRarityWord(prefs) {
   };
   output += randomItem(endings)
   for (let i of doubVowels) {
-    output = output.replace(new RegExp(`${i}`, "g"), i[0] + randomItem("bcdfghjklmnpqrstvwxyz") + i[1]);
+    output = output.replace(new RegExp(`${i}`, "g"), i[0] + randomItem([..."bcdfghjklmnpqrstvwxyz".split(""), "ch", "sh", "th", "ng"]) + i[1]);
   };
   return output[0].toUpperCase() + output.slice(1)
 }
