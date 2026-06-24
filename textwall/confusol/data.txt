@@ -17,3 +17,4 @@ lime.person 0.02
 ScrapFan_1 8192.3
 Diamond26 0.48
 NullArea 293.1
+Setsumi2s4 0.01
