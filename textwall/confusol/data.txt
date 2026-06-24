@@ -8,13 +8,12 @@ RenaultHasAlwaysBeenKing 911.2
 RenaultFan 140.3
 THE_LAST_DISASTER 519.2
 Bzuki 0.02
-xdartboar 0.24
-Fr00t 0.01
+Denux 0.05
 NotReiny 0.04
 haster 0.01
 penthexium56 0.03
 lime.person 0.02
 ScrapFan_1 8192.3
-Diamond26 0.48
-NullArea 293.1
+Diamond26 0.42
+NullArea 317.3
 Setsumi2s4 0.02
