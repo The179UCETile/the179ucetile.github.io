@@ -1,6 +1,6 @@
 Luca12FCSB 0
 The11thVai 1.04
-BernatJansaRebirthed 648392.1
+BernatJansaRebirthed 4027.1
 Europe2048_ 0.08
 dominoguy_ 0.04
 The179UCETile 0.06
@@ -15,5 +15,5 @@ penthexium56 0.03
 lime.person 0.02
 ScrapFan_1 8192.3
 Diamond26 0.42
-NullArea 317.3
+NullArea 573.19
 Setsumi2s4 0.02
