@@ -15,5 +15,5 @@ penthexium56 0.03
 lime.person 0.02
 ScrapFan_1 8192.3
 Diamond26 0.42
-NullArea 573.19
+NullArea 1892.02
 Setsumi2s4 0.02
