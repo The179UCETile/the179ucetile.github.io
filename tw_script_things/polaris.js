@@ -183,7 +183,7 @@ container.innerHTML = `
 document.getElementsByClassName("container")[0].appendChild(container);
 setInterval(() => {
 lvl = getLvl(xp);
-lvlProgress += ((lvl == 1000 ? 100 : (xp - getLvlReq(lvl)) / (getLvlReq(lvl + 1) - getLvlReq(lvl)) * 100) - lvlProgress) / 5;
+lvlProgress += ((lvl == 1000 ? 100 : (xp - getLvlReq(lvl)) / (getLvlReq(lvl + 1) - getLvlReq(lvl)) * 100) - lvlProgress) / 8;
 _$("polarisXP").innerHTML = `<p>${xp.toLocaleString("en-US")} XP</p>`;
 _$("polarisLvl").innerHTML = `<p>Level ${lvl.toLocaleString("en-US")}</p>`;
 _$("polarisRank").innerHTML = `<p>${getTagInfo(lvl)[1]}</p>`;
