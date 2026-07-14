@@ -1,6 +1,6 @@
 const req = "0 300 650 1100 1450 2100 2550 3100 3950 5050 6200 7350 8500 9750 11100 12300 13550 15600 17800 20050 22100 24200 26750 29800 32150 35700 39100 42500 46000 50100 55700".split(" ").map(Number);
 const keyframes = [[55, 51, 85], [139, 54, 80], [182, 65, 80], [208, 66, 80], [242, 53, 84], [253, 76, 74], [238, 94, 74]];
-let xp = Number(localStorage.polarisXP ?? "0"), lvl = 0, tsChat = 0, tsCanvas = 0;
+let xp = Number(localStorage.polarisXP ?? "0"), lvl = 0, tsChat = 0, tsCanvas = 0, lvlProgress = 0;
 function getLvl(n) {
   let r = Math.round;
   if (n <= 55700) {
@@ -112,37 +112,30 @@ style.innerHTML = `
 #polarisDisplay {
   position: fixed;
   top: 20px;
-  width: 500px;
+  width: min(calc(100dvw - 20px), 500px);
 }
 #polarisDisplay > * {
   margin: auto;
-  width: 500px;
+  width: min(calc(100dvw - 20px), 500px);
   text-align: center;
   color: #fff;
 }
 #polarisDisplay * {
   position: absolute;
 }
-.polarisProgressBar {
+#polarisProgressBar {
   top: 0;
-  width: 500px;
+  width: min(calc(100dvw - 20px), 500px);
   height: 20px;
-  background-color: #222;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #fff 0%, #222 0%);
   border: 2px solid #444;
-}
-#polarisProgress {
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #fff;
-  transition: 0.5s width;
 }
 .polarisStatContainer {
   top: 0;
 }
 .polarisStatContainer * {
-  width: 500px;
+  width: min(calc(100dvw - 20px), 500px);
   height: 20px;
   text-align: center;
   text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 4px #000;
@@ -176,9 +169,7 @@ document.head.appendChild(style);
 let container = document.createElement("div");
 container.id = "polarisDisplay";
 container.innerHTML = `
-<div class="polarisProgressBar">
-  <div id="polarisProgress"></div>
-</div>
+<div id="polarisProgressBar"></div>
 <div class="polarisStatContainer">
   <div class="polarisLevelRequirements">
     <p id="polarisCurrentLvlXP">0 XP</p>
@@ -192,12 +183,12 @@ container.innerHTML = `
 document.getElementsByClassName("container")[0].appendChild(container);
 setInterval(() => {
 lvl = getLvl(xp);
+lvlProgress += ((lvl == 1000 ? 100 : (xp - getLvlReq(lvl)) / (getLvlReq(lvl + 1) - getLvlReq(lvl)) * 100) - lvlProgress) / 5;
 _$("polarisXP").innerHTML = `<p>${xp.toLocaleString("en-US")} XP</p>`;
 _$("polarisLvl").innerHTML = `<p>Level ${lvl.toLocaleString("en-US")}</p>`;
 _$("polarisRank").innerHTML = `<p>${getTagInfo(lvl)[1]}</p>`;
 _$("polarisRank").style.color = getTagInfo(lvl)[0];
-_$("polarisProgress").style.backgroundColor = lvl == 1000 ? `hsl(${(Date.now() / 5e3) % 1 * 360}deg, 100%, 50%)` : getTagInfo(lvl)[0];
-_$("polarisProgress").style.width = lvl == 1000 ? "100%" : `${(xp - getLvlReq(lvl)) / (getLvlReq(lvl + 1) - getLvlReq(lvl)) * 100}%`;
+_$("polarisProgressBar").style.backgroundImage = `linear-gradient(to right, ${lvl == 1000 ? `hsl(${(Date.now() / 5e3) % 1 * 360}deg, 100%, 50%)` : getTagInfo(lvl)[0]} ${lvlProgress}%, #222 ${lvlProgress}%)`;
 _$("polarisCurrentLvlXP").innerHTML = `${getLvlReq(lvl).toLocaleString("en-US")} XP`;
 _$("polarisNextLvlXP").innerHTML = `${getLvlReq(lvl + 1).toLocaleString("en-US")} XP`;
 localStorage.setItem("polarisXP", xp.toString());
