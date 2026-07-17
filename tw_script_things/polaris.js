@@ -278,10 +278,12 @@ container.innerHTML = `
 </div>
 <div id="polarisSettingsButton"><p>Settings</p></div>
 <div id="polarisSettings">
-  <input type="checkbox" id="polarisUseAltRoles"></input>
-  <label for="polarisUseAltRoles">Use alternative roles</label><br>
-  <input type="checkbox" id="polarisShowTag"></input>
-  <label for="polarisShowTag">Show tag</label><br>
+  <form>
+    <input type="checkbox" id="polarisUseAltRoles"></input>
+    <label for="polarisUseAltRoles">Use alternative roles</label><br>
+    <input type="checkbox" id="polarisShowTag"></input>
+    <label for="polarisShowTag">Show tag</label>
+  </form>
 </div>
 `;
 document.getElementsByClassName("container")[0].appendChild(container);
