@@ -9,6 +9,7 @@ screenshot.setAttribute("width", canvas.getAttribute("width"));
 screenshot.setAttribute("height", canvas.getAttribute("height"));
 screenshot.style.display = "none";
 let scsCtx = screenshot.getContext("2d");
+w.showToast("Screenshotting...", 1500);
 function formatISODate(d) {
   return `${d.getUTCFullYear()}-${(d.getUTCMonth() + 1).toString().padStart(2, "0")}-${d.getUTCDate().toString().padStart(2, "0")}T${d.getUTCHours().toString().padStart(2, "0")}:${d.getUTCMinutes().toString().padStart(2, "0")}:${d.getUTCSeconds().toString().padStart(2, "0")}.${d.getUTCMilliseconds().toString().padStart(3, "0")}Z`;
 }
@@ -21,7 +22,7 @@ function wrtT(text, x, y) {
   scsCtx.fillText(text, x, canvas.getAttribute("height") - y);
 }
 let size = 3;
-scsCtx.font = `${size}em Consolas, monospace, 'courier new', Courier, special`;
+scsCtx.font = `${size}em "${(localStorage.font == "Custom" ? localStorage.customfont : localStorage.font).toLowerCase()}", monospace, 'courier new', Courier, special`;
 scsCtx.fillStyle = "#fff";
 scsCtx.strokeStyle = "#000";
 scsCtx.lineWidth = size * 1.25;
@@ -35,7 +36,7 @@ wrtT(`~${localStorage.username}`, 10, 10 + size * 12.5);
 wrtT(`${localStorage.zoom}x`, 10, 10);
 screenshot.toBlob(function (blob) {
   if (!blob) {
-    w.showToast("Failed to download.");
+    w.showToast("Failed to screenshot.", 1500);
     return;
   }
   let url = URL.createObjectURL(blob);
@@ -46,6 +47,7 @@ screenshot.toBlob(function (blob) {
   a.download = `TextWall Screenshot /~${w.wall}/${w.subwall} ${r}.png`;
   document.body.appendChild(a);
   a.click();
+  w.showToast("Screenshotted.", 1500);
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }, 'image/png');
