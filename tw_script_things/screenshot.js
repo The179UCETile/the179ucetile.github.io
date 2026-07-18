@@ -10,7 +10,7 @@ screenshot.setAttribute("height", canvas.getAttribute("height"));
 screenshot.style.display = "none";
 let scsCtx = screenshot.getContext("2d");
 function formatISODate(d) {
-  return `${d.getUTCFullYear()}-${d.getUTCMonth().toString().padStart(2, "0")}-${d.getUTCDate().toString().padStart(2, "0")}T${d.getUTCHours().toString().padStart(2, "0")}:${d.getUTCMinutes().toString().padStart(2, "0")}:${d.getUTCSeconds().toString().padStart(2, "0")}.${d.getUTCMilliseconds().toString().padStart(3, "0")}Z`;
+  return `${d.getUTCFullYear()}-${(d.getUTCMonth() + 1).toString().padStart(2, "0")}-${d.getUTCDate().toString().padStart(2, "0")}T${d.getUTCHours().toString().padStart(2, "0")}:${d.getUTCMinutes().toString().padStart(2, "0")}:${d.getUTCSeconds().toString().padStart(2, "0")}.${d.getUTCMilliseconds().toString().padStart(3, "0")}Z`;
 }
 function wrt(text, x, y) {
   scsCtx.strokeText(text, x, y);
