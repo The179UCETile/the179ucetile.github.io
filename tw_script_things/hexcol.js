@@ -8,11 +8,13 @@ function hexToRGB(str) {
   return arr;
 }
 let cc = document.getElementById("customcolour");
+let fr = document.createElement("form");
+document.getElementById("colourcontainer").appendChild(r);
 let i = document.createElement("input");
 i.type = "text";
-i.style.height = "100%";
+i.style.height = "95%";
 i.style.width = "25%";
-document.getElementById("colourcontainer").appendChild(i);
+fr.appendChild(i);
 i.addEventListener("input", () => {
   if (!(i.value.length == 6 || /[0-9a-f]/g.test(i.value.toLowerCase()))) return;
   w.changeColor(hexToRGB(i.value.toUpperCase()));
