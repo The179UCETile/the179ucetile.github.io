@@ -21,7 +21,7 @@ style.innerHTML = `
   width: 35%;
   height: 25px;
   padding: 2px;
-  background-color: #666e;
+  background-color: #444e;
   border: 2px solid #888;
   top: 177px;
   border-radius: 0 0 25px 25px;
@@ -52,7 +52,8 @@ style.innerHTML = `
   border-radius: 4px;
   background-color: #000;
   color: #fff;
-  padding: 2px;
+  font-size: 1.2em;
+  padding: 0;
   text-align: center;
   height: 40px;
 }
@@ -105,10 +106,10 @@ unicodePal.appendChild(closeBtn);
 unicodePal.appendChild(charContainer);
 document.getElementsByClassName("container")[0].appendChild(unicodePal);
 const characters = [
-  ["Blocks", "█■▔🭶🭷🭸🭹🭺🭻▁🮀🮁🮗▐▌▞▚▛▀▜▙▄▟▗▖▝▘🮕🮖░▒▓🮐🮒🮑🮘🮙🮍🮌🮎🮏🮔▕🮇🮈🮉🮊🮋▉▊▋▍▎▏▂▃▅▆▇🮆🮅🮄🮃🮂🭽🭾🭼🭿🭰🭱🭲🭳🭴🭵"],
+  ["Blocks", "█▓🮐▒░▀▄▐▌🮎🮏🮍🮌🮑🮒🮔🮕🮖🮘🮙■🮗▞▚▛ ▜▙ ▟▗▖▝▘▁▂▃▅▆▇🮆🮅🮄🮃🮂▔🮇🮈🮉🮊🮋▉▊▋▍▎▏🮀🮁🭶🭷🭸🭹🭺🭻🭽🭾🭼🭿🭰🭱🭲🭳🭴🭵"],
   ["Slopes", "🭈🭆🭂🭍🭑🬽🭣🭧🭓🭞🭜🭘🭊🭁🭇🭄🭏🬼🭌🬿🭥🭒🭢🭕🭠🭗🭝🭚◢◣◥◤🭃🭉🬾🭎🭔🭤🭙🭟🭅🭋🭀🭐🭖🭦🭛🭡🭮🭩🭯🭨🮛🭪🭬🭫🮚🭭🮞🮟🮝🮜"],
   ["Sextants", "🬞🬭🬏🬇🬋🬃🬁🬂🬀🬠🬰🬐🬦🬹🬓🬉🬎🬄🬙🬥🬖🬢🬔🬧🬡🬒🬜🬪🬶🬳🬈🬅🬣🬘🬯🬮🬛🬫🬴🬸🬤🬗🬕🬨🬚🬩🬝🬬🬵🬱🬲🬷🬌🬍🬺🬻🬊🬆🬑🬟"],
-  ["Box Drawing", "━┃╺╸╻╹═║╌┄┈╍┅┉╎┆┊╏┇┋┍┯┑┝┿┥┕┷┙╒╤╕╞╪╡╘╧╛╓╥╖╟╫╢╙╨╜╔╦╗╠╬╣╚╩╝╲╳╱🮭🮬🮫🮪🮣🮢🮡🮠🮦🮥🮮🮤🮧🮩🮨╭╮╰╯"],
+  ["Box Drawing", "━┃╺╸╻╹┍┯┑┝┿┥┕┷┙╭╮╰╯═║╔╦╗╠╬╣╚╩╝╒╤╕╞╪╡╘╧╛╓╥╖╟╫╢╙╨╜╲╳╱🮭🮬🮫🮪🮣🮢🮡🮠🮦🮥🮮🮤🮧🮩🮨╌┄┈╍┅┉╎┆┊╏┇┋"],
   ["Arrows", "←↑→↓↖↗↙↘⤡⤧⇆⤨⇅⇵⇄⤩⤪"],
   ["Miscellaneous", "□◄▲►▼🮵🮶🯄🮱🮰🮷🮸🮴🮽🮾🮿🮹🮺🮻🯊🮼🯀🯁🯂🯃🯅🯆🯇🯈🮲🮳🯉🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹⎞⎝⎜⎛⎠⎞"],
   ["SLC2 Blocks", "🯤🯥𜰡𜰢𜰣𜰤𜰥𜰦𜰧𜰨𜰩𜰪𜰫𜰬𜰭𜰮𜰯𜱀𜱁𜱂𜱃𜱄𜱅𜱆𜱇𜹇𜹈𜹉𜹊𜹋𜹌𜹍𜹎𜹏𜹐𜺐𜺑𜺒𜺓𜺔𜺕𜺖𜺗𜺘𜺙𜺚𜺛𜺜𜺝𜺞𜺟𜺠𜺡𜺢𜺣𜺤𜺥𜺦𜺧𜺨𜺩𜺪𜺫𜺬𜺭𜺮𜺯𜹑𜹒𜹓𜹔𜹕𜹖𜹗𜹘𜹙𜹚𜹛𜹜𜹝𜹞𜹟𜹠𜹡𜹢𜹣𜹤𜹥𜹦𜹧𜹨𜹩𜹪𜹫𜹬𜹭𜹮𜹯𜹰𜹱𜹲𜹳𜹴𜹵𜹶𜹷𜹸𜹹𜹺𜹻𜹼𜹽𜹾𜹿𜺀𜺁𜺂𜺃𜺄𜺅𜺆𜺇𜺈𜺉𜺊𜺋𜺌𜺍𜺎𜺏"],
