@@ -55,7 +55,7 @@ style.innerHTML = `
   font-size: 1.2em;
   padding: 0;
   text-align: center;
-  height: 40px;
+  height: 35px;
 }
 .groupContainer {
   position: absolute;
