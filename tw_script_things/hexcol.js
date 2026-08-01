@@ -9,7 +9,7 @@ function hexToRGB(str) {
 }
 let cc = document.getElementById("customcolour");
 let fr = document.createElement("form");
-document.getElementById("colourcontainer").appendChild(r);
+document.getElementById("colourcontainer").appendChild(fr);
 let i = document.createElement("input");
 i.type = "text";
 i.style.height = "95%";
