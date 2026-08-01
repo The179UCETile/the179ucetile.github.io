@@ -9,11 +9,13 @@ function hexToRGB(str) {
 }
 let cc = document.getElementById("customcolour");
 let fr = document.createElement("form");
+fr.style.height = "95%";
+fr.style.width = "25%";
 document.getElementById("colourcontainer").appendChild(fr);
 let i = document.createElement("input");
 i.type = "text";
-i.style.height = "95%";
-i.style.width = "25%";
+i.style.height = "100%";
+i.style.width = "100%";
 fr.appendChild(i);
 i.addEventListener("input", () => {
   if (!(i.value.length == 6 || /[0-9a-f]/g.test(i.value.toLowerCase()))) return;
