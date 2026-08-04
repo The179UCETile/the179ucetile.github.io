@@ -4,35 +4,38 @@
     <link rel="stylesheet" href="styles.css">
     <title>TextWall scripting reference | The179UCETile's site</title>
     <link rel="icon" type="image/x-icon" href="/images/favicons/textwall/scriptingRef.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <h1>TextWall scripting reference</h1>
     <p>NOTE: This is a work in progress!</p>
     <h2>Window properties</h2>
-    <div class="code"><span>unreadAmount</span></div>
+    <code>unreadAmount</code>
     <p>Returns the amount of unread messages <span class="red">(BROKEN)</span></p>
-    <div class="code"><span>cel()</span></div>
+    <code>cel()</code>
     <p>Returns the cursor's internal decoration ID.</p>
-    <div class="code"><span>undoWrite()</span></div>
+    <code>undoWrite()</code>
     <p>Removes the most recent character(s) written in the canvas.</p>
-    <div class="code"><span>redoWrite()</span></div>
+    <code>redoWrite()</code>
     <p>Adds back the most recent character(s) written in the canvas.</p>
-    <div class="code"><span>selectedChatTab</span></div>
+    <code>selectedChatTab</code>
     <p>Returns the selected chat channel.<br>
     <b>Return values:</b></p>
     <ul>
       <li>0: This wall</li>
       <li>1: Global</li>
     </ul>
-    <div class="code"><span>position</span></div>
+    <code>position</code>
     <p>???</p>
-    <div class="code"><span>elem</span></div>
+    <code>elem</code>
     <p>Holds references to key DOM elements on the website.</p>
-    <div class="code"><span>accept_nsfw()</span></div>
+    <code>accept_nsfw()</code>
     <p>Hides the NSFW message. <span class="red">By using this command, you understand that the wall you're about to enter contains NSFW content.</span></p>
-    <div class="code"><span>decline_nsfw()</span></div>
+    <code>decline_nsfw()</code>
     <p>Declines the NSFW message and go back to the main wall.</p>
-    <div class="code"><span>printMsg(nick, color, msg, isRegistered, isAdmin, channel, displayNick, timestamp, tag, html = false)</span></div>
+    <code>printMsg(nick, color, msg, isRegistered, isAdmin, channel, displayNick, timestamp, tag, html = false)</code>
     <p>Displays a message in chat only shown to the client.<br>
     <b>Parameters:</b></p>
     <ul>
@@ -47,11 +50,11 @@
       <li>tag: The tag. You can use HTML to style the tag.</li>
       <li>html: Doesn't do anything.</li>
     </ul>
-    <div class="code"><span>prsCol(color_name)</span></div>
+    <code>prsCol(color_name)</code>
     <p>A utility to get the index of a color in the color palette.</p>
-    <div class="code"><span>prsTil(color)</span></div>
+    <code>prsTil(color)</code>
     <p>Returns the color name from a color index or array.</p>
-    <div class="code"><span>colFmt(index, options)</span></div>
+    <code>colFmt(index, options)</code>
     <p>Returns the numeric index of a color in the palette, optionally applying decorations for later rendering.<br>
     Options:</p>
     <pre>

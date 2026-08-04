@@ -1,9 +1,6 @@
-@font-face {
-  font-family: fairfax;
-  src: url(https://the179ucetile.github.io/h/fonts/FairfaxHD.ttf)
-}
 * {
-  font-family: fairfax;
+  font-family: inconsolata, monospace;
+  font-optical-sizing: auto;
   color: #fff;
 }
 html {
@@ -12,9 +9,10 @@ html {
 a:link {
   color: #44f
 }
-div.code span {
+code, pre {
   background-color: #333;
-  border: 2px solid #666;
+  border-radius: 3px;
+  padding: 0 3px;
 }
 span.red {
   color: #f00
