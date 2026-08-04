@@ -8,15 +8,15 @@ html {
 }
 body {
   margin: 0 50px;
-  padding: 5px;
+  padding: 10px;
   background-color: #141414;
 }
-h2 {
+h1, h2 {
   padding-bottom: 5px;
   border-bottom: 1px solid #fff;
 }
 a:link {
-  color: #44f
+  color: #44f;
 }
 code {
   background-color: #303030;
@@ -29,5 +29,8 @@ pre {
   padding: 3px;
 }
 span.red {
-  color: #f00
+  color: #f00;
+}
+span.yellow {
+  color: #ff0;
 }
