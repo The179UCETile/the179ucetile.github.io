@@ -19,12 +19,12 @@ a:link {
   color: #44f;
 }
 code {
-  background-color: #ffffff28;
+  background-color: #ffffff20;
   border-radius: 3px;
   padding: 0 3px;
 }
 pre {
-  background-color: #ffffff28;
+  background-color: #ffffff20;
   border-radius: 3px;
   padding: 3px;
 }
@@ -32,11 +32,15 @@ span.red {
   color: #f00;
 }
 span.red > code, span.red > pre {
-  background-color: #ff000028
+  background-color: #ff000020;
 }
 span.yellow {
   color: #ff0;
 }
 span.yellow > code, span.yellow > pre {
-  background-color: #ffff0028
+  background-color: #ffff0020;
+}
+span.subtext {
+  font-style: italic;
+  color: #808080;
 }

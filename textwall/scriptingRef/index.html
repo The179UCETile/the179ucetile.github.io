@@ -99,6 +99,22 @@
     <p><span class="yellow">This is an alias directed to <code>w.cursors</code>.</span></p>
     <code>cursor</code>
     <p>Contains information about the cursor. See <code>cursor</code> properties section.</p>
+    <code>writeBuffer</code>
+    <p>The current rate (milliseconds) at which the writeBuffer is flushed to the canvas.</p>
+    <code>flushWrites()</code>
+    <p><span class="yellow">This function is automatically used by <code>setWriteInterval()</code></span><br>
+    Immediately processes and renders all queued writes from writeBuffer to the canvas.</p>
+    <code>getChar(tileX, tileY, charX, charY)</code>
+    <p>Returns the character at a specific set of coordinates<br>
+    <span class="subtext">Default coordinates will be used</span><br>
+    <br>
+    <span class="yellow">Returns a String or <code>null</code></span></p>
+    <code>getCharDecoration(tileX, tileY, charX, charY)</code>
+    <p>Returns the decorations of a chracter at a specific set of coordinates<br>
+    <span class="subtext">Default coordinates will be used</span><br>
+    <br>
+    <span class="yellow">Returns an Object or <code>null</code></span></p>
+
     <h2><code>cursor</code> properties</h2>
     <code>cursor.x</code>
     <p>Returns the cursors current X position</p>
