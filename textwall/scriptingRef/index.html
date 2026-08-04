@@ -54,9 +54,9 @@
     <p>A utility to get the index of a color in the color palette.</p>
     <code>prsTil(color)</code>
     <p>Returns the color name from a color index or array.</p>
-    <code>colFmt(index, options)</code>
-    <p>Returns the numeric index of a color in the palette, optionally applying decorations for later rendering.<br>
-    Options:</p>
+    <code>colFmt(index, options = {})</code>
+    <p>Returns the internal repersentation of a color, optionally applying decorations for later rendering.<br>
+    <code>options</code>:</p>
     <pre>
 {
     bold: Boolean,
@@ -65,5 +65,7 @@
     underline: Boolean
 }
     </pre>
+    <code>prsFmt(color)</code>
+    <p>Parses a specified color into an object of the color and decorations</p>
   </body>
 </html>
