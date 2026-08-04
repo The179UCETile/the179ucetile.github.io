@@ -130,6 +130,21 @@
     <span class="yellow">Returns an Object or <code>null</code></span></p>
     <code>XYtoTile(x, y)</code>
     <p>Converts XY coordinates to specific Tile coordinates</p>
+    <code>cursorCoords</code>
+    <p><span class="red">Read-only</span><br>
+    Returns the cursor's position</p>
+    <code>cursorCoordsXY</code>
+    <p><span class="red">Read-only</span><br>
+    Returns the cursor's position in XY format</p>
+    <code>getTileCoordsFromMouseCoords(instance)</code>
+    <p>An utility function that turns mouse coordinates into canvas tile coordinates.<br>
+    Requires an instance from a MouseEvent or an ancestor of it.</p>
+    <code>getTileCoordsFromMouseCoords(instance)</code>
+    <p>An utility function that turns mouse coordinates into canvas XY coordinates.<br>
+    Requires an instance from a MouseEvent or an ancestor of it.</p>
+    <code>Xr(hexColor, increment)</code>
+    <p>An utility function which increases all channels of a hex color by a certain amount.<br>
+    Colors will automatically get turned into a valid hex color.</p>
     
     <h2><code>cursor</code> properties</h2>
     <code>cursor.x</code>
