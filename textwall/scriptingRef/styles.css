@@ -10,6 +10,7 @@ body {
   margin: 0 5dvw;
   padding: 2dvw;
   background-color: #141414;
+  word-wrap: break-word;
 }
 h1, h2 {
   padding-bottom: 5px;
