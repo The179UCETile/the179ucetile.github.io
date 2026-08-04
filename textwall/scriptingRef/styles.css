@@ -19,18 +19,24 @@ a:link {
   color: #44f;
 }
 code {
-  background-color: #303030;
+  background-color: #ffffff28;
   border-radius: 3px;
   padding: 0 3px;
 }
 pre {
-  background-color: #303030;
+  background-color: #ffffff28;
   border-radius: 3px;
   padding: 3px;
 }
 span.red {
   color: #f00;
 }
+span.red > code, span.red > pre {
+  background-color: #ff000028
+}
 span.yellow {
   color: #ff0;
+}
+span.yellow > code, span.yellow > pre {
+  background-color: #
 }
