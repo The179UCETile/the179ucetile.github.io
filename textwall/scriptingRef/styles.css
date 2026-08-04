@@ -6,6 +6,10 @@
 html {
   background-color: #000;
 }
+h2 {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
 a:link {
   color: #44f
 }
