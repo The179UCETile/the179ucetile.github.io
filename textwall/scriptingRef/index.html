@@ -10,7 +10,8 @@
   </head>
   <body>
     <h1>TextWall scripting reference</h1>
-    <p>NOTE: This is a work in progress!</p>
+    <p>NOTE: This is a work in progress!<br>
+    <span class="red">All Y coordinates are flipped!</span></p>
     <h2>Window properties</h2>
     <code>unreadAmount</code>
     <p>Returns the amount of unread messages <span class="red">(BROKEN)</span></p>
@@ -66,5 +67,29 @@
 }</pre>
     <code>prsFmt(color)</code>
     <p>Parses a specified color into an object of the color and decorations</p>
+    <code>writeCharAt(char, color, coordX, coordY, decos, doNotAddToUndoBuffer)</code>
+    <p>Writes a single character at a specific coordinate<br>
+    <b>Parameters:</b></p>
+    <ul>
+      <li>char: The character to write.</li>
+      <li>color: The color of the character.</li>
+      <li>coordX: The character's X position.</li>
+      <li>coordY: The character's Y position.</li>
+      <li>decos: The decorations to apply to the character.<br>
+      <pre>
+{
+  bold: Boolean,
+  italic: Boolean,
+  underline: Boolean,
+  strikethrough: Boolean
+}</pre></li>
+      <li>doNotAddToUndoBuffer: Decides if the character will add to the undo buffer or not.</li>
+    </ul>
+    <code>ce2()</code>
+    <p>Returns an Object that contains the infomation of the user's enabled decorations.</p>
+    <code>writeChar(char, step, ???)</code>
+    <p>Writes a single character at the cursor position with steps included</p>
+    <code>flushAmount</code>
+    <p>???</p>
   </body>
 </html>
