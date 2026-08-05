@@ -217,6 +217,31 @@
     <p><span class="yellow">This is an alias directed to <code>writeChar</code>.</span></p>
     <code>w.socket</code>
     <p>Holds the active WebSocket connection for real-time communication</p>
+    <code>w.clipboard</code>
+    <p>Represents the system's internal clipboard for copy interactions</p>
+    <code>w.clipboard.textarea</code>
+    <p>A hidden or internal <code>&lt;textarea&gt;</code> element used by the clipboard system</p>
+    <code>w.clipboard.copy(text)</code>
+    <p>Copies String to the internal clipboard</p>
+    <code>w.clipboard.init()</code>
+    <p>Initializes the internal clipboard system</p>
+    <code>w.showChat(toggle)</code>
+    <p>Shows or hides the chat</p>
+    <code>w.rerender()</code>
+    <p>Rerenders the canvas</p>
+    <code>w.split(str, noSurrog, noComb, norm)</code>
+    <p>Performs an advanced string split with additional handling for Unicode and normalization</p>
+    <code>w.chat.send(string)</code>
+    <p>Sends a message (String) to the chat</p>
+    <code>w.changeZoom(factor)</code>
+    <p>Changes the display zoom of the text canvas.<br>
+    <span class="yellow">This won't save when you refresh.</span></p>
+    <code>w.clientId</code>
+    <p>Shows your client session ID</p>
+    <code>w.wall</code>
+    <p>Returns the current wall you are in</p>
+    <code>w.subwall</code>
+    <p>Returns the current subwall you are in (main if no subwall)</p>
 
     <h2><code>cursor</code> properties</h2>
     <code>cursor</code>
