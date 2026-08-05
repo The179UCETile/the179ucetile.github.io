@@ -155,7 +155,21 @@
     <p>"w": Main hub or core object of the system</p>
     <code>w.currentVersion</code>
     <p>Returns the client's version (should usually be <code>"3.0.7"</code>)</p>
-    
+    <code>w.displayNick</code>
+    <p>Returns the user's display name</p>
+    <code>w.chatHistory</code>
+    <p>An Array holding all chat messages</p>
+    <code>w.events</code>
+    <p>Returns an Object holding events from w.on callbacks</p>
+    <code>w.on(eventName, callback)</code>
+    <p>Creates a listener for a specific event, attaching a callback function that will run whenever the event is emitted.</p>
+    <code>w.off(eventName, callback)</code>
+    <p>Removes a previously registered event listener, so the callback will no longer runs when the event occurs.</p>
+    <code>w.emit(event, data)</code>
+    <p>Triggers or fires a specific event, optionally passing data to all listeners attached to that event.</p>
+    <code>w.moveCursor(direction, amount, doNotAutoPan)</code>
+    <p>Moves the cursor with a specified direction and the amount of characters moved.<br>
+    <code>direction</code>: <code>"up"</code>, <code>"down"</code>, <code>"left"</code>, <code>"right"</code></p>
 
     <h2><code>cursor</code> properties</h2>
     <code>cursor</code>
