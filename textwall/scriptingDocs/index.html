@@ -3,14 +3,14 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>TextWall scripting reference | The179UCETile's site</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicons/textwall/scriptingRef.png">
+    <title>TextWall scripting documentation | The179UCETile's site</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicons/textwall/scriptingDocs.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>TextWall scripting reference</h1>
+    <h1>TextWall scripting documentation</h1>
     <p>NOTE: This is a work in progress!<br>
     <span class="red">All Y coordinates are flipped!</span></p>
     <h2><code>window</code> properties</h2>
@@ -98,8 +98,6 @@
     <p>The controller that decides how often <code>flushWrites()</code> runs automatically.</p>
     <code>cursors</code>
     <p><span class="yellow">This is an alias directed to <code>w.cursors</code>.</span></p>
-    <code>cursor</code>
-    <p>Contains information about the cursor. See <code>cursor</code> properties section.</p>
     <code>writeBuffer</code>
     <p>The current rate (milliseconds) at which the writeBuffer is flushed to the canvas.</p>
     <code>flushWrites()</code>
@@ -153,6 +151,8 @@
     <p>Stores the timestamp of the last update or action in the system or world</p>
     
     <h2><code>cursor</code> properties</h2>
+    <code>cursor</code>
+    <p>Contains infomation about the cursor</p>
     <code>cursor.x</code>
     <p>Returns the cursors current X position</p>
     <code>cursor.y</code>
