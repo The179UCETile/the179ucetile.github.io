@@ -268,9 +268,33 @@
     <p>Gets a tile at a specific set of coordinates<br>
     <br>
     <span class="yellow">Returns an Object or <code>null</code></span></p>
-    <p><code>Tile.set(tileX, tileY)</code> <span class="yellow">[useless</span></p>
+    <p><code>Tile.set(tileX, tileY)</code> <span class="yellow">[useless]</span></p>
     <p>Sets a tile at a specific set of coordinates<br>
     <br>
     <span class="yellow">Returns a Boolean</span></p>
+    <code>Tile.exists(tileX, tileY)</code>
+    <p>Checks a tile if it exists at a specific set of coordinates<br>
+    <br>
+    <span class="yellow">Returns a Boolean</span></p>
+    <code>Tile.loaded(tileX, tileY)</code>
+    <p>Checks a tile if its loaded at a specific set of coordinates<br>
+    <br>
+    <span class="yellow">Returns a Boolean</span></p>
+    <code>Tile.protected(tileX, tileY)</code>
+    <p>Checks a tile if its protected at a specific set of coordinates<br>
+    <br>
+    <span class="yellow">Returns a Boolean</span></p>
+    <code>Tile.visible(tileX, tileY)</code>
+    <p>Checks a tile if its visible on the client's viewport at a specific set of coordinates<br>
+    <br>
+    <span class="yellow">Returns a Boolean</span></p>
+    <code>Tile.empty(tileX, tileY)</code>
+    <p>Checks a tile if it's empty at a specific set of coordinates<br>
+    <br>
+    <span class="yellow">Returns a Boolean</span></p>
+    <code>Tile.saveBlob(tileX, tileY)</code>
+    <p>Downloads a tile at a specific set of coordinates as a PNG file<br>
+    <br>
+    <span class="yellow">Returns <code>undefined</code> or <code>null</code></span></p>
   </body>
 </html>
