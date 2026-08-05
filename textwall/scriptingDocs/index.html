@@ -201,6 +201,22 @@
     <p>Holds the state or data of all active cursors in the system (Map)</p>
     <code>w.redraw</code>
     <p>Does nothing(?)</p>
+    <code>w.renderChunkAmount</code>
+    <p>Holds the current number of chunks the renderer processes per cycle</p>
+    <code>w.setRenderChunkAmount(amount)</code>
+    <p>Sets how many chunks of the canvas should be processed at a time</p>
+    <code>w.getTheme()</code>
+    <p>Returns the current theme of the canvas (Object)</p>
+    <code>w.generateCoords(wall)</code>
+    <p>Generates the wall's coordinates</p>
+    <code>w.generateCoordsOld(wall)</code>
+    <p>Generates the wall's coordinates, using old PRNG</p>
+    <code>w.chunks</code>
+    <p>A Map containing all chunks loaded by the client</p>
+    <code>w.typeChar(char, step, ???)</code>
+    <p><span class="yellow">This is an alias directed to <code>writeChar</code>.</span></p>
+    <code>w.socket</code>
+    <p>Holds the active WebSocket connection for real-time communication</p>
 
     <h2><code>cursor</code> properties</h2>
     <code>cursor</code>
