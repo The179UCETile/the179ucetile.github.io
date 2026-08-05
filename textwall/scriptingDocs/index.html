@@ -170,6 +170,37 @@
     <code>w.moveCursor(direction, amount, doNotAutoPan)</code>
     <p>Moves the cursor with a specified direction and the amount of characters moved.<br>
     <code>direction</code>: <code>"up"</code>, <code>"down"</code>, <code>"left"</code>, <code>"right"</code></p>
+    <code>w.moveCursorTo(x, y, doNotAutoPan)</code>
+    <p><code>w.tp</code>, but with a doNotAutoPan argument</p>
+    <code>w.broadcastRecieve(force = false)</code>
+    <p>This function determines if you can listen to <code>cmd</code> events or not.</p>
+    <code>w.cmd(data, sendId = true)</code>
+    <p>Triggers a <code>cmd</code> command. Objects automatically get turned into Strings.</p>
+    <code>w.setFlushInterval(milliseconds)</code>
+    <p>Sets how often queued ce/edits in a buffer are automatically processed or flushed</p>
+    <code>w.changeTheme(type)</code>
+    <p>Changes your current theme to specified type:<br>
+    0 - Light<br>
+    1 - Dark<br>
+    2 - Custom</p>
+    <code>w.setPrimaryColor(hex_color_code)</code>
+    <p>Sets the primary color of the current theme</p>
+    <code>w.setSecondaryColor(hex_color_code)</code>
+    <p>Sets the secondary color of the current theme</p>
+    <code>w.toggleTeleport()</code>
+    <p>Shows or hides the teleport menu</p>
+    <code>w.color()</code>
+    <p>Shows or hides the color</p>
+    <code>w.settings()</code>
+    <p>Shows or hides the settings</p>
+    <code>w.goto(wall, subwall)</code>
+    <p>Teleports or switches the viewport to another wall/subwall</p>
+    <code>w.tp(x, y)</code>
+    <p>Moves the cursor to a specific coordinate</p>
+    <code>w.cursors</code>
+    <p>Holds the state or data of all active cursors in the system (Map)</p>
+    <code>w.redraw</code>
+    <p>Does nothing(?)</p>
 
     <h2><code>cursor</code> properties</h2>
     <code>cursor</code>
