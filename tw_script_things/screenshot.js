@@ -40,7 +40,7 @@ screenshot.toBlob(function (blob) {
   let a = document.createElement('a');
   a.href = url;
   let d = new Date();
-  let r = formatISODate(d)
+  let r = d.toISOString();
   a.download = `TextWall Screenshot /~${w.wall}/${w.subwall} ${r}.png`;
   document.body.appendChild(a);
   a.click();
