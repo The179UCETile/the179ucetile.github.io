@@ -311,5 +311,128 @@
     <p>Starts the selection.</p>
     <code>getSelected()</code>
     <p>Returns the character and the color at the cursor's position.</p>
+
+    <h2>Events</h2>
+    <p>These are used in w.on or w.off, perfect if you want to make a bot or anything else</p>
+    <code>"join"</code>
+    <p>Emitted when you join a wall<br>
+    Example packet:</p>
+    <pre>
+{
+  wall: "textwall",
+  subwall: "main", // "main" indicates that the subwall name is not there
+}
+    </pre>
+    <code>"alert"</code>
+    <p>Emitted when the server sends an alert<br>
+    Example packet:</p>
+    <pre>
+{
+  message: "Hello World."
+}
+    </pre>
+    <code>"edit"</code>
+    <p>Emitted <br>when someone or you edit a character or more
+    Example packet:</p>
+    <pre>
+{
+  edits: [
+	  // Each entry in this array repersents a chunk
+		[
+		  chunkX, // 0 (do not expect 20, 40, 60, ...)
+			chunkY, // 0 (do not expect 10, 20, 30,  ...)
+			charCode, // 0x61
+			index, // 20, Works very strange here. The X offset is index % 20, while the Y offset is Math.floor(index / 20).
+			color,
+			// Sometimes these will appear
+			charCode,
+			index,
+			color,
+			charCode,
+			index,
+			color,
+			...
+		]
+	],
+	clientId: "1234567"
+}
+    </pre>
+    <code>"chunks"</code>
+    <p>Emitted when ??? <span class="yellow">[useless?]</span><br>
+    Example packet:</p>
+    <pre>
+{
+  chunks: undefined?
+}
+    </pre>
+    <code>"protect"</code>
+    <p>Emitted when a chunk is protected<br>
+    Example packet:</p>
+    <pre>
+{
+  cell: "-20,10",
+	protect: false
+}
+    </pre>
+    <code>"textprotect"</code>
+    <p>Might emit when a cell is protected<br>
+    Example packet:</p>
+    <pre>
+{
+  cell: "-2,1",
+	protected: false
+}
+    </pre>
+    <code>"clear"</code>
+    <p>Emitted when a chunk is cleared<br>
+    Example packet:</p>
+    <pre>
+{
+  x1: 0,
+	y1: 0,
+	x2: 20,
+	y2: 0,
+}
+    </pre>
+    <code>"cursor"</code>
+    <p>Emitted when a cursor is updating properties<br>
+    Example packet:</p>
+    <pre>
+{
+  id: "1234567",
+	n: "Bzuki",
+	dn: "The Bzuker",
+	l: [0, 0], // Currently this holds the PREVIOUS position of the cursor, so you need to resort to other methods such as using w.cursors.
+	c: [0, 217, 0]
+}
+    </pre>
+    <code>"pong"<code>
+    <p>Emitted every second<br>
+    Example packet:</p>
+    <pre>
+		1000 // ms since last ping
+    </pre>
+    <code>"msg"</code>
+    <p>Emitted when someone sends a message<br>
+    Example packet:</p>
+    <pre>
+{
+  nick: "penthexium56",
+	msg: "chess battle advanced",
+	displayNick: "Penthex ## Mod",
+	color: 20,
+	isAdmin: false,
+	isRegisted: true,
+	channel: "world",
+	timestamp: 1787282059723,
+	tag: '&lt;span style="color: #0f0"&gt;MOD&lt;/span&gt;'
+}
+    </pre>
+    <code>"cursorleft"<code>
+    <p>Emitted when a cursor leaves the wall<br>
+    Example packet:</p>
+    <pre>
+		"1234567" // The cursor that recently left's ID
+    </pre>
   </body>
 </html>
