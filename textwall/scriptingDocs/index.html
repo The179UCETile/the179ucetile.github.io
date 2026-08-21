@@ -320,17 +320,15 @@
     <pre>
 {
 	wall: "textwall",
-  subwall: "main", // "main" indicates that the subwall name is not there
-}
-    </pre>
+	subwall: "main", // "main" indicates that the subwall name is not there
+}</pre>
     <code>"alert"</code>
     <p>Emitted when the server sends an alert<br>
     Example packet:</p>
     <pre>
 {
 	message: "Hello World."
-}
-    </pre>
+}</pre>
     <code>"edit"</code>
     <p>Emitted <br>when someone or you edit a character or more
     Example packet:</p>
@@ -340,7 +338,7 @@
 		// Each entry in this array repersents a chunk
 		[
 			chunkX, // 0 (do not expect 20, 40, 60, ...)
-			chunkY, // 0 (do not expect 10, 20, 30,  ...)
+			chunkY, // 0 (do not expect 10, 20, 30, ...)
 			charCode, // 0x61
 			index, // 20, Works very strange here. The X offset is index % 20, while the Y offset is Math.floor(index / 20).
 			color,
@@ -355,16 +353,14 @@
 		]
 	],
 	clientId: "1234567"
-}
-    </pre>
+}</pre>
     <code>"chunks"</code>
     <p>Emitted when ??? <span class="yellow">[useless?]</span><br>
     Example packet:</p>
     <pre>
 {
 	chunks: undefined?
-}
-    </pre>
+}</pre>
     <code>"protect"</code>
     <p>Emitted when a chunk is protected<br>
     Example packet:</p>
@@ -372,8 +368,7 @@
 {
 	cell: "-20,10",
 	protect: false
-}
-    </pre>
+}</pre>
     <code>"textprotect"</code>
     <p>Might emit when a cell is protected<br>
     Example packet:</p>
@@ -381,8 +376,7 @@
 {
 	cell: "-2,1",
 	protected: false
-}
-    </pre>
+}</pre>
     <code>"clear"</code>
     <p>Emitted when a chunk is cleared<br>
     Example packet:</p>
@@ -392,8 +386,7 @@
 	y1: 0,
 	x2: 20,
 	y2: 0,
-}
-    </pre>
+}</pre>
     <code>"cursor"</code>
     <p>Emitted when a cursor is updating properties<br>
     Example packet:</p>
@@ -404,14 +397,12 @@
 	dn: "The Bzuker",
 	l: [0, 0], // Currently this holds the PREVIOUS position of the cursor, so you need to resort to other methods such as using w.cursors.
 	c: [0, 217, 0]
-}
-    </pre>
+}</pre>
     <code>"pong"</code>
     <p>Emitted every second<br>
     Example packet:</p>
     <pre>
-		1000 // ms since last ping
-    </pre>
+1000 // ms since last ping</pre>
     <code>"msg"</code>
     <p>Emitted when someone sends a message<br>
     Example packet:</p>
@@ -425,9 +416,8 @@
 	isRegisted: true,
 	channel: "world",
 	timestamp: 1787282059723,
-	tag: '&lt;span style="color: #0f0"&gt;MOD&lt;/span&gt;'
-}
-    </pre>
+	tag: '&lt;span style="color:#00ffcc"&gt;MOD&lt;/span&gt;'
+}</pre>
     <code>"cursorleft"</code>
     <p>Emitted when a cursor leaves the wall<br>
     Example packet:</p>
