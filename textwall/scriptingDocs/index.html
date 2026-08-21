@@ -319,7 +319,7 @@
     Example packet:</p>
     <pre>
 {
-  wall: "textwall",
+	wall: "textwall",
   subwall: "main", // "main" indicates that the subwall name is not there
 }
     </pre>
@@ -328,7 +328,7 @@
     Example packet:</p>
     <pre>
 {
-  message: "Hello World."
+	message: "Hello World."
 }
     </pre>
     <code>"edit"</code>
@@ -336,10 +336,10 @@
     Example packet:</p>
     <pre>
 {
-  edits: [
-	  // Each entry in this array repersents a chunk
+	edits: [
+		// Each entry in this array repersents a chunk
 		[
-		  chunkX, // 0 (do not expect 20, 40, 60, ...)
+			chunkX, // 0 (do not expect 20, 40, 60, ...)
 			chunkY, // 0 (do not expect 10, 20, 30,  ...)
 			charCode, // 0x61
 			index, // 20, Works very strange here. The X offset is index % 20, while the Y offset is Math.floor(index / 20).
@@ -362,7 +362,7 @@
     Example packet:</p>
     <pre>
 {
-  chunks: undefined?
+	chunks: undefined?
 }
     </pre>
     <code>"protect"</code>
@@ -370,7 +370,7 @@
     Example packet:</p>
     <pre>
 {
-  cell: "-20,10",
+	cell: "-20,10",
 	protect: false
 }
     </pre>
@@ -379,7 +379,7 @@
     Example packet:</p>
     <pre>
 {
-  cell: "-2,1",
+	cell: "-2,1",
 	protected: false
 }
     </pre>
@@ -388,7 +388,7 @@
     Example packet:</p>
     <pre>
 {
-  x1: 0,
+	x1: 0,
 	y1: 0,
 	x2: 20,
 	y2: 0,
@@ -399,7 +399,7 @@
     Example packet:</p>
     <pre>
 {
-  id: "1234567",
+	id: "1234567",
 	n: "Bzuki",
 	dn: "The Bzuker",
 	l: [0, 0], // Currently this holds the PREVIOUS position of the cursor, so you need to resort to other methods such as using w.cursors.
@@ -417,7 +417,7 @@
     Example packet:</p>
     <pre>
 {
-  nick: "penthexium56",
+	nick: "penthexium56",
 	msg: "chess battle advanced",
 	displayNick: "Penthex ## Mod",
 	color: 20,
@@ -432,7 +432,7 @@
     <p>Emitted when a cursor leaves the wall<br>
     Example packet:</p>
     <pre>
-		"1234567" // The cursor that recently left's ID
+"1234567" // The cursor that recently left's ID
     </pre>
   </body>
 </html>
