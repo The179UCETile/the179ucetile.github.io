@@ -127,7 +127,7 @@ button:disabled {
   cursor: not-allowed;
 }
 input[type="text"], input[type="search"], input[type="number"], input[type="password"], textarea {
-  background-image: linear-gradient(to bottom, #101010, #202020);
+  background-image: linear-gradient(to bottom, #101010, #181818);
   border: 1px solid #404040
 }
 hr {
