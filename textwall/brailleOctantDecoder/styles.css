@@ -2,7 +2,7 @@
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30px 200px 30px;
+    grid-template-rows: 15px 150px 30px;
     gap: 5px;
 }
 div.subtext {
@@ -14,4 +14,18 @@ div.subtext {
 div.subtext p {
     font-size: 0.8em;
     color: #a0a0a0;
+}
+@font-face {
+  font-family: unifont17;
+  src: url(https://the179ucetile.github.io/h/fonts/unifont-17.0.04.otf);
+  unicode-range: U+0-FFFF;
+}
+@font-face {
+  font-family: unifont17;
+  src: url(https://the179ucetile.github.io/h/fonts/unifont_upper-17.0.04.otf);
+  unicode-range: U+10000-10FFFF;
+}
+textarea {
+    resize: none;
+    font-family: unifont17, "monospace textwall", monospace;
 }
