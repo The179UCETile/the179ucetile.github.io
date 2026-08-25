@@ -28,5 +28,5 @@ document.getElementById("convertBrailleOctant").addEventListener("click", () => 
 	document.getElementById("textareaBrailleOctant").value = textToBrailleOctant(document.getElementById("textareaText").value)
 });
 document.getElementById("convertText").addEventListener("click", () => {
-	document.getElementById("textareaText").value = textToBrailleOctant(document.getElementById("textareaBrailleOctant").value)
+	document.getElementById("textareaText").value = brailleOctantToText(document.getElementById("textareaBrailleOctant").value)
 })
