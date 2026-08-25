@@ -2,7 +2,7 @@
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30px 100px 30px;
+    grid-template-rows: 30px 200px 30px;
     gap: 5px;
 }
 div.subtext {
@@ -10,4 +10,8 @@ div.subtext {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+div.subtext p {
+    font-size: 0.8em;
+    color: #a0a0a0;
 }

@@ -126,7 +126,7 @@ button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
-input {
+input[type="text"], input[type="search"], input[type="number"], input[type="password"], textarea {
   background-image: linear-gradient(to bottom, #101010, #202020);
   border: 1px solid #404040
 }
