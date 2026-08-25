@@ -1,0 +1,13 @@
+#decoderContainer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 100px 30px;
+    gap: 5px;
+}
+div.subtext {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
