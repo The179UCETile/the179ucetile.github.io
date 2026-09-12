@@ -284,7 +284,7 @@ body.menu-open #bubbles {
 
 
 .tab-content input[type="text"], .tab-content input[type="password"], .tab-content input[type="number"], .tab-content select, .tab-content textarea {
-  width:100%; box-sizing:border-box; margin:4px 0 8px; padding:6px; background:rgba(255,255,255,0.03);
+  width:100%; box-sizing:border-box; margin:4px 0 8px; padding:6px; background:#303030;
   border:1px solid rgba(255,255,255,0.04); color:#fff; border-radius:4px;
 }
 .tab-content input[type="checkbox"]{ margin-right:6px; }
@@ -2073,4 +2073,12 @@ input[type="color"]:active {
 }
 #chatbutton {
     backdrop-filter: blur(4px);
+}
+
+p#_msg a::after {
+    content: attr(href);
+    font-size: 0.5em;
+    font-style: italic;
+    vertical-align: middle;
+    opacity: 0.7;
 }
