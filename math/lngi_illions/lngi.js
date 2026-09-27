@@ -287,7 +287,7 @@ function illionName(illion, c = false) {
 		part = `${getTierPref(new Decimal("1"), illion.slog("1e3").add("1").floor())}`
 	};
 	part ??= "";
-	return illion.eq("0") || c ? part : part.replace(/[aeiou]$/, "") + "illion"
+	return illion.eq("0") || c ? part : part.replace(/[aeiou]+$/, "") + "illion"
 }
 function formatIllion(n) {
 	n = n.floor();
