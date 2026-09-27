@@ -38,13 +38,16 @@
 	src: url(/fonts/LastResort-Regular.ttf);
 }
 body, html { 
-	background-color: #000000; 
+	background-color: #000000;
 }
 html {
 	font-family: "Monospace TextWall", "monospace textwall em", monospace, 'last resort';
 	font-weight: normal;
 	color: #ffffff;
 	font-size: 16px;
+}
+* {
+	font-family: "Monospace TextWall", "monospace textwall em", monospace, 'last resort';
 }
 h1 {
 	font-size: 2em;
@@ -128,6 +131,7 @@ button:disabled {
 }
 input[type="text"], input[type="search"], input[type="number"], input[type="password"], textarea {
 	background-image: linear-gradient(to bottom, #101010, #181818);
+	color: #ffffff;
 	border: 1px solid #404040
 }
 hr {
