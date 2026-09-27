@@ -25,8 +25,8 @@ function tierer(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false, 
 	const s = [];
 	let ii = 0;
 	for (let i of arr) {
-    let pref = cur(i[0]);
-    if (ending != "" && i[1].neq(0)) pref = pref.replace(/.$/, ending);
+		let pref = cur(i[0]);
+		if (ending != "" && i[1].neq(0)) pref = pref.replace(/.$/, ending);
 		if (i[1].eq("0")) {
 			s.push(pref);
 		} else {
@@ -57,8 +57,8 @@ function tierer3(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false,
 	const s = [];
 	let ii = 0;
 	for (let i of arr) {
-    let pref = cur(i[0]);
-    if (ending != "" && i[1].neq(0)) pref = pref.replace(/.$/, ending);
+		let pref = cur(i[0]);
+		if (ending != "" && i[1].neq(0)) pref = pref.replace(/.$/, ending);
 		if (i[1].eq("0")) {
 			s.push(pref);
 		} else {
@@ -86,8 +86,8 @@ function tierer4(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false,
 	const s = [];
 	let ii = 0;
 	for (let i of arr) {
-    let pref = cur(i[0], ii != 0);
-    if (ending != "" && i[1].neq(0)) pref = pref.replace(/.$/, ending);
+		let pref = cur(i[0], ii != 0);
+		if (ending != "" && i[1].neq(0)) pref = pref.replace(/.$/, ending);
 		if (i[1].eq("0")) {
 			s.push(pref);
 		} else {
@@ -108,19 +108,19 @@ function truncateString(str, len, left = false) {
 function illionName(illion, c = false) {
 	const r = [
 		"thousand m b tr quadr quint sext sept oct non",
-    " un duo tre quattuor quin sex septen octo novem",
-    " deci viginti triginta quadraginta quinquaginta sexaginta septuaginta octoginta nonaginta",
-    " centi ducenti trecenti quadringenti quingenti sescenti septingenti octingenti nonaginti",
+		" un duo tre quattuor quin sex septen octo novem",
+		" deci viginti triginta quadraginta quinquaginta sexaginta septuaginta octoginta nonaginta",
+		" centi ducenti trecenti quadringenti quingenti sescenti septingenti octingenti nonaginti",
 
 		" milli micro nano pico femto atto zepto yocto ronto quecto meco dueco treco tetreco penteco hexeco hepteco octeco enneco",
-    " me due trio tetre pente hexe hepte octe enne",
-    " ce icose triaconte tetraconte pentaconte hexaconte heptaconte octaconte ennaconte",
-    " hect dohect triahect tetrahect pentahect hexahect heptahect octahect ennahect",
+		" me due trio tetre pente hexe hepte octe enne",
+		" ce icose triaconte tetraconte pentaconte hexaconte heptaconte octaconte ennaconte",
+		" hect dohect triahect tetrahect pentahect hexahect heptahect octahect ennahect",
 
 		" killa mega giga tera peta exa zetta yotta ronna quetta henda doka tradaka tedaka pedaka exdaka zadaka yodaka nedaka",
-    "a ena oda tra tera peta eca zeta yota rona",
-    " da i tra te pe exa za yo no",
-    " ho bo tro to po exo zo yo no",
+		"a ena oda tra tera peta eca zeta yota rona",
+		" da i tra te pe exa za yo no",
+		" ho bo tro to po exo zo yo no",
 
 		" kal mej gij ast lun ferm jov sol bet gloc gax sup vers mult pyr gunt kentr onl paptr",
 		" kal mej gij ast lun ferm jov sol bet", // UNUSED
@@ -187,7 +187,7 @@ function illionName(illion, c = false) {
 	].map(a => a.split(/ /u));
 	const specials = [
 		" al ej ij ast un erm ov ol eet oc ax up ers ult opyr unt entr eonl aptr",
-		"  ous ong at andr omast ogot ort enk",
+		"	ous ong at andr omast ogot ort enk",
 		" an ejan ijan astan unan erman ovan olan etan",
 		" unt duot tret quadr quint sext sept oct non"
 	].map(a => a.split(/ /u));
@@ -239,21 +239,21 @@ function illionName(illion, c = false) {
 				if (idx.lt("20")) return r[4][idx.toNumber()];
 				return `${idx.mod("100").eq("10") ? "" : `${r[5][rnd("0", 0, idx)]}${r[6][rnd("1", 0, idx)]}`}${r[7][rnd("2", 0, idx)]}o`.replace(/eo$/, "o")
 			case 3: {
-				if (special && idx.lt("11")) return "  da tra ta pa exa za ya na daka".split(/ /u)[idx.toNumber()]
+				if (special && idx.lt("11")) return "	da tra ta pa exa za ya na daka".split(/ /u)[idx.toNumber()]
 				if (idx.lt("20")) return r[8][idx.toNumber()];
-        let pref = idx.mod("100").lt("20") && idx.mod("100").gte("10") ? r[8][idx.mod("100").toNumber()] : r[9][rnd("0", 0, idx)];
-        if (idx.mod("100").gte("20")) {
-				  if (idx.mod("10").eq("0") || /^[aeiuy]/.test(pref)) {
-            pref = `${r[10][rnd("1", 0, idx)]}k${pref}`
-          } else {
-            pref = `${r[10][rnd("1", 0, idx)]}c${pref}`
-          }
-        };
-        if (idx.gte("100")) {
-          pref = `${r[11][rnd("2", 0, idx)]}${/^[aeiou]/.test(pref) ? "t" : ""}${pref}`;
-        }
-        return pref
-      }
+				let pref = idx.mod("100").lt("20") && idx.mod("100").gte("10") ? r[8][idx.mod("100").toNumber()] : r[9][rnd("0", 0, idx)];
+				if (idx.mod("100").gte("20")) {
+					if (idx.mod("10").eq("0") || /^[aeiuy]/.test(pref)) {
+						pref = `${r[10][rnd("1", 0, idx)]}k${pref}`
+					} else {
+						pref = `${r[10][rnd("1", 0, idx)]}c${pref}`
+					}
+				};
+				if (idx.gte("100")) {
+					pref = `${r[11][rnd("2", 0, idx)]}${/^[aeiou]/.test(pref) ? "t" : ""}${pref}`;
+				}
+				return pref
+			}
 			case 4: {
 				if (idx.lt("20")) return r[12][idx.toNumber()];
 				let pref = (special ? specials[2] : r[15])[rnd("2", 0, idx)];
@@ -270,7 +270,7 @@ function illionName(illion, c = false) {
 		}
 	}
 	let nm = illion.toNumber();
-  let part = "";
+	let part = "";
 	if (illion.lt("10")) {
 		part = c == 2 ? specials[3][nm] : r[c ? 1 : 0][nm];
 	} else if (illion.lt("1e3")) {
@@ -287,10 +287,10 @@ function illionName(illion, c = false) {
 		part = `${getTierPref(new Decimal("1"), illion.slog("1e3").add("1").floor())}`
 	};
 	part ??= "";
-  return illion.eq("0") || c ? part : part.replace(/[aeiou]$/, "") + "illion"
+	return illion.eq("0") || c ? part : part.replace(/[aeiou]$/, "") + "illion"
 }
 function formatIllion(n) {
-  n = n.floor();
+	n = n.floor();
 	if (Decimal.isNaN(n)) return "NaN";
 	if (n.eq("-Infinity")) return "negative<br>infinity";
 	if (n.eq("Infinity")) return "infinity";
@@ -298,12 +298,12 @@ function formatIllion(n) {
 	if (n.lt("0")) {
 		return `negative<br>${pmn(n.neg(), config)}`
 	};
-  const arr = commasplitThing(n, "1000", n.gte("1e303") ? 3 : 6);
-  let str = "";
-  for (let i of arr) {
-    str += `${toWord(i[0].floor())}${n.gte("1e303") ? "<br>" : " "}${i[1].eq("0") ? "" : illionName(i[1].sub("1"))}<br>`
-  };
-  return str;
+	const arr = commasplitThing(n, "1000", n.gte("1e303") ? 3 : 6);
+	let str = "";
+	for (let i of arr) {
+		str += `${toWord(i[0].floor())}${n.gte("1e303") ? "<br>" : " "}${i[1].eq("0") ? "" : illionName(i[1].sub("1"))}<br>`
+	};
+	return str;
 }
 function toWord(n) {
 	const r = [
@@ -320,13 +320,13 @@ function toWord(n) {
 	}
 }
 function formatDefault(n) {
-  let str = EternalNotations.HTMLPresets.Default.format(n);
-  while (/e/.test(str)) {
-    str = str.replace(/([^e<>]+)e(.+)/g, "$1 * 10<sup>$2</sup>")
+	let str = EternalNotations.HTMLPresets.Default.format(n);
+	while (/e/.test(str)) {
+		str = str.replace(/([^e<>]+)e(.+)/g, "$1 * 10<sup>$2</sup>")
 			.replace(/1 \* 10(<sup>[^<>]+<\/sup>)/g, "10$1")
-      .replace(/e(.+)/g, "10<sup>$1</sup>");
-  };
-  return str;
+			.replace(/e(.+)/g, "10<sup>$1</sup>");
+	};
+	return str;
 }
 let lastTs = 0, speed = 1, paused = false;
 function slowDown() {
@@ -345,14 +345,14 @@ function pause() {
 	paused = !paused;
 }
 function update(time) {
-  t += (time - lastTs) / 1e3 * (paused ? 0 : speed);
-  let num = Decimal.tetrate(10, t / 1200 + 1).add(t).sub(10).min("(e^6)3000.47712125471966244").floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
-  document.getElementById("num").innerHTML = formatDefault(num);
+	t += (time - lastTs) / 1e3 * (paused ? 0 : speed);
+	let num = Decimal.tetrate(10, t / 1200 + 1).add(t).sub(10).min("(e^6)3000.47712125471966244").floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
+	document.getElementById("num").innerHTML = formatDefault(num);
 	document.getElementById("num").style.backgroundImage = `repeating-linear-gradient(-45deg, #ffffff, hsl(${num.slog().mul("30").toString()}deg, 100%, ${Decimal.sub("100", num.slog().mul("2.5")).max("50").toString()}%) 25%, #ffffff 50%)`;
-  document.getElementById("num_illion").innerHTML = formatIllion(num);
+	document.getElementById("num_illion").innerHTML = formatIllion(num);
 	document.getElementById("factor").innerText = `Speed: x${EternalNotations.Presets.Default.format(speed)} | NOTE: This uses a modified system that makes illions like "micro-unmillillion" possible to appear.`;
 	document.getElementById("pause").innerText = paused ? "Continue" : "Pause";
-  lastTs = time;
-  requestAnimationFrame(update);
+	lastTs = time;
+	requestAnimationFrame(update);
 }
 update(0)
