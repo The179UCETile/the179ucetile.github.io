@@ -63,6 +63,7 @@ function tierer3(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false,
 			s.push(pref);
 		} else {
 			let pref2 = i[0].gt("1") || (doNotUseBlankForOne && ii != 0) ? cur(i[0], i[0].gte("2")) : "";
+			pref2 ??= "";
 			if (i[0].gte("2")) pref2 = pref2.replace(/[aeiou]$/, "");
 			let prefNext = next(i[1]);
 			if (i[0].gte("2")) {
@@ -346,7 +347,7 @@ function pause() {
 }
 function update(time) {
 	t += (time - lastTs) / 1e3 * (paused ? 0 : speed);
-	t = Math.min(7980.364409178636, t);
+	t = Math.min(7980.364409178636, Math.max(0, t));
 	let num = Decimal.tetrate(10, t / 1200 + 1).add(t).sub(10).min("(e^6)3000.47712125471966244").floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
 	document.getElementById("num").innerHTML = formatDefault(num);
 	document.getElementById("num").style.backgroundImage = `repeating-linear-gradient(-45deg, #ffffff, hsl(${num.slog().mul("30").toString()}deg, 100%, ${Decimal.sub("100", num.slog().mul("2.5")).max("50").toString()}%) 25%, #ffffff 50%)`;
