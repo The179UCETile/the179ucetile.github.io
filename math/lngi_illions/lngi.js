@@ -274,7 +274,7 @@ function illionName(illion, c = false) {
 	if (illion.lt("10")) {
 		part = c == 2 ? specials[3][nm] : r[c ? 1 : 0][nm];
 	} else if (illion.lt("1e3")) {
-		part = illion.eq("103") ? "trescent" : `${r[1][rnd("0")]}${r[2][rnd("1")]}${r[3][rnd("2")]}`;
+		part = illion.eq("103") ? "trescenti" : `${r[1][rnd("0")]}${r[2][rnd("1")]}${r[3][rnd("2")]}`;
 	} else if (illion.lt("(e^7)3000.47712125471966244")) {
 		part = getTierPref(illion, new Decimal("1"))
 	} else if (illion.lt("F9e15")) {
