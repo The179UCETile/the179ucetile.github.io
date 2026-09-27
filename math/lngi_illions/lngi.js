@@ -323,8 +323,7 @@ function toWord(n) {
 function formatDefault(n) {
 	let str = EternalNotations.HTMLPresets.Default.format(n);
 	while (/e/.test(str)) {
-		str = str.replace(/([^e<>]+)e(.+)/g, "$1 * 10<sup>$2</sup>")
-			.replace(/1 \* 10(<sup>[^<>]+<\/sup>)/g, "10$1")
+		str = str.replace(/([^e<>]+)e(.+)/g, "$1 × 10<sup>$2</sup>")
 			.replace(/e(.+)/g, "10<sup>$1</sup>");
 	};
 	return str;
@@ -350,6 +349,8 @@ function update(time) {
 	t = Math.min(7980.364409178636, Math.max(0, t));
 	let num = Decimal.tetrate(10, t / 1200 + 1).add(t).sub(10).min("(e^6)3000.47712125471966244").floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
 	document.getElementById("num").innerHTML = formatDefault(num);
+	document.getElementById("num").style.fontFamily = document.getElementById("fontinput").value;
+	document.getElementById("num_illion").style.fontFamily = document.getElementById("fontinput").value;
 	document.getElementById("num").style.backgroundImage = `repeating-linear-gradient(-45deg, #ffffff, hsl(${num.slog().mul("30").toString()}deg, 100%, ${Decimal.sub("100", num.slog().mul("2.5")).max("50").toString()}%) 25%, #ffffff 50%)`;
 	document.getElementById("num_illion").innerHTML = formatIllion(num);
 	document.getElementById("factor").innerText = `Speed: x${EternalNotations.Presets.Default.format(speed)} | NOTE: This uses a modified system that makes illions like "micro-unmillillion" possible to appear.`;
