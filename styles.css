@@ -41,12 +41,11 @@ body, html {
 	background-color: #000000;
 }
 html {
-	font-family: "Monospace TextWall", "monospace textwall em", monospace, 'last resort';
 	font-weight: normal;
 	color: #ffffff;
 	font-size: 16px;
 }
-* {
+*:not(sup, sub, b, i, u, s) {
 	font-family: "Monospace TextWall", "monospace textwall em", monospace, 'last resort';
 }
 h1 {
