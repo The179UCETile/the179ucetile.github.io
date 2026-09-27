@@ -1,0 +1,25 @@
+p#num {
+  font-size: 6em;
+  margin: 0;
+  text-align: center;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background-image: repeating-linear-gradient(-45deg, #ffffff, #ff0000 25%, #ffffff 50%);
+  background-size: 50dvmax 50dvmax;
+  animation: anim 10s linear infinite;
+}
+@keyframes anim {
+  from {
+    background-position-x: 0%;
+  }
+  to {
+    background-position-x: 100%;
+  }
+}
+p#num_illion {
+  font-size: 2em;
+}
+sup, sub {
+  font-size: 0.8em;
+}
