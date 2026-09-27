@@ -11,12 +11,12 @@ screenshot.style.display = "none";
 let scsCtx = screenshot.getContext("2d");
 w.showToast("Screenshotting...", 1500);
 function wrt(text, x, y) {
-  scsCtx.strokeText(text, x, y);
-  scsCtx.fillText(text, x, y);
+	scsCtx.strokeText(text, x, y);
+	scsCtx.fillText(text, x, y);
 }
 function wrtT(text, x, y) {
-  scsCtx.strokeText(text, x, canvas.getAttribute("height") - y);
-  scsCtx.fillText(text, x, canvas.getAttribute("height") - y);
+	scsCtx.strokeText(text, x, canvas.getAttribute("height") - y);
+	scsCtx.fillText(text, x, canvas.getAttribute("height") - y);
 }
 let size = 3;
 scsCtx.font = `${size}em "${(localStorage.font == "Custom" ? localStorage.customfont : localStorage.font).toLowerCase()}", monospace, 'courier new', Courier, special`;
@@ -32,21 +32,21 @@ scsCtx.textBaseline = "alphabetic";
 wrtT(`~${localStorage.username}`, 10, 10 + size * 12.5);
 wrtT(`${localStorage.zoom}x`, 10, 10);
 screenshot.toBlob(function (blob) {
-  if (!blob) {
-    w.showToast("Failed to screenshot.", 1500);
-    return;
-  }
-  let url = URL.createObjectURL(blob);
-  let a = document.createElement('a');
-  a.href = url;
-  let d = new Date();
-  let r = d.toISOString();
-  a.download = `TextWall Screenshot /~${w.wall}/${w.subwall} ${r}.png`;
-  document.body.appendChild(a);
-  a.click();
-  w.showToast("Screenshotted.", 1500);
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+	if (!blob) {
+		w.showToast("Failed to screenshot.", 1500);
+		return;
+	}
+	let url = URL.createObjectURL(blob);
+	let a = document.createElement('a');
+	a.href = url;
+	let d = new Date();
+	let r = d.toISOString();
+	a.download = `TextWall Screenshot /~${w.wall}/${w.subwall} ${r}.png`;
+	document.body.appendChild(a);
+	a.click();
+	w.showToast("Screenshotted.", 1500);
+	document.body.removeChild(a);
+	URL.revokeObjectURL(url);
 }, 'image/png');
 screenshot.remove();
 });

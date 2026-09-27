@@ -1,31 +1,31 @@
 #decoderContainer {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 15px 150px 30px;
-    gap: 5px;
+		display: grid;
+		width: 100%;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 15px 150px 30px;
+		gap: 5px;
 }
 div.subtext {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 }
 div.subtext p {
-    font-size: 0.9em;
-    color: #c0c0c0;
+		font-size: 0.9em;
+		color: #c0c0c0;
 }
 @font-face {
-  font-family: unifont17;
-  src: url(https://the179ucetile.github.io/h/fonts/unifont-17.0.05.otf);
-  unicode-range: U+0-FFFF;
+	font-family: unifont17;
+	src: url(https://the179ucetile.github.io/h/fonts/unifont-17.0.05.otf);
+	unicode-range: U+0-FFFF;
 }
 @font-face {
-  font-family: unifont17;
-  src: url(https://the179ucetile.github.io/h/fonts/unifont_upper-17.0.05.otf);
-  unicode-range: U+10000-10FFFF;
+	font-family: unifont17;
+	src: url(https://the179ucetile.github.io/h/fonts/unifont_upper-17.0.05.otf);
+	unicode-range: U+10000-10FFFF;
 }
 textarea {
-    resize: none;
-    font-family: unifont17, "monospace textwall", monospace;
+		resize: none;
+		font-family: unifont17, "monospace textwall", monospace;
 }

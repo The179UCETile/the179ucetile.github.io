@@ -1,94 +1,94 @@
 * {
-  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "wdth" 100,
-    "GRAD" 0,
-    "XOPQ" 96,
-    "XTRA" 468,
-    "YOPQ" 79,
-    "YTAS" 750,
-    "YTDE" -203,
-    "YTFI" 738,
-    "YTLC" 514,
-    "YTUC" 712;
-  color: #fff;
+	font-family: "Roboto Flex", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+		"slnt" 0,
+		"wdth" 100,
+		"GRAD" 0,
+		"XOPQ" 96,
+		"XTRA" 468,
+		"YOPQ" 79,
+		"YTAS" 750,
+		"YTDE" -203,
+		"YTFI" 738,
+		"YTLC" 514,
+		"YTUC" 712;
+	color: #fff;
 }
 html {
-  background-color: #000;
+	background-color: #000;
 }
 div.container {
-  width: 400px;
-  height: 300px;
-  position: fixed;
-  top: calc(50dvh - 150px);
-  left: calc(50dvw - 200px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #444;
+	width: 400px;
+	height: 300px;
+	position: fixed;
+	top: calc(50dvh - 150px);
+	left: calc(50dvw - 200px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #444;
 }
 div.container div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
 }
 div#word p {
-  font-weight: 700;
-  font-variation-settings: "wdth" 87.5;
-  font-size: 40px;
+	font-weight: 700;
+	font-variation-settings: "wdth" 87.5;
+	font-size: 40px;
 }
 div#word {
-  position: absolute;
-  top: 60px;
-  text-align: center;
-  width: 100%;
+	position: absolute;
+	top: 60px;
+	text-align: center;
+	width: 100%;
 }
 input#wordInput, button {
-  background-color: #000;
-  border-radius: 0;
-  border: 1px solid #fff;
+	background-color: #000;
+	border-radius: 0;
+	border: 1px solid #fff;
 }
 button {
-  padding: 2px;
+	padding: 2px;
 }
 button#retry, button#check, input#wordInput {
-  position: absolute;
-  bottom: 120px;
+	position: absolute;
+	bottom: 120px;
 }
 button#check {
-  bottom: 95px;
+	bottom: 95px;
 }
 div#timeRemaining {
-  position: absolute;
-  top: 70px;
-  width: 100%;
-  height: 20px;
-  backdrop-filter: invert(100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	position: absolute;
+	top: 70px;
+	width: 100%;
+	height: 20px;
+	backdrop-filter: invert(100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 div#timeRemaining p {
-  font-weight: 200;
-  font-variation-settings: "wdth" 150, "slnt" -10;
-  color: #000;
+	font-weight: 200;
+	font-variation-settings: "wdth" 150, "slnt" -10;
+	color: #000;
 }
 div.gameoverText {
-  position: absolute;
-  top: 70px;
-  text-align: center;
-  width: 100%;
-  display: block;
+	position: absolute;
+	top: 70px;
+	text-align: center;
+	width: 100%;
+	display: block;
 }
 b {
-  font-weight: 700;
-  font-variation-settings: "wdth" 87.5;
+	font-weight: 700;
+	font-variation-settings: "wdth" 87.5;
 }
 i {
-  font-variation-settings: "slnt" -10;
+	font-variation-settings: "slnt" -10;
 }

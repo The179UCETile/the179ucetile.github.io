@@ -1,30 +1,30 @@
 header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  padding: 5px;
-  width: 100vw;
-  min-height: 30px;
-  border: 2px solid #404040;
-  border-style: none none solid none;
-  background-image: linear-gradient(to bottom, #000000, #202020)
+	position: sticky;
+	top: 0;
+	left: 0;
+	padding: 5px;
+	width: 100vw;
+	min-height: 30px;
+	border: 2px solid #404040;
+	border-style: none none solid none;
+	background-image: linear-gradient(to bottom, #000000, #202020)
 }
 button.upg {
-  border-radius: 5px;
-  box-shadow: 0 0 5px #fff4;
-  width: 175px;
-  height: 60px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #fff4;
+	width: 175px;
+	height: 60px;
 }
 span.btn {
-  color: #000;
+	color: #000;
 }
 span#mainCurrency {
-  background: linear-gradient(to bottom, #fff, #ccc);
-  background-clip: text !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent;
+	background: linear-gradient(to bottom, #fff, #ccc);
+	background-clip: text !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent;
 }
 div#shortHR {
-  height: 5px;
-  background-image: linear-gradient(to right, #fff0, #ffff, #fff0)
+	height: 5px;
+	background-image: linear-gradient(to right, #fff0, #ffff, #fff0)
 }

@@ -1,338 +1,338 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>TextWall scripting documentation | The179UCETile's site</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicons/textwall/scriptingDocs.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <h1>TextWall scripting documentation</h1>
-    <p>NOTE: This is a work in progress!<br>
-    <span class="red">All Y coordinates are flipped!</span></p>
-    <h2><code>window</code> properties</h2>
-    <code>unreadAmount</code>
-    <p>Returns the amount of unread messages <span class="red">(BROKEN)</span></p>
-    <code>cel()</code>
-    <p>Returns the cursor's internal decoration ID.</p>
-    <code>undoWrite()</code>
-    <p>Removes the most recent character(s) written in the canvas.</p>
-    <code>redoWrite()</code>
-    <p>Adds back the most recent character(s) written in the canvas.</p>
-    <code>selectedChatTab</code>
-    <p>Returns the selected chat channel.<br>
-    <b>Return values:</b></p>
-    <ul>
-      <li>0: This wall</li>
-      <li>1: Global</li>
-    </ul>
-    <code>position</code>
-    <p>???</p>
-    <code>elem</code>
-    <p>Holds references to key DOM elements on the website.</p>
-    <code>accept_nsfw()</code>
-    <p>Hides the NSFW message. <span class="red">By using this function, you understand that the wall you're about to enter may contain NSFW content.</span></p>
-    <code>decline_nsfw()</code>
-    <p>Declines the NSFW message and go back to the main wall.</p>
-    <code>printMsg(nick, color, msg, isRegistered, isAdmin, channel, displayNick, timestamp, tag, html = false)</code>
-    <p>Displays a message in chat only shown to the client.<br>
-    <b>Parameters:</b></p>
-    <ul>
-      <li>nick: The user who sent the message.</li>
-      <li>color: The username color's internal repersentation.</li>
-      <li>msg: The message to send.</li>
-      <li>isRegistered: Determines if the user is registered or not.</li>
-      <li>isAdmin: Doesn't do anything.</li>
-      <li>channel: The channel to send in.</li>
-      <li>displayNick: Overwrites nick.</li>
-      <li>timestamp: The timestamp (given by <code>Date.now()</code>) when the message is sent.</li>
-      <li>tag: The tag. You can use CSS to style the tag.</li>
-      <li>html: Doesn't do anything.</li>
-    </ul>
-    <code>prsCol(color_name)</code>
-    <p>A utility to get the index of a color in the color palette.</p>
-    <code>prsTil(color)</code>
-    <p>Returns the color name from a color index or array.</p>
-    <code>colFmt(index, options = {})</code>
-    <p>Returns the internal repersentation of a color, optionally applying decorations for later rendering.<br>
-    <code>options</code>:</p>
-    <pre>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+		<title>TextWall scripting documentation | The179UCETile's site</title>
+		<link rel="icon" type="image/x-icon" href="/images/favicons/textwall/scriptingDocs.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<h1>TextWall scripting documentation</h1>
+		<p>NOTE: This is a work in progress!<br>
+		<span class="red">All Y coordinates are flipped!</span></p>
+		<h2><code>window</code> properties</h2>
+		<code>unreadAmount</code>
+		<p>Returns the amount of unread messages <span class="red">(BROKEN)</span></p>
+		<code>cel()</code>
+		<p>Returns the cursor's internal decoration ID.</p>
+		<code>undoWrite()</code>
+		<p>Removes the most recent character(s) written in the canvas.</p>
+		<code>redoWrite()</code>
+		<p>Adds back the most recent character(s) written in the canvas.</p>
+		<code>selectedChatTab</code>
+		<p>Returns the selected chat channel.<br>
+		<b>Return values:</b></p>
+		<ul>
+			<li>0: This wall</li>
+			<li>1: Global</li>
+		</ul>
+		<code>position</code>
+		<p>???</p>
+		<code>elem</code>
+		<p>Holds references to key DOM elements on the website.</p>
+		<code>accept_nsfw()</code>
+		<p>Hides the NSFW message. <span class="red">By using this function, you understand that the wall you're about to enter may contain NSFW content.</span></p>
+		<code>decline_nsfw()</code>
+		<p>Declines the NSFW message and go back to the main wall.</p>
+		<code>printMsg(nick, color, msg, isRegistered, isAdmin, channel, displayNick, timestamp, tag, html = false)</code>
+		<p>Displays a message in chat only shown to the client.<br>
+		<b>Parameters:</b></p>
+		<ul>
+			<li>nick: The user who sent the message.</li>
+			<li>color: The username color's internal repersentation.</li>
+			<li>msg: The message to send.</li>
+			<li>isRegistered: Determines if the user is registered or not.</li>
+			<li>isAdmin: Doesn't do anything.</li>
+			<li>channel: The channel to send in.</li>
+			<li>displayNick: Overwrites nick.</li>
+			<li>timestamp: The timestamp (given by <code>Date.now()</code>) when the message is sent.</li>
+			<li>tag: The tag. You can use CSS to style the tag.</li>
+			<li>html: Doesn't do anything.</li>
+		</ul>
+		<code>prsCol(color_name)</code>
+		<p>A utility to get the index of a color in the color palette.</p>
+		<code>prsTil(color)</code>
+		<p>Returns the color name from a color index or array.</p>
+		<code>colFmt(index, options = {})</code>
+		<p>Returns the internal repersentation of a color, optionally applying decorations for later rendering.<br>
+		<code>options</code>:</p>
+		<pre>
 {
-  bold: Boolean,
-  italic: Boolean,
-  underline: Boolean,
-  strikethrough: Boolean
+	bold: Boolean,
+	italic: Boolean,
+	underline: Boolean,
+	strikethrough: Boolean
 }</pre>
-    <code>prsFmt(color)</code>
-    <p>Parses a specified color into an object of the color and decorations</p>
-    <code>writeCharAt(char, color, coordX, coordY, decos, doNotAddToUndoBuffer)</code>
-    <p>Writes a single character at a specific coordinate<br>
-    <b>Parameters:</b></p>
-    <ul>
-      <li>char: The character to write.</li>
-      <li>color: The color of the character.</li>
-      <li>coordX: The character's X position.</li>
-      <li>coordY: The character's Y position.</li>
-      <li>decos: The decorations to apply to the character.<br>
-      <pre>
+		<code>prsFmt(color)</code>
+		<p>Parses a specified color into an object of the color and decorations</p>
+		<code>writeCharAt(char, color, coordX, coordY, decos, doNotAddToUndoBuffer)</code>
+		<p>Writes a single character at a specific coordinate<br>
+		<b>Parameters:</b></p>
+		<ul>
+			<li>char: The character to write.</li>
+			<li>color: The color of the character.</li>
+			<li>coordX: The character's X position.</li>
+			<li>coordY: The character's Y position.</li>
+			<li>decos: The decorations to apply to the character.<br>
+			<pre>
 {
-  bold: Boolean,
-  italic: Boolean,
-  underline: Boolean,
-  strikethrough: Boolean
+	bold: Boolean,
+	italic: Boolean,
+	underline: Boolean,
+	strikethrough: Boolean
 }</pre></li>
-      <li>doNotAddToUndoBuffer: Decides if the character will add to the undo buffer or not.</li>
-    </ul>
-    <code>color</code>
-    <p>Repersents the cursor's color.</p>
-    <code>ce2()</code>
-    <p>Returns an Object that contains the infomation of the user's enabled decorations.</p>
-    <code>writeChar(char, step, doNotUseRainbowMode)</code>
-    <p>Writes a single character at the cursor position with steps included</p>
-    <code>flushAmount</code>
-    <p>The amount of writes to be processed by <code>flushWrites()</code> at once.</p>
-    <code>setWriteInterval(ms)</code>
-    <p>The controller that decides how often <code>flushWrites()</code> runs automatically.</p>
-    <code>cursors</code>
-    <p><span class="yellow">This is an alias directed to <code>w.cursors</code>.</span></p>
-    <code>writeBuffer</code>
-    <p>The current rate (milliseconds) at which the writeBuffer is flushed to the canvas.</p>
-    <code>flushWrites()</code>
-    <p><span class="yellow">This function is automatically used by <code>setWriteInterval()</code></span><br>
-    Immediately processes and renders all queued writes from writeBuffer to the canvas.</p>
-    <code>getChar(tileX, tileY, charX, charY)</code>
-    <p>Returns the character at a specific set of coordinates<br>
-    <span class="subtext">Default coordinates will be used<br>
-    Omiting the parameters will give you the character at the current position</span><br>
-    <br>
-    <span class="yellow">Returns a String or <code>null</code></span></p>
-    <code>getCharDecoration(col)</code>
-    <p>Returns an Object containing decoration infomation from the internal repersentation of a color</p>
-    <code>getCharColor(tileX, tileY, charX, charY)</code>
-    <p>Returns the color of a character at a specific set of coordinates<br>
-    <span class="subtext">Default coordinates will be used<br>
-    Omiting the parameters will give you the character color at the current position</span><br>
-    <br>
-    <span class="yellow">Returns a Number, Array or <code>null</code></span></p>
-    <code>getCharInfo(tileX, tileY, charX, charY)</code>
-    <p>Returns the information of a character that is at a specific set of coordinates<br>
-    <span class="subtext">Default coordinates will be used<br>
-    Omiting the parameters will give you the character infomation at the current position</span><br>
-    <br>
-    <span class="yellow">Returns an Object or <code>null</code></span></p>
-    <code>getCharInfoXY(x, y)</code>
-    <p>Returns the information of a character that is at a specific set of coordinates in XY format<br>
-    <span class="yellow">Returns an Object or <code>null</code></span></p>
-    <code>XYtoTile(x, y)</code>
-    <p>Converts XY coordinates to specific Tile coordinates</p>
-    <code>cursorCoords</code>
-    <p><span class="red">Read-only</span><br>
-    Returns the cursor's position</p>
-    <code>cursorCoordsXY</code>
-    <p><span class="red">Read-only</span><br>
-    Returns the cursor's position in XY format</p>
-    <code>getTileCoordsFromMouseCoords(instance)</code>
-    <p>An utility function that turns mouse coordinates into canvas tile coordinates.<br>
-    Requires an instance from a MouseEvent or an ancestor of it.</p>
-    <code>getTileCoordsFromMouseCoords(instance)</code>
-    <p>An utility function that turns mouse coordinates into canvas XY coordinates.<br>
-    Requires an instance from a MouseEvent or an ancestor of it.</p>
-    <code>Xr(hexColor, increment)</code>
-    <p>An utility function which increases all channels of a hex color by a certain amount.<br>
-    Colors will automatically get turned into a valid hex color.</p>
-    <code>currentRegionSelection</code>
-    <p>Holds the currently active <code>RegionSelection</code>.</p>
-    <code>loadEruda()</code>
-    <p>Loads Eruda, a developer console for mobile browsers or custom environments</p>
-    <code>lastTime</code>
-    <p>Stores the timestamp of the last update or action in the system or world</p>
-    
-    <h2><code>w</code> properties</h2>
-    <code>w</code>
-    <p>"w": Main hub or core object of the system</p>
-    <code>w.currentVersion</code>
-    <p>Returns the client's version (should usually be <code>"3.0.7"</code>)</p>
-    <code>w.displayNick</code>
-    <p>Returns the user's display name</p>
-    <code>w.chatHistory</code>
-    <p>An Array holding all chat messages</p>
-    <code>w.events</code>
-    <p>Returns an Object holding events from w.on callbacks</p>
-    <code>w.on(eventName, callback)</code>
-    <p>Creates a listener for a specific event, attaching a callback function that will run whenever the event is emitted.</p>
-    <code>w.off(eventName, callback)</code>
-    <p>Removes a previously registered event listener, so the callback will no longer runs when the event occurs.</p>
-    <code>w.emit(event, data)</code>
-    <p>Triggers or fires a specific event, optionally passing data to all listeners attached to that event.</p>
-    <code>w.moveCursor(direction, amount, doNotAutoPan)</code>
-    <p>Moves the cursor with a specified direction and the amount of characters moved.<br>
-    <code>direction</code>: <code>"up"</code>, <code>"down"</code>, <code>"left"</code>, <code>"right"</code></p>
-    <code>w.moveCursorTo(x, y, doNotAutoPan)</code>
-    <p><code>w.tp</code>, but with a doNotAutoPan argument</p>
-    <code>w.broadcastRecieve(force = false)</code>
-    <p>This function determines if you can listen to <code>cmd</code> events or not.</p>
-    <code>w.cmd(data, sendId = true)</code>
-    <p>Triggers a <code>cmd</code> command. Objects automatically get turned into Strings.</p>
-    <code>w.setFlushInterval(milliseconds)</code>
-    <p>Sets how often queued ce/edits in a buffer are automatically processed or flushed</p>
-    <code>w.changeTheme(type)</code>
-    <p>Changes your current theme to specified type:<br>
-    0 - Light<br>
-    1 - Dark<br>
-    2 - Custom</p>
-    <code>w.setPrimaryColor(hex_color_code)</code>
-    <p>Sets the primary color of the current theme</p>
-    <code>w.setSecondaryColor(hex_color_code)</code>
-    <p>Sets the secondary color of the current theme</p>
-    <code>w.toggleTeleport()</code>
-    <p>Shows or hides the teleport menu</p>
-    <code>w.color()</code>
-    <p>Shows or hides the color</p>
-    <code>w.settings()</code>
-    <p>Shows or hides the settings</p>
-    <code>w.goto(wall, subwall)</code>
-    <p>Teleports or switches the viewport to another wall/subwall</p>
-    <code>w.tp(x, y)</code>
-    <p>Moves the cursor to a specific coordinate</p>
-    <code>w.cursors</code>
-    <p>Holds the state or data of all active cursors in the system (Map)</p>
-    <code>w.redraw</code>
-    <p>Does nothing(?)</p>
-    <code>w.renderChunkAmount</code>
-    <p>Holds the current number of chunks the renderer processes per cycle</p>
-    <code>w.setRenderChunkAmount(amount)</code>
-    <p>Sets how many chunks of the canvas should be processed at a time</p>
-    <code>w.getTheme()</code>
-    <p>Returns the current theme of the canvas (Object)</p>
-    <code>w.generateCoords(wall)</code>
-    <p>Generates the wall's coordinates</p>
-    <code>w.generateCoordsOld(wall)</code>
-    <p>Generates the wall's coordinates, using old PRNG</p>
-    <code>w.chunks</code>
-    <p>A Map containing all chunks loaded by the client</p>
-    <code>w.typeChar(char, step, ???)</code>
-    <p><span class="yellow">This is an alias directed to <code>writeChar</code>.</span></p>
-    <code>w.socket</code>
-    <p>Holds the active WebSocket connection for real-time communication</p>
-    <code>w.clipboard</code>
-    <p>Represents the system's internal clipboard for copy interactions</p>
-    <code>w.clipboard.textarea</code>
-    <p>A hidden or internal <code>&lt;textarea&gt;</code> element used by the clipboard system</p>
-    <code>w.clipboard.copy(text)</code>
-    <p>Copies String to the internal clipboard</p>
-    <code>w.clipboard.init()</code>
-    <p>Initializes the internal clipboard system</p>
-    <code>w.showChat(toggle)</code>
-    <p>Shows or hides the chat</p>
-    <code>w.rerender()</code>
-    <p>Rerenders the canvas</p>
-    <code>w.split(str, noSurrog, noComb, norm)</code>
-    <p>Performs an advanced string split with additional handling for Unicode and normalization</p>
-    <code>w.chat.send(string)</code>
-    <p>Sends a message (String) to the chat</p>
-    <code>w.changeZoom(factor)</code>
-    <p>Changes the display zoom of the text canvas.<br>
-    <span class="yellow">This won't save when you refresh.</span></p>
-    <code>w.clientId</code>
-    <p>Shows your client session ID</p>
-    <code>w.wall</code>
-    <p>Returns the current wall you are in</p>
-    <code>w.subwall</code>
-    <p>Returns the current subwall you are in (main if no subwall)</p>
+			<li>doNotAddToUndoBuffer: Decides if the character will add to the undo buffer or not.</li>
+		</ul>
+		<code>color</code>
+		<p>Repersents the cursor's color.</p>
+		<code>ce2()</code>
+		<p>Returns an Object that contains the infomation of the user's enabled decorations.</p>
+		<code>writeChar(char, step, doNotUseRainbowMode)</code>
+		<p>Writes a single character at the cursor position with steps included</p>
+		<code>flushAmount</code>
+		<p>The amount of writes to be processed by <code>flushWrites()</code> at once.</p>
+		<code>setWriteInterval(ms)</code>
+		<p>The controller that decides how often <code>flushWrites()</code> runs automatically.</p>
+		<code>cursors</code>
+		<p><span class="yellow">This is an alias directed to <code>w.cursors</code>.</span></p>
+		<code>writeBuffer</code>
+		<p>The current rate (milliseconds) at which the writeBuffer is flushed to the canvas.</p>
+		<code>flushWrites()</code>
+		<p><span class="yellow">This function is automatically used by <code>setWriteInterval()</code></span><br>
+		Immediately processes and renders all queued writes from writeBuffer to the canvas.</p>
+		<code>getChar(tileX, tileY, charX, charY)</code>
+		<p>Returns the character at a specific set of coordinates<br>
+		<span class="subtext">Default coordinates will be used<br>
+		Omiting the parameters will give you the character at the current position</span><br>
+		<br>
+		<span class="yellow">Returns a String or <code>null</code></span></p>
+		<code>getCharDecoration(col)</code>
+		<p>Returns an Object containing decoration infomation from the internal repersentation of a color</p>
+		<code>getCharColor(tileX, tileY, charX, charY)</code>
+		<p>Returns the color of a character at a specific set of coordinates<br>
+		<span class="subtext">Default coordinates will be used<br>
+		Omiting the parameters will give you the character color at the current position</span><br>
+		<br>
+		<span class="yellow">Returns a Number, Array or <code>null</code></span></p>
+		<code>getCharInfo(tileX, tileY, charX, charY)</code>
+		<p>Returns the information of a character that is at a specific set of coordinates<br>
+		<span class="subtext">Default coordinates will be used<br>
+		Omiting the parameters will give you the character infomation at the current position</span><br>
+		<br>
+		<span class="yellow">Returns an Object or <code>null</code></span></p>
+		<code>getCharInfoXY(x, y)</code>
+		<p>Returns the information of a character that is at a specific set of coordinates in XY format<br>
+		<span class="yellow">Returns an Object or <code>null</code></span></p>
+		<code>XYtoTile(x, y)</code>
+		<p>Converts XY coordinates to specific Tile coordinates</p>
+		<code>cursorCoords</code>
+		<p><span class="red">Read-only</span><br>
+		Returns the cursor's position</p>
+		<code>cursorCoordsXY</code>
+		<p><span class="red">Read-only</span><br>
+		Returns the cursor's position in XY format</p>
+		<code>getTileCoordsFromMouseCoords(instance)</code>
+		<p>An utility function that turns mouse coordinates into canvas tile coordinates.<br>
+		Requires an instance from a MouseEvent or an ancestor of it.</p>
+		<code>getTileCoordsFromMouseCoords(instance)</code>
+		<p>An utility function that turns mouse coordinates into canvas XY coordinates.<br>
+		Requires an instance from a MouseEvent or an ancestor of it.</p>
+		<code>Xr(hexColor, increment)</code>
+		<p>An utility function which increases all channels of a hex color by a certain amount.<br>
+		Colors will automatically get turned into a valid hex color.</p>
+		<code>currentRegionSelection</code>
+		<p>Holds the currently active <code>RegionSelection</code>.</p>
+		<code>loadEruda()</code>
+		<p>Loads Eruda, a developer console for mobile browsers or custom environments</p>
+		<code>lastTime</code>
+		<p>Stores the timestamp of the last update or action in the system or world</p>
+		
+		<h2><code>w</code> properties</h2>
+		<code>w</code>
+		<p>"w": Main hub or core object of the system</p>
+		<code>w.currentVersion</code>
+		<p>Returns the client's version (should usually be <code>"3.0.7"</code>)</p>
+		<code>w.displayNick</code>
+		<p>Returns the user's display name</p>
+		<code>w.chatHistory</code>
+		<p>An Array holding all chat messages</p>
+		<code>w.events</code>
+		<p>Returns an Object holding events from w.on callbacks</p>
+		<code>w.on(eventName, callback)</code>
+		<p>Creates a listener for a specific event, attaching a callback function that will run whenever the event is emitted.</p>
+		<code>w.off(eventName, callback)</code>
+		<p>Removes a previously registered event listener, so the callback will no longer runs when the event occurs.</p>
+		<code>w.emit(event, data)</code>
+		<p>Triggers or fires a specific event, optionally passing data to all listeners attached to that event.</p>
+		<code>w.moveCursor(direction, amount, doNotAutoPan)</code>
+		<p>Moves the cursor with a specified direction and the amount of characters moved.<br>
+		<code>direction</code>: <code>"up"</code>, <code>"down"</code>, <code>"left"</code>, <code>"right"</code></p>
+		<code>w.moveCursorTo(x, y, doNotAutoPan)</code>
+		<p><code>w.tp</code>, but with a doNotAutoPan argument</p>
+		<code>w.broadcastRecieve(force = false)</code>
+		<p>This function determines if you can listen to <code>cmd</code> events or not.</p>
+		<code>w.cmd(data, sendId = true)</code>
+		<p>Triggers a <code>cmd</code> command. Objects automatically get turned into Strings.</p>
+		<code>w.setFlushInterval(milliseconds)</code>
+		<p>Sets how often queued ce/edits in a buffer are automatically processed or flushed</p>
+		<code>w.changeTheme(type)</code>
+		<p>Changes your current theme to specified type:<br>
+		0 - Light<br>
+		1 - Dark<br>
+		2 - Custom</p>
+		<code>w.setPrimaryColor(hex_color_code)</code>
+		<p>Sets the primary color of the current theme</p>
+		<code>w.setSecondaryColor(hex_color_code)</code>
+		<p>Sets the secondary color of the current theme</p>
+		<code>w.toggleTeleport()</code>
+		<p>Shows or hides the teleport menu</p>
+		<code>w.color()</code>
+		<p>Shows or hides the color</p>
+		<code>w.settings()</code>
+		<p>Shows or hides the settings</p>
+		<code>w.goto(wall, subwall)</code>
+		<p>Teleports or switches the viewport to another wall/subwall</p>
+		<code>w.tp(x, y)</code>
+		<p>Moves the cursor to a specific coordinate</p>
+		<code>w.cursors</code>
+		<p>Holds the state or data of all active cursors in the system (Map)</p>
+		<code>w.redraw</code>
+		<p>Does nothing(?)</p>
+		<code>w.renderChunkAmount</code>
+		<p>Holds the current number of chunks the renderer processes per cycle</p>
+		<code>w.setRenderChunkAmount(amount)</code>
+		<p>Sets how many chunks of the canvas should be processed at a time</p>
+		<code>w.getTheme()</code>
+		<p>Returns the current theme of the canvas (Object)</p>
+		<code>w.generateCoords(wall)</code>
+		<p>Generates the wall's coordinates</p>
+		<code>w.generateCoordsOld(wall)</code>
+		<p>Generates the wall's coordinates, using old PRNG</p>
+		<code>w.chunks</code>
+		<p>A Map containing all chunks loaded by the client</p>
+		<code>w.typeChar(char, step, ???)</code>
+		<p><span class="yellow">This is an alias directed to <code>writeChar</code>.</span></p>
+		<code>w.socket</code>
+		<p>Holds the active WebSocket connection for real-time communication</p>
+		<code>w.clipboard</code>
+		<p>Represents the system's internal clipboard for copy interactions</p>
+		<code>w.clipboard.textarea</code>
+		<p>A hidden or internal <code>&lt;textarea&gt;</code> element used by the clipboard system</p>
+		<code>w.clipboard.copy(text)</code>
+		<p>Copies String to the internal clipboard</p>
+		<code>w.clipboard.init()</code>
+		<p>Initializes the internal clipboard system</p>
+		<code>w.showChat(toggle)</code>
+		<p>Shows or hides the chat</p>
+		<code>w.rerender()</code>
+		<p>Rerenders the canvas</p>
+		<code>w.split(str, noSurrog, noComb, norm)</code>
+		<p>Performs an advanced string split with additional handling for Unicode and normalization</p>
+		<code>w.chat.send(string)</code>
+		<p>Sends a message (String) to the chat</p>
+		<code>w.changeZoom(factor)</code>
+		<p>Changes the display zoom of the text canvas.<br>
+		<span class="yellow">This won't save when you refresh.</span></p>
+		<code>w.clientId</code>
+		<p>Shows your client session ID</p>
+		<code>w.wall</code>
+		<p>Returns the current wall you are in</p>
+		<code>w.subwall</code>
+		<p>Returns the current subwall you are in (main if no subwall)</p>
 
-    <h2><code>cursor</code> properties</h2>
-    <code>cursor</code>
-    <p>Contains infomation about the cursor</p>
-    <code>cursor.x</code>
-    <p>Returns the cursors current X position</p>
-    <code>cursor.y</code>
-    <p>Returns the cursors current Y position</p>
-    <code>cursor.rawx</code>
-    <p>Returns the cursors current X position on the screen. <code>cursor.x</code> differs from this if "Smooth cursors" option is true.</p>
-    <code>cursor.rawy</code>
-    <p>Returns the cursors current Y position on the screen. <code>cursor.y</code> differs from this if "Smooth cursors" option is true.</p>
-    <code>cursor.start</code>
-    <p>Returns the X position where the cursor will go to when you create a new line</p>
-    <code>cursor.visible</code>
-    <p>Doesn't do anything</p>
-    <code>cursor.lastedit</code>
-    <p>Returns the coordinates of the last edit</p>
+		<h2><code>cursor</code> properties</h2>
+		<code>cursor</code>
+		<p>Contains infomation about the cursor</p>
+		<code>cursor.x</code>
+		<p>Returns the cursors current X position</p>
+		<code>cursor.y</code>
+		<p>Returns the cursors current Y position</p>
+		<code>cursor.rawx</code>
+		<p>Returns the cursors current X position on the screen. <code>cursor.x</code> differs from this if "Smooth cursors" option is true.</p>
+		<code>cursor.rawy</code>
+		<p>Returns the cursors current Y position on the screen. <code>cursor.y</code> differs from this if "Smooth cursors" option is true.</p>
+		<code>cursor.start</code>
+		<p>Returns the X position where the cursor will go to when you create a new line</p>
+		<code>cursor.visible</code>
+		<p>Doesn't do anything</p>
+		<code>cursor.lastedit</code>
+		<p>Returns the coordinates of the last edit</p>
 
-    <h2><code>Tile</code> properties</h2>
-    <code>Tile</code>
-    <p>Tile is a manager, a system that handles all tiles or all chunks in a canvas</p>
-    <code>Tile.get(tileX, tileY)</code>
-    <p>Gets a tile at a specific set of coordinates<br>
-    <br>
-    <span class="yellow">Returns an Object or <code>null</code></span></p>
-    <p><code>Tile.set(tileX, tileY)</code> <span class="yellow">[useless]</span></p>
-    <p>Sets a tile at a specific set of coordinates<br>
-    <br>
-    <span class="yellow">Returns a Boolean</span></p>
-    <code>Tile.exists(tileX, tileY)</code>
-    <p>Checks a tile if it exists at a specific set of coordinates<br>
-    <br>
-    <span class="yellow">Returns a Boolean</span></p>
-    <code>Tile.loaded(tileX, tileY)</code>
-    <p>Checks a tile if its loaded at a specific set of coordinates<br>
-    <br>
-    <span class="yellow">Returns a Boolean</span></p>
-    <code>Tile.protected(tileX, tileY)</code>
-    <p>Checks a tile if its protected at a specific set of coordinates<br>
-    <br>
-    <span class="yellow">Returns a Boolean</span></p>
-    <code>Tile.visible(tileX, tileY)</code>
-    <p>Checks a tile if its visible on the client's viewport at a specific set of coordinates<br>
-    <br>
-    <span class="yellow">Returns a Boolean</span></p>
-    <code>Tile.empty(tileX, tileY)</code>
-    <p>Checks a tile if it's empty at a specific set of coordinates<br>
-    <br>
-    <span class="yellow">Returns a Boolean</span></p>
-    <code>Tile.saveBlob(tileX, tileY)</code>
-    <p>Downloads a tile at a specific set of coordinates as a PNG file<br>
-    <br>
-    <span class="yellow">Returns <code>undefined</code> or <code>null</code></span></p>
-    
-    <h2><code>RegionSelection</code> class</h2>
-    <code>RegionSelection()</code>
-    <p>The RegionSelection constructor.</p>
-    <code>onSelection(callback)</code>
-    <p>Adds a listener to the RegionSelection object, executing after selection.<br>
-    The callback should have 4 parameters, which should be like this: <code>(xTopLeft, yTopLeft, xBottomRight, yBottomRight)</code></p>
-    <code>onSelectionEvents</code>
-    <p>Returns an Array holding callbacks from the onSelection function</p>
-    <code>tiled</code>
-    <p>Determines if the RegionSelection snaps to a tile or not. <span class="red">(BROKEN)</span></p>
-    <code>startSelection()</code>
-    <p>Starts the selection.</p>
-    <code>getSelected()</code>
-    <p>Returns the character and the color at the cursor's position.</p>
+		<h2><code>Tile</code> properties</h2>
+		<code>Tile</code>
+		<p>Tile is a manager, a system that handles all tiles or all chunks in a canvas</p>
+		<code>Tile.get(tileX, tileY)</code>
+		<p>Gets a tile at a specific set of coordinates<br>
+		<br>
+		<span class="yellow">Returns an Object or <code>null</code></span></p>
+		<p><code>Tile.set(tileX, tileY)</code> <span class="yellow">[useless]</span></p>
+		<p>Sets a tile at a specific set of coordinates<br>
+		<br>
+		<span class="yellow">Returns a Boolean</span></p>
+		<code>Tile.exists(tileX, tileY)</code>
+		<p>Checks a tile if it exists at a specific set of coordinates<br>
+		<br>
+		<span class="yellow">Returns a Boolean</span></p>
+		<code>Tile.loaded(tileX, tileY)</code>
+		<p>Checks a tile if its loaded at a specific set of coordinates<br>
+		<br>
+		<span class="yellow">Returns a Boolean</span></p>
+		<code>Tile.protected(tileX, tileY)</code>
+		<p>Checks a tile if its protected at a specific set of coordinates<br>
+		<br>
+		<span class="yellow">Returns a Boolean</span></p>
+		<code>Tile.visible(tileX, tileY)</code>
+		<p>Checks a tile if its visible on the client's viewport at a specific set of coordinates<br>
+		<br>
+		<span class="yellow">Returns a Boolean</span></p>
+		<code>Tile.empty(tileX, tileY)</code>
+		<p>Checks a tile if it's empty at a specific set of coordinates<br>
+		<br>
+		<span class="yellow">Returns a Boolean</span></p>
+		<code>Tile.saveBlob(tileX, tileY)</code>
+		<p>Downloads a tile at a specific set of coordinates as a PNG file<br>
+		<br>
+		<span class="yellow">Returns <code>undefined</code> or <code>null</code></span></p>
+		
+		<h2><code>RegionSelection</code> class</h2>
+		<code>RegionSelection()</code>
+		<p>The RegionSelection constructor.</p>
+		<code>onSelection(callback)</code>
+		<p>Adds a listener to the RegionSelection object, executing after selection.<br>
+		The callback should have 4 parameters, which should be like this: <code>(xTopLeft, yTopLeft, xBottomRight, yBottomRight)</code></p>
+		<code>onSelectionEvents</code>
+		<p>Returns an Array holding callbacks from the onSelection function</p>
+		<code>tiled</code>
+		<p>Determines if the RegionSelection snaps to a tile or not. <span class="red">(BROKEN)</span></p>
+		<code>startSelection()</code>
+		<p>Starts the selection.</p>
+		<code>getSelected()</code>
+		<p>Returns the character and the color at the cursor's position.</p>
 
-    <h2>Events</h2>
-    <p>These are used in w.on or w.off, perfect if you want to make a bot or anything else</p>
-    <code>"join"</code>
-    <p>Emitted when you join a wall<br>
-    Example packet:</p>
-    <pre>
+		<h2>Events</h2>
+		<p>These are used in w.on or w.off, perfect if you want to make a bot or anything else</p>
+		<code>"join"</code>
+		<p>Emitted when you join a wall<br>
+		Example packet:</p>
+		<pre>
 {
 	wall: "textwall",
 	subwall: "main", // "main" indicates that the subwall name is not there
 }</pre>
-    <code>"alert"</code>
-    <p>Emitted when the server sends an alert<br>
-    Example packet:</p>
-    <pre>
+		<code>"alert"</code>
+		<p>Emitted when the server sends an alert<br>
+		Example packet:</p>
+		<pre>
 {
 	message: "Hello World."
 }</pre>
-    <code>"edit"</code>
-    <p>Emitted <br>when someone or you edit a character or more
-    Example packet:</p>
-    <pre>
+		<code>"edit"</code>
+		<p>Emitted <br>when someone or you edit a character or more
+		Example packet:</p>
+		<pre>
 {
 	edits: [
 		// Each entry in this array repersents a chunk
@@ -354,43 +354,43 @@
 	],
 	clientId: "1234567"
 }</pre>
-    <code>"chunks"</code>
-    <p>Emitted when ??? <span class="yellow">[useless?]</span><br>
-    Example packet:</p>
-    <pre>
+		<code>"chunks"</code>
+		<p>Emitted when ??? <span class="yellow">[useless?]</span><br>
+		Example packet:</p>
+		<pre>
 {
 	chunks: undefined?
 }</pre>
-    <code>"protect"</code>
-    <p>Emitted when a chunk is protected<br>
-    Example packet:</p>
-    <pre>
+		<code>"protect"</code>
+		<p>Emitted when a chunk is protected<br>
+		Example packet:</p>
+		<pre>
 {
 	cell: "-20,10",
 	protect: false
 }</pre>
-    <code>"textprotect"</code>
-    <p>Might emit when a cell is protected<br>
-    Example packet:</p>
-    <pre>
+		<code>"textprotect"</code>
+		<p>Might emit when a cell is protected<br>
+		Example packet:</p>
+		<pre>
 {
 	cell: "-2,1",
 	protected: false
 }</pre>
-    <code>"clear"</code>
-    <p>Emitted when a chunk is cleared<br>
-    Example packet:</p>
-    <pre>
+		<code>"clear"</code>
+		<p>Emitted when a chunk is cleared<br>
+		Example packet:</p>
+		<pre>
 {
 	x1: 0,
 	y1: 0,
 	x2: 20,
 	y2: 0,
 }</pre>
-    <code>"cursor"</code>
-    <p>Emitted when a cursor is updating properties<br>
-    Example packet:</p>
-    <pre>
+		<code>"cursor"</code>
+		<p>Emitted when a cursor is updating properties<br>
+		Example packet:</p>
+		<pre>
 {
 	id: "1234567",
 	n: "Bzuki",
@@ -398,15 +398,15 @@
 	l: [0, 0], // Currently this holds the PREVIOUS position of the cursor, so you need to resort to other methods such as using w.cursors.
 	c: [0, 217, 0]
 }</pre>
-    <code>"pong"</code>
-    <p>Emitted every second<br>
-    Example packet:</p>
-    <pre>
+		<code>"pong"</code>
+		<p>Emitted every second<br>
+		Example packet:</p>
+		<pre>
 1000 // ms since last ping</pre>
-    <code>"msg"</code>
-    <p>Emitted when someone sends a message<br>
-    Example packet:</p>
-    <pre>
+		<code>"msg"</code>
+		<p>Emitted when someone sends a message<br>
+		Example packet:</p>
+		<pre>
 {
 	nick: "penthexium56",
 	msg: "chess battle advanced",
@@ -418,11 +418,11 @@
 	timestamp: 1787282059723,
 	tag: '&lt;span style="color:#00ffcc"&gt;MOD&lt;/span&gt;'
 }</pre>
-    <code>"cursorleft"</code>
-    <p>Emitted when a cursor leaves the wall<br>
-    Example packet:</p>
-    <pre>
+		<code>"cursorleft"</code>
+		<p>Emitted when a cursor leaves the wall<br>
+		Example packet:</p>
+		<pre>
 "1234567" // The cursor that recently left's ID
-    </pre>
-  </body>
+		</pre>
+	</body>
 </html>
