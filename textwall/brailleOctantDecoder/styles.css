@@ -16,13 +16,13 @@ div.subtext p {
 		color: #c0c0c0;
 }
 @font-face {
-	font-family: unifont17;
-	src: url(https://the179ucetile.github.io/h/fonts/unifont-17.0.05.otf);
+	font-family: unifont18;
+	src: url(https://the179ucetile.github.io/h/fonts/unifont-18.0.01.otf);
 	unicode-range: U+0-FFFF;
 }
 @font-face {
-	font-family: unifont17;
-	src: url(https://the179ucetile.github.io/h/fonts/unifont_upper-17.0.05.otf);
+	font-family: unifont18;
+	src: url(https://the179ucetile.github.io/h/fonts/unifont_upper-18.0.01.otf);
 	unicode-range: U+10000-10FFFF;
 }
 textarea {
