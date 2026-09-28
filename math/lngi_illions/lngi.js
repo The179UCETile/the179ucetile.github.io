@@ -67,13 +67,13 @@ function tierer3(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false,
 			if (i[0].gte("2")) pref2 = pref2.replace(/[aeiou]$/, "");
 			let prefNext = next(i[1]);
 			if (i[0].gte("2")) {
-				prefNext = prefNext.replace(/^[bcdfghjklmnpqrstvwxyz]+/, "");
+				prefNext = prefNext.replace(/^[bcdfghjklmnpqrstvwxz]+/, "");
 				if (/^et/.test(prefNext)) {
 					prefNext = `e${prefNext}`
-				}
+				};
 				if (/^y/.test(prefNext)) {
 					prefNext = `o${prefNext}`
-				}
+				};
 			}
 			s.push(`${pref2}${prefNext}i`);
 		};
@@ -261,7 +261,7 @@ function illionName(illion, c = false) {
 				let pref = (special ? specials[2] : r[15])[rnd("2", 0, idx)];
 				pref += (pref != "" ? specials[1] : r[14])[rnd("1", 0, idx)];
 				pref += (pref != "" ? specials[0] : r[13])[rnd("0", 0, idx)];
-				return `${pref}i`;
+				return `${pref}`;
 			}
 			case 5:
 				return `${r[18][rnd("2", 0, idx)]}${r[17][rnd("1", 0, idx)]}${r[16][rnd("0", 0, idx)]}`.replace(/[aeiou]$/, "")
