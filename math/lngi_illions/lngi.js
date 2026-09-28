@@ -30,13 +30,13 @@ function tierer(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false, 
 		if (i[1].eq("0")) {
 			s.push(pref);
 		} else {
-			s.push(`${i[0].gt("1") || (doNotUseBlankForOne && ii != 0) ? pref : ""}${next(i[1])}`);
+			s.push(`${i[0].gt("1") || (doNotUseBlankForOne && ii != 0) ? pref + (i[1].gte("10") ? "<br>" : "") : ""}${next(i[1])}`);
 		};
 		ii++;
 	};
 	return s.join(sep);
 }
-function tierer2(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false, max = 6) { // for tier 2 specifically
+function tierer2(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false, max = 6) { // for tier 2
 	if (num.lt(base)) return cur(num);
 	const arr = commasplitThing(num, base, max);
 	const s = [];
@@ -45,7 +45,7 @@ function tierer2(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false,
 		if (i[1].eq("0")) {
 			s.push(cur(i[0], 2));
 		} else {
-			s.push(`${i[0].gt("1") || (doNotUseBlankForOne && ii != 0) ? cur(i[0], 1) : ""}${next(i[1])}`);
+			s.push(`${i[0].gt("1") || (doNotUseBlankForOne && ii != 0) ? cur(i[0], 1) + (i[1].gte("10") ? "<br>" : "") : ""}${next(i[1])}`);
 		};
 		ii++;
 	};
@@ -75,7 +75,7 @@ function tierer3(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false,
 					prefNext = `o${prefNext}`
 				}
 			}
-			s.push(`${pref2}${prefNext}i`);
+			s.push(`${pref2 + (i[0].gt("1") && i[1].gte("10") ? "<br>" : "")}${prefNext}i`);
 		};
 		ii++;
 	};
@@ -92,7 +92,7 @@ function tierer4(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false,
 		if (i[1].eq("0")) {
 			s.push(pref);
 		} else {
-			s.push(`${i[0].gt("1") || (doNotUseBlankForOne && ii != 0) ? pref : ""}${next(i[1])}`);
+			s.push(`${i[0].gt("1") || (doNotUseBlankForOne && ii != 0) ? pref + (i[1].gte("10") ? "<br>" : "") : ""}${next(i[1])}`);
 		};
 		ii++;
 	};
@@ -218,10 +218,11 @@ function illionName(illion, c = false) {
 	}
 	function getTierPref(idx, tier, special = false) {
 		if (idx.gte("1000")) {
-			if (tier.eq("1")) return tierer2(idx, illionName, d => getTierPref(d, new Decimal("2")), "-<br>", "1000", true, 3);
-			if (tier.eq("3")) return tierer3(idx, (d, m) => getTierPref(d, tier, m), d => getTierPref(d, tier.add("1").floor()), "-<br>", "1000", true, 3, "i");
-			if (tier.eq("4")) return tierer4(idx, (d, m) => getTierPref(d, tier, m), (d, m) => getTierPref(d, tier.add("1").floor(), m), "-<br>", "1000", true, 3, "");
-			return tierer(idx, d => getTierPref(d, tier), d => getTierPref(d, tier.add("1").floor()), "-<br>", "1000", true, 3, ["", "o", "e"][tier.floor().toNumber()] ?? "");
+			let sep = (tier.mod("2").eq("1") ? "-" : "") + "<br>";
+			if (tier.eq("1")) return tierer2(idx, illionName, d => getTierPref(d, new Decimal("2")), sep, "1000", true, 3);
+			if (tier.eq("3")) return tierer3(idx, (d, m) => getTierPref(d, tier, m), d => getTierPref(d, tier.add("1").floor()), sep, "1000", true, 3, "i");
+			if (tier.eq("4")) return tierer4(idx, (d, m) => getTierPref(d, tier, m), (d, m) => getTierPref(d, tier.add("1").floor(), m), sep, "1000", true, 3, "");
+			return tierer(idx, d => getTierPref(d, tier), d => getTierPref(d, tier.add("1").floor()), sep, "1000", true, 3, ["", "o", "e"][tier.floor().toNumber()] ?? "");
 		}
 		if (tier.gte("56")) {
 			let tier2 = tier.sub("56").floor();
@@ -240,7 +241,7 @@ function illionName(illion, c = false) {
 				if (idx.lt("20")) return r[4][idx.toNumber()];
 				return `${idx.mod("100").eq("10") ? "" : `${r[5][rnd("0", 0, idx)]}${r[6][rnd("1", 0, idx)]}`}${r[7][rnd("2", 0, idx)]}o`.replace(/eo$/, "o")
 			case 3: {
-				if (special && idx.lt("11")) return "	da tra ta pa exa za ya na daka".split(/ /u)[idx.toNumber()]
+				if (special && idx.lt("11")) return "  da tra ta pa exa za ya na daka".split(/ /u)[idx.toNumber()]
 				if (idx.lt("20")) return r[8][idx.toNumber()];
 				let pref = idx.mod("100").lt("20") && idx.mod("100").gte("10") ? r[8][idx.mod("100").toNumber()] : r[9][rnd("0", 0, idx)];
 				if (idx.mod("100").gte("20")) {
@@ -346,8 +347,8 @@ function pause() {
 }
 function update(time) {
 	t += (time - lastTs) / 1e3 * (paused ? 0 : speed);
-	t = Math.min(7980.364409178636, Math.max(0, t));
-	let num = Decimal.tetrate(10, t / 1200 + 1).add(t).sub(10).min("(e^6)3000.47712125471966244").floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
+	t = Math.min(127685.83054685818, Math.max(0, t));
+	let num = Decimal.tetrate(10, t / 19200 + 1).add(t / 2).sub(10).min("(e^6)3000.47712125471966244").floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
 	document.getElementById("num").innerHTML = formatDefault(num);
 	document.getElementById("num").style.fontFamily = document.getElementById("fontinput").value;
 	document.getElementById("num_illion").style.fontFamily = document.getElementById("fontinput").value;

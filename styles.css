@@ -1,37 +1,37 @@
 @font-face {
 	font-family: "Monospace TextWall";
-	src: url(/fonts/monospace-textwall-bmp.ttf);
+	src: url(fonts/monospace-textwall-bmp.ttf);
 }
 @font-face {
 	font-family: "Monospace TextWall";
-	src: url(/fonts/monospace-textwall-spuab.ttf);
+	src: url(fonts/monospace-textwall-spuab.ttf);
 	unicode-range: U+100000-10FFFF;
 }
 @font-face {
 	font-family: "Monospace TextWall";
-	src: url(/fonts/monospace-textwall-wip.ttf);
+	src: url(fonts/monospace-textwall-wip.ttf);
 	font-display: fallback;
 }
 @font-face {
 	font-family: "Monospace TextWall";
-	src: url(/fonts/monospace-textwall-smp.ttf);
+	src: url(fonts/monospace-textwall-smp.ttf);
 	font-display: fallback;
 }
 @font-face {
 	font-family: "Monospace TextWall";
-	src: url(/fonts/monospace-textwall-bold-bmp.ttf);
+	src: url(fonts/monospace-textwall-bold-bmp.ttf);
 	font-weight: 700;
 	unicode-range: U+0-FFFF;
 }
 @font-face {
 	font-family: "Monospace TextWall";
-	src: url(/fonts/monospace-textwall-bold-smp.ttf);
+	src: url(fonts/monospace-textwall-bold-smp.ttf);
 	font-weight: 700;
 	unicode-range: U+10000-1FFFF;
 }
 @font-face {
 	font-family: "last resort";
-	src: url(/fonts/LastResort-Regular.ttf);
+	src: url(fonts/LastResort-Regular.ttf);
 }
 body, html { 
 	background-color: #000000;
