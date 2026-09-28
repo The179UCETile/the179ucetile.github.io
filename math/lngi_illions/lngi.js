@@ -75,7 +75,7 @@ function tierer3(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false,
 					prefNext = `o${prefNext}`
 				}
 			}
-			s.push(`${pref2 + (i[0].gt("1") && i[1].gte("10") ? "<br>" : "")}${prefNext}i`);
+			s.push(`${pref2}${prefNext}i`);
 		};
 		ii++;
 	};
