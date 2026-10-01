@@ -67,6 +67,7 @@ function tierer3(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false,
 			if (i[0].gte("2")) pref2 = pref2.replace(/[aeiou]$/, "");
 			let prefNext = next(i[1]);
 			if (i[0].gte("2")) {
+				if (i[1].eq("60")) prefNext = "omast";
 				prefNext = prefNext.replace(/^[bcdfghjklmnpqrstvwxz]+/, "");
 				if (/^et/.test(prefNext)) {
 					prefNext = `e${prefNext}`
