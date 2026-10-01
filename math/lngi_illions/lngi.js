@@ -365,8 +365,8 @@ function pause() {
 }
 function update(time) {
 	t += (time - lastTs) / 1e3 * (paused ? 0 : speed);
-	t = Math.min(192000, Math.max(0, t));
-	let num = Decimal.tetrate(1000, t / 19200 + 1).sub(1000).min("(e^10)3000.47712125471966244").floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
+	t = Math.min(211200, Math.max(0, t));
+	let num = Decimal.tetrate(1000, t / 19200 + 1).sub(1000).min("(e^11)3000.47712125471966244").floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
 	let perc = num.gte("F5") ? Decimal.div(1, num.slog().sub(1).sqrt()).mul(100).max(2.5).toNumber() : 50;
 	document.getElementById("num").innerHTML = formatDefault(num);
 	document.getElementById("num").style.fontFamily = document.getElementById("fontinput").value;
