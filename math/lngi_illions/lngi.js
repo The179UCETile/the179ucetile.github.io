@@ -140,7 +140,7 @@ function illionName(illion, c = false) {
 		" 'indigi magenti pinki blacki whiti grayi silvi browni handi", // aposthophe to prevent rediindigillion
 		" wigi bitterswigi oragigi goldigi yelligi limigi greenigi aquligi bluigi",
 
-		" 'erke alejandre bethe bridge code courte deve dunce 'eve", // same here
+		" 'erke 'alejandre bethe bridge code courte deve dunce 'eve", // same here
 		" 'ezeke 'ealejandreke 'ebetheke 'ebridgeke 'ecodeke 'ecourteke 'edeveke 'edunceke 'eeveke",
 		" gwene healthe bethgwene bridgwene codqwene courtgwene devgwene duncgwene evgwene",
 
@@ -150,11 +150,11 @@ function illionName(illion, c = false) {
 
 		" meakoowa wookipa coopa ksurna sfreigna gfhfmka morefa hoogrga hendekaresta",
 		" refentrepta royarda troyarda tetroyarda pentoyarda hexoyarda heptoyarda 'octoyarda 'ennoyarda",
-		" centinga ducentinga trecentinga quadgentinga quingentinga sescentinga septgentinga octgentinga nongentinga",
+		" centinga ducentinga trecentinga quadgentinga quingentinga sescentinga septgentinga 'octgentinga nongentinga",
 
 		" kilingu megingu gigingu teringu petingu exingu zettingu yottingu ronningu",
-		" quettingu ikingu trakingu tekingu pekingu exakingu zakingu yokingu nokingu",
-		" hotingu botingu trotingu totingu potingu exotingu zotingu yootingu notingu",
+		" quettingu 'ikingu trakingu tekingu pekingu 'exakingu zakingu yokingu nokingu",
+		" hotingu botingu trotingu totingu potingu 'exotingu zotingu yootingu notingu",
 
 		" kall ᴿ ᴶ ᵀ ꟲ ⱽ ᶻ ᴬ ᴺ",
 		" ᴰ ʳ ʲ ᵗ ᶜ ᵛ 𐞚 ᵃ ⁿ",
