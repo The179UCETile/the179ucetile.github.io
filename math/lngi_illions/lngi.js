@@ -256,7 +256,7 @@ function illionName(illion, c = false) {
 				return illionName(idx);
 			case 2:
 				if (idx.lt("20")) return r[4][idx.toNumber()];
-				return `${idx.mod("100").eq("10") ? "" : `${r[5][rnd("0", 0, idx)]}${r[6][rnd("1", 0, idx)]}`}${r[7][rnd("2", 0, idx)]}o`.replace(/eo$/, "o")
+				return `${idx.mod("100").eq("10") ? "quece" : `${r[5][rnd("0", 0, idx)]}${r[6][rnd("1", 0, idx)]}`}${r[7][rnd("2", 0, idx)]}o`.replace(/eo$/, "o")
 			case 3: {
 				if (special && idx.lt("11")) return "  da tra ta pa exa za ya na daka".split(/ /u)[idx.toNumber()]
 				if (idx.lt("20")) return r[8][idx.toNumber()];
