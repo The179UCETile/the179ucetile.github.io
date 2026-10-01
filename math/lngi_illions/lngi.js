@@ -5,7 +5,7 @@ function commasplitThing(num, base, lim, forceInteg = false) {
 	const arr = [];
 	let num2 = num;
 	if (num.lt("0")) return [[new Decimal(0), new Decimal(0)]];
-	if (num.gte("e9e15")) lim = 1; // precision loss
+	if (num.gte("e1e12")) lim = 1; // arbitrary
 	while (arr.length < lim && num2.gt("0")) {
 		let log = num2.log(base).floor(), man = num2.div(base.pow(log)).floor();
 		if (man.eq("0")) man = new Decimal("1");
@@ -75,7 +75,7 @@ function tierer3(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false,
 					prefNext = `o${prefNext}`
 				};
 			}
-			s.push(`${pref2}${prefNext}i`);
+			s.push(`${pref2 + (i[1].gte("20") && i[0].neq("1") ? "<br>" : "")}${prefNext}i`);
 		};
 		ii++;
 	};
@@ -124,7 +124,6 @@ function illionName(illion, c = false) {
 		" ho bo tro to po exo zo yo no",
 
 		" kal mej gij ast lun ferm jov sol bet gloc gax sup vers mult pyr gunt kentr onl paptr",
-		" kal mej gij ast lun ferm jov sol bet", // UNUSED
 		" gloc hous trong bat handr mast got kort nenk",
 		" jan mejan gijan astan lunan ferman joven solan betan",
 
@@ -136,12 +135,30 @@ function illionName(illion, c = false) {
 		" kharoshe ugaricuenife persicuenife desericuenife shavicuenife osmanicuenife cyprnicuenife pheonicuenife kharoshicuenife",
 		" ceneife ugariceneife persiceneife desericeneife shaviceneife osmaniceneife cyprniceneife pheoniceneife kharoshiceneife",
 
-		" red ᶀ Œ G Ƴ Ł Ɠ ꜳ Ꞗ", " ɨ Ṃ Ᵽ Ɓ W ꝿ ſ Ƃ ħ", " ɯ ƃ œ Ǥ ƴ Ɩ Ɡ Ꜷ ꞗ",
-		" Ə ꜵ ב Ꞵ c ɕ ɗ ᴆ ɘ", " ə ɚ Ǝ ɜ ɝ ɞ ⱸ ꬲ ꬳ", " ꞡ ʮ ʚ ʙ Ↄ ↄ ꝱ Ɑ Ɛ",
-		" ᴉ ɻ ꞣ ꝇ Ꝉ ᶇ ᴓ ꟊ Ꟍ", " ꞇ Ꞇ ᶑ ꟗ ʌ Ꝕ ᵺ ᵱ ḃ", " Ꟙ 𝼉 Ḃ ꟿ ꝃ ꟷ Ꟈ ꟁ Ꞔ",
-		" ᶬ W ꞔ Ꝁ ꝸ Ꟑ Ｍ ʯ ꞕ", " ꝛ Ꝛ Ꜩ ʧ ꝕ Ⱶ ⱶ ⱺ Ꝫ", " ꭃ Ꝺ þ ꝙ Ꝙ Ꝣ ꝣ Ꞝ Ꟗ",
-		" Ꝃ ｍ ꟑ ꝷ ƿ ɇ Ƹ Ɏ Ʀ", " ꝯ ꟾ 𝼓 𝼪 ꟕ ꬴ Ᶎ ɣ ꞑ", " ꜧ ꞵ ʨ Ʇ ꝥ 𝼘 ƹ Ȝ ȵ",
-		" ᴷ ᴿ ᴶ ᵀ ꟲ ⱽ ᶻ ᴬ ᴺ", " ᴰ ʳ ʲ ᵗ ᶜ ᵛ 𐞚 ᵃ ⁿ", " ᶝ 𐞨 𐞘 𐞯 ˤ ᶹ 𐞞 𐞃 ᶮ",
+		" redi bitterswi orangi goldi yelli limi greeni aquli blui",
+		" 'indigi magenti pinki blacki whiti grayi silvi browni handi", // aposthophe to prevent rediindigillion
+		" wigi bitterswigi oragigi goldigi yelligi limigi greenigi aquligi bluigi",
+
+		" 'erke alejandre bethe bridge code courte deve dunce 'eve", // same here
+		" 'ezeke 'ealejandreke 'ebetheke 'ebridgeke 'ecodeke 'ecourteke 'edeveke 'edunceke 'eeveke",
+		" gwene healthe bethgwene bridgwene codqwene courtgwene devgwene duncgwene evgwene",
+
+		" izzo justo kato leshawno lindso noaho oweno sado sierro",
+		" trento tyro derto britto voco prowdo traino paino babo",
+		" scilo tropto bito mito kopto hipto dayo 'onto chirpo",
+
+		" meakoowa wookipa coopa ksurna sfreigna gfhfmka morefa hoogrga hendekaresta",
+		" refentrepta royarda troyarda tetroyarda pentoyarda hexoyarda heptoyarda 'octoyarda 'ennoyarda",
+		" centinga ducentinga trecentinga quadgentinga quingentinga sescentinga septgentinga octgentinga nongentinga",
+
+		" kilingu megingu gigingu teringu petingu exingu zettingu yottingu ronningu",
+		" quettingu ikingu trakingu tekingu pekingu exakingu zakingu yokingu nokingu",
+		" hotingu botingu trotingu totingu potingu exotingu zotingu yootingu notingu",
+
+		" kall ᴿ ᴶ ᵀ ꟲ ⱽ ᶻ ᴬ ᴺ",
+		" ᴰ ʳ ʲ ᵗ ᶜ ᵛ 𐞚 ᵃ ⁿ",
+		" ᶝ 𐞨 𐞘 𐞯 ˤ ᶹ 𐞞 𐞃 ᶮ",
+
 		" ẅ ṽ u ṯ ṧ Ṝ Ǭ ṕ ṓ", " Ṿ ḕ ṻ Ṯ Ṧ ṝ ǭ Ṕ Ṓ", " ẖ ṿ Ṹ ṭ ṥ Ṟ Ƣ ṗ ṏ",
 		" Ɯ ᶌ ư ȶ Ʃ Ɍ ƣ ᵽ Ɵ", " Ʋ ơ Ʉ Ⱦ Ꞩ ɍ ǫ Ƿ Ơ", " ɦ Ʌ Ʊ Ŧ ʪ ʀ ȹ Ꝓ ɷ",
 		" Ɲ ɱ ɫ ƙ ʝ ɩ ʎ ƍ ƒ", " ɤ ɐ ȴ ʞ ʄ ı ʜ ǥ Ⅎ", " Ꜧ ᴟ ʟ Ꝅ ⱹ ǂ ʱ ꬶ ʇ",
@@ -187,8 +204,8 @@ function illionName(illion, c = false) {
 		" ҫ Ԃ Ᲊ ᲊ ᴥ 𝽸 𝽤 𝽘 𝽭", " ᲈ 𝽱 𞀳 𞁧 ⅊ Ή 𝑯 ѹ 𝽂", " ℋ 𝼒 ᲆ Ꙥ ⅌ ԡ ℌ 𝼼 𝾁"
 	].map(a => a.split(/ /u));
 	const specials = [
-		" al ej ij ast un erm ov ol eet oc ax up ers ult opyr unt entr eonl aptr",
-		"	ous ong at andr omast ogot ort enk",
+		" al ej ij ast un erm ov ol et oc ax up ers ult opyr unt entr eonl aptr",
+		" oc ous ong at andr omast ogot ort enk",
 		" an ejan ijan astan unan erman ovan olan etan",
 		" unt duot tret quadr quint sext sept oct non"
 	].map(a => a.split(/ /u));
@@ -258,17 +275,18 @@ function illionName(illion, c = false) {
 			}
 			case 4: {
 				if (idx.lt("20")) return r[12][idx.toNumber()];
-				let pref = (special ? specials[2] : r[15])[rnd("2", 0, idx)];
-				pref += (pref != "" ? specials[1] : r[14])[rnd("1", 0, idx)];
-				pref += (pref != "" ? specials[0] : r[13])[rnd("0", 0, idx)];
+				let pref = (special ? specials[2] : r[14])[rnd("2", 0, idx)];
+				pref += (pref != "" ? specials[1] : r[13])[rnd("1", 0, idx)];
+				pref += (pref != "" ? specials[0] : r[12])[rnd("0", 0, idx)];
 				return `${pref}`;
 			}
 			case 5:
-				return `${r[18][rnd("2", 0, idx)]}${r[17][rnd("1", 0, idx)]}${r[16][rnd("0", 0, idx)]}`.replace(/[aeiou]$/, "")
+				return `${r[17][rnd("2", 0, idx)]}${r[16][rnd("1", 0, idx)]}${r[15][rnd("0", 0, idx)]}`.replace(/[aeiou]$/, "")
 			case 8:
-				return `${r[27][rnd("2", 0, idx)]}${r[26][rnd("1", 0, idx)]}${r[25][rnd("0", 0, idx)]}`
+				return `${r[26][rnd("2", 0, idx)]}${r[25][rnd("1", 0, idx)]}${r[24][rnd("0", 0, idx)]}`.replace(/'{2,}/g, "'").replace(/^'|'$/, "")
 			default:
-				return `${r[19 + (tier - 6) * 3][rnd("0", 0, idx)]}${r[20 + (tier - 6) * 3][rnd("1", 0, idx)]}${r[21 + (tier - 6) * 3][rnd("2", 0, idx)]}`
+				return `${r[18 + (tier - 6) * 3][rnd("0", 0, idx)]}${r[19 + (tier - 6) * 3][rnd("1", 0, idx)]}${r[20 + (tier - 6) * 3][rnd("2", 0, idx)]}`
+					.replace(/'{2,}/g, "'").replace(/^'|'$/, "")
 		}
 	}
 	let nm = illion.toNumber();
@@ -347,12 +365,14 @@ function pause() {
 }
 function update(time) {
 	t += (time - lastTs) / 1e3 * (paused ? 0 : speed);
-	t = Math.min(127685.83054685818, Math.max(0, t));
-	let num = Decimal.tetrate(10, t / 19200 + 1).add(t / 2).sub(10).min("(e^6)3000.47712125471966244").floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
+	t = Math.min(192000, Math.max(0, t));
+	let num = Decimal.tetrate(1000, t / 19200 + 1).sub(1000).min("(e^10)3000.47712125471966244").floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
+	let perc = num.gte("F5") ? Decimal.div(1, num.slog().sub(1).sqrt()).mul(100).max(2.5).toNumber() : 50;
 	document.getElementById("num").innerHTML = formatDefault(num);
 	document.getElementById("num").style.fontFamily = document.getElementById("fontinput").value;
 	document.getElementById("num_illion").style.fontFamily = document.getElementById("fontinput").value;
-	document.getElementById("num").style.backgroundImage = `repeating-linear-gradient(-45deg, #ffffff, hsl(${num.slog().mul("30").toString()}deg, 100%, ${Decimal.sub("100", num.slog().mul("2.5")).max("50").toString()}%) 25%, #ffffff 50%)`;
+	document.getElementById("num").style.backgroundImage = `repeating-linear-gradient(-45deg, #ffffff, hsl(${num.add(2).slog().sqrt().mul("30").toString()}deg, 100%, ${Decimal.sub("100", num.add(2).slog().mul("2.5")).max("50").toString()}%) 25%, #ffffff 50%)`;
+	document.getElementById("num").style.backgroundSize = `${perc}dvmax ${perc}dvmax`
 	document.getElementById("num_illion").innerHTML = formatIllion(num);
 	document.getElementById("factor").innerText = `Speed: x${EternalNotations.Presets.Default.format(speed)} | NOTE: This uses a modified system that makes illions like "micro-unmillillion" possible to appear.`;
 	document.getElementById("pause").innerText = paused ? "Continue" : "Pause";
