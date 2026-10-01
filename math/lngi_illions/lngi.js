@@ -277,8 +277,12 @@ function illionName(illion, c = false) {
 			case 4: {
 				if (idx.lt("20")) return r[12][idx.toNumber()];
 				let pref = (special ? specials[2] : r[14])[rnd("2", 0, idx)];
-				pref += (pref != "" ? specials[1] : r[13])[rnd("1", 0, idx)];
-				pref += (pref != "" ? specials[0] : r[12])[rnd("0", 0, idx)];
+				if (idx.mod("100").lt("20")) {
+					pref += (pref != "" ? specials[0] : r[12])[idx.mod("100").toNumber()];
+				} else {
+					pref += (pref != "" ? specials[1] : r[13])[rnd("1", 0, idx)];
+					pref += (pref != "" ? specials[0] : r[12])[rnd("0", 0, idx)];
+				}
 				return `${pref}`;
 			}
 			case 5:
