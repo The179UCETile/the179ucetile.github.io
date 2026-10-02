@@ -156,23 +156,59 @@ function illionName(illion, c = false) {
 		" quettingu 'ikingu trakingu tekingu pekingu 'exakingu zakingu yokingu nokingu",
 		" hotingu botingu trotingu totingu potingu 'exotingu zotingu yootingu notingu",
 
-		" kall ᴿ ᴶ ᵀ ꟲ ⱽ ᶻ ᴬ ᴺ",
-		" ᴰ ʳ ʲ ᵗ ᶜ ᵛ 𐞚 ᵃ ⁿ",
-		" ᶝ 𐞨 𐞘 𐞯 ˤ ᶹ 𐞞 𐞃 ᶮ",
+		" kalle rexhe jexhe trexhe codexhe vettexhe zethe aitexhe niexhe",
+		" dingexhe ringexhe jingexhe tringexhe codingexhe vettexhe zingexhe 'aitingexhe ningexhe",
+		" cengexhe rengexhe jengexhe trengexhe codengexhe vettengexhe zengexhe 'aitengexhe nengexhe",
 
-		" ẅ ṽ u ṯ ṧ Ṝ Ǭ ṕ ṓ", " Ṿ ḕ ṻ Ṯ Ṧ ṝ ǭ Ṕ Ṓ", " ẖ ṿ Ṹ ṭ ṥ Ṟ Ƣ ṗ ṏ",
-		" Ɯ ᶌ ư ȶ Ʃ Ɍ ƣ ᵽ Ɵ", " Ʋ ơ Ʉ Ⱦ Ꞩ ɍ ǫ Ƿ Ơ", " ɦ Ʌ Ʊ Ŧ ʪ ʀ ȹ Ꝓ ɷ",
-		" Ɲ ɱ ɫ ƙ ʝ ɩ ʎ ƍ ƒ", " ɤ ɐ ȴ ʞ ʄ ı ʜ ǥ Ⅎ", " Ꜧ ᴟ ʟ Ꝅ ⱹ ǂ ʱ ꬶ ʇ",
-		" Ƞ Ⅿ ł Ⱪ ⱼ Ɨ ᴴ ᶃ ꜰ", " ⱴ Ꜵ ʫ 𝼃 𝼈 ɪ ʰ ʛ ⅎ", " ᶣ ᴹ Ƚ ⱪ 𝼋 ʅ ₕ 𝼁 ꞙ",
-		" Ɇ Ɗ ƈ ɓ ᶏ Ƶ Ɣ X w", " ⱱ ᴐ ʗ Ꝧ ⱥ ƺ ɏ ᶍ ʬ", " ꟸ Đ Ɔ ꝧ Ꜹ ᴣ Ꟛ Ꭓ ꝡ",
-		" ꭡ Ƌ Ƈ ꟓ ꜻ ʑ Ɤ ꭓ Ꝡ", " ꝟ ᶖ Ȼ 𝼅 Ꜳ ɀ ỿ ꭗ Ⱳ", " 𐞕 ƌ ȼ ꟔ ꜹ ʐ ꝩ ꭖ ꞷ",
-		" ꜷ ₘ ȸ ʋ ᶗ ↅ 𝼂 Ỽ ꞩ", " ↆ Ա ↁ Ⅴ 𝼏 𝼝 Ꞡ ꟒ Ꟊ", " 𐞖 ꭩ ꟈ Ꝟ Ç ç ᶢ ỽ ꟍ",
-		" Ｈ Ǆ ｈ ŧ ⱷ ᵇ ᵐ ϻ ꝓ", " ƚ ᴑ 𝼆 ꞁ 𝼛 Ｂ Ѧ ѩ ᴾ", " Ḣ ǲ ḥ Ꞁ ᵖ ｂ ѧ Ѩ ₚ",
-		" Ʂ ꝅ Ꝍ ꞥ Ѭ ꓨ ꭤ 𝼌 ꞹ", " 𐞄 ᶒ ꝋ ꝴ ѫ Ϭ Ⅽ ꭍ Ꞟ", " 𐞗 Ʞ ꝏ Ꞥ ѭ ϭ Ϛ ꟙ ꭎ",
-		" א בּ ג ד ה ו ז ח ט", " Ｇ ｐ גּ דּ הּ וּ זּ 𐡇 טּ", " ң 𐤁 𐤂 𐤃 𐤄 𐤅 𐤆 𐤇 𐤈",
-		" י כ ל מ נ ס ע פ צ", " Ꝇ 𝼩 לּ מּ נּ סּ 𐡏 פּ צּ", " ђ 𐤊 𐤋 𐤌 𐤍 𐤎 𐤏 𐤐 𐤑",
-		" ק ר ש ת α β γ δ ε", " Ҥ ﬆ שּ תּ ꓯ ꓭ Γ Δ ꝫ", " Ϧ 𐤓 𐤔 𐤕 ⲁ ⲃ ⲅ ⲇ ⲉ",
-		" ζ η θ ι κ λ μ ν ξ", " Ϸ 𝼊 ꭧ 𝼚 Қ 𝼍 Ѫ 𝼇 Ξ", " ͱ ⲏ ⲑ ⲓ ⲕ ⲗ ⲙ ⲛ ⲝ",
+		" wekto vundo unto trekto sotro rimkto quekto pekto oukto",
+		" vedo enoso 'untoso trektoso sotroso rimktoso quektoso pektoso 'ouktoso",
+		" heneoso vundeneoso 'unteneoso trekteneoso sotreneoso rimkteneoso quekteneoso pekteneoso oukteneoso",
+
+		" weki vendi udi toredi sorti rinti quexi pepti ochi",
+		" vebi 'okudi 'udeni toredeni sorteni rinteni quexeni pepteni 'ocheni",
+		" heekri vendeekri 'udeekri toredeekri sorteekri rinteekri quexeekri pepteekri ocheekri",
+
+		" nekta mikta lunta kentra jrekta iquaktta huiktta gatektta feqeska",
+		" vepa 'akewa luntoxa kentroxa jrektoxa iquakttoxa huikttoxa gatekttoxa feqeskoxa",
+		" hosta miktosta luntosta kentrosta jrektosta iquakttosta huikttosta gatekttosta feqeskosta",
+
+		" nenu mingu lumu kentu jretu iquattu huittu gatexttu feqezu",
+		" vequ anovu lumehu kentehu jrettehu iquattehu huittehu gatexttehu feqezehu",
+		" heju mingeju lumeju kenteju jreteju iquatteju huitteju gatextteju feqezeju",
+
+		" enscenkte deyskte ceanakte bevvkte avgkte ziegkte yesakte xoxikte weakte",
+		" veje 'osuze ceanaktoge bevvktoge 'avgktoge ziegktoge yesaktoge xoxiktoge weaktoge",
+		" hetre deysktetre ceanaktetre bevvktetre 'avgktetre ziegktetre yesaktetre xoxiktetre weaktetre",
+
+		" enscendi deysti ceanati bevvgi avti ziegfri yesani xoxixi weasti",
+		" vefi 'ibi ceanatewi bevvgtewi 'avtewi ziegfrewi yesanewi xoxixewi weastewi",
+		" hogi deystogi ceanatogi bevvgogi 'avtogi ziegfrogi yesanogi xoxixogi weastogi",
+
+		" atoma molecula dnala virusa chroma cella graina bacta seeda",
+		" vesa 'uqa dnalada virusada chromada cellada grainada bactada seedada",
+		" huba moleculuba dnaluba virusuba chromuba celluba grainuba bactuba seeduba",
+
+		" humo dinoso huoso titano pyramo burjo mounto moono planeto",
+		" lero 'orco huoserko titanerko pyramerko burjerko mounterko moonerko planeterko",
+		" herulo dinoserulo huoserulo titanerulo pyramerulo burjerulo mounterulo moonerulo ₚ",
+
+		" staru kuipu oortu nebulu milkylu groupu clustu suclu unu",
+		" bezu 'ezu 'oortettu nebulettu milkyettu groupettu clustettu suclettu 'unettu",
+		" holdupu koldupu 'ooldupu noldupgoldupu u moldupu coldupu soldupu 'uoldupu",
+
+		" alefo beho gimelo daleto heilo wawo zayino hetho tetho",
+		" gozo pigo gimerlulo daletulo heiulo wawulo zayinulo hethulo tethulo",
+		" holo bolo golo dolo heiolo wolo zolo heolo tolo",
+
+		" yodi kaphi lamedi memi nuni samekhi ayini peli tsadi",
+		" loli saxi lamediyi memiyi nuniyi samekhiyi 'ayiniyi piyi tsadiyi",
+		" holdi koldi loldi moldi noldi soldi 'aoldi poldi toldi",
+
+		" qofhe reshe shine tawe alphe betale gamme delte epse",
+		" hake suse shinoje tawoje 'alphoje betaoje gammoje deltoje 'epsoje",
+		" hecke recke secke tecke 'aecke becke gecke decke 'eecke",
+
+		" zetala η θ ι κ λ μ ν ξ", " Ϸ 𝼊 ꭧ 𝼚 Қ 𝼍 Ѫ 𝼇 Ξ", " ͱ ⲏ ⲑ ⲓ ⲕ ⲗ ⲙ ⲛ ⲝ",
 		" ϙ π ρ σ τ υ φ χ ψ", " ω ͳ ꓤ Ɜ ꭏ ꓵ Φ ꭔ Ψ", " Ћ ⲡ ⲣ ⲥ ⲧ ⲩ ⲫ ⲭ ⲯ",
 		" Ӎ Ꟃ ⱻ ӎ ᶘ ȿ ʉ ʭ ϼ", " К ƶ ᶓ Щ 𝼕 𝼞 ᵫ ꬻ Ҏ", " Ђ ꟃ ꭢ щ 𝼎 Ϩ ϥ Л ҏ",
 		" 𝐙 𝐘 𝐗 𝐖 𝐕 𝐔 𝐓 𝐒 𝐑", " 𝐳 𝐲 𝐱 𝐰 𝐯 𝐮 𝐭 𝐬 𝐫", " 𝕫 𝕪 𝕩 𝕨 𝕧 𝕦 𝕥 𝕤 𝕣",
@@ -300,7 +336,7 @@ function illionName(illion, c = false) {
 		part = c == 2 ? specials[3][nm] : r[c ? 1 : 0][nm];
 	} else if (illion.lt("1e3")) {
 		part = illion.eq("103") ? "trescenti" : `${r[1][rnd("0")]}${r[2][rnd("1")]}${r[3][rnd("2")]}`;
-	} else if (illion.lt("(e^7)3000.47712125471966244")) {
+	} else if (illion.lt("(e^6)3000.47712125471966244")) {
 		part = getTierPref(illion, new Decimal("1"))
 	} else if (illion.lt("F9e15")) {
 		// for optimization purposes so that we don't get to do 100 getTierPref's
@@ -368,19 +404,22 @@ function resetSpeed() {
 function pause() {
 	paused = !paused;
 }
+const MAX_TIERS = 24;
+document.getElementById("fontinput").value = localStorage.getItem("illionslngifont") ?? "'monospace textwall'";
 function update(time) {
 	t += (time - lastTs) / 1e3 * (paused ? 0 : speed);
-	t = Math.min(211200, Math.max(0, t));
-	let num = Decimal.tetrate(1000, t / 19200 + 1).sub(1000).min("(e^11)3000.47712125471966244").floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
+	t = Math.min(19200 * MAX_TIERS, Math.max(0, t));
+	let num = Decimal.tetrate(1000, t / 19200 + 1).sub(1000).min(`(e^${MAX_TIERS})3000.47712125471966244`).floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
 	let perc = num.gte("F5") ? Decimal.div(1, num.slog().sub(1).sqrt()).mul(100).max(2.5).toNumber() : 50;
 	document.getElementById("num").innerHTML = formatDefault(num);
 	document.getElementById("num").style.fontFamily = document.getElementById("fontinput").value;
 	document.getElementById("num_illion").style.fontFamily = document.getElementById("fontinput").value;
-	document.getElementById("num").style.backgroundImage = `repeating-linear-gradient(-45deg, #ffffff, hsl(${num.add(2).slog().sqrt().mul("30").toString()}deg, 100%, ${Decimal.sub("100", num.add(2).slog().mul("2.5")).max("50").toString()}%) 25%, #ffffff 50%)`;
+	document.getElementById("num").style.backgroundImage = `repeating-linear-gradient(-45deg, #ffffff, hsl(${num.add(2).slog().sqrt().mul("30").sub("45").toString()}deg, 100%, ${Decimal.sub("100", num.add(2).slog().mul("2.5")).max("50").toString()}%) 25%, #ffffff 50%)`;
 	document.getElementById("num").style.backgroundSize = `${perc}dvmax ${perc}dvmax`
 	document.getElementById("num_illion").innerHTML = formatIllion(num);
 	document.getElementById("factor").innerText = `Speed: x${EternalNotations.Presets.Default.format(speed)} | NOTE: This uses a modified system that makes illions like "micro-unmillillion" possible to appear.`;
 	document.getElementById("pause").innerText = paused ? "Continue" : "Pause";
+	localStorage.setItem("illionslngifont", document.getElementById("fontinput").value);
 	lastTs = time;
 	requestAnimationFrame(update);
 }
