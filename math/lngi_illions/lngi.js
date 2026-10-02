@@ -30,7 +30,7 @@ function tierer(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false, 
 		if (i[1].eq("0")) {
 			s.push(pref);
 		} else {
-			s.push(`${i[0].gt("1") || (doNotUseBlankForOne && ii != 0) ? pref + (i[1].gte("10") ? "<br>" : "") : ""}${next(i[1])}`);
+			s.push(`${i[0].gt("1") || (doNotUseBlankForOne && ii != 0) ? pref + (/aeiou$/.test(pref) && /^aeiou/.test(next(i[1])) ? "'" : "") + (i[1].gte("10") ? "<br>" : "") : ""}${next(i[1])}`);
 		};
 		ii++;
 	};
@@ -190,7 +190,7 @@ function illionName(illion, c = false) {
 
 		" humo dinoso huoso titano pyramo burjo mounto moono planeto",
 		" lero 'orco huoserko titanerko pyramerko burjerko mounterko moonerko planeterko",
-		" herulo dinoserulo huoserulo titanerulo pyramerulo burjerulo mounterulo moonerulo ₚ",
+		" herulo dinoserulo huoserulo titanerulo pyramerulo burjerulo mounterulo moonerulo planetero",
 
 		" staru kuipu oortu nebulu milkylu groupu clustu suclu unu",
 		" bezu 'ezu 'oortettu nebulettu milkyettu groupettu clustettu suclettu 'unettu",
