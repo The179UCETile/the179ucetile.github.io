@@ -30,7 +30,8 @@ function tierer(num, cur, next, sep, base = "1e3", doNotUseBlankForOne = false, 
 		if (i[1].eq("0")) {
 			s.push(pref);
 		} else {
-			s.push(`${i[0].gt("1") || (doNotUseBlankForOne && ii != 0) ? pref + (/aeiou$/.test(pref) && /^aeiou/.test(next(i[1])) ? "'" : "") + (i[1].gte("10") ? "<br>" : "") : ""}${next(i[1])}`);
+			pref = pref + (/[aeiou]$/.test(pref) && /^[aeiou]/.test(next(i[1])) ? "'" : "");
+			s.push(`${i[0].gt("1") || (doNotUseBlankForOne && ii != 0) ? pref + (i[1].gte("10") ? "<br>" : "") : ""}${next(i[1])}`);
 		};
 		ii++;
 	};
