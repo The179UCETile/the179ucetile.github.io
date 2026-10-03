@@ -463,7 +463,7 @@ function formatOther(n) {
 	if (amountOfEs.lt("1e3")) return `1E3+3E^${formatOther(amountOfEs)} ${formatOther(n.iteratedlog("10", amountOfEs.add("1")))}`;
 	return `1E3+3E^${formatOther(amountOfEs)} 3`;
 }
-let lastTs = 0, speed = 1, paused = false;
+let lastTs = performance.now() - 16, speed = 1, paused = false;
 const MAX_TIERS = 42;
 function slowDown() {
 	speed /= 2;
@@ -481,11 +481,13 @@ function pause() {
 	paused = !paused;
 }
 document.getElementById("fontinput").value = localStorage.getItem("illionslngifont") ?? "'monospace textwall'";
-function update(time) {
-	t += (time - lastTs) / 1e3 * (paused ? 0 : speed);
+function update() {
+	if (!(document.getElementById("reducedfps").checked && performance.now() - lastTs < 100)) {
+		t += (performance.now() - lastTs) / 1e3 * (paused ? 0 : speed);
+	}
 	t = Math.min(16000 * MAX_TIERS, Math.max(0, t));
 	let num = Decimal.tetrate(1000, Math.floor(t / 16000) + (10 ** ((t / 16000) % 1) - 1) / 9 + 1).add(t / 2).sub(1000).min(`(e^${MAX_TIERS})3000.47712125471966244`).floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
-	let perc = num.gte("F5") ? Decimal.div(1, num.slog().sub(1).sqrt()).mul(100).max(2.5).toNumber() : 50;
+	let perc = num.gte("(e^7)12") ? Decimal.div(1, num.slog().sub(1).sqrt()).mul(100).max(2.5).toNumber() : 50;
 	let isAlt = document.getElementById("altnum").checked;
 	document.getElementById("num").innerHTML = isAlt ? formatOther(num) : formatDefault(num);
 	document.getElementById("num").style.fontFamily = document.getElementById("fontinput").value;
@@ -502,8 +504,9 @@ function update(time) {
 	document.getElementById("factor").innerText = `Speed: x${EternalNotations.Presets.Default.format(speed)} | NOTE: This uses a modified system that makes illions like "micro-unmillillion" possible to appear.`;
 	document.getElementById("pause").innerText = paused ? "Continue" : "Pause";
 	localStorage.setItem("illionslngifont", document.getElementById("fontinput").value);
-	document.title = `Illions LNGI - ${isAlt ? formatOther(num) : EternalNotations.Presets.Default.format(num)}`;
-	lastTs = time;
-	requestAnimationFrame(update);
+	document.title = `${isAlt ? formatOther(num) : EternalNotations.Presets.Default.format(num)} - Illions LNGI`;
+	if (!(document.getElementById("reducedfps").checked && performance.now() - lastTs < 100)) {
+		lastTs = performance.now();
+	}
 }
-update(0)
+setInterval(update, 16.666)

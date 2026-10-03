@@ -14,14 +14,17 @@
 		<button onclick="speedUp()">x2 speed</button>
 		<button onclick="slowDown()">/2 speed</button>
 		<button onclick="reverse()">Reverse</button>
+		<button onclick="t += 16000">Next tier</button>
+		<button onclick="t = Math.max(0, t - 16000)">Previous tier</button>
+		<br>
 		<label for="font">Font:</label>
 		<input type="text" id="fontinput" value="'monospace textwall'">
 		<label for="fontbold">Bold:</label>
 		<input type="checkbox" id="fontbold">
-		<button onclick="t += 16000">Next tier</button>
-		<button onclick="t = Math.max(0, t - 16000)">Previous tier</button>
 		<label for="altnum">Use alternate formatting:</label>
 		<input type="checkbox" id="altnum">
+		<label for="reducedfps">Reduce FPS:</label>
+		<input type="checkbox" id="reducedfps">
     <p id="num"></p>
     <p id="num_alt"></p>
     <p id="num_illion"></p>
