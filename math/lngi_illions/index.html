@@ -16,9 +16,14 @@
 		<button onclick="reverse()">Reverse</button>
 		<label for="font">Font:</label>
 		<input type="text" id="fontinput" value="'monospace textwall'">
+		<label for="fontbold">Bold:</label>
+		<input type="checkbox" id="fontbold">
 		<button onclick="t += 16000">Next tier</button>
 		<button onclick="t = Math.max(0, t - 16000)">Previous tier</button>
+		<label for="altnum">Use alternate formatting:</label>
+		<input type="checkbox" id="altnum">
     <p id="num"></p>
+    <p id="num_alt"></p>
     <p id="num_illion"></p>
     <script src="../../game_scripts/break_eternity.min.js"></script>
     <script src="../../game_scripts/eternal_notations.min.js"></script>

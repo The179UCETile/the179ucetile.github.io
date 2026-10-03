@@ -9,6 +9,22 @@ p#num {
   background-size: 50dvmax 50dvmax;
   animation: anim 10s linear infinite;
 }
+p#num_alt {
+  font-size: 1.5em;
+  margin: 0;
+  text-align: center;
+  opacity: 0.5;
+  font-style: italic;
+}
+p#num_illion {
+  font-size: 2em;
+}
+sup, sub {
+  font-size: 0.8em;
+}
+* {
+  word-wrap: break-word;
+}
 @keyframes anim {
   from {
     background-position-x: 0%;
@@ -16,10 +32,4 @@ p#num {
   to {
     background-position-x: 100%;
   }
-}
-p#num_illion {
-  font-size: 2em;
-}
-sup, sub {
-  font-size: 0.8em;
 }

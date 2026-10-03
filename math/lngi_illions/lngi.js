@@ -234,24 +234,57 @@ function illionName(illion, c = false) {
 		" baha baga bafa baela bada baca babela baala bapra",
 
 		" millento micrento nanento piceno femtento attento zeptento yoctento ronento",
-		" quetento icosento trontento tetrotento pentotento hexontento heptontento octontento ennontento",
+		" quecento icosento trontento tetrotento pentotento hexontento heptontento octontento ennontento",
 		" hectento dectento trectento tetrectento pentectento hexectento heptectento octectento ennectento",
 
 		" kilentu megentu gigentu terentu petentu exentu zettentu yottentu ronnentu",
 		" tetaru ikentu trakentu tekentu pekentu exakentu zakentu yokentu rokentu",
 		" hotentu botentu trotentu totentu potentu exotentu zotentu yootentu rotentu",
 
-		" kalento ѡ п Ṗ Ꞙ Å Ҭ ү ӷ", " ʠ ᵼ ҭ Ҵ ф Ҕ Ң Ꟁ Є", " ћ ȡ Ԏ ԏ 𝑷 ԋ Ӊ Ҩ ҙ",
-		" ќ ϡ Ϥ 𐞝 𝒑 Ѥ Ɀ ϒ г", " ᶐ İ ҵ ₜ ℘ ѥ ꝝ ϔ Ǌ", " ӈ ѣ 𐞫 𐞮 ℗ ℇ ᶎ ℽ ℿ",
-		" ӄ Ѡ ϑ 𐞬 𝒫 Ԑ ʒ ʏ ʁ", " ℚ ΐ 𐞭 ṱ 𝓅 Э ʓ ұ 𝼔", " Ԩ б ẗ Ṱ 𝓹 ԑ ʡ ϓ ᴎ",
-		" Ҝ ж Ԍ Ṭ 𝔓 ᴔ ƾ Ӌ ꞃ", " Ҷ ϊ ꞅ Ꞅ 𝕻 Ә ᵶ Ҹ Љ", " Ԧ ъ Ṫ ṭ 𝖕 ℈ ʕ Ұ Ԉ",
-		" Ҟ ↀ л ᴅ ᴝ Ҙ ꝼ ϩ Б", " Ҁ Д ԩ ꝁ 𝖯 𝗉 ẜ ꬼ ʖ", " 𝛼 𝛽 𝛾 𝛿 𝜃 𝜄 𝜅 𝜆 𝜎",
-		" ϛ ẝ ԧ Ѹ ｇ ѝ д Ғ ẛ", " Ԣ ғ Ꜽ Ꝏ Ʝ ҷ Ԫ 𝗣 ỻ", " Þ ԣ Ѵ ᶋ Ț ⅉ ꬿ ꭄ ẞ",
-		" 𐞠 ꭦ ț Ť 𝗽 ҕ 𐞡 ꝍ э", " ʣ ℹ ť ℡ 𝘗 ӊ Һ ѳ Ӛ", " һ ᶁ ™ 𝑇 𝘱 ĥ Ĥ ᴒ Ѯ",
-		" Ҫ ӂ Ϙ ℸ 𝙋 Ҽ ϟ ц Я", " ℺ ⅈ 𝑡 𝑻 𝙥 ҿ Ϟ ч И", " Ԡ Ҍ 𝒕 𝒯 𝙿 ҽ ᶼ Ӳ 𝼧",
-		" Ӄ ӝ ᵍ Ⱥ ɬ ʩ ᶨ ˢ Ъ", " 𐞒 ȟ 𝓉 Ы Ȟ Ӝ 𐞓 Ϗ ͷ", " 𝚥 Ӂ 𐞔 ꬰ ᶅ ﬀ 𐞦 ᶳ ы",
-		" Ԟ Ж Ĝ ª ƛ ℻ 𐞧 ᶴ љ", " Ģ Ḥ 𝓣 ь Ҧ ᶭ ℊ Ҡ Ӆ", " ĵ ꟺ ğ ꜽ Ⱡ ﬁ Ĵ š ß",
-		" қ ℳ ⅁ 𝓽 𝚙 ϱ ź ꭅ ꭆ", " Ｑ ⁱ 𝔗 𝔱 𝛒 ȝ ℤ ҹ Ҋ", " њ ϐ 𝕋 𝕿 𝜌 ᶕ Ｚ ӌ Й",
+		" kalento micranko nananko picanko femtanko attanko teptanko yoctanko ronanko",
+		" quecanko icosanko trontanko tetrontanko pentontanko hexontanko heptontano octotanko ennontanko",
+		" hectanko dectanko trectanko tetrectanko pentectanko hexectanko heptectanko octectanko ennectanko",
+
+		" kilanka meganka giganka teranka petanka exatanka zettanka yottanka ronnanka",
+		" quekanka ikanka trakanka tekanka pekanka exakanka zakanka yokanka nokanka",
+		" hotanka botanka trotanka totanka potanka exotanka zotanka yootanka notanka",
+
+		" kalanke megunde gigunde terunde petunde exunde zettunde yottunde ronnunde",
+		" quetunde ikunde trakunde tekunde pekunde exakunde zakunde yokunde nokunde",
+		" hotunde botunde trotunde totunde potunde exotunde zotunde yootunde notunde",
+
+		" kalundi megenpi gigenpi terenpi petenpi exuenpi zettenpi yottenpi ronnepi",
+		" quetenpi ikenpi trakenpi tekenpi pekenpi exakenpi zakenpi yokenpi nokenpi",
+		" hotenpi botenpi trotenpi totenpi potenpi exotenpi zotenpi yootenpi notenpi",
+
+		" kalenpu ottu neatu deatu unatu entu firu sytu brontu",
+		" geopu amosu hapru kyru piju pectru saganu nisabu zotzu",
+		" alphenu bexu gammenu deltenu thetenu iotenu kapu lambdenu sigmenu",
+
+		" cardo songo healo onlino gramo nikelo amazo forgo sussylo",
+		" hooko fighto attacko oveno jinxo qwertylo asdfo ponto losso",
+		" thero hiso vano jogo toro jetsko chestno cooko shooto",
+
+		" hapaxi disi trisi tetrisi pentisi hexisi heptisi octisi ennisi",
+		" dekisi icosisi triacontisi tesseracontisi pentecontisi hexacontisi hebdomecontisi ogdoecontisi enenecontisi",
+		" hectontisi diacosisi triacosisi tetracosisi pentacosisi hexacosisi heptacosisi octacosisi ennacosisi",
+
+		" chillise megise gigise terise petise exise zettise yottise ronnise",
+		" quetise ikise trakise tekise pekise exakise zakise yokise nokise",
+		" hotise botise trotise totise potise exotise zotise yootise notise",
+
+		" kalisa mejisa gijisa astisa lunisa fermisa jovisa solisa betisa",
+		" glocisa housisa teongisa batisa handrisa mastisa gotisa kortisa nenkisa",
+		" janisa mejanisa gijanisa astanisa lunanisa fermanisa jovanisa solanisa betanisa",
+
+		" kungu mungu gungu aungu lungu fungu jungu sungu bungu",
+		" glocungu housungu trongungu batungu handrungu mastungu gotungu kortungu nenkungu",
+		" janungu mejanungu gijanungu astanungu lunanungu fermanungu jovanungu solanungu betanungu",
+
+		" kilero ℳ ⅁ 𝓽 𝚙 ϱ ź ꭅ ꭆ",
+		" Ｑ ⁱ 𝔗 𝔱 𝛒 ȝ ℤ ҹ Ҋ",
+		" њ ϐ 𝕋 𝕿 𝜌 ᶕ Ｚ ӌ Й",
+
 		" ҝ Җ ҁ ꬱ ꬹ ﬂ ǰ ﬅ ℬ", " 𝐺 ℏ 𝖙 𝼻 𝼲 𝽊 𝼰 𝼐 𝽍", " 𝽰 𝽌 𝽅 𝽀 ɭ 𝼀 𝽐 𝾕 𐞅",
 		" 𝽈 𝽋 ġ 𝼢 𝝆 𝽃 𝽦 𝼱 𝾔", " ꟴ 𝽝 𝼣 𝼤 𝞀 𝽄 ƻ 𝼹 𝽎", " 𝽆 Ḅ 𝼬 𝼯 𝞺 𝽜 ℥ 𝽕 𝽏",
 		" 𝽉 𝑀 Ǧ ꭁ ɮ ﬃ ꓩ 𝾖 ḇ", " Ġ ℎ 𝼸 ḅ ℍ 𝑚 ģ ҡ №", " 𐞼 𝑴 ǵ 𝽚 ⱡ Ϝ 𝽗 𝚦 Ḇ",
@@ -417,7 +450,21 @@ function formatDefault(n) {
 	};
 	return str;
 }
+function formatAlt(n) {
+	if (n.lt("10^^8")) return formatDefault(n);
+	let iters = n.slog().sub("2.0451151501638742").floor();
+	return iters.gte("1e12") ? `10^^(${formatDefault(n.slog().floor())})` : `(10^)<sup>${formatDefault(iters)}</sup> ${formatDefault(n.iteratedlog("10", iters).floor())}`
+}
+function formatOther(n) {
+	let amountOfEs = n.slog().sub("2.850475787576277").floor();
+	if (n.lt("1e6")) return formatDefault(n).replace(/,/g, "");
+	if (n.lt("e1e6")) return EternalNotations.HTMLPresets.Scientific.format(n).replace(/e/g, "E").replace(/,/g, "");
+	if (amountOfEs.lt("17")) return `1E3+${"3E".repeat(amountOfEs.toNumber())}${formatOther(n.iteratedlog("10", amountOfEs.add("1")))}`;
+	if (amountOfEs.lt("1e3")) return `1E3+3E^${formatOther(amountOfEs)} ${formatOther(n.iteratedlog("10", amountOfEs.add("1")))}`;
+	return `1E3+3E^${formatOther(amountOfEs)} 3`;
+}
 let lastTs = 0, speed = 1, paused = false;
+const MAX_TIERS = 42;
 function slowDown() {
 	speed /= 2;
 }
@@ -428,27 +475,34 @@ function reverse() {
 	speed = -speed;
 }
 function resetSpeed() {
-	speed = 1;
+	speed = Math.sign(speed) == 0 ? 1 : Math.sign(speed);
 }
 function pause() {
 	paused = !paused;
 }
-const MAX_TIERS = 32;
 document.getElementById("fontinput").value = localStorage.getItem("illionslngifont") ?? "'monospace textwall'";
 function update(time) {
 	t += (time - lastTs) / 1e3 * (paused ? 0 : speed);
 	t = Math.min(16000 * MAX_TIERS, Math.max(0, t));
-	let num = Decimal.tetrate(1000, t / 16000 + 1).sub(1000).min(`(e^${MAX_TIERS})3000.47712125471966244`).floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
+	let num = Decimal.tetrate(1000, Math.floor(t / 16000) + (10 ** ((t / 16000) % 1) - 1) / 9 + 1).add(t / 2).sub(1000).min(`(e^${MAX_TIERS})3000.47712125471966244`).floor(); // Decimal.iteratedexp("1000", "6", Decimal.pow("1.5", t).add(t).floor()).mul("1000").floor();
 	let perc = num.gte("F5") ? Decimal.div(1, num.slog().sub(1).sqrt()).mul(100).max(2.5).toNumber() : 50;
-	document.getElementById("num").innerHTML = formatDefault(num);
+	let isAlt = document.getElementById("altnum").checked;
+	document.getElementById("num").innerHTML = isAlt ? formatOther(num) : formatDefault(num);
 	document.getElementById("num").style.fontFamily = document.getElementById("fontinput").value;
+	document.getElementById("num").style.fontWeight = document.getElementById("fontbold").checked ? "bolder" : "";
+	document.getElementById("num").style.backgroundImage = `repeating-linear-gradient(-45deg, #ffffff, hsl(${num.add(2).slog().add(10).log(1.125).mul(30).toString()}deg, 100%, ${Decimal.sub("100", num.add(2).slog().mul("2.5")).max("50").toString()}%) 25%, #ffffff 50%)`;
+	document.getElementById("num").style.backgroundSize = `${perc}dvmax ${perc}dvmax`;
+	document.getElementById("num_alt").style.display = num.gte("F8") || (isAlt && num.gte("1e6")) ? "block" : "none";
+	document.getElementById("num_alt").style.fontFamily = document.getElementById("fontinput").value;
+	document.getElementById("num_alt").style.fontWeight = document.getElementById("fontbold").checked ? "bolder" : "";
+	document.getElementById("num_alt").innerHTML = formatAlt(num);
 	document.getElementById("num_illion").style.fontFamily = document.getElementById("fontinput").value;
-	document.getElementById("num").style.backgroundImage = `repeating-linear-gradient(-45deg, #ffffff, hsl(${num.add(2).slog().sqrt().mul("30").sub("45").toString()}deg, 100%, ${Decimal.sub("100", num.add(2).slog().mul("2.5")).max("50").toString()}%) 25%, #ffffff 50%)`;
-	document.getElementById("num").style.backgroundSize = `${perc}dvmax ${perc}dvmax`
+	document.getElementById("num_illion").style.fontWeight = document.getElementById("fontbold").checked ? "bolder" : "";
 	document.getElementById("num_illion").innerHTML = formatIllion(num);
 	document.getElementById("factor").innerText = `Speed: x${EternalNotations.Presets.Default.format(speed)} | NOTE: This uses a modified system that makes illions like "micro-unmillillion" possible to appear.`;
 	document.getElementById("pause").innerText = paused ? "Continue" : "Pause";
 	localStorage.setItem("illionslngifont", document.getElementById("fontinput").value);
+	document.title = `Illions LNGI - ${isAlt ? formatOther(num) : EternalNotations.Presets.Default.format(num)}`;
 	lastTs = time;
 	requestAnimationFrame(update);
 }
