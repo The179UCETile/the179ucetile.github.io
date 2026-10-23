@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../badNotationsImg/tile.css">
+    <title>Bulked Rolls [BATA, UNFINISHED]</title>
+		<link rel="icon" type="image/x-icon" href="../../images/favicons/placeholder.png">
+  </head>
+  <body>
+    <div class="game">
+      <div class="tab-select">
+      </div>
+      <div class="tab-contents">
+        <div id="tab-main" class="shown">
+          <p id="rarity">None</p>
+          <p id="rarityChance">1/1</p>
+          <div class="horiz-center"><button id="roll">Roll</button></div>
+          <button class="upgrade" id="mupg1">
+            <span>
+              <p class="upgname" id="mupg1n">Additional Bulk</p>
+              <p class="upgdesc" id="mupg1d">+1 roll bulk/upgrade<span id="mupg1c"><br>Currently: +0</span></p>
+              <p class="upgreq" id="mupg1r">Requirement</p>
+            </span>
+          </button>
+          <div id="gains"></div>
+        </div>
+        <div id="tab-inventory">
+          <div class="horiz-center">
+            <div id="raritycontainer"></div>
+          </div>
+        </div>
+        <div id="tab-statistics">
+          <p id="statistics-totalrolls">Total rolls: 0</p>
+          <p id="statistics-timeplayed">Time played: 0s</p>
+        </div>
+        <div id="tab-options">
+          <h2>General</h2>
+          <label for="options-notation">Notation:</label>
+          <select id="options-notation"></select><br>
+          <label for="options-maxrollgainentries">Maximum roll gain entries:</label>
+          <input type="number" step="1" value="20" id="options-maxrollgainentries"></input>
+          <h2>Saving</h2>
+          <button id="options-import">Import</button>
+          <button id="options-export">Export</button>
+          <button id="options-hardreset" style="background-color: #f00">HARD RESET</button>
+        </div>
+      </div>
+    </div>
+    <script src="../../game_scripts/break_eternity.min.js"></script>
+    <script src="../../game_scripts/eternal_notations.min.js"></script>
+    <script src="https://the179ucetile.github.io/Bad-Notations/bad_notations.js"></script>
+    <script src="../../game_scripts/lootalot_decimal.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/saving.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tabs.js"></script>
+  </body>
+</html>
