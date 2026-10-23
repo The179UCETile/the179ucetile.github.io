@@ -1,0 +1,14 @@
+html {
+  background-color: #202020;
+  color: #ffffff;
+  font-family: "Work Sans", sans-serif;
+}
+input[type="text"] {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: "Work Sans", sans-serif;
+  padding: 2px;
+}
