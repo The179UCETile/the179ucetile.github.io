@@ -7,8 +7,32 @@ input[type="text"] {
   background-color: transparent;
   border-radius: 0;
   border: none;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff40;
   color: #ffffff;
   font-family: "Work Sans", sans-serif;
   padding: 2px;
+  transition: 0.3s all;
+}
+input[type="text"]:hover {
+  border-bottom: 1px solid #ffffff80;
+}
+input[type="text"]:focus {
+  border-bottom: 2px solid #ffffff;
+  outline: none;
+}
+p.input {
+  font-size: min(3em, 5dvw);
+  text-align: center;
+  margin: 0px 25px;
+}
+p.input input[type="text"] {
+  font-size: inherit;
+  font-family: "Roboto Mono", monospace;
+  width: 4em;
+}
+span#result {
+  font-family: "Roboto Mono", monospace;
+}
+sup {
+  font-size: 0.7em;
 }
