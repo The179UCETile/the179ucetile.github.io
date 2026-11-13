@@ -1,7 +1,8 @@
 [
   [
     0,
-    "Basic Latin"
+    "Basic Latin",
+    1
   ],
   [
     128,
@@ -41,11 +42,13 @@
   ],
   [
     1328,
-    "Armenian"
+    "Armenian",
+    1329
   ],
   [
     1424,
-    "Hebrew"
+    "Hebrew",
+    1488
   ],
   [
     1536,
@@ -89,7 +92,8 @@
   ],
   [
     2304,
-    "Devanagari"
+    "Devanagari",
+    2308
   ],
   [
     2432,
@@ -97,23 +101,28 @@
   ],
   [
     2560,
-    "Gurmukhi"
+    "Gurmukhi",
+    2565
   ],
   [
     2688,
-    "Gujarati"
+    "Gujarati",
+    2693
   ],
   [
     2816,
-    "Oriya"
+    "Oriya",
+    2821
   ],
   [
     2944,
-    "Tamil"
+    "Tamil",
+    2949
   ],
   [
     3072,
-    "Telugu"
+    "Telugu",
+    3077
   ],
   [
     3200,
@@ -121,19 +130,23 @@
   ],
   [
     3328,
-    "Malayalam"
+    "Malayalam",
+    3333
   ],
   [
     3456,
-    "Sinhala"
+    "Sinhala",
+    3461
   ],
   [
     3584,
-    "Thai"
+    "Thai",
+    3585
   ],
   [
     3712,
-    "Lao"
+    "Lao",
+    3713
   ],
   [
     3840,
@@ -233,11 +246,13 @@
   ],
   [
     6912,
-    "Balinese"
+    "Balinese",
+    6917
   ],
   [
     7040,
-    "Sundanese"
+    "Sundanese",
+    7043
   ],
   [
     7104,
@@ -265,7 +280,8 @@
   ],
   [
     7376,
-    "Vedic Extensions"
+    "Vedic Extensions",
+    7401
   ],
   [
     7424,
@@ -429,11 +445,13 @@
   ],
   [
     12288,
-    "CJK Symbols and Punctuation"
+    "CJK Symbols and Punctuation",
+    12289
   ],
   [
     12352,
-    "Hiragana"
+    "Hiragana",
+    12353
   ],
   [
     12448,
@@ -441,11 +459,13 @@
   ],
   [
     12544,
-    "Bopomofo"
+    "Bopomofo",
+    12549
   ],
   [
     12592,
-    "Hangul Compatibility Jamo"
+    "Hangul Compatibility Jamo",
+    12593
   ],
   [
     12688,
@@ -529,11 +549,13 @@
   ],
   [
     43136,
-    "Saurashtra"
+    "Saurashtra",
+    43138
   ],
   [
     43232,
-    "Devanagari Extended"
+    "Devanagari Extended",
+    43250
   ],
   [
     43264,
@@ -549,7 +571,8 @@
   ],
   [
     43392,
-    "Javanese"
+    "Javanese",
+    43396
   ],
   [
     43488,
@@ -649,11 +672,13 @@
   ],
   [
     65280,
-    "Halfwidth and Fullwidth Forms"
+    "Halfwidth and Fullwidth Forms",
+    65281
   ],
   [
     65520,
-    "Specials"
+    "Specials",
+    65533
   ],
   [
     65536,
@@ -689,7 +714,8 @@
   ],
   [
     66272,
-    "Coptic Epact Numbers"
+    "Coptic Epact Numbers",
+    66273
   ],
   [
     66304,
@@ -849,7 +875,8 @@
   ],
   [
     69312,
-    "Arabic Extended-C"
+    "Arabic Extended-C",
+    69314
   ],
   [
     69376,
@@ -873,11 +900,13 @@
   ],
   [
     69632,
-    "Brahmi"
+    "Brahmi",
+    69635
   ],
   [
     69760,
-    "Kaithi"
+    "Kaithi",
+    69763
   ],
   [
     69840,
@@ -885,7 +914,8 @@
   ],
   [
     69888,
-    "Chakma"
+    "Chakma",
+    69891
   ],
   [
     69968,
@@ -893,11 +923,13 @@
   ],
   [
     70016,
-    "Sharada"
+    "Sharada",
+    70019
   ],
   [
     70112,
-    "Sinhala Archaic Numbers"
+    "Sinhala Archaic Numbers",
+    70113
   ],
   [
     70144,
@@ -913,7 +945,8 @@
   ],
   [
     70400,
-    "Grantha"
+    "Grantha",
+    70405
   ],
   [
     70528,
@@ -1025,7 +1058,8 @@
   ],
   [
     73472,
-    "Kawi"
+    "Kawi",
+    73476
   ],
   [
     73648,
@@ -1097,7 +1131,8 @@
   ],
   [
     93504,
-    "Kirat Rai"
+    "Kirat Rai",
+    93507
   ],
   [
     93760,
@@ -1157,7 +1192,8 @@
   ],
   [
     110896,
-    "Small Kana Extension"
+    "Small Kana Extension",
+    110898
   ],
   [
     110960,
@@ -1181,7 +1217,8 @@
   ],
   [
     118528,
-    "Znamenny Musical Notation"
+    "Znamenny Musical Notation",
+    118608
   ],
   [
     118784,
@@ -1277,11 +1314,13 @@
   ],
   [
     126064,
-    "Indic Siyaq Numbers"
+    "Indic Siyaq Numbers",
+    126065
   ],
   [
     126208,
-    "Ottoman Siyaq Numbers"
+    "Ottoman Siyaq Numbers",
+    126209
   ],
   [
     126464,
@@ -1404,7 +1443,7 @@
     "Small Seal"
   ],
   [
-    261183,
+    261184,
     "Unassigned"
   ],
   [
@@ -1449,7 +1488,8 @@
   ],
   [
     917504,
-    "Tags"
+    "Tags",
+    917505
   ],
   [
     917760,
