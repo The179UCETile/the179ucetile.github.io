@@ -1057,6 +1057,7 @@ td {
 @font-face {
 		font-family: "monospace textwall";
 		src: url(/fonts/monospace-textwall-bmp.ttf);
+		unicode-range: U+0-FFFF;
 }
 @font-face {
 		font-family: "monospace textwall";
