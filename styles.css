@@ -12,6 +12,7 @@
 	font-family: "Monospace TextWall";
 	src: url(fonts/monospace-textwall-wip.ttf);
 	font-display: fallback;
+	unicode-range: U+100-FFFF;
 }
 @font-face {
 	font-family: "Monospace TextWall";
