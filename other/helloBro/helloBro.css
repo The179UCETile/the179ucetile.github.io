@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  background-color: #000000;
+  font-family: "Source Sans 3", sans-serif;
+}
+.box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%) translateY(-50%) perspective(100dvmin);
+  animation: funni linear 0.5s 6s both;
+  background-color: #ffffff;
+  width: 100dvmin;
+  height: 100dvmin;
+}
+.helloBro {
+  font-size: 12.5dvmin;
+  animation: hider linear(0, 0 50%, 1 50%) 0.5s 6s both;
+}
+.skull {
+  width: 100dvmin;
+  height: 100dvmin;
+  animation: hider linear(0, 0 50%, 1 50%) 0.5s 6s reverse both;
+}
+@keyframes funni {
+  0% {
+    transform: translateX(-50%) translateY(-50%) perspective(100dvmin) rotateY(0deg) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-50%) perspective(100dvmin) rotateY(-90deg) scale(0.5);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) perspective(100dvmin) rotateY(-180deg) scale(1);
+  }
+}
+@keyframes hider {
+  from {
+    display: unset;
+  }
+  to {
+    display: none;
+  }
+}
