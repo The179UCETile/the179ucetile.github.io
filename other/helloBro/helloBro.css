@@ -23,6 +23,7 @@ body {
 .skull {
   width: 100dvmin;
   height: 100dvmin;
+  transform: rotateY(-180deg);
   animation: hider linear(0, 0 50%, 1 50%) 0.5s 6s reverse both;
 }
 @keyframes funni {
