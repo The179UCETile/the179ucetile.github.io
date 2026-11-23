@@ -12,7 +12,7 @@ div.subtext {
 		align-items: center;
 }
 div.subtext p {
-		color: #c0c0c0;
+	font-size: 0.8em;
 }
 @font-face {
 	font-family: unifont18;
