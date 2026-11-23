@@ -12,7 +12,6 @@ div.subtext {
 		align-items: center;
 }
 div.subtext p {
-		font-size: 0.9em;
 		color: #c0c0c0;
 }
 @font-face {
@@ -27,5 +26,5 @@ div.subtext p {
 }
 textarea {
 		resize: none;
-		font-family: unifont18, "monospace textwall", monospace;
+		font-family: unifont18, "monospace textwall", monospace !important;
 }
